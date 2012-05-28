@@ -16,7 +16,6 @@ namespace TP2
             this.ancho = ancho;
             this.alto = alto;
             tablero = new Casillero[ancho,alto];
-            // NO ME FUNCA ESTO SE ME VA DE RANGO NOSE POR QUE
             for (int i = 0; i < ancho; i++)
             {
                 for (int j = 0; i < alto; j++)
@@ -27,7 +26,7 @@ namespace TP2
         }
         public double Tamanio
         {
-            get { return ancho*alto; }
+            get { return this.ancho*this.alto; }
         }
         public Casillero ObtenerCasillero(uint x,uint y)
         {
