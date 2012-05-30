@@ -37,5 +37,16 @@ namespace TP2.Tests
             Assert.AreEqual(5, bombita.Velocidad);
         }
 
+        [Test]
+        public void CuandoSeMueveBombitaCambiaSuPosicionEnElTablero()
+        {
+            Bombita bombita = new Bombita(4);
+
+            bombita.mover();
+
+            Assert.AreNotEqual(bombita.Columna, 0);
+            Assert.AreNotEqual(bombita.Fila, 0);
+        }
+
     }
 }
