@@ -19,3 +19,10 @@ C:\Javi\UBA\FIUBA\Algoritmos y Programación III\TP2\ TP2\ tp-algoritmos-tres\TP
 C:\Javi\UBA\FIUBA\Algoritmos y Programación III\TP2\ TP2\ tp-algoritmos-tres\TP2\obj\Release\ResolveAssemblyReference.cache
 C:\Javi\UBA\FIUBA\Algoritmos y Programación III\TP2\ TP2\ tp-algoritmos-tres\TP2\obj\Release\TP2.dll
 C:\Javi\UBA\FIUBA\Algoritmos y Programación III\TP2\ TP2\ tp-algoritmos-tres\TP2\obj\Release\TP2.pdb
+C:\Users\asd\Documents\Visual Studio 2010\Projects\TP2-2\ tp-algoritmos-tres\TP2\bin\Release\TP2.dll
+C:\Users\asd\Documents\Visual Studio 2010\Projects\TP2-2\ tp-algoritmos-tres\TP2\bin\Release\TP2.pdb
+C:\Users\asd\Documents\Visual Studio 2010\Projects\TP2-2\ tp-algoritmos-tres\TP2\bin\Release\nunit.framework.dll
+C:\Users\asd\Documents\Visual Studio 2010\Projects\TP2-2\ tp-algoritmos-tres\TP2\bin\Release\nunit.framework.xml
+C:\Users\asd\Documents\Visual Studio 2010\Projects\TP2-2\ tp-algoritmos-tres\TP2\obj\Release\ResolveAssemblyReference.cache
+C:\Users\asd\Documents\Visual Studio 2010\Projects\TP2-2\ tp-algoritmos-tres\TP2\obj\Release\TP2.dll
+C:\Users\asd\Documents\Visual Studio 2010\Projects\TP2-2\ tp-algoritmos-tres\TP2\obj\Release\TP2.pdb

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace TP2.src
 {
-    class Bombita: Movible
+    class Bombita: Personaje
     {
         private int cantidadDeBombas;
         private int vida;
@@ -51,9 +51,6 @@ namespace TP2.src
         }
 
 
-        public bool mover()
-        {
-            return true;
-        }
+
     }
 }
