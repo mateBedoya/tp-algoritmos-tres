@@ -7,14 +7,10 @@ namespace TP2.src
 {
     class Bombita: Personaje
     {
-        private int vida;
-        private int velocidad;
-        private Casillero posicion;
 
         public Bombita()
         {
             this.vida = 1;
-            this.velocidad = 5;
             this.posicion = new Casillero(0, 0); //Que bombita empiece siempre en el casillero 0,0
         }
 
