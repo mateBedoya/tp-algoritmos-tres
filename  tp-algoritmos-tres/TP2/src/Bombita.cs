@@ -7,27 +7,21 @@ namespace TP2.src
 {
     class Bombita: Personaje
     {
-        private int cantidadDeBombas;
         private int vida;
         private int velocidad;
         private Casillero posicion;
 
-        public Bombita(int cantidadDeBombas)
+        public Bombita()
         {
-            this.cantidadDeBombas = cantidadDeBombas;
             this.vida = 1;
             this.velocidad = 5;
             this.posicion = new Casillero(0, 0); //Que bombita empiece siempre en el casillero 0,0
         }
 
-        public int CantidadDeBombas
-        {
-            get { return this.cantidadDeBombas;}
-        }
 
         public void LanzarBomba()
         {
-            this.cantidadDeBombas = this.cantidadDeBombas - 1;
+            
         }
 
         public object Vida
