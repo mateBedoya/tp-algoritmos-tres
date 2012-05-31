@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="src\Bombita.cs" />
     <Compile Include="src\Casillero.cs" />
+    <Compile Include="src\Personaje.cs" />
     <Compile Include="src\Movible.cs" />
     <Compile Include="Tests\BombitaTest.cs" />
     <Compile Include="Tests\CasilleroTest.cs" />

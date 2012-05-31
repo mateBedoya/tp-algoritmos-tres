@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
-  <TopNode>[0-1010]C:\Javi\UBA\FIUBA\Algoritmos y Programación III\TP2\ TP2\ tp-algoritmos-tres\TP2\bin\Release\TP2.dll</TopNode>
-  <SelectedNode>[0-1003]TP2.Tests.BombitaTest</SelectedNode>
+  <TopNode>[0-1010]C:\Users\asd\Documents\Visual Studio 2010\Projects\TP2-2\ tp-algoritmos-tres\TP2\bin\Release\TP2.dll</TopNode>
+  <SelectedNode>[0-1011]TP2</SelectedNode>
   <ExcludeCategories>false</ExcludeCategories>
   <Nodes>
-    <Node UniqueName="[0-1010]C:\Javi\UBA\FIUBA\Algoritmos y Programación III\TP2\ TP2\ tp-algoritmos-tres\TP2\bin\Release\TP2.dll" Expanded="true" />
+    <Node UniqueName="[0-1010]C:\Users\asd\Documents\Visual Studio 2010\Projects\TP2-2\ tp-algoritmos-tres\TP2\bin\Release\TP2.dll" Expanded="true" />
     <Node UniqueName="[0-1011]TP2" Expanded="true" />
     <Node UniqueName="[0-1008]TP2.CasilleroTest" Expanded="true" />
     <Node UniqueName="[0-1012]TP2.Tests" Expanded="true" />
