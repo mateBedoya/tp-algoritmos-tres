@@ -13,32 +13,32 @@ namespace TP2.Elementales
     /// </summary>
     public class Tablero
     {
-        private static int FILAS_MAXIMAS = 100;
-        private static int COLUMNAS_MAXIMAS = 100;
+        private static int MAXIMO_FILA = 30;
+        private static int MAXIMO_COLUMNA = 30;
         private static Tablero INSTANCIA = null;
         private Casilla[,] casillas;
 
         // inicializa los casilleros que compondran al tablero, en principio vacios
         private void InicializarCasillas()
         {
-            int fila = 0;
-            int columna = 0;
-            while (fila < FILAS_MAXIMAS)
+            int indiceFila = 0;
+            int indiceColumna = 0;
+            while (indiceFila < MAXIMO_FILA)
             {
-                columna = 0;
-                while (columna < COLUMNAS_MAXIMAS)
+                indiceColumna = 0;
+                while (indiceColumna < MAXIMO_COLUMNA)
                 {
-                    casillas [fila, columna] = new Casilla (fila, columna);
-                    columna++;
+                    casillas [indiceFila, indiceColumna] = new Casilla (indiceFila, indiceColumna);
+                    indiceColumna++;
                 }
-                fila++;
+                indiceFila++;
             }
         }
 
         // solo puede crearse una instancia de esta clase
         private Tablero()
         {
-            this.casillas = new Casilla [FILAS_MAXIMAS, COLUMNAS_MAXIMAS];
+            this.casillas = new Casilla [MAXIMO_FILA, MAXIMO_COLUMNA];
             this.InicializarCasillas();
         }
 
@@ -50,13 +50,19 @@ namespace TP2.Elementales
             return (INSTANCIA);
         }
 
+        // retorna la cantidad de casillas que tiene
+        public int GetTamanio()
+        {
+            return (MAXIMO_FILA * MAXIMO_COLUMNA);
+        }
+
         // retorna la casilla coincidente con la fila y columna pasada;
         // en caso de que la casilla solicitada exceda los limites del tablero,
-        // se lanzara una excepcion informando el error
+        // se lanzara una casilla nula
         public Casilla GetCasilla(int fila, int columna)
         {
-            if (fila > FILAS_MAXIMAS || fila < 0 ||
-                columna > COLUMNAS_MAXIMAS || columna < 0)
+            if (fila > MAXIMO_FILA || fila < 0 ||
+                columna > MAXIMO_COLUMNA || columna < 0)
             {
                 CasillaNull.GetInstancia();
             }

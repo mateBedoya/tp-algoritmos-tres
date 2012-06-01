@@ -7,7 +7,7 @@ namespace TP2.Juego.personajes
 {
     /// <summary>
     /// Esta clase solo es utilizada para inicializar un objeto
-    /// de tipo obstaculo en nulo (patron null object)
+    /// de tipo personaje en nulo (patron null object)
     /// </summary>
     public class PersonajeNull : Personaje
     {
