@@ -18,7 +18,7 @@ namespace TP2
             tablero = new Casillero[ancho,alto];
             for (int i = 0; i < ancho; i++)
             {
-                for (int j = 0; i < alto; j++)
+                for (int j = 0; j < alto; j++)
                 {
                     tablero[i, j] = new Casillero(i, j);
                 }
@@ -26,7 +26,7 @@ namespace TP2
         }
         public double Tamanio
         {
-            get { return this.ancho*this.alto; }
+            get { return (this.ancho*this.alto); }
         }
         public Casillero ObtenerCasillero(uint x,uint y)
         {
