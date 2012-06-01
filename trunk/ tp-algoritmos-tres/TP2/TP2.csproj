@@ -46,12 +46,15 @@
   <ItemGroup>
     <Compile Include="src\Bombita.cs" />
     <Compile Include="src\Casillero.cs" />
+    <Compile Include="src\Cecilio.cs" />
+    <Compile Include="src\Enemigo.cs" />
     <Compile Include="src\Personaje.cs" />
     <Compile Include="src\Movible.cs" />
     <Compile Include="Tests\BombitaTest.cs" />
     <Compile Include="Tests\CasilleroTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="src\Tablero.cs" />
+    <Compile Include="Tests\CecilioTest.cs" />
     <Compile Include="Tests\TableroTest.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

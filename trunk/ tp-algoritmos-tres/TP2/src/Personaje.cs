@@ -16,6 +16,11 @@ namespace TP2.src
             this.velocidad = 5; // Único atributo compartido por todos los personajes.
         }
 
+        public object Vida
+        {
+            get { return this.vida; }
+        }
+
         public bool mover()
         {
             return true;

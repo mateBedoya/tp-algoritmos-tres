@@ -20,11 +20,6 @@ namespace TP2.src
             
         }
 
-        public object Vida
-        {
-            get { return this.vida;}
-        }
-
         public object Velocidad 
         {
             get { return this.velocidad ;} 
