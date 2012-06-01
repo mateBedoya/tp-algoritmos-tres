@@ -1,7 +1,0 @@
-C:\Users\Alan\Documents\Visual Studio 2010\Projects\TP2-Tests\TP- Tests\bin\Debug\TP- Tests.dll
-C:\Users\Alan\Documents\Visual Studio 2010\Projects\TP2-Tests\TP- Tests\bin\Debug\TP- Tests.pdb
-C:\Users\Alan\Documents\Visual Studio 2010\Projects\TP2-Tests\TP- Tests\bin\Debug\TP2.exe
-C:\Users\Alan\Documents\Visual Studio 2010\Projects\TP2-Tests\TP- Tests\bin\Debug\TP2.pdb
-C:\Users\Alan\Documents\Visual Studio 2010\Projects\TP2-Tests\TP- Tests\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\Alan\Documents\Visual Studio 2010\Projects\TP2-Tests\TP- Tests\obj\Debug\TP- Tests.dll
-C:\Users\Alan\Documents\Visual Studio 2010\Projects\TP2-Tests\TP- Tests\obj\Debug\TP- Tests.pdb
