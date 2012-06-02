@@ -33,3 +33,10 @@ C:\Users\asd\Documents\Visual Studio 2010\Projects\TP2\ tp-algoritmos-tres\TP2\b
 C:\Users\asd\Documents\Visual Studio 2010\Projects\TP2\ tp-algoritmos-tres\TP2\bin\Release\TP2.pdb
 C:\Users\asd\Documents\Visual Studio 2010\Projects\TP2\ tp-algoritmos-tres\TP2\bin\Release\nunit.framework.dll
 C:\Users\asd\Documents\Visual Studio 2010\Projects\TP2\ tp-algoritmos-tres\TP2\bin\Release\nunit.framework.xml
+C:\Users\Alan\Documents\Visual Studio 2010\Projects\Nueva carpeta\ tp-algoritmos-tres\TP2\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Alan\Documents\Visual Studio 2010\Projects\Nueva carpeta\ tp-algoritmos-tres\TP2\obj\Release\TP2.dll
+C:\Users\Alan\Documents\Visual Studio 2010\Projects\Nueva carpeta\ tp-algoritmos-tres\TP2\obj\Release\TP2.pdb
+C:\Users\Alan\Documents\Visual Studio 2010\Projects\Nueva carpeta\ tp-algoritmos-tres\TP2\bin\Release\TP2.dll
+C:\Users\Alan\Documents\Visual Studio 2010\Projects\Nueva carpeta\ tp-algoritmos-tres\TP2\bin\Release\TP2.pdb
+C:\Users\Alan\Documents\Visual Studio 2010\Projects\Nueva carpeta\ tp-algoritmos-tres\TP2\bin\Release\nunit.framework.dll
+C:\Users\Alan\Documents\Visual Studio 2010\Projects\Nueva carpeta\ tp-algoritmos-tres\TP2\bin\Release\nunit.framework.xml

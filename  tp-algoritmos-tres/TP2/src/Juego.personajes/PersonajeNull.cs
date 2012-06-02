@@ -15,7 +15,10 @@ namespace TP2.Juego.personajes
 
         // solo puede crearse una sola instancia de esta clase
          private PersonajeNull()
-            : base() { }
+            : base(0) 
+         {
+                this.velocidad = 0;
+         }
 
         // retorna la instancia
          public static PersonajeNull GetInstancia()

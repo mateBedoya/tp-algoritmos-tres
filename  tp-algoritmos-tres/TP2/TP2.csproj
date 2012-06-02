@@ -44,19 +44,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="src\Bombita.cs" />
-    <Compile Include="src\Casillero.cs" />
-    <Compile Include="src\Cecilio.cs" />
-    <Compile Include="src\Enemigo.cs" />
-    <Compile Include="src\Personaje.cs" />
-    <Compile Include="src\Movible.cs" />
-    <Compile Include="Tests\BombitaTest.cs" />
-    <Compile Include="Tests\CasilleroTest.cs" />
+    <Compile Include="src\Elementales\Casillero.cs" />
+    <Compile Include="src\Elementales\CasilleroNull.cs" />
+    <Compile Include="src\Elementales\Entidad.cs" />
+    <Compile Include="src\Elementales\Tablero.cs" />
+    <Compile Include="src\Excepciones\CasilleroOcupadoError.cs" />
+    <Compile Include="src\Interfaces\Destruible.cs" />
+    <Compile Include="src\Interfaces\Movible.cs" />
+    <Compile Include="src\Juego.articulos\Articulo.cs" />
+    <Compile Include="src\Juego.articulos\ArticuloNull.cs" />
+    <Compile Include="src\Juego.bombas\Bomba.cs" />
+    <Compile Include="src\Juego.bombas\BombaNull.cs" />
+    <Compile Include="src\Juego.obstaculos\Obstaculo.cs" />
+    <Compile Include="src\Juego.obstaculos\ObstaculoNull.cs" />
+    <Compile Include="src\Juego.personajes\Personaje.cs" />
+    <Compile Include="src\Juego.personajes\PersonajeNull.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="src\Tablero.cs" />
-    <Compile Include="Tests\CecilioTest.cs" />
-    <Compile Include="Tests\TableroTest.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

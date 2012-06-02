@@ -11,56 +11,56 @@ namespace TP2.Elementales
 {
     /// <summary>
     /// Esta clase solo es utilizada para inicializar un objeto
-    /// de tipo casilla en nulo (patron null object)
+    /// de tipo casillero en nulo (patron null object)
     /// </summary>
-    public class CasillaNull : Casilla
+    public class CasilleroNull : Casillero
     {
-        private static CasillaNull INSTANCIA = null;
+        private static CasilleroNull INSTANCIA = null;
 
         // solo puede crearse una sola instancia de esta clase
-        private CasillaNull()
+        private CasilleroNull()
             : base(0, 0) { }
 
         // retorna la instancia
-        public static CasillaNull GetInstancia()
+        public static CasilleroNull GetInstancia()
         {
             if (INSTANCIA == null)
-                INSTANCIA = new CasillaNull();
+                INSTANCIA = new CasilleroNull();
             return (INSTANCIA);
         }
 
         // retorna la propia instancia
-        public override Casilla GetCasillaSuperior()
-        {
-            return (INSTANCIA);
-        }
-
-        // retorna la propia instancia
-        public override Casilla GetCasillaInferior()
+        public override Casillero GetCasilleroSuperior()
         {
             return (INSTANCIA);
         }
 
         // retorna la propia instancia
-        public override Casilla GetCasillaDerecha()
+        public override Casillero GetCasilleroInferior()
         {
             return (INSTANCIA);
         }
 
         // retorna la propia instancia
-        public override Casilla GetCasillaIzquierda()
+        public override Casillero GetCasilleroDerecha()
         {
             return (INSTANCIA);
         }
 
-        // retorna la lista vacia (sin casillas adyacentes)
-        public override List<Casilla> GetCasillasAdyacentes()
+        // retorna la propia instancia
+        public override Casillero GetCasilleroIzquierda()
         {
-            return (new List<Casilla>());
+            return (INSTANCIA);
         }
 
-        // retorna si la casilla esta vacia
-        public override bool EstaVacia()
+        // retorna la lista vacia (sin casilleros adyacentes)
+        public override List<Casillero> GetCasillerosAdyacentes()
+        {
+            return (new List<Casillero>());
+        }
+
+        // retorna si el casillero esta vacio
+        public override bool EstaVacio()
         {
             return false;
         }
@@ -99,8 +99,6 @@ namespace TP2.Elementales
         public override Articulo GetArticulo()
         {
             return (ArticuloNull.GetInstancia());
-        }
-
-     
+        }     
     }
 }
