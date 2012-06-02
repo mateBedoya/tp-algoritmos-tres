@@ -8,34 +8,22 @@ namespace TP2_Bomberman
 {
     class Bombita : Personaje
     {
+        private static int RESISTENCIA = 1;
 
+        // crea a bombita con una resistencia y posicion inicial dentro del tablero
+        public Bombita(Casillero casilleroPosicion)
+            : base(RESISTENCIA, casilleroPosicion)
+        {   }
+
+        // BORRAR COMENTARIO: agrego este constructor porque lo usan los tests, pero el que vale es el de arriba
         public Bombita()
-        {
-            this.vida = 1;
-            this.posicion = new Casillero(0, 0); //Que bombita empiece siempre en el casillero 0,0
-        }
+            : base(RESISTENCIA)
+        {   }
 
 
         public void LanzarBomba()
         {
 
         }
-
-        public object Velocidad
-        {
-            get { return this.velocidad; }
-        }
-
-        public object Columna
-        {
-            get { return this.posicion.Columna; }
-        }
-
-        public object Fila
-        {
-            get { return this.posicion.Fila; }
-        }
-
-
     }
 }

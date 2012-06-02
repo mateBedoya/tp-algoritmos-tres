@@ -5,7 +5,7 @@ using System.Text;
 
 namespace TP2_Bomberman.src
 {
-    class Molotov: Bomba,IExplotable,IDependienteDelTiempo
+    public class Molotov: Bomba,IExplotable,IDependienteDelTiempo
     {
         public Molotov()
         { 
@@ -14,7 +14,7 @@ namespace TP2_Bomberman.src
             this.rango = 3;
         }
 
-        public void explotar()
+        public void Explotar()
         {
             
         }
