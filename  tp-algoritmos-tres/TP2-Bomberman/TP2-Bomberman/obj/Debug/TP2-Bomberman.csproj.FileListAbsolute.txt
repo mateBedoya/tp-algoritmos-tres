@@ -1,0 +1,5 @@
+C:\Documents and Settings\Administrador\Configuración local\Datos de programa\Temporary Projects\TP2-Bomberman\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrador\Configuración local\Datos de programa\Temporary Projects\TP2-Bomberman\bin\Debug\TP2-Bomberman.dll
+C:\Documents and Settings\Administrador\Configuración local\Datos de programa\Temporary Projects\TP2-Bomberman\bin\Debug\TP2-Bomberman.pdb
+C:\Documents and Settings\Administrador\Configuración local\Datos de programa\Temporary Projects\TP2-Bomberman\obj\Debug\TP2-Bomberman.dll
+C:\Documents and Settings\Administrador\Configuración local\Datos de programa\Temporary Projects\TP2-Bomberman\obj\Debug\TP2-Bomberman.pdb
