@@ -5,8 +5,8 @@ using System.Text;
 
 namespace TP2.Excepciones
 {
-    public class CasillaOcupadaError : Exception
+    public class CasilleroOcupadoError : Exception
     {
-        public CasillaOcupadaError() { }
+        public CasilleroOcupadoError() { }
     }
 }

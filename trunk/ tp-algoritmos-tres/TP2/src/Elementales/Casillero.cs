@@ -9,7 +9,8 @@ using TP2.Juego.articulos;
 
 namespace TP2.Elementales
 {
-    public class Casilla
+
+    public class Casillero
     {
         protected int fila;
         protected int columna;
@@ -18,8 +19,8 @@ namespace TP2.Elementales
         protected Bomba bomba;
         protected Articulo articulo;
 
-        // crea una casilla vacia con una posicion en el tablero
-        public Casilla(int fila, int columna)
+        // crea un casillero vacio con una posicion en el tablero
+        public Casillero(int fila, int columna)
         {
             this.fila = fila;
             this.columna = columna;
@@ -41,43 +42,43 @@ namespace TP2.Elementales
             return (this.columna);
         }
 
-        // retorna la casilla adyacente- superior 
-        public virtual Casilla GetCasillaSuperior()
+        // retorna el casillero adyacente- superior 
+        public virtual Casillero GetCasilleroSuperior()
         { 
-            return (Tablero.GetInstancia().GetCasilla(this.fila + 1, this.columna));
+            return (Tablero.GetInstancia().GetCasillero(this.fila + 1, this.columna));
         }
 
-        // retorna la casilla adyacente- inferior
-        public virtual Casilla GetCasillaInferior()
+        // retorna el casillero adyacente- inferior
+        public virtual Casillero GetCasilleroInferior()
         {
-            return (Tablero.GetInstancia().GetCasilla(this.fila - 1, this.columna));
+            return (Tablero.GetInstancia().GetCasillero(this.fila - 1, this.columna));
         }
 
-        // retorna la casilla adyacente- derecha
-        public virtual Casilla GetCasillaDerecha()
+        // retorna el casillero adyacente- derecha
+        public virtual Casillero GetCasilleroDerecha()
         {
-            return (Tablero.GetInstancia().GetCasilla(this.fila, this.columna + 1));
+            return (Tablero.GetInstancia().GetCasillero(this.fila, this.columna + 1));
         }
 
-        // retorna la casilla adyacente- izquierda
-        public virtual Casilla GetCasillaIzquierda()
+        // retorna el casillero adyacente- izquierda
+        public virtual Casillero GetCasilleroIzquierda()
         {
-           return (Tablero.GetInstancia().GetCasilla(this.fila, this.columna - 1));  
+           return (Tablero.GetInstancia().GetCasillero(this.fila, this.columna - 1));  
         }
 
-        // retorna las casillas adyacentes 
-        public virtual List<Casilla> GetCasillasAdyacentes()
+        // retorna los casilleros adyacentes 
+        public virtual List<Casillero> GetCasillerosAdyacentes()
         {
-            List<Casilla> casillasAdyacentes = new List<Casilla>();
-            casillasAdyacentes.Add(this.GetCasillaSuperior());
-            casillasAdyacentes.Add(this.GetCasillaInferior());
-            casillasAdyacentes.Add(this.GetCasillaDerecha());
-            casillasAdyacentes.Add(this.GetCasillaIzquierda());
-            return (casillasAdyacentes);
+            List<Casillero> casillerosAdyacentes = new List<Casillero>();
+            casillerosAdyacentes.Add(this.GetCasilleroSuperior());
+            casillerosAdyacentes.Add(this.GetCasilleroInferior());
+            casillerosAdyacentes.Add(this.GetCasilleroDerecha());
+            casillerosAdyacentes.Add(this.GetCasilleroIzquierda());
+            return (casillerosAdyacentes);
         }
 
-        // retorna si la casilla esta vacia
-        public virtual bool EstaVacia()
+        // retorna si el casillero esta vacia
+        public virtual bool EstaVacio()
         {
             return (this.personaje == PersonajeNull.GetInstancia() & 
                     this.obstaculo == ObstaculoNull.GetInstancia() &
@@ -85,25 +86,25 @@ namespace TP2.Elementales
                     this.articulo == ArticuloNull.GetInstancia());
         }
 
-        // agrega un personaje a la casilla
+        // agrega un personaje al casillero
         public virtual void AgregarPersonaje(Personaje personaje)
         {
             this.personaje = personaje;
         }
 
-        // agrega un obstaculo a la casilla
+        // agrega un obstaculo al casillero
         public virtual void AgregarObstaculo(Obstaculo obstaculo)
         {
             this.obstaculo = obstaculo;
         }
 
-        // agrega una bomba a la casilla
+        // agrega una bomba al casillero
         public virtual void AgregarBomba(Bomba bomba)
         {
             this.bomba = bomba;
         }
 
-        // agrega un articulo a la casilla
+        // agrega un articulo al casillero
         public virtual void AgregarArticulo(Articulo articulo)
         {
             this.articulo = articulo;

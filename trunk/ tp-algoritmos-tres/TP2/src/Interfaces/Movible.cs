@@ -16,6 +16,6 @@ namespace TP2.Interfaces
 
         void MoverIzquierda();
 
-        bool PuedeMoverseA(Casilla casilla);
+        bool PuedeMoverseA(Casillero casilla);
     }
 }
