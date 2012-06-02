@@ -14,7 +14,7 @@ namespace TP2_Bomberman.test
         public void crearLopezRTiene10Vida()
         {
             LopezR lopezR = new LopezR();
-            Assert.AreEqual(lopezR.Vida, 10);
+            Assert.AreEqual(lopezR.Resistencia, 10);
         }
     }
 }

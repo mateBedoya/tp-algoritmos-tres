@@ -2,23 +2,51 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using TP2_Bomberman.src.Interfaces;
+using TP2_Bomberman.src.Elementales;
 
 namespace TP2_Bomberman.src
 {
-    class Personaje : IMovible
+    public abstract class Personaje : Entidad, IMovible, IDestruible
     {
-        protected int vida;
+        private int VELOCIDAD_INICIAL = 5; //BORRAR ESTE COMENTARIO: esto es para inicializar atributos con valores, para si despues
+        //se quiere cambiar el valor asignado, no tocas el constructor o el codigo, tocas este valor y listo!!!
+        protected int resistencia;
         protected int velocidad;
-        protected Casillero posicion;
 
-        public Personaje()
+        // se crea un personaje con una resistencia y velocidad inicial
+        public Personaje(int resistencia)
+            : base()
         {
-            this.velocidad = 5; // Único atributo compartido por todos los personajes.
+            this.resistencia = resistencia;
+            this.velocidad = VELOCIDAD_INICIAL;
         }
 
-        public object Vida
+        // se crea un personaje con una resistencia y velocidad inicial
+        // y su casillero- posicion en el tablero
+        public Personaje(int resistencia, Casillero casilleroPosicion)
+            : base(casilleroPosicion)
         {
-            get { return this.vida; }
+            this.resistencia = resistencia;
+            this.velocidad = VELOCIDAD_INICIAL;
+        }
+
+        // retorna la resistencia actual
+        public object Resistencia
+        {
+            get { return this.resistencia; }
+        }
+
+        // un personaje es destruido cuando su resistencia es menor o igual a 0
+        public virtual bool FueDestruido()
+        {
+            return (this.resistencia <= 0);
+        }
+
+        // retorna la velocidad
+        public virtual int GetVelocidad()
+        {
+            return (this.velocidad);
         }
 
 

@@ -14,7 +14,7 @@ namespace TP2_Bomberman.test
         public void CrearCecilioTiene5Vida()
         {
             Cecilio cecilio = new Cecilio();
-            Assert.AreEqual(cecilio.Vida, 5);
+            Assert.AreEqual(cecilio.Resistencia, 5);
         }
     }
 }

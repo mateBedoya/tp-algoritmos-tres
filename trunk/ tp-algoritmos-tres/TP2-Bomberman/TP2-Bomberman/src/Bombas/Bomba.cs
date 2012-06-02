@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using TP2_Bomberman.src.Elementales;
 
 namespace TP2_Bomberman.src
 {
-    abstract class Bomba
+    public abstract class Bomba : Entidad
     {
         protected int destruccion;
         protected int retardo;

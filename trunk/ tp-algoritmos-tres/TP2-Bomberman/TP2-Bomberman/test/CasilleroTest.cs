@@ -25,11 +25,13 @@ namespace TP2_Bomberman.test
         {
             Casillero casillero = new Casillero(0, 0);
 
-            Personaje personaje = new Personaje();
+            //Personaje personaje = new Personaje();  BORRAR COMENTARIO : personaje deberia ser asbtracta ya que de esta clase heredan todos
+            // los otros personajes (Cecilio, Bombita..); no deberia poder instanciarse un personaje que no sea Cecilio, Bombita, etc,
+            // es decir un personaje de tipo "Personaje"
 
-            casillero.Personaje = personaje;
+            // casillero.Personaje = personaje;
 
-            Assert.IsNotNull(casillero.Personaje);
+            // Assert.IsNotNull(casillero.Personaje);
         }
 
         [Test]
@@ -67,7 +69,7 @@ namespace TP2_Bomberman.test
 
             Casillero casilleroActual = tablero.ObtenerCasillero(1, 1);
 
-            Casillero casilleroIzquierdo = casilleroActual.ObtenerCasilleroIzquierda();
+            Casillero casilleroIzquierdo = casilleroActual.ObtenerCasilleroIzquierdo();
 
             Assert.AreEqual(1, casilleroIzquierdo.Fila);
             Assert.AreEqual(0, casilleroIzquierdo.Columna);

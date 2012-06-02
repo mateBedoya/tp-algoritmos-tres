@@ -5,8 +5,13 @@ using System.Text;
 
 namespace TP2_Bomberman.src
 {
-    class Enemigo : Personaje
+    public class Enemigo : Personaje
     {
+        private static int RESISTENCIA = 5;
 
+        public Enemigo()
+            : base(RESISTENCIA)
+        { }
+            
     }
 }

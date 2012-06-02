@@ -5,7 +5,7 @@ using System.Text;
 
 namespace TP2_Bomberman.src
 {
-    interface IDependienteDelTiempo
+    public interface IDependienteDelTiempo
     {
         void CuandoPaseElTiempo(int tiempo);
     }

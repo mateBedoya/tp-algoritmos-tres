@@ -9,7 +9,7 @@ namespace TP2_Bomberman.src
     {
         public Cecilio()
         {
-            this.vida = 5;
+            this.resistencia = 5;
         }
 
 

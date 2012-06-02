@@ -5,7 +5,7 @@ using System.Text;
 
 namespace TP2_Bomberman.src
 {
-    interface IMovible
+    public interface IMovible
     {
         void MoverArriba();
 

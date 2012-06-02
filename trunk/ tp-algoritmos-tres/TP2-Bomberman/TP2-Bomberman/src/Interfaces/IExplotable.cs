@@ -5,8 +5,8 @@ using System.Text;
 
 namespace TP2_Bomberman.src
 {
-    interface IExplotable
+    public interface IExplotable
     {
-        void explotar();
+        void Explotar();
     }
 }

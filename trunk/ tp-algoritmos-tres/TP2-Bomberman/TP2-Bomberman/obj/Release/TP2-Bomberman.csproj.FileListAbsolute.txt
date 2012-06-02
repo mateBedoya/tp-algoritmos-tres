@@ -12,3 +12,10 @@ C:\Javi\UBA\FIUBA\Algoritmos y Programación III\TP2\ TP2\ tp-algoritmos-tres\TP
 C:\Javi\UBA\FIUBA\Algoritmos y Programación III\TP2\ TP2\ tp-algoritmos-tres\TP2-Bomberman\TP2-Bomberman\obj\Release\ResolveAssemblyReference.cache
 C:\Javi\UBA\FIUBA\Algoritmos y Programación III\TP2\ TP2\ tp-algoritmos-tres\TP2-Bomberman\TP2-Bomberman\obj\Release\TP2-Bomberman.dll
 C:\Javi\UBA\FIUBA\Algoritmos y Programación III\TP2\ TP2\ tp-algoritmos-tres\TP2-Bomberman\TP2-Bomberman\obj\Release\TP2-Bomberman.pdb
+C:\Users\Alan\Documents\Visual Studio 2010\Projects\TP-Bombita\ tp-algoritmos-tres\TP2-Bomberman\TP2-Bomberman\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Alan\Documents\Visual Studio 2010\Projects\TP-Bombita\ tp-algoritmos-tres\TP2-Bomberman\TP2-Bomberman\obj\Release\TP2-Bomberman.dll
+C:\Users\Alan\Documents\Visual Studio 2010\Projects\TP-Bombita\ tp-algoritmos-tres\TP2-Bomberman\TP2-Bomberman\obj\Release\TP2-Bomberman.pdb
+C:\Users\Alan\Documents\Visual Studio 2010\Projects\TP-Bombita\ tp-algoritmos-tres\TP2-Bomberman\TP2-Bomberman\bin\Release\TP2-Bomberman.dll
+C:\Users\Alan\Documents\Visual Studio 2010\Projects\TP-Bombita\ tp-algoritmos-tres\TP2-Bomberman\TP2-Bomberman\bin\Release\TP2-Bomberman.pdb
+C:\Users\Alan\Documents\Visual Studio 2010\Projects\TP-Bombita\ tp-algoritmos-tres\TP2-Bomberman\TP2-Bomberman\bin\Release\nunit.framework.dll
+C:\Users\Alan\Documents\Visual Studio 2010\Projects\TP-Bombita\ tp-algoritmos-tres\TP2-Bomberman\TP2-Bomberman\bin\Release\nunit.framework.xml

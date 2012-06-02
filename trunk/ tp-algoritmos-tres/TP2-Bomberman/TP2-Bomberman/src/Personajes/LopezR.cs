@@ -9,7 +9,7 @@ namespace TP2_Bomberman.src
     {
         public LopezR()
         {
-            this.vida = 10;
+            this.resistencia = 10;
         }
     }
 }
