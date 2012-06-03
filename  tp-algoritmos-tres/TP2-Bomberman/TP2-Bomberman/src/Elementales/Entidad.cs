@@ -11,30 +11,24 @@ namespace TP2_Bomberman.src.Elementales
     /// </summary>
     public abstract class Entidad
     {
-        protected Casillero casilleroPosicion;
+        protected Casillero posicion;
 
         // crea una entidad sin casillero- posicion asignado
         public Entidad()
         {
-            this.casilleroPosicion = CasilleroNull.GetInstancia();
+            this.posicion = null;
         }
 
-        // crea una entidad con casillero- posicion
-        public Entidad(Casillero casilleroPosicion)
+        public Entidad(Casillero posicion)
         {
-            this.casilleroPosicion = casilleroPosicion;
+            if(Tablero.GetInstancia().CasilleroFueraDeRango(posicion.Fila,posicion.Columna)) throw new CasilleroFueraDeRangoException();
+            this.posicion = posicion;
         }
 
-        // retorna su casillero- posicion actual
-        public Casillero GetPosicion()
+        public Casillero Posicion
         {
-            return (this.casilleroPosicion);
-        }
-
-        // posiciona a la entidad 
-        public void Posicionar(Casillero casilleroPosicion)
-        {
-            this.casilleroPosicion = casilleroPosicion;
+            get { return this.posicion; }
+            set { this.posicion = value; }
         }
     }
 }

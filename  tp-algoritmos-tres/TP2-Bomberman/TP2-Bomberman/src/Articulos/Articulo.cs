@@ -6,7 +6,7 @@ using TP2_Bomberman.src.Elementales;
 
 namespace TP2_Bomberman.src.Articulos
 {
-    public abstract class Articulo : Entidad
+    public abstract class Articulo: Entidad
     {
     }
 }

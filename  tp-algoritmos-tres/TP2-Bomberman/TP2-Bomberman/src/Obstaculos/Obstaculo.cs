@@ -6,7 +6,7 @@ using TP2_Bomberman.src.Elementales;
 
 namespace TP2_Bomberman.src.Obstaculos
 {
-    public abstract class Obstaculo : Entidad
+    public abstract class Obstaculo: Entidad
     {
     }
 }
