@@ -21,6 +21,14 @@ namespace TP2_Bomberman.test
 
         }
 
+        [Test]
+        public void PruebaCrearOtraMolotov()
+        {
+            Molotov molotov = new Molotov();
+
+            Assert.AreEqual(5, molotov.Destruccion);
+        }
+
 
     }
 }
