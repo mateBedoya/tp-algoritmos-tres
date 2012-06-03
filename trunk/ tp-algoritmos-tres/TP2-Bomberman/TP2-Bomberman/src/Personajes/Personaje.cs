@@ -7,7 +7,7 @@ using TP2_Bomberman.src.Elementales;
 
 namespace TP2_Bomberman.src
 {
-    public abstract class Personaje : Entidad, IMovible, IDestruible
+    public abstract class Personaje : Entidad,IMovible, IDestruible
     {
         private int VELOCIDAD_INICIAL = 5; //BORRAR ESTE COMENTARIO: esto es para inicializar atributos con valores, para si despues
         //se quiere cambiar el valor asignado, no tocas el constructor o el codigo, tocas este valor y listo!!!
@@ -25,7 +25,7 @@ namespace TP2_Bomberman.src
         // se crea un personaje con una resistencia y velocidad inicial
         // y su casillero- posicion en el tablero
         public Personaje(int resistencia, Casillero casilleroPosicion)
-            : base(casilleroPosicion)
+            //: base(casilleroPosicion)
         {
             this.resistencia = resistencia;
             this.velocidad = VELOCIDAD_INICIAL;

@@ -6,7 +6,7 @@ using TP2_Bomberman.src.Elementales;
 
 namespace TP2_Bomberman.src
 {
-    public abstract class Bomba : Entidad
+    public abstract class Bomba
     {
         protected int destruccion;
         protected int retardo;

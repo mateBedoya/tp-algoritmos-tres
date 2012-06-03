@@ -1,32 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Javi\UBA\FIUBA\Algoritmos y Programación III\TP2\ TP2\ tp-algoritmos-tres\TP2-Bomberman\TP2-Bomberman\bin\Release\TP2-Bomberman.dll" total="9" errors="0" failures="1" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2012-06-02" time="03:15:13">
-  <environment nunit-version="2.6.0.12051" clr-version="2.0.50727.3082" os-version="Microsoft Windows NT 5.1.2600 Service Pack 3" platform="Win32NT" cwd="C:\Javi\UBA\FIUBA\Algoritmos y Programación III\TP2\ TP2\ tp-algoritmos-tres\TP2-Bomberman\TP2-Bomberman\bin\Release" machine-name="HOME" user="Administrador" user-domain="HOME" />
+<test-results name="C:\Javi\UBA\FIUBA\Algoritmos y Programación III\TP2\ tp-algoritmos-tres\TP2-Bomberman\TP2-Bomberman\bin\Release\TP2-Bomberman.dll" total="19" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2012-06-03" time="14:45:54">
+  <environment nunit-version="2.6.0.12051" clr-version="2.0.50727.3082" os-version="Microsoft Windows NT 5.1.2600 Service Pack 3" platform="Win32NT" cwd="C:\Javi\UBA\FIUBA\Algoritmos y Programación III\TP2\ tp-algoritmos-tres\TP2-Bomberman\TP2-Bomberman\bin\Release" machine-name="HOME" user="Administrador" user-domain="HOME" />
   <culture-info current-culture="es-AR" current-uiculture="es-ES" />
-  <test-suite type="Assembly" name="C:\Javi\UBA\FIUBA\Algoritmos y Programación III\TP2\ TP2\ tp-algoritmos-tres\TP2-Bomberman\TP2-Bomberman\bin\Release\TP2-Bomberman.dll" executed="True" result="Failure" success="False" time="0.266" asserts="0">
+  <test-suite type="Assembly" name="C:\Javi\UBA\FIUBA\Algoritmos y Programación III\TP2\ tp-algoritmos-tres\TP2-Bomberman\TP2-Bomberman\bin\Release\TP2-Bomberman.dll" executed="True" result="Success" success="True" time="0.203" asserts="0">
     <results>
-      <test-suite type="Namespace" name="TP2_Bomberman" executed="True" result="Failure" success="False" time="0.250" asserts="0">
+      <test-suite type="Namespace" name="TP2_Bomberman" executed="True" result="Success" success="True" time="0.203" asserts="0">
         <results>
-          <test-suite type="Namespace" name="test" executed="True" result="Failure" success="False" time="0.250" asserts="0">
+          <test-suite type="Namespace" name="test" executed="True" result="Success" success="True" time="0.203" asserts="0">
             <results>
-              <test-suite type="TestFixture" name="BombitaTest" executed="True" result="Failure" success="False" time="0.125" asserts="0">
+              <test-suite type="TestFixture" name="BombaTest" executed="True" result="Success" success="True" time="0.094" asserts="0">
                 <results>
-                  <test-case name="TP2_Bomberman.test.BombitaTest.CuandoCreoABombitaQueTenga1Vida" executed="True" result="Success" success="True" time="0.031" asserts="1" />
-                  <test-case name="TP2_Bomberman.test.BombitaTest.CuandoCreoABombitaQueTenga5DeVelocidad" executed="True" result="Success" success="True" time="0.000" asserts="1" />
-                  <test-case name="TP2_Bomberman.test.BombitaTest.CuandoSeMueveBombitaCambiaSuPosicionEnElTablero" executed="True" result="Failure" success="False" time="0.016" asserts="1">
-                    <failure>
-                      <message><![CDATA[  Expected: not 0
-  But was:  0
-]]></message>
-                      <stack-trace><![CDATA[at TP2_Bomberman.test.BombitaTest.CuandoSeMueveBombitaCambiaSuPosicionEnElTablero() in C:\Javi\UBA\FIUBA\Algoritmos y Programación III\TP2\ TP2\ tp-algoritmos-tres\TP2-Bomberman\TP2-Bomberman\test\BombitaTest.cs:line 34
-]]></stack-trace>
-                    </failure>
-                  </test-case>
+                  <test-case name="TP2_Bomberman.test.BombaTest.PruebaCrearOtraMolotov" executed="True" result="Success" success="True" time="0.031" asserts="1" />
+                  <test-case name="TP2_Bomberman.test.BombaTest.PruebaLaCreacionDeUnaMolotov" executed="True" result="Success" success="True" time="0.000" asserts="3" />
                 </results>
               </test-suite>
-              <test-suite type="TestFixture" name="CasilleroTest" executed="True" result="Success" success="True" time="0.000" asserts="0">
+              <test-suite type="TestFixture" name="BombitaTest" executed="True" result="Success" success="True" time="0.000" asserts="0">
+                <results>
+                  <test-case name="TP2_Bomberman.test.BombitaTest.CuandoCreoABombitaQueTenga1Vida" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="TP2_Bomberman.test.BombitaTest.CuandoCreoABombitaQueTenga5DeVelocidad" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="TP2_Bomberman.test.BombitaTest.CuandoSeMueveBombitaCambiaSuPosicionEnElTablero" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="CasilleroTest" executed="True" result="Success" success="True" time="0.016" asserts="0">
                 <results>
                   <test-case name="TP2_Bomberman.test.CasilleroTest.PruebaLaCreacionDeUnCasillero" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                  <test-case name="TP2_Bomberman.test.CasilleroTest.PruebaObtenerLaCasillaPosicionadaAbajo" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                  <test-case name="TP2_Bomberman.test.CasilleroTest.PruebaObtenerLaCasillaPosicionadaALaDerecha" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                  <test-case name="TP2_Bomberman.test.CasilleroTest.PruebaObtenerLaCasillaPosicionadaALaIzquierda" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                  <test-case name="TP2_Bomberman.test.CasilleroTest.PruebaObtenerLaCasillaPosicionadaArriba" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                  <test-case name="TP2_Bomberman.test.CasilleroTest.PruebaPosicionarUnPersonajeEnLaCasilla" executed="True" result="Success" success="True" time="0.000" asserts="0" />
                 </results>
               </test-suite>
               <test-suite type="TestFixture" name="CecilioTest" executed="True" result="Success" success="True" time="0.000" asserts="0">
@@ -39,11 +42,14 @@
                   <test-case name="TP2_Bomberman.test.LopezRTest.crearLopezRTiene10Vida" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                 </results>
               </test-suite>
-              <test-suite type="TestFixture" name="TableroTest" executed="True" result="Success" success="True" time="0.016" asserts="0">
+              <test-suite type="TestFixture" name="TableroTest" executed="True" result="Success" success="True" time="0.047" asserts="0">
                 <results>
-                  <test-case name="TP2_Bomberman.test.TableroTest.PruebaCrearUnTableroConDimension1" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="TP2_Bomberman.test.TableroTest.PruebaCrearUnTableroConDimension1" executed="True" result="Success" success="True" time="0.016" asserts="1" />
+                  <test-case name="TP2_Bomberman.test.TableroTest.PruebaQueCuandoSeIntentaAccederAUnCasilleroFueraDeRangoLanceUnaExcepcion" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                   <test-case name="TP2_Bomberman.test.TableroTest.PruebaQueDevuelvaElCasilleroDeUnaPosicionDada" executed="True" result="Success" success="True" time="0.000" asserts="2" />
                   <test-case name="TP2_Bomberman.test.TableroTest.PruebaQueDevuelvaLosAdyacentesDeUnCasillero" executed="True" result="Success" success="True" time="0.000" asserts="8" />
+                  <test-case name="TP2_Bomberman.test.TableroTest.PruebaQueDevuelvaLosAdyacentesDeUnCasilleroQueEsteEnElBorde" executed="True" result="Success" success="True" time="0.016" asserts="4" />
+                  <test-case name="TP2_Bomberman.test.TableroTest.PruebaQueLanceUnaExcepcionCuandoQuieraObtenerLosAdyacentesDeUnCasilleroFueraDeRango" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                 </results>
               </test-suite>
             </results>
