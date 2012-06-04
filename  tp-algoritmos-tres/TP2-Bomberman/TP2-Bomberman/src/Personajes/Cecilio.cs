@@ -11,13 +11,22 @@ namespace TP2_Bomberman.src
             :base()
         {
             this.resistencia = 5;
+            this.bomba = new Molotov();
         }
 
         public Cecilio(Casillero posicion)
             :base()
         {
             this.resistencia = 5;
+            this.bomba = new Molotov();
             this.posicion = posicion;
+        }
+
+        public override void LanzarBomba()
+        {
+            // FALTA IMPLEMENTAR
+            // LO QUE PENSE ES QUE CUANDO LANCE UNA BOMBA, TIRE LA QUE TIENE GUARDADA EN EL ATRIBUTO "bomba"
+            // E INMEDIATAMENTE CREE UNA NUEVA INSTANCIA Y LA GUARDE EN EL ATRIBUTO
         }
 
 

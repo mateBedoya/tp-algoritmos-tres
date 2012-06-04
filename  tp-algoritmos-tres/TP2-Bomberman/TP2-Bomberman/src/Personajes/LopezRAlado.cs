@@ -2,24 +2,23 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using TP2_Bomberman.src.Bombas;
 
-namespace TP2_Bomberman.src
+namespace TP2_Bomberman.src.Personajes
 {
-    public class LopezR : Enemigo
+    class LopezRAlado: Enemigo
     {
-        public LopezR()
+        public LopezRAlado()
             :base()
         {
-            this.resistencia = 10;
-            this.bomba = new Proyectil();
+            this.resistencia = 5;
+            this.bomba = new Molotov();
         }
 
-        public LopezR(Casillero posicion)
+        public LopezRAlado(Casillero posicion)
             :base()
         {
-            this.resistencia = 10;
-            this.bomba = new Proyectil();
+            this.resistencia = 5;
+            this.bomba = new Molotov();
             this.posicion = posicion;
         }
 
@@ -29,5 +28,8 @@ namespace TP2_Bomberman.src
             // LO QUE PENSE ES QUE CUANDO LANCE UNA BOMBA, TIRE LA QUE TIENE GUARDADA EN EL ATRIBUTO "bomba"
             // E INMEDIATAMENTE CREE UNA NUEVA INSTANCIA Y LA GUARDE EN EL ATRIBUTO
         }
+
+
+        //TAMBIEN FALTA VER EL TEMA DE QUE ESTE SE PUEDE MOVER POR DONDE QUIERA
     }
 }

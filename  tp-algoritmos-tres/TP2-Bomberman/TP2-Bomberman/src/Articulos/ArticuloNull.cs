@@ -17,6 +17,7 @@ namespace TP2_Bomberman.src.Articulos
         private ArticuloNull()
             : base() { }
 
+
         // retorna la instancia
         public static ArticuloNull GetInstancia()
         {
@@ -26,9 +27,7 @@ namespace TP2_Bomberman.src.Articulos
         }
 
         //sin implementacion
-        public override bool FueDestruido() { return true; }
-        public override void DaniarConMolotov(Molotov molotov) { }
-        public override void DaniarConToleTole(Bombas.ToleTole toleTole) { }
-        public override void DaniarConProyectil(Bombas.Proyectil proyectil) { }
+        public override void UtilizarArticuloEn(Bombita bombita) { }
+
     }
 }

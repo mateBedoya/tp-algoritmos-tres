@@ -15,7 +15,7 @@ namespace TP2_Bomberman.src
             this.rango = 3;
         }
 
-        public override void Explotar()
+        public override void Explotar(double porcentajeRetardo = 1)
         {
             // Aca tendria que ir recorriendo y agarrando los elementos de cada casillero e ir daniandolos llamando a 
             // Dañar(elementoDelCasillero)

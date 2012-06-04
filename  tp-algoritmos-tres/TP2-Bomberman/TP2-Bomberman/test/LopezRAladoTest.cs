@@ -6,32 +6,33 @@ using NUnit.Framework;
 using TP2_Bomberman.src;
 using TP2_Bomberman.src.Bombas;
 using TP2_Bomberman.src.Excepciones;
+using TP2_Bomberman.src.Personajes;
 
 namespace TP2_Bomberman.test
 {
     [TestFixture]
-    class LopezRTest
+    class LopezRAladoAladoTest
     {
         [Test]
-        public void crearLopezRTiene10Resistencia()
+        public void crearLopezRAladoTiene5DeResistencia()
         {
-            LopezR lopezR = new LopezR();
-            Assert.AreEqual(lopezR.Resistencia, 10);
+            LopezRAlado lopez = new LopezRAlado();
+            Assert.AreEqual(lopez.Resistencia, 5);
         }
 
 
         [Test]
-        public void CuandoCreoALopezRQueTenga5DeVelocidad() //vemos despues que significa tener "5" de velocidad
+        public void CuandoCreoALopezRAladoQueTenga5DeVelocidad() //vemos despues que significa tener "5" de velocidad
         {
-            LopezR lopez = new LopezR();
+            LopezRAlado lopez = new LopezRAlado();
 
             Assert.AreEqual(5, lopez.Velocidad);
         }
 
         [Test]
-        public void CuandoSeMueveLopezRALaDerechaCambiaSuPosicionEnElTablero()
+        public void CuandoSeMueveLopezRAladoALaDerechaCambiaSuPosicionEnElTablero()
         {
-            LopezR lopez = new LopezR(new Casillero(0, 0));
+            LopezRAlado lopez = new LopezRAlado(new Casillero(0, 0));
 
             lopez.MoverDerecha();
 
@@ -40,9 +41,9 @@ namespace TP2_Bomberman.test
         }
 
         [Test]
-        public void CuandoSeMueveLopezRALaIzquierdaCambiaSuPosicionEnElTablero()
+        public void CuandoSeMueveLopezRAladoALaIzquierdaCambiaSuPosicionEnElTablero()
         {
-            LopezR lopez = new LopezR(new Casillero(0, 0));
+            LopezRAlado lopez = new LopezRAlado(new Casillero(0, 0));
 
             lopez.MoverDerecha();
             lopez.MoverIzquierda();
@@ -52,9 +53,9 @@ namespace TP2_Bomberman.test
         }
 
         [Test]
-        public void CuandoSeMueveLopezRAbajoCambiaSuPosicionEnElTablero()
+        public void CuandoSeMueveLopezRAladoAbajoCambiaSuPosicionEnElTablero()
         {
-            LopezR lopez = new LopezR(new Casillero(0, 0));
+            LopezRAlado lopez = new LopezRAlado(new Casillero(0, 0));
 
             lopez.MoverAbajo();
 
@@ -63,9 +64,9 @@ namespace TP2_Bomberman.test
         }
 
         [Test]
-        public void CuandoSeMueveLopezRArribaCambiaSuPosicionEnElTablero()
+        public void CuandoSeMueveLopezRAladoArribaCambiaSuPosicionEnElTablero()
         {
-            LopezR lopez = new LopezR(new Casillero(0, 0));
+            LopezRAlado lopez = new LopezRAlado(new Casillero(0, 0));
 
             lopez.MoverAbajo();
             lopez.MoverAbajo();
@@ -76,9 +77,9 @@ namespace TP2_Bomberman.test
         }
 
         [Test]
-        public void IntentarMoverseAUnaPosicionInvalidaDejaALopezREnElLugarQueEstaba()
+        public void IntentarMoverseAUnaPosicionInvalidaDejaALopezRAladoEnElLugarQueEstaba()
         {
-            LopezR lopez = new LopezR(new Casillero(0, 0));
+            LopezRAlado lopez = new LopezRAlado(new Casillero(0, 0));
 
             lopez.MoverArriba();
 
@@ -87,21 +88,21 @@ namespace TP2_Bomberman.test
         }
 
         [Test]
-        public void QueLopezRSeaDañandoPorUnaMolotovLeQuiteUnaVida()
+        public void QueLopezRAladoSeaDañandoPorUnaMolotovLeQuiteUnaVida()
         {
-            LopezR lopez = new LopezR();
+            LopezRAlado lopez = new LopezRAlado();
 
             Molotov molotov = new Molotov();
 
             lopez.DaniarConMolotov(molotov);
 
-            Assert.AreEqual(5,lopez.Resistencia);
+            Assert.IsTrue(lopez.FueDestruido());
         }
 
         [Test]
-        public void QueLopezRSeaDañandoPorUnaToleToleLeQuiteUnaVida()
+        public void QueLopezRAladoSeaDañandoPorUnaToleToleLeQuiteUnaVida()
         {
-            LopezR lopez = new LopezR();
+            LopezRAlado lopez = new LopezRAlado();
 
             ToleTole toleTole = new ToleTole();
 
@@ -111,21 +112,21 @@ namespace TP2_Bomberman.test
         }
 
         [Test]
-        public void QueLopezRSeaDañandoPorUnProyectilLeQuiteUnaVida()
+        public void QueLopezRAladoSeaDañandoPorUnProyectilLeQuiteUnaVida()
         {
-            LopezR lopez = new LopezR();
+            LopezRAlado lopez = new LopezRAlado();
 
             Proyectil proyectil = new Proyectil();
 
             lopez.DaniarConProyectil(proyectil);
 
-            Assert.AreEqual(5,lopez.Resistencia);
+            Assert.IsTrue(lopez.FueDestruido());
         }
 
         [Test]
-        public void TratarDeSeguirDaniandoALopezRDestruidoLanceUnaExcepcion()
+        public void TratarDeSeguirDaniandoALopezRAladoDestruidoLanceUnaExcepcion()
         {
-            LopezR lopez = new LopezR();
+            LopezRAlado lopez = new LopezRAlado();
             ToleTole toleTole = new ToleTole();
             lopez.DaniarConToleTole(toleTole); //Ya lo destruyo
 

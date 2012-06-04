@@ -27,7 +27,7 @@ namespace TP2_Bomberman.src.Bombas
 
         //sin implementacion
         public override void Daniar(Interfaces.IDaniable daniable) { }
-        public override void Explotar() { }
+        public override void Explotar(double porcentajeRetardo = 1) { }
 
     }
 }

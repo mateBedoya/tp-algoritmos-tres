@@ -13,7 +13,14 @@ namespace TP2_Bomberman.src
         protected int retardo;
         protected int rango;
 
-        public abstract void Explotar();
+
+        // porcentajeRetardo es por si bombita agarra el articulo 
+        // Timer y se le pasa el porcentaje respecto del retardo original
+        // que debe esperar la bomba para explotar. De no pasarse, vale
+        // 1 (100%)
+        public abstract void Explotar(double porcentajeRetardo = 1);
+        
+        
         public abstract void Daniar(IDaniable daniable);
 
 
