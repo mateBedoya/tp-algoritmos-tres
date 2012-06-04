@@ -6,6 +6,7 @@ using NUnit.Framework;
 using TP2_Bomberman.src;
 using TP2_Bomberman.src.Bombas;
 using TP2_Bomberman.src.Excepciones;
+using TP2_Bomberman.src.Articulos;
 
 
 
@@ -21,6 +22,14 @@ namespace TP2_Bomberman.test
             Bombita bombita = new Bombita();
 
             Assert.AreEqual(bombita.Resistencia, 1);
+        }
+
+        [Test]
+        public void CuandoCreoABombitaQueTenga3Vidas()
+        {
+            Bombita bombita = new Bombita();
+
+            Assert.AreEqual(bombita.Vidas, 3);
         }
 
         [Test]
@@ -152,6 +161,42 @@ namespace TP2_Bomberman.test
             }
 
             Assert.Throws<EntidadYaDestruidaException>(() => bombita.DaniarConToleTole(toleTole));
+        }
+
+        [Test]
+        public void QueBombitaAgarreUnHabanoYQueModifiqueSuVelocidad()
+        {
+            Bombita bombita = new Bombita();
+            Habano articulo = new Habano();
+            int velocidadInicial = bombita.Velocidad;
+
+            bombita.AgarrarArticulo(articulo);
+
+            Assert.Greater(bombita.Velocidad, velocidadInicial);
+        }
+
+        [Test]
+        public void QueBombitaAgarreUnBombaToleToleYQueModifiqueSuTipoDeBombaALanzar()
+        {
+            Bombita bombita = new Bombita();
+            BombaToleTole articulo = new BombaToleTole();
+            int destruccionInicial = bombita.Bomba.Destruccion;
+
+            bombita.AgarrarArticulo(articulo);
+
+            Assert.Greater(bombita.Bomba.Destruccion, destruccionInicial);
+        }
+
+        [Test]
+        public void QueBombitaAgarreUnTimerYQueModifiqueElRetardoConQueVaALanzarSusBombas()
+        {
+            Bombita bombita = new Bombita();
+            Timer articulo = new Timer();
+            double porcentajeInicial = bombita.PorcentajeDeRetardo;
+
+            bombita.AgarrarArticulo(articulo);
+
+            Assert.Greater(bombita.Bomba.Destruccion, porcentajeInicial);
         }
     }
 }

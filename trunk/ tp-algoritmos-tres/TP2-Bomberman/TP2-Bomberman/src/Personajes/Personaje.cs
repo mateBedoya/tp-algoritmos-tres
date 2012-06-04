@@ -12,6 +12,7 @@ namespace TP2_Bomberman.src
     {
         protected int resistencia;
         protected int velocidad;
+        protected Bomba bomba;
 
         public Personaje()
         {
@@ -95,6 +96,13 @@ namespace TP2_Bomberman.src
         public int Velocidad
         {
             get { return this.velocidad; }
+            set { this.velocidad = value; }
+        }
+
+        public Bomba Bomba
+        {
+            get { return this.bomba;}
+            set { this.bomba = value; }
         }
 
     }

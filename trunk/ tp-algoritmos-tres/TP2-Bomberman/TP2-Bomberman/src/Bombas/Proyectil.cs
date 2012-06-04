@@ -16,7 +16,7 @@ namespace TP2_Bomberman.src.Bombas
             this.rango = 3;
         }
 
-        public override void Explotar()
+        public override void Explotar(double porcentajeRetardo = 1)
         {
             // Aca tendria que ir MOVIENDOSE Y CUANDO LLEGUE A LA DISTANCIA HACER 
             // Dañar(elementoDelCasillero)

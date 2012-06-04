@@ -46,6 +46,9 @@
   <ItemGroup>
     <Compile Include="src\Articulos\Articulo.cs" />
     <Compile Include="src\Articulos\ArticuloNull.cs" />
+    <Compile Include="src\Articulos\BombaToleTole.cs" />
+    <Compile Include="src\Articulos\Habano.cs" />
+    <Compile Include="src\Articulos\Timer.cs" />
     <Compile Include="src\Bombas\Bomba.cs" />
     <Compile Include="src\Bombas\BombaNull.cs" />
     <Compile Include="src\Bombas\Proyectil.cs" />
@@ -70,18 +73,23 @@
     <Compile Include="src\Personajes\LopezR.cs" />
     <Compile Include="src\Interfaces\IMovible.cs" />
     <Compile Include="src\Bombas\Molotov.cs" />
+    <Compile Include="src\Personajes\LopezRAlado.cs" />
     <Compile Include="src\Personajes\Personaje.cs" />
     <Compile Include="src\Elementales\Tablero.cs" />
     <Compile Include="src\Personajes\PersonajeNull.cs" />
     <Compile Include="test\BloqueDeAceroTest.cs" />
     <Compile Include="test\BloqueDeCementoTest.cs" />
     <Compile Include="test\BombaTest.cs" />
+    <Compile Include="test\BombaToleToleTest.cs" />
     <Compile Include="test\BombitaTest.cs" />
     <Compile Include="test\CasilleroTest.cs" />
     <Compile Include="test\CecilioTest.cs" />
+    <Compile Include="test\HabanoTest.cs" />
+    <Compile Include="test\LopezRAladoTest.cs" />
     <Compile Include="test\LopezRTest.cs" />
     <Compile Include="test\BloqueDeLadrillosTest.cs" />
     <Compile Include="test\TableroTest.cs" />
+    <Compile Include="test\TimerTest.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

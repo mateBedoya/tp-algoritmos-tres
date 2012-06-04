@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using NUnit.Framework;
 using TP2_Bomberman.src;
+using TP2_Bomberman.src.Obstaculos;
+using TP2_Bomberman.src.Articulos;
 
 namespace TP2_Bomberman.test
 {
@@ -30,6 +32,42 @@ namespace TP2_Bomberman.test
             casillero.Personaje = personaje;
 
             Assert.IsNotNull(casillero.Personaje);
+        }
+
+        [Test]
+        public void PruebaPosicionarUnaBombaEnLaCasilla()
+        {
+            Casillero casillero = new Casillero(0, 0);
+
+            Molotov bomba = new Molotov();
+
+            casillero.Bomba = bomba;
+
+            Assert.IsNotNull(casillero.Bomba);
+        }
+
+        [Test]
+        public void PruebaPosicionarUnObstaculoEnLaCasilla()
+        {
+            Casillero casillero = new Casillero(0, 0);
+
+            Obstaculo bloque = new BloqueDeAcero();
+
+            casillero.Obstaculo = bloque;
+
+            Assert.IsNotNull(casillero.Obstaculo);
+        }
+
+        [Test]
+        public void PruebaPosicionarUnArticuloEnLaCasilla()
+        {
+            Casillero casillero = new Casillero(0, 0);
+
+            Articulo articulo = new Habano();
+
+            casillero.Articulo = articulo;
+
+            Assert.IsNotNull(casillero.Articulo);
         }
 
         [Test]

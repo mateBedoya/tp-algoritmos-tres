@@ -7,10 +7,11 @@ using TP2_Bomberman.src.Excepciones;
 
 namespace TP2_Bomberman.src
 {
-    public class Enemigo : Personaje
+    public abstract class Enemigo : Personaje
     {
         public Enemigo()
             : base() { }
+
         //A todos los enemigos se les baja la resistencia dependiendo de la bomba
         public override void DaniarConMolotov(Molotov molotov)
         {
@@ -35,5 +36,9 @@ namespace TP2_Bomberman.src
             if(this.resistencia <= 0) return true;
             return false;
         }
+
+
+        public abstract void LanzarBomba();
+
     }
 }
