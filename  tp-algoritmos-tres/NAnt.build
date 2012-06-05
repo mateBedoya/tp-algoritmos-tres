@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<project name="project build" default="test" basedir=".">
+<project name="project build" default="correr_pruebas" basedir=".">
 	<description>Project -- NAnt Build</description>
 	<property name="debug" value="true" />
 	<property name="build.dir" value="bin" />
@@ -56,7 +56,7 @@
 
 	<target name="test" description="builds all and runs unit tests" depends="build-tests">
 		<exec workingdir="References"
-			program="nunit-console.exe">
+		program="nunit-console.exe">
 			<arg value="Project1.Tests.dll" />
 			<arg value="/xml=Project1.Tests-results.xml" />
 		</exec>
@@ -78,6 +78,13 @@
 			program="ncoverexplorer.exe">
 			<arg value="Project1.Tests-coverage.xml" />
 		</exec>
+	</target>
+
+	<target name="correr_pruebas" description="builds all and runs unit tests" depends="build-tests">
+		<nunit2>
+    			<formatter type="Plain" />
+    			<test assemblyname="${build.dir}\Project1.Tests.dll" />
+		</nunit2>
 	</target>
 
 </project>
