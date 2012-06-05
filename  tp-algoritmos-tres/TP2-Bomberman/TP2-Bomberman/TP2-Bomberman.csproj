@@ -85,6 +85,7 @@
     <Compile Include="test\CasilleroTest.cs" />
     <Compile Include="test\CecilioTest.cs" />
     <Compile Include="test\HabanoTest.cs" />
+    <Compile Include="test\IntegracionTest.cs" />
     <Compile Include="test\LopezRAladoTest.cs" />
     <Compile Include="test\LopezRTest.cs" />
     <Compile Include="test\BloqueDeLadrillosTest.cs" />
