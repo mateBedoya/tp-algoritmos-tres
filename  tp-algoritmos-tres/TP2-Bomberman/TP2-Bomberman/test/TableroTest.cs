@@ -5,6 +5,7 @@ using System.Text;
 using NUnit.Framework;
 using TP2_Bomberman.src;
 using System.Collections;
+using TP2_Bomberman.src.Obstaculos;
 
 namespace TP2_Bomberman.test
 {
@@ -89,6 +90,17 @@ namespace TP2_Bomberman.test
             ArrayList listaDeAdyacentes;
 
             Assert.Throws<CasilleroFueraDeRangoException>(() => listaDeAdyacentes = tablero.ObtenerAdyacentes(-5, 8));
+        }
+
+        [Test]
+        public void PruebaTableroInicializadoConBloquesDeAcero()
+        {
+            Tablero tablero = new Tablero();
+            Assert.IsInstanceOf<BloqueDeAcero>(tablero.ObtenerCasillero(1, 1).Obstaculo);
+            Assert.IsInstanceOf<BloqueDeAcero>(tablero.ObtenerCasillero(29, 29).Obstaculo);
+            Assert.IsInstanceOf<BloqueDeAcero>(tablero.ObtenerCasillero(15, 1).Obstaculo);
+            Assert.IsNotInstanceOf<BloqueDeAcero>(tablero.ObtenerCasillero(0, 0).Obstaculo);
+            Assert.IsNotInstanceOf<BloqueDeAcero>(tablero.ObtenerCasillero(2, 24).Obstaculo);
         }
     }
 }
