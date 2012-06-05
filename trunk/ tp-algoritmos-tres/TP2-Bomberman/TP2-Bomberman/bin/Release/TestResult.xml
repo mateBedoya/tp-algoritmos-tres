@@ -1,19 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Javi\UBA\FIUBA\Algoritmos y Programación III\TP2\ tp-algoritmos-tres\TP2-Bomberman\TP2-Bomberman\bin\Release\TP2-Bomberman.dll" total="110" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2012-06-04" time="23:25:04">
+<test-results name="C:\Javi\UBA\FIUBA\Algoritmos y Programación III\TP2\ tp-algoritmos-tres\TP2-Bomberman\TP2-Bomberman\bin\Release\TP2-Bomberman.dll" total="112" errors="0" failures="1" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2012-06-05" time="02:13:47">
   <environment nunit-version="2.6.0.12051" clr-version="2.0.50727.3082" os-version="Microsoft Windows NT 5.1.2600 Service Pack 3" platform="Win32NT" cwd="C:\Javi\UBA\FIUBA\Algoritmos y Programación III\TP2\ tp-algoritmos-tres\TP2-Bomberman\TP2-Bomberman\bin\Release" machine-name="HOME" user="Administrador" user-domain="HOME" />
   <culture-info current-culture="es-AR" current-uiculture="es-ES" />
-  <test-suite type="Assembly" name="C:\Javi\UBA\FIUBA\Algoritmos y Programación III\TP2\ tp-algoritmos-tres\TP2-Bomberman\TP2-Bomberman\bin\Release\TP2-Bomberman.dll" executed="True" result="Success" success="True" time="0.438" asserts="0">
+  <test-suite type="Assembly" name="C:\Javi\UBA\FIUBA\Algoritmos y Programación III\TP2\ tp-algoritmos-tres\TP2-Bomberman\TP2-Bomberman\bin\Release\TP2-Bomberman.dll" executed="True" result="Failure" success="False" time="1.469" asserts="0">
     <results>
-      <test-suite type="Namespace" name="TP2_Bomberman" executed="True" result="Success" success="True" time="0.438" asserts="0">
+      <test-suite type="Namespace" name="TP2_Bomberman" executed="True" result="Failure" success="False" time="1.453" asserts="0">
         <results>
-          <test-suite type="Namespace" name="test" executed="True" result="Success" success="True" time="0.438" asserts="0">
+          <test-suite type="Namespace" name="test" executed="True" result="Failure" success="False" time="1.453" asserts="0">
             <results>
-              <test-suite type="TestFixture" name="BloqueDeAceroTest" executed="True" result="Success" success="True" time="0.016" asserts="0">
+              <test-suite type="TestFixture" name="BloqueDeAceroTest" executed="True" result="Success" success="True" time="0.125" asserts="0">
                 <results>
-                  <test-case name="TP2_Bomberman.test.BloqueDeAceroTest.PruebaLaCreacionDeUnBloqueDeAcero" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="TP2_Bomberman.test.BloqueDeAceroTest.PruebaLaCreacionDeUnBloqueDeAcero" executed="True" result="Success" success="True" time="0.031" asserts="1" />
                   <test-case name="TP2_Bomberman.test.BloqueDeAceroTest.PruebaQuePosicionarAlBloqueEnUnaPosicionInvalidaLanceUnaExcepcion" executed="True" result="Success" success="True" time="0.000" asserts="1" />
-                  <test-case name="TP2_Bomberman.test.BloqueDeAceroTest.PruebaQueSePosicioneCorrectamenteEnUnTablero" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                  <test-case name="TP2_Bomberman.test.BloqueDeAceroTest.PruebaQueSePosicioneCorrectamenteEnUnTablero" executed="True" result="Success" success="True" time="0.016" asserts="2" />
                   <test-case name="TP2_Bomberman.test.BloqueDeAceroTest.QueElBloqueNoSeaDañandoPorUnaMolotov" executed="True" result="Success" success="True" time="0.000" asserts="2" />
                   <test-case name="TP2_Bomberman.test.BloqueDeAceroTest.QueElBloqueNoSeaDañandoPorUnProyectil" executed="True" result="Success" success="True" time="0.000" asserts="2" />
                   <test-case name="TP2_Bomberman.test.BloqueDeAceroTest.QueElBloqueSeaDañandoPorUnaToleToleYSeaDestruido" executed="True" result="Success" success="True" time="0.000" asserts="2" />
@@ -32,7 +32,7 @@
                   <test-case name="TP2_Bomberman.test.BloqueDeCementoTest.TratarDeSeguirDaniandoAUnBloqueDestruidoLanceUnaExcepcion" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                 </results>
               </test-suite>
-              <test-suite type="TestFixture" name="BloqueDeLadrillosTest" executed="True" result="Success" success="True" time="0.016" asserts="0">
+              <test-suite type="TestFixture" name="BloqueDeLadrillosTest" executed="True" result="Success" success="True" time="0.031" asserts="0">
                 <results>
                   <test-case name="TP2_Bomberman.test.BloqueDeLadrillosTest.PruebaLaCreacionDeUnBloqueDeLadrillos" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                   <test-case name="TP2_Bomberman.test.BloqueDeLadrillosTest.PruebaQueLaResistenciaDeUnBloqueDeLadrillosSea5" executed="True" result="Success" success="True" time="0.000" asserts="1" />
@@ -41,7 +41,7 @@
                   <test-case name="TP2_Bomberman.test.BloqueDeLadrillosTest.QueElBloqueSeaDañandoPorUnaMolotovYSeaDestruido" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                   <test-case name="TP2_Bomberman.test.BloqueDeLadrillosTest.QueElBloqueSeaDañandoPorUnaToleToleYSeaDestruido" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                   <test-case name="TP2_Bomberman.test.BloqueDeLadrillosTest.QueElBloqueSeaDañandoPorUnProyectilYSeaDestruido" executed="True" result="Success" success="True" time="0.000" asserts="1" />
-                  <test-case name="TP2_Bomberman.test.BloqueDeLadrillosTest.TratarDeSeguirDaniandoAUnBloqueDestruidoLanceUnaExcepcion" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="TP2_Bomberman.test.BloqueDeLadrillosTest.TratarDeSeguirDaniandoAUnBloqueDestruidoLanceUnaExcepcion" executed="True" result="Success" success="True" time="0.016" asserts="1" />
                 </results>
               </test-suite>
               <test-suite type="TestFixture" name="BombaTest" executed="True" result="Success" success="True" time="0.000" asserts="0">
@@ -50,51 +50,51 @@
                   <test-case name="TP2_Bomberman.test.BombaTest.PruebaLaCreacionDeUnaMolotov" executed="True" result="Success" success="True" time="0.000" asserts="3" />
                 </results>
               </test-suite>
-              <test-suite type="TestFixture" name="BombaToleToleTest" executed="True" result="Success" success="True" time="0.016" asserts="0">
+              <test-suite type="TestFixture" name="BombaToleToleTest" executed="True" result="Success" success="True" time="0.031" asserts="0">
                 <results>
                   <test-case name="TP2_Bomberman.test.BombaToleToleTest.CuandoSeTrateDeDaniarUnBombaToleToleYaDestruidoLanceUnaExcepcion" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                   <test-case name="TP2_Bomberman.test.BombaToleToleTest.CuandoUnBombitaUtiliceUnBombaToleToleSusBombasSeanDelTipoToleTole" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                   <test-case name="TP2_Bomberman.test.BombaToleToleTest.PruebaLaCreacionDeUnBombaToleTole" executed="True" result="Success" success="True" time="0.000" asserts="2" />
                   <test-case name="TP2_Bomberman.test.BombaToleToleTest.PruebaLaCreacionDeUnBombaToleToleEnUnaPosicionDeterminada" executed="True" result="Success" success="True" time="0.000" asserts="4" />
                   <test-case name="TP2_Bomberman.test.BombaToleToleTest.PruebaQueDaniarUnBombaToleToleConUnaMolotovLoDestruya" executed="True" result="Success" success="True" time="0.000" asserts="1" />
-                  <test-case name="TP2_Bomberman.test.BombaToleToleTest.PruebaQueDaniarUnBombaToleToleConUnaToleToleLoDestruya" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="TP2_Bomberman.test.BombaToleToleTest.PruebaQueDaniarUnBombaToleToleConUnaToleToleLoDestruya" executed="True" result="Success" success="True" time="0.016" asserts="1" />
                   <test-case name="TP2_Bomberman.test.BombaToleToleTest.PruebaQueDaniarUnBombaToleToleConUnProyectilLoDestruya" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                 </results>
               </test-suite>
-              <test-suite type="TestFixture" name="BombitaTest" executed="True" result="Success" success="True" time="0.078" asserts="0">
+              <test-suite type="TestFixture" name="BombitaTest" executed="True" result="Success" success="True" time="0.094" asserts="0">
                 <results>
                   <test-case name="TP2_Bomberman.test.BombitaTest.CuandoCreoABombitaQueTenga1DeResistencia" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                   <test-case name="TP2_Bomberman.test.BombitaTest.CuandoCreoABombitaQueTenga3Vidas" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                   <test-case name="TP2_Bomberman.test.BombitaTest.CuandoCreoABombitaQueTenga5DeVelocidad" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                   <test-case name="TP2_Bomberman.test.BombitaTest.CuandoSeMueveBombitaAbajoCambiaSuPosicionEnElTablero" executed="True" result="Success" success="True" time="0.000" asserts="2" />
                   <test-case name="TP2_Bomberman.test.BombitaTest.CuandoSeMueveBombitaALaDerechaCambiaSuPosicionEnElTablero" executed="True" result="Success" success="True" time="0.000" asserts="2" />
-                  <test-case name="TP2_Bomberman.test.BombitaTest.CuandoSeMueveBombitaALaIzquierdaCambiaSuPosicionEnElTablero" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                  <test-case name="TP2_Bomberman.test.BombitaTest.CuandoSeMueveBombitaALaIzquierdaCambiaSuPosicionEnElTablero" executed="True" result="Success" success="True" time="0.016" asserts="2" />
                   <test-case name="TP2_Bomberman.test.BombitaTest.CuandoSeMueveBombitaArribaCambiaSuPosicionEnElTablero" executed="True" result="Success" success="True" time="0.000" asserts="2" />
                   <test-case name="TP2_Bomberman.test.BombitaTest.IntentarMoverseAUnaPosicionInvalidaDejaABombitaEnElLugarQueEstaba" executed="True" result="Success" success="True" time="0.000" asserts="2" />
                   <test-case name="TP2_Bomberman.test.BombitaTest.QueABombitaNoLeQuedenMasVidasYQueEsteDestruido" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                   <test-case name="TP2_Bomberman.test.BombitaTest.QueBombitaAgarreUnBombaToleToleYQueModifiqueSuTipoDeBombaALanzar" executed="True" result="Success" success="True" time="0.000" asserts="1" />
-                  <test-case name="TP2_Bomberman.test.BombitaTest.QueBombitaAgarreUnHabanoYQueModifiqueSuVelocidad" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="TP2_Bomberman.test.BombitaTest.QueBombitaAgarreUnHabanoYQueModifiqueSuVelocidad" executed="True" result="Success" success="True" time="0.016" asserts="1" />
                   <test-case name="TP2_Bomberman.test.BombitaTest.QueBombitaAgarreUnTimerYQueModifiqueElRetardoConQueVaALanzarSusBombas" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                   <test-case name="TP2_Bomberman.test.BombitaTest.QueBombitaSeaDañandoPorUnaMolotovLeQuiteUnaVida" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                   <test-case name="TP2_Bomberman.test.BombitaTest.QueBombitaSeaDañandoPorUnaToleToleLeQuiteUnaVida" executed="True" result="Success" success="True" time="0.000" asserts="1" />
-                  <test-case name="TP2_Bomberman.test.BombitaTest.QueBombitaSeaDañandoPorUnProyectilLeQuiteUnaVida" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="TP2_Bomberman.test.BombitaTest.QueBombitaSeaDañandoPorUnProyectilLeQuiteUnaVida" executed="True" result="Success" success="True" time="0.016" asserts="1" />
                   <test-case name="TP2_Bomberman.test.BombitaTest.TratarDeSeguirDaniandoAUnBombitaDestruidoLanceUnaExcepcion" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                 </results>
               </test-suite>
-              <test-suite type="TestFixture" name="CasilleroTest" executed="True" result="Success" success="True" time="0.031" asserts="0">
+              <test-suite type="TestFixture" name="CasilleroTest" executed="True" result="Success" success="True" time="0.063" asserts="0">
                 <results>
                   <test-case name="TP2_Bomberman.test.CasilleroTest.PruebaLaCreacionDeUnCasillero" executed="True" result="Success" success="True" time="0.000" asserts="2" />
                   <test-case name="TP2_Bomberman.test.CasilleroTest.PruebaObtenerLaCasillaPosicionadaAbajo" executed="True" result="Success" success="True" time="0.000" asserts="2" />
                   <test-case name="TP2_Bomberman.test.CasilleroTest.PruebaObtenerLaCasillaPosicionadaALaDerecha" executed="True" result="Success" success="True" time="0.000" asserts="2" />
                   <test-case name="TP2_Bomberman.test.CasilleroTest.PruebaObtenerLaCasillaPosicionadaALaIzquierda" executed="True" result="Success" success="True" time="0.000" asserts="2" />
-                  <test-case name="TP2_Bomberman.test.CasilleroTest.PruebaObtenerLaCasillaPosicionadaArriba" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                  <test-case name="TP2_Bomberman.test.CasilleroTest.PruebaObtenerLaCasillaPosicionadaArriba" executed="True" result="Success" success="True" time="0.016" asserts="2" />
                   <test-case name="TP2_Bomberman.test.CasilleroTest.PruebaPosicionarUnaBombaEnLaCasilla" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                   <test-case name="TP2_Bomberman.test.CasilleroTest.PruebaPosicionarUnArticuloEnLaCasilla" executed="True" result="Success" success="True" time="0.000" asserts="1" />
-                  <test-case name="TP2_Bomberman.test.CasilleroTest.PruebaPosicionarUnObstaculoEnLaCasilla" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="TP2_Bomberman.test.CasilleroTest.PruebaPosicionarUnObstaculoEnLaCasilla" executed="True" result="Success" success="True" time="0.016" asserts="1" />
                   <test-case name="TP2_Bomberman.test.CasilleroTest.PruebaPosicionarUnPersonajeEnLaCasilla" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                 </results>
               </test-suite>
-              <test-suite type="TestFixture" name="CecilioTest" executed="True" result="Success" success="True" time="0.031" asserts="0">
+              <test-suite type="TestFixture" name="CecilioTest" executed="True" result="Success" success="True" time="0.063" asserts="0">
                 <results>
                   <test-case name="TP2_Bomberman.test.CecilioTest.CrearCecilioTiene5Vida" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                   <test-case name="TP2_Bomberman.test.CecilioTest.CuandoCreoACecilioQueTenga5DeVelocidad" executed="True" result="Success" success="True" time="0.000" asserts="1" />
@@ -105,14 +105,14 @@
                   <test-case name="TP2_Bomberman.test.CecilioTest.IntentarMoverseAUnaPosicionInvalidaDejaACecilioEnElLugarQueEstaba" executed="True" result="Success" success="True" time="0.000" asserts="2" />
                   <test-case name="TP2_Bomberman.test.CecilioTest.QueCecilioSeaDañandoPorUnaMolotovLeQuiteUnaVida" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                   <test-case name="TP2_Bomberman.test.CecilioTest.QueCecilioSeaDañandoPorUnaToleToleLeQuiteUnaVida" executed="True" result="Success" success="True" time="0.000" asserts="1" />
-                  <test-case name="TP2_Bomberman.test.CecilioTest.QueCecilioSeaDañandoPorUnProyectilLeQuiteUnaVida" executed="True" result="Success" success="True" time="0.016" asserts="1" />
+                  <test-case name="TP2_Bomberman.test.CecilioTest.QueCecilioSeaDañandoPorUnProyectilLeQuiteUnaVida" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                   <test-case name="TP2_Bomberman.test.CecilioTest.TratarDeSeguirDaniandoACecilioDestruidoLanceUnaExcepcion" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                 </results>
               </test-suite>
-              <test-suite type="TestFixture" name="HabanoTest" executed="True" result="Success" success="True" time="0.031" asserts="0">
+              <test-suite type="TestFixture" name="HabanoTest" executed="True" result="Success" success="True" time="0.047" asserts="0">
                 <results>
                   <test-case name="TP2_Bomberman.test.HabanoTest.CuandoSeTrateDeDaniarUnHabanoYaDestruidoLanceUnaExcepcion" executed="True" result="Success" success="True" time="0.000" asserts="1" />
-                  <test-case name="TP2_Bomberman.test.HabanoTest.CuandoUnBombitaUtiliceUnHabanoAumenteSuVelocidad" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="TP2_Bomberman.test.HabanoTest.CuandoUnBombitaUtiliceUnHabanoAumenteSuVelocidad" executed="True" result="Success" success="True" time="0.016" asserts="1" />
                   <test-case name="TP2_Bomberman.test.HabanoTest.PruebaLaCreacionDeUnHabano" executed="True" result="Success" success="True" time="0.000" asserts="2" />
                   <test-case name="TP2_Bomberman.test.HabanoTest.PruebaLaCreacionDeUnHabanoEnUnaPosicionDeterminada" executed="True" result="Success" success="True" time="0.000" asserts="4" />
                   <test-case name="TP2_Bomberman.test.HabanoTest.PruebaQueDaniarUnHabanoConUnaMolotovLoDestruya" executed="True" result="Success" success="True" time="0.000" asserts="1" />
@@ -120,22 +120,36 @@
                   <test-case name="TP2_Bomberman.test.HabanoTest.PruebaQueDaniarUnHabanoConUnProyectilLoDestruya" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                 </results>
               </test-suite>
-              <test-suite type="TestFixture" name="LopezRAladoAladoTest" executed="True" result="Success" success="True" time="0.031" asserts="0">
+              <test-suite type="TestFixture" name="IntegracionTest" executed="True" result="Failure" success="False" time="0.094" asserts="0">
+                <results>
+                  <test-case name="TP2_Bomberman.test.IntegracionTest.CreaUnTableroConUnBombitaYUnCecilioYLosMueve" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                  <test-case name="TP2_Bomberman.test.IntegracionTest.CreaUnTableroConUnBombitaYUnCecilioYLosMueveHastaChocarse" executed="True" result="Failure" success="False" time="0.094" asserts="1">
+                    <failure>
+                      <message><![CDATA[  Expected: True
+  But was:  False
+]]></message>
+                      <stack-trace><![CDATA[at TP2_Bomberman.test.IntegracionTest.CreaUnTableroConUnBombitaYUnCecilioYLosMueveHastaChocarse() in C:\Javi\UBA\FIUBA\Algoritmos y Programación III\TP2\ tp-algoritmos-tres\TP2-Bomberman\TP2-Bomberman\test\IntegracionTest.cs:line 42
+]]></stack-trace>
+                    </failure>
+                  </test-case>
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="LopezRAladoAladoTest" executed="True" result="Success" success="True" time="0.047" asserts="0">
                 <results>
                   <test-case name="TP2_Bomberman.test.LopezRAladoAladoTest.crearLopezRAladoTiene5DeResistencia" executed="True" result="Success" success="True" time="0.000" asserts="1" />
-                  <test-case name="TP2_Bomberman.test.LopezRAladoAladoTest.CuandoCreoALopezRAladoQueTenga5DeVelocidad" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="TP2_Bomberman.test.LopezRAladoAladoTest.CuandoCreoALopezRAladoQueTenga5DeVelocidad" executed="True" result="Success" success="True" time="0.016" asserts="1" />
                   <test-case name="TP2_Bomberman.test.LopezRAladoAladoTest.CuandoSeMueveLopezRAladoAbajoCambiaSuPosicionEnElTablero" executed="True" result="Success" success="True" time="0.000" asserts="2" />
                   <test-case name="TP2_Bomberman.test.LopezRAladoAladoTest.CuandoSeMueveLopezRAladoALaDerechaCambiaSuPosicionEnElTablero" executed="True" result="Success" success="True" time="0.000" asserts="2" />
                   <test-case name="TP2_Bomberman.test.LopezRAladoAladoTest.CuandoSeMueveLopezRAladoALaIzquierdaCambiaSuPosicionEnElTablero" executed="True" result="Success" success="True" time="0.000" asserts="2" />
-                  <test-case name="TP2_Bomberman.test.LopezRAladoAladoTest.CuandoSeMueveLopezRAladoArribaCambiaSuPosicionEnElTablero" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                  <test-case name="TP2_Bomberman.test.LopezRAladoAladoTest.CuandoSeMueveLopezRAladoArribaCambiaSuPosicionEnElTablero" executed="True" result="Success" success="True" time="0.016" asserts="2" />
                   <test-case name="TP2_Bomberman.test.LopezRAladoAladoTest.IntentarMoverseAUnaPosicionInvalidaDejaALopezRAladoEnElLugarQueEstaba" executed="True" result="Success" success="True" time="0.000" asserts="2" />
                   <test-case name="TP2_Bomberman.test.LopezRAladoAladoTest.QueLopezRAladoSeaDañandoPorUnaMolotovLeQuiteUnaVida" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                   <test-case name="TP2_Bomberman.test.LopezRAladoAladoTest.QueLopezRAladoSeaDañandoPorUnaToleToleLeQuiteUnaVida" executed="True" result="Success" success="True" time="0.000" asserts="1" />
-                  <test-case name="TP2_Bomberman.test.LopezRAladoAladoTest.QueLopezRAladoSeaDañandoPorUnProyectilLeQuiteUnaVida" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="TP2_Bomberman.test.LopezRAladoAladoTest.QueLopezRAladoSeaDañandoPorUnProyectilLeQuiteUnaVida" executed="True" result="Success" success="True" time="0.016" asserts="1" />
                   <test-case name="TP2_Bomberman.test.LopezRAladoAladoTest.TratarDeSeguirDaniandoALopezRAladoDestruidoLanceUnaExcepcion" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                 </results>
               </test-suite>
-              <test-suite type="TestFixture" name="LopezRTest" executed="True" result="Success" success="True" time="0.031" asserts="0">
+              <test-suite type="TestFixture" name="LopezRTest" executed="True" result="Success" success="True" time="0.125" asserts="0">
                 <results>
                   <test-case name="TP2_Bomberman.test.LopezRTest.crearLopezRTiene10Resistencia" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                   <test-case name="TP2_Bomberman.test.LopezRTest.CuandoCreoALopezRQueTenga5DeVelocidad" executed="True" result="Success" success="True" time="0.000" asserts="1" />
@@ -154,7 +168,7 @@
                 <results>
                   <test-case name="TP2_Bomberman.test.TableroTest.PruebaCrearUnTableroConDimension1" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                   <test-case name="TP2_Bomberman.test.TableroTest.PruebaQueCuandoSeIntentaAccederAUnCasilleroFueraDeRangoLanceUnaExcepcion" executed="True" result="Success" success="True" time="0.000" asserts="1" />
-                  <test-case name="TP2_Bomberman.test.TableroTest.PruebaQueDevuelvaElCasilleroDeUnaPosicionDada" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                  <test-case name="TP2_Bomberman.test.TableroTest.PruebaQueDevuelvaElCasilleroDeUnaPosicionDada" executed="True" result="Success" success="True" time="0.016" asserts="2" />
                   <test-case name="TP2_Bomberman.test.TableroTest.PruebaQueDevuelvaLosAdyacentesDeUnCasillero" executed="True" result="Success" success="True" time="0.000" asserts="8" />
                   <test-case name="TP2_Bomberman.test.TableroTest.PruebaQueDevuelvaLosAdyacentesDeUnCasilleroQueEsteEnElBorde" executed="True" result="Success" success="True" time="0.000" asserts="4" />
                   <test-case name="TP2_Bomberman.test.TableroTest.PruebaQueLanceUnaExcepcionCuandoQuieraObtenerLosAdyacentesDeUnCasilleroFueraDeRango" executed="True" result="Success" success="True" time="0.000" asserts="1" />
