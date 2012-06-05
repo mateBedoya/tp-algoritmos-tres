@@ -16,11 +16,10 @@ namespace TP2_Bomberman.src
         }
 
         public LopezR(Casillero posicion)
-            :base()
+            :base(posicion)
         {
             this.resistencia = 10;
             this.bomba = new Proyectil();
-            this.posicion = posicion;
         }
 
         public override void LanzarBomba()

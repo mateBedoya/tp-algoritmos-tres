@@ -15,8 +15,15 @@ namespace TP2_Bomberman.src
         protected Bomba bomba;
 
         public Personaje()
+            :base()
         {
             this.velocidad = 5; // Único atributo compartido por todos los personajes.
+        }
+
+        public Personaje(Casillero posicion)
+            : base(posicion) 
+        {
+            posicion.Personaje = this;        
         }
 
         

@@ -10,6 +10,15 @@ namespace TP2_Bomberman.src.Bombas
     {
         //private int distancia; //BORRAR COMENTARIO: La distancia en casilleros que puede recorrer el proyectil (LO PUSE COMO COMENTARIO PARA NO TENER UN WARNING)
         public Proyectil()
+            :base()
+        {
+            this.destruccion = 5;//Esto era a determinar, lo dejo en 5 por ahora
+            this.retardo = 1;
+            this.rango = 3;
+        }
+
+        public Proyectil(Casillero posicion)
+            :base(posicion)
         {
             this.destruccion = 5;//Esto era a determinar, lo dejo en 5 por ahora
             this.retardo = 1;

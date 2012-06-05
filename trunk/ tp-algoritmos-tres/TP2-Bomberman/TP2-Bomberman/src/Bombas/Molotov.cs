@@ -9,7 +9,16 @@ namespace TP2_Bomberman.src
     public class Molotov: Bomba,IDependienteDelTiempo
     {
         public Molotov()
+            :base()
         { 
+            this.destruccion = 5;
+            this.retardo = 1;
+            this.rango = 3;
+        }
+
+        public Molotov(Casillero posicion)
+            : base(posicion)
+        {
             this.destruccion = 5;
             this.retardo = 1;
             this.rango = 3;

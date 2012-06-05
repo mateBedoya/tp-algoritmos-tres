@@ -16,7 +16,10 @@ namespace TP2_Bomberman.src.Articulos
             :base() { }
 
         public Articulo(Casillero posicion)
-            : base(posicion) { }
+            : base(posicion) 
+        {
+            posicion.Articulo = this;        
+        }
 
         public abstract void UtilizarArticuloEn(Bombita bombita);
 

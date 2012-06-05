@@ -15,11 +15,10 @@ namespace TP2_Bomberman.src.Personajes
         }
 
         public LopezRAlado(Casillero posicion)
-            :base()
+            :base(posicion)
         {
             this.resistencia = 5;
             this.bomba = new Molotov();
-            this.posicion = posicion;
         }
 
         public override void LanzarBomba()
