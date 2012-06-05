@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+
+<project name="project build" default="test" basedir=".">
+	<description>Project -- NAnt Build</description>
+	<property name="debug" value="true" />
+	<property name="build.dir" value="bin" />
+
+	<echo message="debug: ${debug}" />
+	<echo message="build.dir: ${build.dir}" />
+
+	<target name="init" description="sets up environment for build">
+		<mkdir dir="${build.dir}" />
+	</target>
+
+	<target name="clean" description="removes old files, copies new reference DLLs">
+		<delete dir="${build.dir}" failonerror="false" />
+		<delete>
+			<fileset basedir="${build.dir}">
+			<include name="*.*" />
+			</fileset>
+		</delete>
+		<copy todir="${build.dir}">
+			<!-- I keep shared DLLs in a directory called References -->
+			<fileset basedir="References">
+				<include name="*.dll" />
+				<include name="*.xml" />
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="build" description="build projects, excluding tests (default)" depends="clean,init">
+		<csc target="library" output="${build.dir}\Project1.dll" debug="${debug}">
+			<sources>
+				<include name="src/**/*.cs" />
+			</sources>
+			<references basedir="${build.dir}">
+				<include name="System.dll" />
+				<!-- add additional references here -->
+			</references>
+		</csc>
+	</target>
+
+	<target name="build-tests" description="build all test projects" depends="build">
+		<csc target="library" output="${build.dir}\Project1.Tests.dll" debug="true">
+		<sources>
+			<include name="test/*.cs" />
+		</sources>
+		<references basedir="${build.dir}">
+		<include name="System.dll" />
+		<include name="nunit.framework.dll" />
+		<include name="Project1.dll" />
+		<!-- add additional references here -->
+		</references>
+		</csc>
+	</target>
+
+	<target name="test" description="builds all and runs unit tests" depends="build-tests">
+		<exec workingdir="References"
+			program="nunit-console.exe">
+			<arg value="Project1.Tests.dll" />
+			<arg value="/xml=Project1.Tests-results.xml" />
+		</exec>
+	</target>
+
+	<target name="cover" description="builds all and runs unit tests using NCover" depends="build-tests">
+		<ncover program="NCover.Console.exe"
+			commandLineExe="nunit-console.exe"
+			workingDirectory="${build.dir}"
+			commandLineArgs="Project1.Tests.dll /xml=Project1.Tests-results.xml"
+			logFile="${build.dir}\Project1.Tests-coverage.log"
+			coverageFile="${build.dir}\Project1.Tests-coverage.xml"
+			assemblyList="Project1.dll"
+		/>
+	</target>
+
+	<target name="coverex" depends="cover">
+		<exec workingdir="${build.dir}"
+			program="ncoverexplorer.exe">
+			<arg value="Project1.Tests-coverage.xml" />
+		</exec>
+	</target>
+
+</project>
