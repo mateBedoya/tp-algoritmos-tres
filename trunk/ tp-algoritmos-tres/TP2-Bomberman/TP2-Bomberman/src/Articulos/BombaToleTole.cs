@@ -6,7 +6,7 @@ using TP2_Bomberman.src.Bombas;
 
 namespace TP2_Bomberman.src.Articulos
 {
-    class BombaToleTole: Articulo
+    public class BombaToleTole : Articulo
     {
         public BombaToleTole()
             :base() { }
