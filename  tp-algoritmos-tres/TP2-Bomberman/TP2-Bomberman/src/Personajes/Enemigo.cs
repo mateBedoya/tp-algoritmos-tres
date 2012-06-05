@@ -12,6 +12,9 @@ namespace TP2_Bomberman.src
         public Enemigo()
             : base() { }
 
+        public Enemigo(Casillero posicion)
+            : base(posicion) { }
+
         //A todos los enemigos se les baja la resistencia dependiendo de la bomba
         public override void DaniarConMolotov(Molotov molotov)
         {

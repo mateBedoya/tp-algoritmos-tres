@@ -9,7 +9,16 @@ namespace TP2_Bomberman.src.Bombas
     public class ToleTole: Bomba
     {
         public ToleTole()
+            :base()
         { 
+            this.destruccion = 10000;//Esto quiere decir que destruye todo
+            this.retardo = 5;
+            this.rango = 6;
+        }
+
+        public ToleTole(Casillero posicion)
+            : base(posicion)
+        {
             this.destruccion = 10000;//Esto quiere decir que destruye todo
             this.retardo = 5;
             this.rango = 6;

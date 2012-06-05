@@ -73,9 +73,7 @@ namespace TP2_Bomberman.test
         [Test]
         public void PruebaObtenerLaCasillaPosicionadaALaDerecha()
         {
-            Tablero tablero = new Tablero();
-
-            Casillero casilleroActual = tablero.ObtenerCasillero(1, 1);
+            Casillero casilleroActual = new Casillero(1, 1);
 
             Casillero casilleroDerecho = casilleroActual.ObtenerCasilleroDerecho();
 
@@ -87,9 +85,7 @@ namespace TP2_Bomberman.test
         [Test]
         public void PruebaObtenerLaCasillaPosicionadaArriba()
         {
-            Tablero tablero = new Tablero();
-
-            Casillero casilleroActual = tablero.ObtenerCasillero(1, 1);
+            Casillero casilleroActual = new Casillero(1, 1);
 
             Casillero casilleroArriba = casilleroActual.ObtenerCasilleroSuperior();
 
@@ -101,9 +97,8 @@ namespace TP2_Bomberman.test
         [Test]
         public void PruebaObtenerLaCasillaPosicionadaALaIzquierda()
         {
-            Tablero tablero = new Tablero();
 
-            Casillero casilleroActual = tablero.ObtenerCasillero(1, 1);
+            Casillero casilleroActual = new Casillero(1, 1);
 
             Casillero casilleroIzquierdo = casilleroActual.ObtenerCasilleroIzquierdo();
 
@@ -115,9 +110,8 @@ namespace TP2_Bomberman.test
         [Test]
         public void PruebaObtenerLaCasillaPosicionadaAbajo()
         {
-            Tablero tablero = new Tablero();
 
-            Casillero casilleroActual = tablero.ObtenerCasillero(1, 1);
+            Casillero casilleroActual = new Casillero(1, 1);
 
             Casillero casilleroAbajo = casilleroActual.ObtenerCasilleroInferior();
 
@@ -125,6 +119,108 @@ namespace TP2_Bomberman.test
             Assert.AreEqual(1, casilleroAbajo.Columna);
 
         }
+
+        [Test]
+        public void PruebaQueElCasilleroEsteVacioDevuelvaTrueCuandoEsteVacio()
+        {
+            Casillero casillero = new Casillero(5, 5);
+
+            Assert.IsTrue(casillero.EstaVacio());
+
+        }
+
+        [Test]
+        public void PruebaQueCasilleroEstaVacioDevuelvaFalseCuandoTieneUnCecilioAdentroCuandoSeLoPasoEnUnSetter()
+        {
+            Casillero casillero = new Casillero(5, 6);
+            Cecilio cecilio = new Cecilio();
+            casillero.Personaje = cecilio;
+
+            Assert.IsFalse(casillero.EstaVacio());
+            Assert.AreEqual(5, cecilio.Posicion.Fila);
+            Assert.AreEqual(6, cecilio.Posicion.Columna);
+        }
+
+        [Test]
+        public void PruebaQueCasilleroEstaVacioDevuelvaFalseCuandoTieneUnCecilioAdentroCuandoLePasoLaPosicionDesdeCecilio()
+        {
+            Casillero casillero = new Casillero(5, 4);
+            Cecilio cecilio = new Cecilio(casillero);
+            
+            Assert.IsFalse(casillero.EstaVacio());
+            Assert.AreEqual(5, cecilio.Posicion.Fila);
+            Assert.AreEqual(4, cecilio.Posicion.Columna);
+        }
+
+        [Test]
+        public void PruebaQueCasilleroEstaVacioDevuelvaFalseCuandoTieneUnaMolotovAdentroCuandoSeLoPasoEnUnSetter()
+        {
+            Casillero casillero = new Casillero(5, 6);
+            Bomba bomba = new Molotov();
+            casillero.Bomba = bomba;
+
+            Assert.IsFalse(casillero.EstaVacio());
+            Assert.AreEqual(5, bomba.Posicion.Fila);
+            Assert.AreEqual(6, bomba.Posicion.Columna);
+        }
+
+        [Test]
+        public void PruebaQueCasilleroEstaVacioDevuelvaFalseCuandoTieneUnaMolotovAdentroCuandoLePasoLaPosicionDesdeMOLOTOV()
+        {
+            Casillero casillero = new Casillero(5, 4);
+            Bomba bomba = new Molotov(casillero);
+
+            Assert.IsFalse(casillero.EstaVacio());
+            Assert.AreEqual(5, bomba.Posicion.Fila);
+            Assert.AreEqual(4, bomba.Posicion.Columna);
+        }
+
+        [Test]
+        public void PruebaQueCasilleroEstaVacioDevuelvaFalseCuandoTieneUnTimerAdentroCuandoSeLoPasoEnUnSetter()
+        {
+            Casillero casillero = new Casillero(5, 6);
+            Timer timer = new Timer();
+            casillero.Articulo = timer;
+
+            Assert.IsFalse(casillero.EstaVacio());
+            Assert.AreEqual(5, timer.Posicion.Fila);
+            Assert.AreEqual(6, timer.Posicion.Columna);
+        }
+
+        [Test]
+        public void PruebaQueCasilleroEstaVacioDevuelvaFalseCuandoTieneUnTimerAdentroCuandoLePasoLaPosicionDesdeTimer()
+        {
+            Casillero casillero = new Casillero(5, 4);
+            Timer timer = new Timer(casillero);
+
+            Assert.IsFalse(casillero.EstaVacio());
+            Assert.AreEqual(5, timer.Posicion.Fila);
+            Assert.AreEqual(4, timer.Posicion.Columna);
+        }
+
+        [Test]
+        public void PruebaQueCasilleroEstaVacioDevuelvaFalseCuandoTieneUnBloqueDeAceroAdentroCuandoSeLoPasoEnUnSetter()
+        {
+            Casillero casillero = new Casillero(5, 6);
+            Obstaculo bloque = new BloqueDeAcero();
+            casillero.Obstaculo = bloque;
+
+            Assert.IsFalse(casillero.EstaVacio());
+            Assert.AreEqual(5, bloque.Posicion.Fila);
+            Assert.AreEqual(6, bloque.Posicion.Columna);
+        }
+
+        [Test]
+        public void PruebaQueCasilleroEstaVacioDevuelvaFalseCuandoTieneUnBloqueDeAceroAdentroCuandoLePasoLaPosicionDesdeElBloque()
+        {
+            Casillero casillero = new Casillero(5, 4);
+            Obstaculo bloque = new BloqueDeAcero(casillero);
+
+            Assert.IsFalse(casillero.EstaVacio());
+            Assert.AreEqual(5, bloque.Posicion.Fila);
+            Assert.AreEqual(4, bloque.Posicion.Columna);
+        }
+
 
     }
 }

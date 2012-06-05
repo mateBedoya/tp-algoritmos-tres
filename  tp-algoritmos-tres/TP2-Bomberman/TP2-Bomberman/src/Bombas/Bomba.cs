@@ -13,6 +13,16 @@ namespace TP2_Bomberman.src
         protected int retardo;
         protected int rango;
 
+        public Bomba()
+            : base() { }
+        public Bomba(Casillero posicion)
+            : base(posicion) 
+        {
+            posicion.Bomba = this;
+        }
+
+
+
 
         // porcentajeRetardo es por si bombita agarra el articulo 
         // Timer y se le pasa el porcentaje respecto del retardo original

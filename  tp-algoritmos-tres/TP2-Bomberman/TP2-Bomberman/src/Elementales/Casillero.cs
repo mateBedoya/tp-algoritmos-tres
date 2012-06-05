@@ -83,25 +83,41 @@ namespace TP2_Bomberman.src
         public Personaje Personaje 
         {
             get {return this.personaje ;}
-            set {this.personaje = value ;} 
+            set 
+            {
+                this.personaje = value;
+                if (value!=null) value.Posicion = this;
+            } 
         }
 
         public Obstaculo Obstaculo
         {
             get { return this.obstaculo; }
-            set { this.obstaculo = value; }
+            set 
+            {
+                this.obstaculo = value;
+                if (value != null) value.Posicion = this;
+            } 
         }
 
         public Bomba Bomba
         {
             get { return this.bomba; }
-            set { this.bomba = value; }
+            set
+            {
+                this.bomba = value;
+                if (value != null) value.Posicion = this;
+            }
         }
 
         public Articulo Articulo
         {
             get { return this.articulo; }
-            set { this.articulo = value; }
+            set
+            {
+                this.articulo = value;
+                if (value != null) value.Posicion = this;
+            }
         }
 
     }

@@ -16,7 +16,10 @@ namespace TP2_Bomberman.src.Obstaculos
             : base() { }
 
         public Obstaculo(Casillero posicion)
-            : base(posicion) { }
+            : base(posicion) 
+        {
+            posicion.Obstaculo = this;
+        }
         
         // MEtodos abstractos a definir en los hijos
         public abstract void DaniarConMolotov(Molotov molotov);
