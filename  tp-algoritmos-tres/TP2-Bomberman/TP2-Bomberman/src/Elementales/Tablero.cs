@@ -32,8 +32,7 @@ namespace TP2_Bomberman.src
             {
                 for (int j = 0; j < MAXIMO_COLUMNA; j++)
                 {
-                    Casillero casillero = new Casillero(i, j);
-                    tablero[i, j] = casillero;
+                    tablero[i, j] = new Casillero(i, j);
 
                     if ( i % 2 == 1 && j % 2 == 1)
                         AgregarObstaculoEnCasillero(new BloqueDeAcero(),i,j);
