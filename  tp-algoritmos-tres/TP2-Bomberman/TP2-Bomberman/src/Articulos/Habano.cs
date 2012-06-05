@@ -5,7 +5,7 @@ using System.Text;
 
 namespace TP2_Bomberman.src.Articulos
 {
-    class Habano: Articulo
+    public class Habano: Articulo
     {
 
         public Habano()

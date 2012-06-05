@@ -5,7 +5,7 @@ using System.Text;
 
 namespace TP2_Bomberman.src.Articulos
 {
-    class Timer: Articulo
+    public class Timer: Articulo
     {
 
         public Timer()

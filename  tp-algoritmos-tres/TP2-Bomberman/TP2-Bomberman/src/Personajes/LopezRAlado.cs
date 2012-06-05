@@ -5,7 +5,7 @@ using System.Text;
 
 namespace TP2_Bomberman.src.Personajes
 {
-    class LopezRAlado: Enemigo
+    public class LopezRAlado : Enemigo
     {
         public LopezRAlado()
             :base()

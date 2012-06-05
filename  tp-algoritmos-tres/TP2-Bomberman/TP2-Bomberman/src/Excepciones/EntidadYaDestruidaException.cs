@@ -6,7 +6,7 @@ using System.Text;
 namespace TP2_Bomberman.src.Excepciones
 {
     //Excepcion que se lanza cuando se trata de mandar un mensaje a una entidad ya destruida
-    class EntidadYaDestruidaException: Exception
+    public class EntidadYaDestruidaException : Exception
     {
     }
 }
