@@ -34,12 +34,35 @@ namespace TP2_Bomberman.src
                 {
                     tablero[i, j] = new Casillero(i, j);
 
-                    if ( i % 2 == 1 && j % 2 == 1)
-                        AgregarObstaculoEnCasillero(new BloqueDeAcero(),i,j);
+                    CargarObstaculo(i, j);
                 }
             }                    
         }
 
+        private void CargarObstaculo(int i, int j)
+        {
+            if (i % 2 == 1 && j % 2 == 1)
+                AgregarObstaculoEnCasillero(new BloqueDeAcero(), i, j);
+
+            else if (i < 2 && j < 2) // Evita encerrar a bombita.
+                return;
+
+            else
+            {
+                Random random = new Random();
+                if (random.Next(1, 10) == 1)
+                {
+                    AgregarObstaculoEnCasillero(new BloqueDeLadrillos(), i, j);
+                    //SortearArticuloEnObstaculo(); Sería similar al sorteo de obstaculos.
+
+                }
+                else if (random.Next(1, 20) == 1)
+                {
+                    AgregarObstaculoEnCasillero(new BloqueDeCemento(), i, j);
+                    //SortearArticuloEnObstaculo();
+                }
+            }
+        }
 
         // retorna la instancia de tablero
         public static Tablero GetInstancia()
