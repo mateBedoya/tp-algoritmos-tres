@@ -206,5 +206,30 @@ namespace TP2_Bomberman.test
             Assert.IsNull(bomba.Posicion);
             
         }
+
+        [Test]
+        public void CreaUnTableroConBombitaYUnBloqueConUnArticuloYQueBombitaLoAgarre()
+        {
+            Tablero tablero = new Tablero();
+            Bombita bombita = new Bombita();
+            tablero.AgregarEntidadEnCasillero(bombita,0,0);
+
+            BloqueDeCemento bloque = new BloqueDeCemento();
+            tablero.AgregarEntidadEnCasillero(bloque, 0, 1);
+            Habano habano = new Habano();
+            bloque.Articulo = habano;
+
+            bloque.DaniarConToleTole(new ToleTole());
+
+            bombita.MoverDerecha();
+
+            Assert.AreEqual(0, bombita.Posicion.Fila);
+            Assert.AreEqual(1, bombita.Posicion.Columna);
+            Assert.AreEqual(10, bombita.Velocidad);
+
+
+            
+
+        }
     }
 }

@@ -87,5 +87,7 @@ namespace TP2_Bomberman.test
 
             Assert.Throws<EntidadYaDestruidaException>(() => bloque.DaniarConToleTole(toleTole));
         }
+
+
     }
 }
