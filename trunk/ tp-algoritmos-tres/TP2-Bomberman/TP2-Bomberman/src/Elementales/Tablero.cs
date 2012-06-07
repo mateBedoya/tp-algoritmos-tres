@@ -112,6 +112,7 @@ namespace TP2_Bomberman.src
                 Casillero casillero = ObtenerCasillero(x, y);
                 casillero.Personaje = personaje;
                 personaje.Posicion = casillero;
+                personaje.Tablero = this;
             }
             catch (CasilleroFueraDeRangoException e)
             {

@@ -30,8 +30,10 @@ namespace TP2_Bomberman.test
         [Test]
         public void CuandoSeMueveCecilioALaDerechaCambiaSuPosicionEnElTablero()
         {
-            Cecilio cecilio = new Cecilio(new Casillero(0,0));
-
+            Tablero tablero = new Tablero();
+            Cecilio cecilio = new Cecilio();
+            tablero.AgregarPersonajeEnCasillero(cecilio, 0, 0);
+            
             cecilio.MoverDerecha();
 
             Assert.AreEqual(1, cecilio.Posicion.Columna);
@@ -41,7 +43,9 @@ namespace TP2_Bomberman.test
         [Test]
         public void CuandoSeMueveCecilioALaIzquierdaCambiaSuPosicionEnElTablero()
         {
-            Cecilio cecilio = new Cecilio(new Casillero(0, 0));
+            Tablero tablero = new Tablero();
+            Cecilio cecilio = new Cecilio();
+            tablero.AgregarPersonajeEnCasillero(cecilio, 0, 0);
 
             cecilio.MoverDerecha();
             cecilio.MoverIzquierda();
@@ -53,7 +57,9 @@ namespace TP2_Bomberman.test
         [Test]
         public void CuandoSeMueveCecilioAbajoCambiaSuPosicionEnElTablero()
         {
-            Cecilio cecilio = new Cecilio(new Casillero(0, 0));
+            Tablero tablero = new Tablero();
+            Cecilio cecilio = new Cecilio();
+            tablero.AgregarPersonajeEnCasillero(cecilio, 0, 0);
 
             cecilio.MoverAbajo();
 
@@ -64,7 +70,9 @@ namespace TP2_Bomberman.test
         [Test]
         public void CuandoSeMueveCecilioArribaCambiaSuPosicionEnElTablero()
         {
-            Cecilio cecilio = new Cecilio(new Casillero(0, 0));
+            Tablero tablero = new Tablero();
+            Cecilio cecilio = new Cecilio();
+            tablero.AgregarPersonajeEnCasillero(cecilio, 0, 0);
 
             cecilio.MoverAbajo();
             cecilio.MoverAbajo();
@@ -77,7 +85,9 @@ namespace TP2_Bomberman.test
         [Test]
         public void IntentarMoverseAUnaPosicionInvalidaDejaACecilioEnElLugarQueEstaba()
         {
-            Cecilio cecilio = new Cecilio(new Casillero(0, 0));
+            Tablero tablero = new Tablero();
+            Cecilio cecilio = new Cecilio();
+            tablero.AgregarPersonajeEnCasillero(cecilio, 0, 0);
 
             cecilio.MoverArriba();
 

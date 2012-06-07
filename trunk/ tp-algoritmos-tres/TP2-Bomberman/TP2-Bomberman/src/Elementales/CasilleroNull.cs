@@ -29,30 +29,6 @@ namespace TP2_Bomberman.src.Elementales
             return (INSTANCIA);
         }
 
-        // retorna la propia instancia
-        public override Casillero ObtenerCasilleroSuperior()
-        {
-            return (INSTANCIA);
-        }
-
-        // retorna la propia instancia
-        public override Casillero ObtenerCasilleroInferior()
-        {
-            return (INSTANCIA);
-        }
-
-        // retorna la propia instancia
-        public override Casillero ObtenerCasilleroDerecho()
-        {
-            return (INSTANCIA);
-        }
-
-        // retorna la propia instancia
-        public override Casillero ObtenerCasilleroIzquierdo()
-        {
-            return (INSTANCIA);
-        }
-
         // retorna si el casillero esta vacio
         public override bool EstaVacio()
         {

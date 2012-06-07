@@ -31,8 +31,10 @@ namespace TP2_Bomberman.test
         [Test]
         public void CuandoSeMueveLopezRALaDerechaCambiaSuPosicionEnElTablero()
         {
-            LopezR lopez = new LopezR(new Casillero(0, 0));
-
+            Tablero tablero = new Tablero();
+            LopezR lopez = new LopezR();
+            tablero.AgregarPersonajeEnCasillero(lopez, 0, 0);
+            
             lopez.MoverDerecha();
 
             Assert.AreEqual(1, lopez.Posicion.Columna);
@@ -42,7 +44,9 @@ namespace TP2_Bomberman.test
         [Test]
         public void CuandoSeMueveLopezRALaIzquierdaCambiaSuPosicionEnElTablero()
         {
-            LopezR lopez = new LopezR(new Casillero(0, 0));
+            Tablero tablero = new Tablero();
+            LopezR lopez = new LopezR();
+            tablero.AgregarPersonajeEnCasillero(lopez, 0, 0);
 
             lopez.MoverDerecha();
             lopez.MoverIzquierda();
@@ -54,7 +58,9 @@ namespace TP2_Bomberman.test
         [Test]
         public void CuandoSeMueveLopezRAbajoCambiaSuPosicionEnElTablero()
         {
-            LopezR lopez = new LopezR(new Casillero(0, 0));
+            Tablero tablero = new Tablero();
+            LopezR lopez = new LopezR();
+            tablero.AgregarPersonajeEnCasillero(lopez, 0, 0);
 
             lopez.MoverAbajo();
 
@@ -65,7 +71,9 @@ namespace TP2_Bomberman.test
         [Test]
         public void CuandoSeMueveLopezRArribaCambiaSuPosicionEnElTablero()
         {
-            LopezR lopez = new LopezR(new Casillero(0, 0));
+            Tablero tablero = new Tablero();
+            LopezR lopez = new LopezR();
+            tablero.AgregarPersonajeEnCasillero(lopez, 0, 0);
 
             lopez.MoverAbajo();
             lopez.MoverAbajo();
@@ -78,7 +86,9 @@ namespace TP2_Bomberman.test
         [Test]
         public void IntentarMoverseAUnaPosicionInvalidaDejaALopezREnElLugarQueEstaba()
         {
-            LopezR lopez = new LopezR(new Casillero(0, 0));
+            Tablero tablero = new Tablero();
+            LopezR lopez = new LopezR();
+            tablero.AgregarPersonajeEnCasillero(lopez, 0, 0);
 
             lopez.MoverArriba();
 

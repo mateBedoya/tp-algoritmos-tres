@@ -32,8 +32,10 @@ namespace TP2_Bomberman.test
         [Test]
         public void CuandoSeMueveLopezRAladoALaDerechaCambiaSuPosicionEnElTablero()
         {
-            LopezRAlado lopez = new LopezRAlado(new Casillero(0, 0));
-
+            Tablero tablero = new Tablero();
+            LopezRAlado lopez = new LopezRAlado();
+            tablero.AgregarPersonajeEnCasillero(lopez, 0, 0);
+            
             lopez.MoverDerecha();
 
             Assert.AreEqual(1, lopez.Posicion.Columna);
@@ -43,7 +45,9 @@ namespace TP2_Bomberman.test
         [Test]
         public void CuandoSeMueveLopezRAladoALaIzquierdaCambiaSuPosicionEnElTablero()
         {
-            LopezRAlado lopez = new LopezRAlado(new Casillero(0, 0));
+            Tablero tablero = new Tablero();
+            LopezRAlado lopez = new LopezRAlado();
+            tablero.AgregarPersonajeEnCasillero(lopez, 0, 0);
 
             lopez.MoverDerecha();
             lopez.MoverIzquierda();
@@ -55,7 +59,9 @@ namespace TP2_Bomberman.test
         [Test]
         public void CuandoSeMueveLopezRAladoAbajoCambiaSuPosicionEnElTablero()
         {
-            LopezRAlado lopez = new LopezRAlado(new Casillero(0, 0));
+            Tablero tablero = new Tablero();
+            LopezRAlado lopez = new LopezRAlado();
+            tablero.AgregarPersonajeEnCasillero(lopez, 0, 0);
 
             lopez.MoverAbajo();
 
@@ -66,7 +72,9 @@ namespace TP2_Bomberman.test
         [Test]
         public void CuandoSeMueveLopezRAladoArribaCambiaSuPosicionEnElTablero()
         {
-            LopezRAlado lopez = new LopezRAlado(new Casillero(0, 0));
+            Tablero tablero = new Tablero();
+            LopezRAlado lopez = new LopezRAlado();
+            tablero.AgregarPersonajeEnCasillero(lopez, 0, 0);
 
             lopez.MoverAbajo();
             lopez.MoverAbajo();
@@ -79,7 +87,9 @@ namespace TP2_Bomberman.test
         [Test]
         public void IntentarMoverseAUnaPosicionInvalidaDejaALopezRAladoEnElLugarQueEstaba()
         {
-            LopezRAlado lopez = new LopezRAlado(new Casillero(0, 0));
+            Tablero tablero = new Tablero();
+            LopezRAlado lopez = new LopezRAlado();
+            tablero.AgregarPersonajeEnCasillero(lopez, 0, 0);
 
             lopez.MoverArriba();
 

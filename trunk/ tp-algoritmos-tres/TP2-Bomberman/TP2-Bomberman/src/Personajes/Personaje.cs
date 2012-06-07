@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using TP2_Bomberman.src.Elementales;
 using TP2_Bomberman.src.Interfaces;
+using TP2_Bomberman.src.Excepciones;
+using TP2_Bomberman.src.Personajes;
 
 
 namespace TP2_Bomberman.src
@@ -13,6 +15,7 @@ namespace TP2_Bomberman.src
         protected int resistencia;
         protected int velocidad;
         protected Bomba bomba;
+        protected Tablero tablero;
 
         public Personaje()
             :base()
@@ -23,7 +26,8 @@ namespace TP2_Bomberman.src
         public Personaje(Casillero posicion)
             : base(posicion) 
         {
-            posicion.Personaje = this;        
+            posicion.Personaje = this;
+            this.posicion = posicion;
         }
 
         
@@ -32,7 +36,7 @@ namespace TP2_Bomberman.src
         {
             try
             {
-                CambiarPosicionA(posicion.ObtenerCasilleroSuperior());
+                CambiarPosicionA(posicion.ObtenerCasilleroSuperiorDe(this.tablero));
             }
             catch(CasilleroFueraDeRangoException)
             {
@@ -44,7 +48,7 @@ namespace TP2_Bomberman.src
         {
             try
             {
-                CambiarPosicionA(posicion.ObtenerCasilleroInferior());
+                CambiarPosicionA(posicion.ObtenerCasilleroInferiorDe(this.tablero));
             }
             catch (CasilleroFueraDeRangoException)
             {
@@ -57,7 +61,7 @@ namespace TP2_Bomberman.src
         {
             try
             {
-                CambiarPosicionA(posicion.ObtenerCasilleroDerecho());
+                CambiarPosicionA(posicion.ObtenerCasilleroDerechoDe(this.tablero));
             }
             catch (CasilleroFueraDeRangoException)
             {
@@ -70,7 +74,7 @@ namespace TP2_Bomberman.src
         {
             try
             {
-                CambiarPosicionA(posicion.ObtenerCasilleroIzquierdo());
+                CambiarPosicionA(posicion.ObtenerCasilleroIzquierdoDe(this.tablero));
             }
             catch (CasilleroFueraDeRangoException)
             {
@@ -82,7 +86,12 @@ namespace TP2_Bomberman.src
 
         public void CambiarPosicionA(Casillero casilleroNuevo)
         {
-            posicion.Personaje = null;
+
+            if (!casilleroNuevo.EstaVacio())
+            {
+                throw new MovimientoInvalidoException();
+            }
+            posicion.Personaje = PersonajeNull.GetInstancia();
             casilleroNuevo.Personaje = this;
             posicion = casilleroNuevo;
         }
@@ -112,5 +121,10 @@ namespace TP2_Bomberman.src
             set { this.bomba = value; }
         }
 
+        public Tablero Tablero
+        {
+            get { return this.tablero; }
+            set { this.tablero = value; }
+        }
     }
 }
