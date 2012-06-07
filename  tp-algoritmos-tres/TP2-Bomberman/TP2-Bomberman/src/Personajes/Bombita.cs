@@ -47,12 +47,6 @@ namespace TP2_Bomberman
         }
 
 
-        public virtual void ChocarCon(Entidad otro)
-        {
-            otro.Chocar(this);
-        }
-
-
         public void LanzarBomba()
         {
             // FALTA IMPLEMENTAR
