@@ -43,7 +43,9 @@ namespace TP2_Bomberman.test
         [Test]
         public void CuandoSeMueveBombitaALaDerechaCambiaSuPosicionEnElTablero()
         {
+            Tablero tablero = new Tablero();
             Bombita bombita = new Bombita();
+            tablero.AgregarPersonajeEnCasillero(bombita, 0, 0);
 
             bombita.MoverDerecha();
 
@@ -54,8 +56,10 @@ namespace TP2_Bomberman.test
         [Test]
         public void CuandoSeMueveBombitaALaIzquierdaCambiaSuPosicionEnElTablero()
         {
+            Tablero tablero = new Tablero();
             Bombita bombita = new Bombita();
-
+            tablero.AgregarPersonajeEnCasillero(bombita, 0, 0);
+            
             bombita.MoverDerecha();
             bombita.MoverIzquierda();
 
@@ -66,7 +70,9 @@ namespace TP2_Bomberman.test
         [Test]
         public void CuandoSeMueveBombitaAbajoCambiaSuPosicionEnElTablero()
         {
+            Tablero tablero = new Tablero();
             Bombita bombita = new Bombita();
+            tablero.AgregarPersonajeEnCasillero(bombita, 0, 0);
 
             bombita.MoverAbajo();
 
@@ -77,7 +83,9 @@ namespace TP2_Bomberman.test
         [Test]
         public void CuandoSeMueveBombitaArribaCambiaSuPosicionEnElTablero()
         {
+            Tablero tablero = new Tablero();
             Bombita bombita = new Bombita();
+            tablero.AgregarPersonajeEnCasillero(bombita, 0, 0);
 
             bombita.MoverAbajo();
             bombita.MoverAbajo();
@@ -90,7 +98,9 @@ namespace TP2_Bomberman.test
         [Test]
         public void IntentarMoverseAUnaPosicionInvalidaDejaABombitaEnElLugarQueEstaba()
         {
+            Tablero tablero = new Tablero();
             Bombita bombita = new Bombita();
+            tablero.AgregarPersonajeEnCasillero(bombita, 0, 0);
 
             bombita.MoverArriba();
 

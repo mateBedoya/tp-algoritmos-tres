@@ -56,6 +56,7 @@
     <Compile Include="src\Elementales\CasilleroNull.cs" />
     <Compile Include="src\Elementales\Entidad.cs" />
     <Compile Include="src\Excepciones\EntidadYaDestruidaException.cs" />
+    <Compile Include="src\Excepciones\MovimientoInvalidoException.cs" />
     <Compile Include="src\Interfaces\IDaniable.cs" />
     <Compile Include="src\Interfaces\IDestruible.cs" />
     <Compile Include="src\Obstaculos\BloqueDeAcero.cs" />

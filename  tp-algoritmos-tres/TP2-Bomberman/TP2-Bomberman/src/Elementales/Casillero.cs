@@ -33,27 +33,27 @@ namespace TP2_Bomberman.src
 
 
         // retorna el casillero adyacente- derecha
-        public virtual Casillero ObtenerCasilleroDerecho()
+        public virtual Casillero ObtenerCasilleroDerechoDe(Tablero tablero)
         {
-            return (Tablero.GetInstancia().ObtenerCasillero(this.fila, this.columna + 1));
+            return (tablero.ObtenerCasillero(this.fila, this.columna + 1));
         }
 
         // retorna el casillero adyacente- superior 
-        public virtual Casillero ObtenerCasilleroSuperior()
+        public virtual Casillero ObtenerCasilleroSuperiorDe(Tablero tablero)
         {
-            return (Tablero.GetInstancia().ObtenerCasillero(this.fila - 1, this.columna));
+            return (tablero.ObtenerCasillero(this.fila - 1, this.columna));
         }
 
         // retorna el casillero adyacente- inferior
-        public virtual Casillero ObtenerCasilleroInferior()
+        public virtual Casillero ObtenerCasilleroInferiorDe(Tablero tablero)
         {
-            return (Tablero.GetInstancia().ObtenerCasillero(this.fila + 1, this.columna));
+            return (tablero.ObtenerCasillero(this.fila + 1, this.columna));
         }
 
         // retorna el casillero adyacente- izquierda
-        public virtual Casillero ObtenerCasilleroIzquierdo()
+        public virtual Casillero ObtenerCasilleroIzquierdoDe(Tablero tablero)
         {
-            return (Tablero.GetInstancia().ObtenerCasillero(this.fila, this.columna - 1));
+            return (tablero.ObtenerCasillero(this.fila, this.columna - 1));
         }
 
         // retorna si esta vacio

@@ -13,14 +13,12 @@ namespace TP2_Bomberman
     {
         private int vidas = 3;
         private double porcentajeDeRetardo = 1; //Empieza con un retardo normal de la bomba incorporada (100%)
+
         
         public Bombita()
             :base()
         {
             this.resistencia = 1;
-            Casillero casilleroInicial = new Casillero(0, 0);
-            this.posicion = casilleroInicial; //Que bombita empiece siempre en el casillero (0,0)
-            casilleroInicial.Personaje = this;
             this.bomba = new Molotov(); //Inicialmente tiene una molotov
         }
 

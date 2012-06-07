@@ -23,6 +23,14 @@ namespace TP2_Bomberman.test
         }
 
         [Test]
+        public void PruebaQueCuandoSeCreaUnCasilleroEsteVacio()
+        {
+            Casillero casillero = new Casillero(1, 5);
+
+            Assert.IsTrue(casillero.EstaVacio());
+        }
+
+        [Test]
         public void PruebaPosicionarUnPersonajeEnLaCasilla()
         {
             Casillero casillero = new Casillero(0, 0);
@@ -73,9 +81,10 @@ namespace TP2_Bomberman.test
         [Test]
         public void PruebaObtenerLaCasillaPosicionadaALaDerecha()
         {
-            Casillero casilleroActual = new Casillero(1, 1);
+            Tablero tablero = new Tablero();
+            Casillero casilleroActual = tablero.ObtenerCasillero(1, 1);
 
-            Casillero casilleroDerecho = casilleroActual.ObtenerCasilleroDerecho();
+            Casillero casilleroDerecho = casilleroActual.ObtenerCasilleroDerechoDe(tablero);
 
             Assert.AreEqual(1, casilleroDerecho.Fila);
             Assert.AreEqual(2, casilleroDerecho.Columna);
@@ -85,9 +94,10 @@ namespace TP2_Bomberman.test
         [Test]
         public void PruebaObtenerLaCasillaPosicionadaArriba()
         {
-            Casillero casilleroActual = new Casillero(1, 1);
+            Tablero tablero = new Tablero();
+            Casillero casilleroActual = tablero.ObtenerCasillero(1, 1);
 
-            Casillero casilleroArriba = casilleroActual.ObtenerCasilleroSuperior();
+            Casillero casilleroArriba = casilleroActual.ObtenerCasilleroSuperiorDe(tablero);
 
             Assert.AreEqual(0, casilleroArriba.Fila);
             Assert.AreEqual(1, casilleroArriba.Columna);
@@ -98,9 +108,10 @@ namespace TP2_Bomberman.test
         public void PruebaObtenerLaCasillaPosicionadaALaIzquierda()
         {
 
-            Casillero casilleroActual = new Casillero(1, 1);
+            Tablero tablero = new Tablero();
+            Casillero casilleroActual = tablero.ObtenerCasillero(1, 1);
 
-            Casillero casilleroIzquierdo = casilleroActual.ObtenerCasilleroIzquierdo();
+            Casillero casilleroIzquierdo = casilleroActual.ObtenerCasilleroIzquierdoDe(tablero);
 
             Assert.AreEqual(1, casilleroIzquierdo.Fila);
             Assert.AreEqual(0, casilleroIzquierdo.Columna);
@@ -111,9 +122,10 @@ namespace TP2_Bomberman.test
         public void PruebaObtenerLaCasillaPosicionadaAbajo()
         {
 
-            Casillero casilleroActual = new Casillero(1, 1);
+            Tablero tablero = new Tablero();
+            Casillero casilleroActual = tablero.ObtenerCasillero(1, 1);
 
-            Casillero casilleroAbajo = casilleroActual.ObtenerCasilleroInferior();
+            Casillero casilleroAbajo = casilleroActual.ObtenerCasilleroInferiorDe(tablero);
 
             Assert.AreEqual(2, casilleroAbajo.Fila);
             Assert.AreEqual(1, casilleroAbajo.Columna);

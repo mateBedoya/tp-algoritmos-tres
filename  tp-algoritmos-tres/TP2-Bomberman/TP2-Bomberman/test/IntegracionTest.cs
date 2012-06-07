@@ -14,8 +14,10 @@ namespace TP2_Bomberman.test
         public void CreaUnTableroConUnBombitaYUnCecilioYLosMueve()
         {
             Tablero tablero = new Tablero();
-            Bombita bombita = new Bombita(); // Arranca en (0,0)
-            Cecilio cecilio = new Cecilio(tablero.ObtenerCasillero(5,0));
+            Bombita bombita = new Bombita();
+            tablero.AgregarPersonajeEnCasillero(bombita, 0, 0);// Arranca en (0,0)
+            Cecilio cecilio = new Cecilio();
+            tablero.AgregarPersonajeEnCasillero(cecilio, 5, 0);
 
             bombita.MoverAbajo();
             cecilio.MoverArriba();
@@ -30,8 +32,10 @@ namespace TP2_Bomberman.test
         public void CreaUnTableroConUnBombitaYUnCecilioYLosMueveHastaChocarse()
         {
             Tablero tablero = new Tablero();
-            Bombita bombita = new Bombita(); // Arranca en (0,0)
-            Cecilio cecilio = new Cecilio(tablero.ObtenerCasillero(5, 0));
+            Bombita bombita = new Bombita();
+            tablero.AgregarPersonajeEnCasillero(bombita, 0, 0);// Arranca en (0,0)
+            Cecilio cecilio = new Cecilio();
+            tablero.AgregarPersonajeEnCasillero(cecilio, 5, 0);
 
             bombita.MoverAbajo();
             cecilio.MoverArriba();
@@ -39,8 +43,7 @@ namespace TP2_Bomberman.test
             cecilio.MoverArriba();
             cecilio.MoverArriba();
 
-            Assert.IsTrue(bombita.FueDestruido());
-            Assert.IsFalse(cecilio.FueDestruido());
+            Assert.IsTrue(bombita.Vidas == 2);
             Assert.AreEqual(1, cecilio.Posicion.Fila);
             Assert.AreEqual(0, cecilio.Posicion.Columna);
             
