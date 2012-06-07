@@ -16,20 +16,12 @@ namespace TP2_Bomberman.src
         protected int fila;
         protected int columna;
         private Entidad entidad;
-        //private Personaje personaje; // Aca tiene todo lo que podria contener
-        //private Obstaculo obstaculo;
-        //private Bomba bomba;
-        //private Articulo articulo;
         
 
         public Casillero(int x, int y)
         {
             this.fila = x;
             this.columna = y;
-            //this.personaje = PersonajeNull.GetInstancia();
-            //this.obstaculo = ObstaculoNull.GetInstancia();
-            //this.bomba = BombaNull.GetInstancia();
-            //this.articulo = ArticuloNull.GetInstancia();
             this.entidad = null;
         }
 
@@ -62,11 +54,6 @@ namespace TP2_Bomberman.src
         // retorna si esta vacio
         public virtual bool EstaVacio()
         {
-            /*return (this.articulo == ArticuloNull.GetInstancia() &
-                    this.bomba == BombaNull.GetInstancia() &
-                    this.obstaculo == ObstaculoNull.GetInstancia() &
-                    this.personaje == PersonajeNull.GetInstancia());
-             * */
             return (this.entidad == null);
         }
 
@@ -84,47 +71,6 @@ namespace TP2_Bomberman.src
         {
             get { return this.fila; }
         }
-/*
-        public Personaje Personaje 
-        {
-            get {return this.personaje ;}
-            set 
-            {
-                this.personaje = value;
-                if (value!=null) value.Posicion = this;
-            } 
-        }
-
-        public Obstaculo Obstaculo
-        {
-            get { return this.obstaculo; }
-            set 
-            {
-                this.obstaculo = value;
-                if (value != null) value.Posicion = this;
-            } 
-        }
-
-        public Bomba Bomba
-        {
-            get { return this.bomba; }
-            set
-            {
-                this.bomba = value;
-                if (value != null) value.Posicion = this;
-            }
-        }
-
-        public Articulo Articulo
-        {
-            get { return this.articulo; }
-            set
-            {
-                this.articulo = value;
-                if (value != null) value.Posicion = this;
-            }
-        }
-        */
 
         public Entidad Entidad
         {

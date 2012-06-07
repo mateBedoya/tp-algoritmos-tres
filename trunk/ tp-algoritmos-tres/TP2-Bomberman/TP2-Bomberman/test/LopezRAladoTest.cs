@@ -7,6 +7,7 @@ using TP2_Bomberman.src;
 using TP2_Bomberman.src.Bombas;
 using TP2_Bomberman.src.Excepciones;
 using TP2_Bomberman.src.Personajes;
+using TP2_Bomberman.src.Obstaculos;
 
 namespace TP2_Bomberman.test
 {
@@ -141,6 +142,21 @@ namespace TP2_Bomberman.test
             lopez.DaniarConToleTole(toleTole); //Ya lo destruyo
 
             Assert.Throws<EntidadYaDestruidaException>(() => lopez.DaniarConToleTole(toleTole));
+        }
+
+        [Test]
+        public void QueLopezRAladoPuedaMoversePorArribaDeLosObstaculos()
+        {
+            Tablero tablero = new Tablero();
+            LopezRAlado lopez = new LopezRAlado();
+            tablero.AgregarEntidadEnCasillero(lopez, 0, 0);
+            BloqueDeAcero bloque = new BloqueDeAcero();
+            tablero.AgregarEntidadEnCasillero(bloque, 0, 1);
+
+            lopez.MoverDerecha();
+            lopez.MoverDerecha();
+
+            Assert.AreEqual(2, lopez.Posicion.Columna);
         }
     }
 }
