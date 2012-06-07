@@ -17,6 +17,9 @@ namespace TP2_Bomberman.src
         private static int MAXIMO_COLUMNA = 30;
         private Casillero[,] tablero;
         private static Tablero INSTANCIA = null;
+        private int PROBABILIDAD_BLOQUE_CEMENTO = 20;
+        private int PROBABILIDAD_BLOQUE_LADRILLO = 10;
+        private int PROBABILIDAD_ARTICULO = 10;
 
         public Tablero(bool ConObstaculos=false) //inicializa los obstaculos si le paso true
         {
@@ -38,28 +41,64 @@ namespace TP2_Bomberman.src
                 }
             }                    
         }
-
+        
+        // Carga un obstaculo en una posicion segun su probabilidad.
         private void CargarObstaculo(int i, int j)
         {
-            if (i % 2 == 1 && j % 2 == 1)
+            // Los obstaculos fijos del bomberman original son de acero en esta version.
+            if (i % 2 == 1 && j % 2 == 1) 
                 AgregarEntidadEnCasillero(new BloqueDeAcero(), i, j);
 
-            else if (i < 2 && j < 2) // Evita encerrar a bombita.
+            // Evita encerrar a bombita.
+            else if (i < 2 && j < 2) 
                 return;
 
             else
             {
-                Random random = new Random();
-                if (random.Next(1, 10) == 1)
-                {
-                    AgregarEntidadEnCasillero(new BloqueDeLadrillos(), i, j);
-                    //SortearArticuloEnObstaculo(); Sería similar al sorteo de obstaculos.
+                SortearObstaculoEnCasillero(i, j);
+            }
+        }
 
-                }
-                else if (random.Next(1, 20) == 1)
+        // Sortea la posibilidad de colocar un obstaculo en el casillero y lo agrega si corresponde.
+        private void SortearObstaculoEnCasillero(int i, int j)
+        {
+            Random random = new Random();
+
+            if (random.Next(1, PROBABILIDAD_BLOQUE_LADRILLO) == 1)
+            {
+                AgregarEntidadEnCasillero(new BloqueDeLadrillos(), i, j);
+                SortearArticuloEnCasillero(i, j);
+
+            }
+
+            else if (random.Next(1, PROBABILIDAD_BLOQUE_CEMENTO) == 1)
+            {
+                AgregarEntidadEnCasillero(new BloqueDeCemento(), i, j);
+                SortearArticuloEnCasillero(i, j);
+            }
+        }
+
+        // Sortea la posibilidad de colocar un articulo en el casillero y lo agrega si corresponde.
+        private void SortearArticuloEnCasillero(int i, int j)
+        {
+            Random random = new Random();
+
+            if (random.Next(1, PROBABILIDAD_ARTICULO) == 1)
+            {
+                switch (random.Next(1, 4))
                 {
-                    AgregarEntidadEnCasillero(new BloqueDeCemento(), i, j);
-                    //SortearArticuloEnObstaculo();
+                    case 1:
+                        AgregarEntidadEnCasillero(new Timer(), i, j);
+                        return;
+
+                    case 2:
+                        AgregarEntidadEnCasillero(new Habano(), i, j);
+                        return;
+
+                    case 3:
+                        AgregarEntidadEnCasillero(new BombaToleTole(), i, j);
+                        return;
+
                 }
             }
         }
