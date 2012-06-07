@@ -7,6 +7,7 @@ using TP2_Bomberman.src.Obstaculos;
 using TP2_Bomberman.src;
 using TP2_Bomberman.src.Bombas;
 using TP2_Bomberman.src.Excepciones;
+using TP2_Bomberman.src.Articulos;
 
 namespace TP2_Bomberman.test
 {
@@ -90,6 +91,25 @@ namespace TP2_Bomberman.test
             bloque.DaniarConToleTole(toleTole); //Ya lo destruyo
 
             Assert.Throws<EntidadYaDestruidaException>(() => bloque.DaniarConToleTole(toleTole));
+        }
+
+        [Test]
+        public void QueUnBloqueDeCementoSeaDestruidoYDejeUnArticulo()
+        {
+            Tablero tablero = new Tablero();
+            BloqueDeCemento bloque = new BloqueDeCemento();
+            tablero.AgregarEntidadEnCasillero(bloque, 0, 0);
+            Timer timer = new Timer();
+            bloque.Articulo = timer;
+
+            Assert.IsNull(timer.Posicion);
+
+            bloque.DaniarConToleTole(new ToleTole());//Lo destruyo
+
+            Assert.AreEqual(tablero.ObtenerCasillero(0, 0).Entidad, timer);
+            Assert.AreEqual(0, timer.Posicion.Fila);
+            Assert.AreEqual(0, timer.Posicion.Columna);
+
         }
     }
 }

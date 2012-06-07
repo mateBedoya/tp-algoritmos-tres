@@ -24,12 +24,30 @@ namespace TP2_Bomberman.src.Obstaculos
         {
             if (FueDestruido()) throw new EntidadYaDestruidaException();
             this.resistencia = this.resistencia - molotov.Destruccion;
+            if (FueDestruido())
+            {
+                if (this.articulo != null)
+                {
+                    this.posicion.Entidad = this.articulo;
+                    this.articulo.Posicion = this.posicion;
+                }
+                this.posicion = null;                
+            }
         }
 
         public override void DaniarConProyectil(Bombas.Proyectil proyectil)
         {
             if (FueDestruido()) throw new EntidadYaDestruidaException();
             this.resistencia = this.resistencia - proyectil.Destruccion;
+            if (FueDestruido())
+            {
+                if (this.articulo != null)
+                {
+                    this.posicion.Entidad = this.articulo;
+                    this.articulo.Posicion = this.posicion;
+                }
+                this.posicion = null;
+            }
         }
 
         
