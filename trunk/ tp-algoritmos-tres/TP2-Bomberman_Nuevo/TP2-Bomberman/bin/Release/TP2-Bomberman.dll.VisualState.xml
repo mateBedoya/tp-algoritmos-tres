@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
+  <TopNode>[0-1147]C:\Javi\UBA\FIUBA\Algoritmos y Programación III\TP2\TP2-Bomberman-COPIA\TP2-Bomberman\TP2-Bomberman\bin\Release\TP2-Bomberman.dll</TopNode>
+  <SelectedNode>[0-1147]C:\Javi\UBA\FIUBA\Algoritmos y Programación III\TP2\TP2-Bomberman-COPIA\TP2-Bomberman\TP2-Bomberman\bin\Release\TP2-Bomberman.dll</SelectedNode>
+  <ExcludeCategories>false</ExcludeCategories>
+  <Nodes>
+    <Node UniqueName="[0-1147]C:\Javi\UBA\FIUBA\Algoritmos y Programación III\TP2\TP2-Bomberman-COPIA\TP2-Bomberman\TP2-Bomberman\bin\Release\TP2-Bomberman.dll" Expanded="true" />
+    <Node UniqueName="[0-1148]TP2_Bomberman" Expanded="true" />
+    <Node UniqueName="[0-1149]TP2_Bomberman.test" Expanded="true" />
+  </Nodes>
+</VisualState>
