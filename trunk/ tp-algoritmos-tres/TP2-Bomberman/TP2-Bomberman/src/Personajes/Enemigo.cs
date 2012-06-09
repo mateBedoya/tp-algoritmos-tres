@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using TP2_Bomberman.src.Bombas;
 using TP2_Bomberman.src.Excepciones;
+using TP2_Bomberman.src.Elementales;
 
 namespace TP2_Bomberman.src
 {

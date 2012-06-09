@@ -28,7 +28,11 @@ namespace TP2_Bomberman.src.Personajes
             // E INMEDIATAMENTE CREE UNA NUEVA INSTANCIA Y LA GUARDE EN EL ATRIBUTO
         }
 
-
+        public override bool PuedeMoverseA(Casillero casilleroNuevo)
+        {
+            if (casilleroNuevo.TienePersonaje()) return false;
+            return true;
+        }
         //TAMBIEN FALTA VER EL TEMA DE QUE ESTE SE PUEDE MOVER POR DONDE QUIERA
     }
 }

@@ -112,13 +112,19 @@ namespace TP2_Bomberman.src
         public void CambiarPosicionA(Casillero casilleroNuevo)
         {
 
-            if (!casilleroNuevo.EstaVacio())
+            if (!PuedeMoverseA(casilleroNuevo))
             {
                 throw new MovimientoInvalidoException();
             }
             posicion.Entidad = null;
             casilleroNuevo.Entidad = this;
             posicion = casilleroNuevo;
+        }
+
+        public virtual bool PuedeMoverseA(Casillero casilleroNuevo)
+        {
+            if (casilleroNuevo.EstaVacio()) return true;
+            return false;
         }
 
         //Metodos abstractos a definir en los hijos

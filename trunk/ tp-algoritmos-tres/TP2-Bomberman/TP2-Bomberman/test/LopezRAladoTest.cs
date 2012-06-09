@@ -144,7 +144,7 @@ namespace TP2_Bomberman.test
             Assert.Throws<EntidadYaDestruidaException>(() => lopez.DaniarConToleTole(toleTole));
         }
 
-        /*[Test]
+        [Test]
         public void QueLopezRAladoPuedaMoversePorArribaDeLosObstaculos()
         {
             Tablero tablero = new Tablero();
@@ -157,6 +157,6 @@ namespace TP2_Bomberman.test
             lopez.MoverDerecha();
 
             Assert.AreEqual(2, lopez.Posicion.Columna);
-        }*/
+        }
     }
 }

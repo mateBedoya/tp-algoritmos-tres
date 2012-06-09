@@ -16,5 +16,7 @@ namespace TP2_Bomberman.src
 
         void MoverIzquierda();
 
+        bool PuedeMoverseA(Casillero nuevoCasillero);
+
     }
 }

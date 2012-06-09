@@ -27,7 +27,7 @@ namespace TP2_Bomberman.src.Bombas
             this.rango = 3;
         }
 
-        public override void Explotar(double porcentajeRetardo = 1)
+        public override void Explotar()
         {
             // Aca tendria que ir MOVIENDOSE Y CUANDO LLEGUE A LA DISTANCIA HACER 
             // Dañar(elementoDelCasillero)
@@ -45,7 +45,8 @@ namespace TP2_Bomberman.src.Bombas
         {
             try
             {
-                CambiarPosicionA(posicion.ObtenerCasilleroSuperiorDe(this.tablero));
+                Casillero casilleroNuevo = posicion.ObtenerCasilleroSuperiorDe(this.tablero);
+                CambiarPosicionA(casilleroNuevo);
             }
             catch (CasilleroFueraDeRangoException)
             {
@@ -64,7 +65,8 @@ namespace TP2_Bomberman.src.Bombas
         {
             try
             {
-                CambiarPosicionA(posicion.ObtenerCasilleroInferiorDe(this.tablero));
+                Casillero casilleroNuevo = posicion.ObtenerCasilleroInferiorDe(this.tablero);
+                CambiarPosicionA(casilleroNuevo);
             }
             catch (CasilleroFueraDeRangoException)
             {
@@ -84,7 +86,8 @@ namespace TP2_Bomberman.src.Bombas
         {
             try
             {
-                CambiarPosicionA(posicion.ObtenerCasilleroDerechoDe(this.tablero));
+                Casillero casilleroNuevo = posicion.ObtenerCasilleroDerechoDe(this.tablero);
+                CambiarPosicionA(casilleroNuevo);
             }
             catch (CasilleroFueraDeRangoException)
             {
@@ -123,8 +126,7 @@ namespace TP2_Bomberman.src.Bombas
 
         public void CambiarPosicionA(Casillero casilleroNuevo)
         {
-
-            if (!casilleroNuevo.EstaVacio() || (this.distanciaRecorrida >= 4))
+            if (!PuedeMoverseA(casilleroNuevo))
             {
                 throw new MovimientoInvalidoException();
             }
@@ -132,6 +134,12 @@ namespace TP2_Bomberman.src.Bombas
             casilleroNuevo.Entidad = this;
             posicion = casilleroNuevo;
             this.distanciaRecorrida++;
+        }
+
+        public bool PuedeMoverseA(Casillero casilleroNuevo)
+        {
+            if (casilleroNuevo.EstaVacio() && (this.distanciaRecorrida < 4)) return true;
+            return false;
         }
 
         public void ChocarConPersonaje(Personaje personaje)

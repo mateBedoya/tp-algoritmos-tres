@@ -102,5 +102,16 @@ namespace TP2_Bomberman.test
             Assert.IsNotInstanceOf<BloqueDeAcero>(tablero.ObtenerCasillero(0, 0).Entidad);
             Assert.IsNotInstanceOf<BloqueDeAcero>(tablero.ObtenerCasillero(2, 24).Entidad);
         }
+
+        [Test]
+        public void PruebaAgregarUnaEntidadAUnaCasillaDelTableroYVerificarQueEstaVacioDevuelvaFalse()
+        {
+            Tablero tablero = new Tablero();
+            BloqueDeAcero bloque = new BloqueDeAcero();
+            tablero.AgregarEntidadEnCasillero(bloque, 0, 0);
+
+            Assert.IsFalse(bloque.Posicion.EstaVacio());
+            Assert.IsFalse(tablero.ObtenerCasillero(0, 0).EstaVacio());
+        }
     }
 }
