@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using TP2_Bomberman.src.Interfaces;
+using TP2_Bomberman.src.Excepciones;
 
 namespace TP2_Bomberman.src
 {
-    public class Molotov: Bomba,IDependienteDelTiempo
+    public class Molotov: Bomba
     {
         public Molotov()
             :base()
@@ -24,22 +25,15 @@ namespace TP2_Bomberman.src
             this.rango = 3;
         }
 
-        public override void Explotar(double porcentajeRetardo = 1)
+        public override void Explotar()
         {
-            // Aca tendria que ir recorriendo y agarrando los elementos de cada casillero e ir daniandolos llamando a 
-            // Dañar(elementoDelCasillero)
+            if (FueDestruido()) throw new EntidadYaDestruidaException();
+            this.estaActivada = true;
         }
         public override void Daniar(IDaniable daniable)
         {
             daniable.DaniarConMolotov(this); // Uso de patron doble dipatch
         }
-
-        public void CuandoPaseElTiempo(int tiempo)
-        {
-            // TODAVIA NO TERMINO DE ENTENDER COMO IMPLEMENTAR ESTO
-        }
-
-        
 
     }
 }

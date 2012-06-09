@@ -43,6 +43,30 @@ namespace TP2_Bomberman.test
         }
 
         [Test]
+        public void PruebaPosicionarUnPersonajeEnLaCasillaYQueTienePersonajeDevuelvaTrue()
+        {
+            Casillero casillero = new Casillero(0, 0);
+
+            Bombita personaje = new Bombita();
+
+            casillero.Entidad = personaje;
+
+            Assert.IsTrue(casillero.TienePersonaje());
+        }
+
+        [Test]
+        public void PruebaPosicionarUnBloqueEnLaCasillaYQueTienePersonajeDevuelvaFalse()
+        {
+            Casillero casillero = new Casillero(0, 0);
+
+            BloqueDeAcero bloque = new BloqueDeAcero();
+
+            casillero.Entidad = bloque;
+
+            Assert.IsFalse(casillero.TienePersonaje());
+        }
+
+        [Test]
         public void PruebaPosicionarUnaBombaEnLaCasilla()
         {
             Casillero casillero = new Casillero(0, 0);
@@ -232,6 +256,7 @@ namespace TP2_Bomberman.test
             Assert.AreEqual(5, bloque.Posicion.Fila);
             Assert.AreEqual(4, bloque.Posicion.Columna);
         }
+
 
 
     }

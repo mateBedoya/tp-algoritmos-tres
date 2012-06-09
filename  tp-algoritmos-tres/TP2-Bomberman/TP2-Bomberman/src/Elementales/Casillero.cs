@@ -57,7 +57,11 @@ namespace TP2_Bomberman.src
             return (this.entidad == null);
         }
 
-
+        public bool TienePersonaje()
+        {
+            if (entidad is Personaje) return true;
+            return false;
+        }
 
 
 
