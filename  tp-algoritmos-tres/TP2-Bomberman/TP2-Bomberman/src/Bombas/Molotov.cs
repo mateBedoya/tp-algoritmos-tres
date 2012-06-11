@@ -25,11 +25,7 @@ namespace TP2_Bomberman.src
             this.rango = 3;
         }
 
-        public override void Explotar()
-        {
-            if (FueDestruido()) throw new EntidadYaDestruidaException();
-            this.estaActivada = true;
-        }
+
         public override void Daniar(IDaniable daniable)
         {
             daniable.DaniarConMolotov(this); // Uso de patron doble dipatch

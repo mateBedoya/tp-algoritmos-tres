@@ -44,10 +44,9 @@ namespace TP2_Bomberman.test
             proyectil.MoverAbajo();
             proyectil.MoverAbajo();
 
-            Assert.AreEqual(4, proyectil.Posicion.Fila);
-            Assert.AreEqual(0, proyectil.Posicion.Columna);
+            proyectil.CuandoPaseElTiempo(0);
 
-            Assert.Throws<MovimientoInvalidoException>(() => proyectil.MoverAbajo());
+            Assert.IsTrue(proyectil.FueDestruido());
 
         }
 
@@ -61,33 +60,66 @@ namespace TP2_Bomberman.test
             tablero.AgregarEntidadEnCasillero(bombita, 1, 0);
 
             proyectil.MoverAbajo();
+            proyectil.CuandoPaseElTiempo(0);
 
             Assert.AreEqual(2, bombita.Vidas);
 
         }
 
         [Test]
-        public void PruebaQueUnaMolotovCuandoExplotaLuegoDeQuePaseUnTiempoEsteDestruida()
+        public void PruebaQueUnaMolotovCuandoSeActivaLuegoDeQuePaseUnTiempo1EsteDestruida()
         {
             Tablero tablero = new Tablero();
             Molotov bomba = new Molotov();
             tablero.AgregarEntidadEnCasillero(bomba, 0, 0);
 
-            bomba.Explotar();
+            bomba.ActivarBomba();
 
-            bomba.CuandoPaseElTiempo(5);
+            bomba.CuandoPaseElTiempo(1);
 
             Assert.IsTrue(bomba.FueDestruido());
         }
 
         [Test]
-        public void PruebaQueUnaMolotovCuandoExplotaYNoPasaTiempoNoEsteDestruida()
+        public void PruebaQueUnProyectilCuandoSeActivaLuegoDeQuePaseUnTiempo0EsteDestruida()
+        {
+            Tablero tablero = new Tablero();
+            Proyectil bomba = new Proyectil();
+            tablero.AgregarEntidadEnCasillero(bomba, 0, 0);
+
+            bomba.ActivarBomba();
+
+            bomba.CuandoPaseElTiempo(0);
+
+            Assert.IsTrue(bomba.FueDestruido());
+        }
+
+        [Test]
+        public void PruebaQueUnaToleToleCuandoSeActivaLuegoDeQuePaseUnTiempo5EsteDestruida()
+        {
+            Tablero tablero = new Tablero();
+            ToleTole bomba = new ToleTole();
+            tablero.AgregarEntidadEnCasillero(bomba, 0, 0);
+
+            bomba.ActivarBomba();
+
+            bomba.CuandoPaseElTiempo(2);
+
+            Assert.IsFalse(bomba.FueDestruido());
+
+            bomba.CuandoPaseElTiempo(3);
+
+            Assert.IsTrue(bomba.FueDestruido());
+        }
+
+        [Test]
+        public void PruebaQueUnaMolotovCuandoSeActivaYNoPasaTiempoNoEsteDestruida()
         {
             Tablero tablero = new Tablero();
             Molotov bomba = new Molotov();
             tablero.AgregarEntidadEnCasillero(bomba, 0, 0);
 
-            bomba.Explotar();
+            bomba.ActivarBomba();
 
             bomba.CuandoPaseElTiempo(0);
 
@@ -95,20 +127,20 @@ namespace TP2_Bomberman.test
         }
 
         [Test]
-        public void PruebaQueUnaMolotovCuandoExplotaSiSeQuiereVolverAExplotarLanceUnaExcepcion()
+        public void PruebaQueUnaMolotovCuandoSeActivaSiSeQuiereVolverAExplotarLanceUnaExcepcion()
         {
             Tablero tablero = new Tablero();
             Molotov bomba = new Molotov();
             tablero.AgregarEntidadEnCasillero(bomba, 0, 0);
 
-            bomba.Explotar();
+            bomba.ActivarBomba();
 
             bomba.CuandoPaseElTiempo(5);
 
-            Assert.Throws<EntidadYaDestruidaException>(() => bomba.Explotar());
+            Assert.Throws<EntidadYaDestruidaException>(() => bomba.ActivarBomba());
         }
 
-        /*[Test]
+        [Test]
         public void PruebaQueUnProyectilCuandoSeEncuentraConUnBloqueLoDania()
         {
             Tablero tablero = new Tablero();
@@ -118,9 +150,10 @@ namespace TP2_Bomberman.test
             tablero.AgregarEntidadEnCasillero(bloque, 0, 1);
 
             proyectil.MoverDerecha();
+            proyectil.CuandoPaseElTiempo(0);
 
             Assert.IsTrue(bloque.FueDestruido());
-        }*/
+        }
 
 
         [Test]
@@ -130,8 +163,8 @@ namespace TP2_Bomberman.test
             Proyectil proyectil = new Proyectil();
             tablero.AgregarEntidadEnCasillero(proyectil, 0, 0);
 
-            Assert.Throws<CasilleroFueraDeRangoException>(() => proyectil.PuedeMoverseA(proyectil.Posicion.ObtenerCasilleroIzquierdoDe(tablero)));
-            Assert.IsTrue(proyectil.PuedeMoverseA(proyectil.Posicion.ObtenerCasilleroDerechoDe(tablero)));
+            Assert.Throws<CasilleroFueraDeRangoException>(() => proyectil.PuedeMoverseA(proyectil.Posicion.ObtenerCasilleroIzquierdoEn(tablero)));
+            Assert.IsTrue(proyectil.PuedeMoverseA(proyectil.Posicion.ObtenerCasilleroDerechoEn(tablero)));
 
         }
 
@@ -144,8 +177,8 @@ namespace TP2_Bomberman.test
             tablero.AgregarEntidadEnCasillero(proyectil, 0, 0);
             tablero.AgregarEntidadEnCasillero(bloque, 0, 1);
 
-            Assert.IsFalse(proyectil.PuedeMoverseA(proyectil.Posicion.ObtenerCasilleroDerechoDe(tablero)));
-            Assert.IsTrue(proyectil.PuedeMoverseA(proyectil.Posicion.ObtenerCasilleroInferiorDe(tablero)));
+            Assert.IsFalse(proyectil.PuedeMoverseA(proyectil.Posicion.ObtenerCasilleroDerechoEn(tablero)));
+            Assert.IsTrue(proyectil.PuedeMoverseA(proyectil.Posicion.ObtenerCasilleroInferiorEn(tablero)));
         }
 
     }
