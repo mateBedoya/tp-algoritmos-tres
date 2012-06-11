@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using TP2_Bomberman.src.Articulos;
 
 namespace TP2_Bomberman.src.Elementales
 {
@@ -40,6 +41,12 @@ namespace TP2_Bomberman.src.Elementales
         {
             get { return this.tablero; }
             set { this.tablero = value; }
+        }
+
+
+
+        virtual internal void AgregarArticulo(Articulo articulo)
+        {
         }
     }
 }

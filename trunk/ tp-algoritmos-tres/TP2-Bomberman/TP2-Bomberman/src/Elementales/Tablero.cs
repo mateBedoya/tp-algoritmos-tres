@@ -150,7 +150,7 @@ namespace TP2_Bomberman.src
             }
         }
 
-        // Sortea la posibilidad de colocar un articulo en el casillero y lo agrega si corresponde.
+        // Sortea el tipo de articulo a colocar en el casillero y lo agrega si corresponde.
         private void SortearArticuloEnCasillero(int i, int j)
         {
             Random random = new Random();
@@ -160,20 +160,36 @@ namespace TP2_Bomberman.src
                 switch (random.Next(1, 4))
                 {
                     case 1:
-                        AgregarEntidadEnCasillero(new Timer(), i, j);
+                        AgregarArticuloEnCasillero(new Timer(), i, j);
                         return;
 
                     case 2:
-                        AgregarEntidadEnCasillero(new Habano(), i, j);
+                        AgregarArticuloEnCasillero(new Habano(), i, j);
                         return;
 
                     case 3:
-                        AgregarEntidadEnCasillero(new BombaToleTole(), i, j);
+                        AgregarArticuloEnCasillero(new BombaToleTole(), i, j);
                         return;
 
                 }
             }
         }
+
+        private void AgregarArticuloEnCasillero(Articulo articulo, int fila, int columna)
+        {
+            try
+            {
+                Casillero casillero = ObtenerCasillero(fila, columna);
+                casillero.Entidad.AgregarArticulo(articulo);
+            }
+            catch (CasilleroFueraDeRangoException e)
+            {
+                throw e;
+            }
+            
+
+        }
+
 
         // retorna la instancia de tablero
         public static Tablero GetInstancia()
