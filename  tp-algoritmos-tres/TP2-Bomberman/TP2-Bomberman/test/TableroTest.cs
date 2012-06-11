@@ -17,7 +17,7 @@ namespace TP2_Bomberman.test
         {
             Tablero tablero = new Tablero();
 
-            Assert.AreEqual(30*30, tablero.Tamanio);
+            Assert.AreEqual(30 * 30, tablero.Tamanio);
         }
 
         [Test]
@@ -58,7 +58,7 @@ namespace TP2_Bomberman.test
         {
             Tablero tablero = new Tablero();
 
-            Casillero casillero; 
+            Casillero casillero;
 
             Assert.Throws<CasilleroFueraDeRangoException>(() => casillero = tablero.ObtenerCasillero(35, 1));
         }
@@ -84,7 +84,7 @@ namespace TP2_Bomberman.test
         [Test]
         public void PruebaQueLanceUnaExcepcionCuandoQuieraObtenerLosAdyacentesDeUnCasilleroFueraDeRango()
         {
- 
+
             Tablero tablero = new Tablero();
 
             ArrayList listaDeAdyacentes;
@@ -113,5 +113,6 @@ namespace TP2_Bomberman.test
             Assert.IsFalse(bloque.Posicion.EstaVacio());
             Assert.IsFalse(tablero.ObtenerCasillero(0, 0).EstaVacio());
         }
+
     }
 }

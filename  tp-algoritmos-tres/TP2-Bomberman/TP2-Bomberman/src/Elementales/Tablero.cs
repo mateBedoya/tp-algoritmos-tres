@@ -6,6 +6,7 @@ using System.Collections;
 using TP2_Bomberman.src.Elementales;
 using TP2_Bomberman.src.Obstaculos;
 using TP2_Bomberman.src.Articulos;
+using TP2_Bomberman.src.Personajes;
 
 namespace TP2_Bomberman.src
 {
@@ -20,13 +21,84 @@ namespace TP2_Bomberman.src
         private int PROBABILIDAD_BLOQUE_CEMENTO = 20;
         private int PROBABILIDAD_BLOQUE_LADRILLO = 10;
         private int PROBABILIDAD_ARTICULO = 10;
+        private int CANTIDAD_DE_NIVELES = 6;
+        private int nivelActual = 1;
+        private Dictionary<int, int> ceciliosPorNivel = new Dictionary<int,int>();
+        private Dictionary<int, int> lopezRPorNivel = new Dictionary<int,int>();
+        private Dictionary<int, int> lopezRAladoPorNivel = new Dictionary<int,int>();
 
         public Tablero(bool ConObstaculos=false) //inicializa los obstaculos si le paso true
         {
             tablero = new Casillero[MAXIMO_FILA, MAXIMO_COLUMNA];
+            if (nivelActual == 1) CargarEnemigosPorNivel();
             InicializarCasilleros(ConObstaculos);
+            AgregarEnemigos();
         }
 
+        // En cada nivel aumenta en 1 la cantidad de LopezRAlado y 
+        // disminuye proporcionalmente la cantidad de cecilios.
+        // La cantidad de LopezR es siempre 3.
+        private void CargarEnemigosPorNivel()
+        {
+            for ( int nivel = 1; nivel <= CANTIDAD_DE_NIVELES; nivel++)
+            {
+                ceciliosPorNivel.Add(nivel,CANTIDAD_DE_NIVELES-nivel);
+                lopezRPorNivel.Add(nivel, 3);
+                lopezRAladoPorNivel.Add(nivel, nivel);
+            }
+        }
+
+        // Agrega la cantidad de enemigos correspondientes segun el nivel actual
+        // reemplazando las entidades existentes en el casillero.
+        private void AgregarEnemigos()
+        {
+            for ( int cantidadDeCecilios = ceciliosPorNivel[nivelActual]; cantidadDeCecilios > 0 ; cantidadDeCecilios-- ) 
+            {
+                int fila = SortearFila();
+                int columna = SortearColumna();
+                AgregarEntidadEnCasillero(new Cecilio(), fila, columna);
+            }
+            for (int cantidadDeLopezR = lopezRPorNivel[nivelActual]; cantidadDeLopezR > 0 ; cantidadDeLopezR--)
+            {
+                int fila = SortearFila();
+                int columna = SortearColumna();
+                AgregarEntidadEnCasillero(new LopezR(), fila, columna);
+            }
+            for (int cantidadDeLopezRAlado = lopezRAladoPorNivel[nivelActual]; cantidadDeLopezRAlado > 0 ; cantidadDeLopezRAlado--)
+            {
+                int fila = SortearFila();
+                int columna = SortearColumna();
+                AgregarEntidadEnCasillero(new LopezRAlado(), fila, columna);
+            }
+
+
+            }
+
+        // Sortea una fila dentro del rango del tablero
+        private int SortearFila()
+        {
+            Random filaRandom = new Random();
+            int fila;
+            fila = filaRandom.Next(4,MAXIMO_FILA-1);
+            return fila;
+            
+        }
+
+        // Sortea una columna par dentro del rango del tablero
+        private int SortearColumna()
+        {
+            Random columnaRandom = new Random();
+            int columna;
+            columna = columnaRandom.Next(2,MAXIMO_COLUMNA-1);
+            columna = ConvertirEnPar(columna);
+            return columna;
+        }
+        
+
+        private int ConvertirEnPar(int numero)
+        {
+            return (numero/2) * 2;
+        }
 
         //Metodo que inicializa los casilleros del tablero
         private void InicializarCasilleros(bool ConObstaculos)
