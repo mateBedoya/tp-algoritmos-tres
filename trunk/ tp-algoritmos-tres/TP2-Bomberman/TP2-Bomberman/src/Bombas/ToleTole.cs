@@ -24,11 +24,7 @@ namespace TP2_Bomberman.src.Bombas
             this.rango = 6;
         }
 
-        public override void Explotar()
-        {
-            // Aca tendria que ir recorriendo y agarrando los elementos de cada casillero e ir daniandolos llamando a 
-            // Dañar(elementoDelCasillero)
-        }
+
         public override void Daniar(IDaniable daniable)
         {
             daniable.DaniarConToleTole(this); // Uso de patron doble dipatch

@@ -36,7 +36,7 @@ namespace TP2_Bomberman.src
         {
             try
             {
-                CambiarPosicionA(posicion.ObtenerCasilleroSuperiorDe(this.tablero));
+                CambiarPosicionA(posicion.ObtenerCasilleroSuperiorEn(this.tablero));
             }
             catch(CasilleroFueraDeRangoException)
             {
@@ -44,7 +44,7 @@ namespace TP2_Bomberman.src
             }
             catch (MovimientoInvalidoException)
             {
-                Entidad entidad = posicion.ObtenerCasilleroSuperiorDe(this.tablero).Entidad;
+                Entidad entidad = posicion.ObtenerCasilleroSuperiorEn(this.tablero).Entidad;
                 entidad.Chocar(this);
 
             }
@@ -54,7 +54,7 @@ namespace TP2_Bomberman.src
         {
             try
             {
-                CambiarPosicionA(posicion.ObtenerCasilleroInferiorDe(this.tablero));
+                CambiarPosicionA(posicion.ObtenerCasilleroInferiorEn(this.tablero));
             }
             catch (CasilleroFueraDeRangoException)
             {
@@ -62,7 +62,7 @@ namespace TP2_Bomberman.src
             }
             catch (MovimientoInvalidoException)
             {
-                Entidad entidad = posicion.ObtenerCasilleroInferiorDe(this.tablero).Entidad;
+                Entidad entidad = posicion.ObtenerCasilleroInferiorEn(this.tablero).Entidad;
                 entidad.Chocar(this);
 
             }
@@ -73,7 +73,7 @@ namespace TP2_Bomberman.src
         {
             try
             {
-                CambiarPosicionA(posicion.ObtenerCasilleroDerechoDe(this.tablero));
+                CambiarPosicionA(posicion.ObtenerCasilleroDerechoEn(this.tablero));
             }
             catch (CasilleroFueraDeRangoException)
             {
@@ -81,7 +81,7 @@ namespace TP2_Bomberman.src
             }
             catch (MovimientoInvalidoException)
             {
-                Entidad entidad = posicion.ObtenerCasilleroDerechoDe(this.tablero).Entidad;
+                Entidad entidad = posicion.ObtenerCasilleroDerechoEn(this.tablero).Entidad;
                 entidad.Chocar(this);
 
             }
@@ -92,7 +92,7 @@ namespace TP2_Bomberman.src
         {
             try
             {
-                Casillero casilleroNuevo = posicion.ObtenerCasilleroIzquierdoDe(this.tablero);
+                Casillero casilleroNuevo = posicion.ObtenerCasilleroIzquierdoEn(this.tablero);
                 CambiarPosicionA(casilleroNuevo);
             }
             catch (CasilleroFueraDeRangoException)
@@ -101,7 +101,7 @@ namespace TP2_Bomberman.src
             }
             catch (MovimientoInvalidoException)
             {
-                Entidad entidad = posicion.ObtenerCasilleroIzquierdoDe(this.tablero).Entidad;
+                Entidad entidad = posicion.ObtenerCasilleroIzquierdoEn(this.tablero).Entidad;
                 entidad.Chocar(this);
 
             }

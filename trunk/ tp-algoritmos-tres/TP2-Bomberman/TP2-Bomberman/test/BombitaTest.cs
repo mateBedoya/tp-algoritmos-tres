@@ -208,5 +208,6 @@ namespace TP2_Bomberman.test
 
             Assert.Greater(bombita.Bomba.Destruccion, porcentajeInicial);
         }
+
     }
 }

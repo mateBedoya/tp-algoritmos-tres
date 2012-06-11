@@ -108,7 +108,7 @@ namespace TP2_Bomberman.test
             Tablero tablero = new Tablero();
             Casillero casilleroActual = tablero.ObtenerCasillero(1, 1);
 
-            Casillero casilleroDerecho = casilleroActual.ObtenerCasilleroDerechoDe(tablero);
+            Casillero casilleroDerecho = casilleroActual.ObtenerCasilleroDerechoEn(tablero);
 
             Assert.AreEqual(1, casilleroDerecho.Fila);
             Assert.AreEqual(2, casilleroDerecho.Columna);
@@ -121,7 +121,7 @@ namespace TP2_Bomberman.test
             Tablero tablero = new Tablero();
             Casillero casilleroActual = tablero.ObtenerCasillero(1, 1);
 
-            Casillero casilleroArriba = casilleroActual.ObtenerCasilleroSuperiorDe(tablero);
+            Casillero casilleroArriba = casilleroActual.ObtenerCasilleroSuperiorEn(tablero);
 
             Assert.AreEqual(0, casilleroArriba.Fila);
             Assert.AreEqual(1, casilleroArriba.Columna);
@@ -135,7 +135,7 @@ namespace TP2_Bomberman.test
             Tablero tablero = new Tablero();
             Casillero casilleroActual = tablero.ObtenerCasillero(1, 1);
 
-            Casillero casilleroIzquierdo = casilleroActual.ObtenerCasilleroIzquierdoDe(tablero);
+            Casillero casilleroIzquierdo = casilleroActual.ObtenerCasilleroIzquierdoEn(tablero);
 
             Assert.AreEqual(1, casilleroIzquierdo.Fila);
             Assert.AreEqual(0, casilleroIzquierdo.Columna);
@@ -149,7 +149,7 @@ namespace TP2_Bomberman.test
             Tablero tablero = new Tablero();
             Casillero casilleroActual = tablero.ObtenerCasillero(1, 1);
 
-            Casillero casilleroAbajo = casilleroActual.ObtenerCasilleroInferiorDe(tablero);
+            Casillero casilleroAbajo = casilleroActual.ObtenerCasilleroInferiorEn(tablero);
 
             Assert.AreEqual(2, casilleroAbajo.Fila);
             Assert.AreEqual(1, casilleroAbajo.Columna);

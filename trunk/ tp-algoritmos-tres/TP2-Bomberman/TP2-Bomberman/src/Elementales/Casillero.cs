@@ -28,25 +28,25 @@ namespace TP2_Bomberman.src
 
 
         // retorna el casillero adyacente- derecha
-        public virtual Casillero ObtenerCasilleroDerechoDe(Tablero tablero)
+        public virtual Casillero ObtenerCasilleroDerechoEn(Tablero tablero)
         {
             return (tablero.ObtenerCasillero(this.fila, this.columna + 1));
         }
 
         // retorna el casillero adyacente- superior 
-        public virtual Casillero ObtenerCasilleroSuperiorDe(Tablero tablero)
+        public virtual Casillero ObtenerCasilleroSuperiorEn(Tablero tablero)
         {
             return (tablero.ObtenerCasillero(this.fila - 1, this.columna));
         }
 
         // retorna el casillero adyacente- inferior
-        public virtual Casillero ObtenerCasilleroInferiorDe(Tablero tablero)
+        public virtual Casillero ObtenerCasilleroInferiorEn(Tablero tablero)
         {
             return (tablero.ObtenerCasillero(this.fila + 1, this.columna));
         }
 
         // retorna el casillero adyacente- izquierda
-        public virtual Casillero ObtenerCasilleroIzquierdoDe(Tablero tablero)
+        public virtual Casillero ObtenerCasilleroIzquierdoEn(Tablero tablero)
         {
             return (tablero.ObtenerCasillero(this.fila, this.columna - 1));
         }

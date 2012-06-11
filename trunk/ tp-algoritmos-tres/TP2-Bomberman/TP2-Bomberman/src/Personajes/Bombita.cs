@@ -57,8 +57,10 @@ namespace TP2_Bomberman
             //ESTA EN EL ATRIBUTO "retardo". ESTO ES POR SI AGARRA EL ARTICULO TIMER Y LAS BOMBAS SE LANZAN CON
             // UN RETARDO DEL 15% MENOS ENTONCES MODIFICA EL ATRIBUTO Y LO PONE EN 0.85 Y AL MULTIPLICARLO POR ESTO
             // SE CAMBIA EL RETARDO DE LA BOMBA
+
+            this.tablero.AgregarEntidadEnCasillero(bomba, posicion.Fila, posicion.Columna);
+            bomba.ActivarBomba();
             
-            //bomba.Explotar(this.porcentajeDeRetardo);
         }
 
 

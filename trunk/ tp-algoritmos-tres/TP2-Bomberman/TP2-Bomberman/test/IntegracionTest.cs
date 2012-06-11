@@ -199,12 +199,37 @@ namespace TP2_Bomberman.test
 
             bomba.MoverIzquierda();
             bomba.MoverIzquierda();
+
+
+            bomba.CuandoPaseElTiempo(0);
             
             Assert.AreEqual(0, bombita.Posicion.Fila);
             Assert.AreEqual(0, bombita.Posicion.Columna);
             Assert.AreEqual(2, bombita.Vidas);
             Assert.IsNull(bomba.Posicion);
             
+        }
+
+        [Test]
+        public void PruebaQueCuandoUnProyectilExploteDanieAUnBombitaQueEsteAlLado()
+        {
+            Tablero tablero = new Tablero();
+            Bombita bombita = new Bombita();
+            tablero.AgregarEntidadEnCasillero(bombita, 4, 1);// Arranca en (0,0)
+            Proyectil bomba = new Proyectil();
+            tablero.AgregarEntidadEnCasillero(bomba, 0, 2);
+
+            bomba.MoverAbajo();
+            bomba.MoverAbajo();
+            bomba.MoverAbajo();
+            bomba.MoverAbajo();
+
+            Assert.AreEqual(4, bomba.Posicion.Fila);
+            Assert.AreEqual(2, bomba.Posicion.Columna);
+
+            bomba.CuandoPaseElTiempo(0);
+
+            Assert.AreEqual(2, bombita.Vidas);
         }
 
         [Test]
@@ -229,6 +254,29 @@ namespace TP2_Bomberman.test
 
 
             
+
+        }
+
+        [Test]
+        public void PruebaQueBombitaLanceUnaBombaAlLadoDeUnBloquesDeLadrillosYLosDestruya()
+        {
+            Tablero tablero = new Tablero();
+            Bombita bombita = new Bombita();
+            tablero.AgregarEntidadEnCasillero(bombita, 0, 0);// Arranca en (0,0)
+            BloqueDeLadrillos bloque = new BloqueDeLadrillos();
+            tablero.AgregarEntidadEnCasillero(bloque, 0, 2);
+            Bomba bomba = bombita.Bomba;
+
+            bombita.MoverDerecha();
+            bombita.LanzarBomba();
+
+            bombita.MoverAbajo();
+            bombita.MoverIzquierda();
+
+            bomba.CuandoPaseElTiempo(5);
+
+            Assert.IsTrue(bloque.FueDestruido());
+
 
         }
     }

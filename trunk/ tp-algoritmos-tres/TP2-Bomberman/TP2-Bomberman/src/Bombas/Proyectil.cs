@@ -15,7 +15,7 @@ namespace TP2_Bomberman.src.Bombas
             :base()
         {
             this.destruccion = 5;//Esto era a determinar, lo dejo en 5 por ahora
-            this.retardo = 1;
+            this.retardo = 0;//Explota apenas se la activa
             this.rango = 3;
         }
 
@@ -27,11 +27,7 @@ namespace TP2_Bomberman.src.Bombas
             this.rango = 3;
         }
 
-        public override void Explotar()
-        {
-            // Aca tendria que ir MOVIENDOSE Y CUANDO LLEGUE A LA DISTANCIA HACER 
-            // Dañar(elementoDelCasillero)
-        }
+
         public override void Daniar(IDaniable daniable)
         {
             daniable.DaniarConProyectil(this); // Uso de patron doble dipatch
@@ -45,19 +41,17 @@ namespace TP2_Bomberman.src.Bombas
         {
             try
             {
-                Casillero casilleroNuevo = posicion.ObtenerCasilleroSuperiorDe(this.tablero);
+                Casillero casilleroNuevo = posicion.ObtenerCasilleroSuperiorEn(this.tablero);
                 CambiarPosicionA(casilleroNuevo);
+                if (this.distanciaRecorrida == 4) ActivarBomba();
             }
             catch (CasilleroFueraDeRangoException)
             {
 
             }
-            catch (MovimientoInvalidoException e)
+            catch (MovimientoInvalidoException)
             {
-                if (this.distanciaRecorrida >= 4) throw e;
-                Entidad entidad = posicion.ObtenerCasilleroSuperiorDe(this.tablero).Entidad;
-                this.ChocarConPersonaje((Personaje)entidad);
-
+                ActivarBomba();
             }
         }
 
@@ -65,19 +59,17 @@ namespace TP2_Bomberman.src.Bombas
         {
             try
             {
-                Casillero casilleroNuevo = posicion.ObtenerCasilleroInferiorDe(this.tablero);
+                Casillero casilleroNuevo = posicion.ObtenerCasilleroInferiorEn(this.tablero);
                 CambiarPosicionA(casilleroNuevo);
+                if (this.distanciaRecorrida == 4) ActivarBomba();
             }
             catch (CasilleroFueraDeRangoException)
             {
 
             }
-            catch (MovimientoInvalidoException e)
+            catch (MovimientoInvalidoException)
             {
-                if (this.distanciaRecorrida >= 4) throw e;
-                Entidad entidad = posicion.ObtenerCasilleroInferiorDe(this.tablero).Entidad;
-                this.ChocarConPersonaje((Personaje)entidad);
-
+                ActivarBomba();
             }
 
         }
@@ -86,19 +78,17 @@ namespace TP2_Bomberman.src.Bombas
         {
             try
             {
-                Casillero casilleroNuevo = posicion.ObtenerCasilleroDerechoDe(this.tablero);
+                Casillero casilleroNuevo = posicion.ObtenerCasilleroDerechoEn(this.tablero);
                 CambiarPosicionA(casilleroNuevo);
+                if (this.distanciaRecorrida == 4) ActivarBomba();
             }
             catch (CasilleroFueraDeRangoException)
             {
 
             }
-            catch (MovimientoInvalidoException e)
+            catch (MovimientoInvalidoException)
             {
-                if (this.distanciaRecorrida >= 4) throw e;
-                Entidad entidad = posicion.ObtenerCasilleroDerechoDe(this.tablero).Entidad;
-                this.ChocarConPersonaje((Personaje)entidad);
-
+                ActivarBomba();
             }
 
         }
@@ -107,19 +97,17 @@ namespace TP2_Bomberman.src.Bombas
         {
             try
             {
-                Casillero casilleroNuevo = posicion.ObtenerCasilleroIzquierdoDe(this.tablero);
+                Casillero casilleroNuevo = posicion.ObtenerCasilleroIzquierdoEn(this.tablero);
                 CambiarPosicionA(casilleroNuevo);
+                if (this.distanciaRecorrida == 4) ActivarBomba();
             }
             catch (CasilleroFueraDeRangoException)
             {
 
             }
-            catch (MovimientoInvalidoException e)
+            catch (MovimientoInvalidoException)
             {
-                if(this.distanciaRecorrida >= 4) throw e;
-                Entidad entidad = posicion.ObtenerCasilleroIzquierdoDe(this.tablero).Entidad;
-                this.ChocarConPersonaje((Personaje)entidad);
-
+                ActivarBomba();
             }
 
         }
@@ -141,11 +129,6 @@ namespace TP2_Bomberman.src.Bombas
             if (casilleroNuevo.EstaVacio() && (this.distanciaRecorrida < 4)) return true;
             return false;
         }
-
-        public void ChocarConPersonaje(Personaje personaje)
-        {
-            personaje.DaniarConProyectil(this);
-            this.posicion = null;
-        }
+        
     }
 }
