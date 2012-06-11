@@ -30,6 +30,12 @@ namespace TP2_Bomberman.src.Elementales
 
         public virtual void Chocar(Personaje personaje) { }
 
+        public bool EsBombita()
+        {
+            if (this is Bombita) return true;
+            return false;
+        }
+
         // Propiedad Posicion
         public Casillero Posicion
         {

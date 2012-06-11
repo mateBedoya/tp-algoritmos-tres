@@ -279,5 +279,67 @@ namespace TP2_Bomberman.test
 
 
         }
+
+        [Test]
+        public void CreaUnEnemigoYUnBombitaYLoLastimaConUnaMolotov()
+        {
+            Tablero tablero = new Tablero();
+            Bombita bombita = new Bombita();
+            tablero.AgregarEntidadEnCasillero(bombita, 0, 0);// Arranca en (0,0)
+            LopezR enemigo = new LopezR();
+            tablero.AgregarEntidadEnCasillero(enemigo, 0, 2);
+            Bomba bomba = bombita.Bomba;
+
+            bombita.MoverDerecha();
+            bombita.LanzarBomba();
+
+            bombita.MoverIzquierda();
+            bombita.MoverAbajo();
+
+            bomba.CuandoPaseElTiempo(5);
+
+            Assert.AreEqual(5, enemigo.Resistencia);
+        }
+
+        [Test]
+        public void CreaUnEnemigoYUnBombitaYLoLastimaConUnaMolotovAlEnemigoYASiMismo()
+        {
+            Tablero tablero = new Tablero();
+            Bombita bombita = new Bombita();
+            tablero.AgregarEntidadEnCasillero(bombita, 0, 0);// Arranca en (0,0)
+            LopezR enemigo = new LopezR();
+            tablero.AgregarEntidadEnCasillero(enemigo, 0, 2);
+            Bomba bomba = bombita.Bomba;
+
+            bombita.MoverDerecha();
+            bombita.LanzarBomba();
+
+            bombita.MoverIzquierda();
+
+            bomba.CuandoPaseElTiempo(5);
+
+            Assert.AreEqual(5, enemigo.Resistencia);
+            Assert.AreEqual(2, bombita.Vidas);
+        }
+
+        [Test]
+        public void CreaUnEnemigoYUnBombitaYLopezRLanzaUnProyectilYLoLastimaABombita()
+        {
+            Tablero tablero = new Tablero();
+            Bombita bombita = new Bombita();
+            tablero.AgregarEntidadEnCasillero(bombita, 0, 0);// Arranca en (0,0)
+            LopezR enemigo = new LopezR();
+            tablero.AgregarEntidadEnCasillero(enemigo, 0, 3);
+            Bomba bomba = enemigo.Bomba;
+
+            enemigo.MoverIzquierda();
+            enemigo.LanzarBomba();
+            enemigo.MoverAbajo();
+
+            bomba.CuandoPaseElTiempo(5);
+
+            Assert.AreEqual(10, enemigo.Resistencia);
+            Assert.AreEqual(2, bombita.Vidas);
+        }
     }
 }

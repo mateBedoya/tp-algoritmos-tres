@@ -119,6 +119,7 @@ namespace TP2_Bomberman.src
             posicion.Entidad = null;
             casilleroNuevo.Entidad = this;
             posicion = casilleroNuevo;
+            if (this.EsBombita()) this.tablero.PosicionBombita = casilleroNuevo;
         }
 
         public virtual bool PuedeMoverseA(Casillero casilleroNuevo)
