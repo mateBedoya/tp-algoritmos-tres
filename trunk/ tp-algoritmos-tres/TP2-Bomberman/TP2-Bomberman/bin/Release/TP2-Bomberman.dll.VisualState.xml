@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
-  <TopNode>[0-1159]C:\Javi\UBA\FIUBA\Algoritmos y Programación III\TP2\ tp-algoritmos-tres\TP2-Bomberman\TP2-Bomberman\bin\Release\TP2-Bomberman.dll</TopNode>
-  <SelectedNode>[0-1159]C:\Javi\UBA\FIUBA\Algoritmos y Programación III\TP2\ tp-algoritmos-tres\TP2-Bomberman\TP2-Bomberman\bin\Release\TP2-Bomberman.dll</SelectedNode>
+  <TopNode>[0-1159]C:\Users\asd\Documents\Visual Studio 2010\Projects\TP2-2\ tp-algoritmos-tres\TP2-Bomberman\TP2-Bomberman\bin\Release\TP2-Bomberman.dll</TopNode>
+  <SelectedNode>[0-1161]TP2_Bomberman.test</SelectedNode>
   <ExcludeCategories>false</ExcludeCategories>
   <Nodes>
-    <Node UniqueName="[0-1159]C:\Javi\UBA\FIUBA\Algoritmos y Programación III\TP2\ tp-algoritmos-tres\TP2-Bomberman\TP2-Bomberman\bin\Release\TP2-Bomberman.dll" Expanded="true" />
+    <Node UniqueName="[0-1159]C:\Users\asd\Documents\Visual Studio 2010\Projects\TP2-2\ tp-algoritmos-tres\TP2-Bomberman\TP2-Bomberman\bin\Release\TP2-Bomberman.dll" Expanded="true" />
     <Node UniqueName="[0-1160]TP2_Bomberman" Expanded="true" />
     <Node UniqueName="[0-1161]TP2_Bomberman.test" Expanded="true" />
-    <Node UniqueName="[0-1149]TP2_Bomberman.test.BombaTest" Expanded="true" />
+    <Node UniqueName="[0-1097]TP2_Bomberman.test.IntegracionTest" Expanded="true" />
   </Nodes>
 </VisualState>
