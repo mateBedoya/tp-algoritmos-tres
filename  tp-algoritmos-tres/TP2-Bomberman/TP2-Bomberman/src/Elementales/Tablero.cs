@@ -26,6 +26,7 @@ namespace TP2_Bomberman.src
         private Dictionary<int, int> ceciliosPorNivel = new Dictionary<int,int>();
         private Dictionary<int, int> lopezRPorNivel = new Dictionary<int,int>();
         private Dictionary<int, int> lopezRAladoPorNivel = new Dictionary<int,int>();
+        private Casillero posicionBombita;
 
         public Tablero(bool ConObstaculos=false) //inicializa los obstaculos si le paso true
         {
@@ -240,6 +241,7 @@ namespace TP2_Bomberman.src
                 casillero.Entidad = entidad;
                 entidad.Posicion = casillero;
                 entidad.Tablero = this;
+                if (entidad.EsBombita()) posicionBombita = casillero;
             }
             catch (CasilleroFueraDeRangoException e)
             {
@@ -260,6 +262,12 @@ namespace TP2_Bomberman.src
         public double Tamanio
         {
             get { return (MAXIMO_FILA * MAXIMO_COLUMNA); }
+        }
+
+        public Casillero PosicionBombita
+        {
+            get { return this.posicionBombita; }
+            set { this.posicionBombita = value; }
         }
     }
 }

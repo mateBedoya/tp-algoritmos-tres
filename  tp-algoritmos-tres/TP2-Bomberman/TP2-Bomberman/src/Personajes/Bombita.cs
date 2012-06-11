@@ -60,7 +60,7 @@ namespace TP2_Bomberman
 
             this.tablero.AgregarEntidadEnCasillero(bomba, posicion.Fila, posicion.Columna);
             bomba.ActivarBomba();
-            
+            bomba = new Molotov();
         }
 
 

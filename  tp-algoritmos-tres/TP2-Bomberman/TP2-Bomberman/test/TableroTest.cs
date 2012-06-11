@@ -114,5 +114,32 @@ namespace TP2_Bomberman.test
             Assert.IsFalse(tablero.ObtenerCasillero(0, 0).EstaVacio());
         }
 
+        [Test]
+        public void PruebaQueSeGuardeCorrectamenteLaPosicionDeBombita()
+        {
+            Tablero tablero = new Tablero();
+            Bombita bombita = new Bombita();
+            tablero.AgregarEntidadEnCasillero(bombita, 5, 6);
+
+            Casillero casillero = tablero.PosicionBombita;
+
+            Assert.AreEqual(5, casillero.Fila);
+            Assert.AreEqual(6, casillero.Columna);
+        }
+
+        [Test]
+        public void PruebaQueSeGuardeCorrectamenteLaPosicionDeBombitaCuandoSeMueve()
+        {
+            Tablero tablero = new Tablero();
+            Bombita bombita = new Bombita();
+            tablero.AgregarEntidadEnCasillero(bombita, 0, 0);
+
+            bombita.MoverAbajo();
+            Casillero casillero = tablero.PosicionBombita;
+
+            Assert.AreEqual(1, casillero.Fila);
+            Assert.AreEqual(0, casillero.Columna);
+        }
+
     }
 }

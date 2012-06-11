@@ -22,11 +22,50 @@ namespace TP2_Bomberman.src
             this.bomba = new Proyectil();
         }
 
-        public override void LanzarBomba()
+        public override void LanzarBomba()//la lanza solo si bombita esta en su misma fila o columna
         {
-            // FALTA IMPLEMENTAR
-            // LO QUE PENSE ES QUE CUANDO LANCE UNA BOMBA, TIRE LA QUE TIENE GUARDADA EN EL ATRIBUTO "bomba"
-            // E INMEDIATAMENTE CREE UNA NUEVA INSTANCIA Y LA GUARDE EN EL ATRIBUTO
+            this.tablero.AgregarEntidadEnCasillero(bomba, posicion.Fila, posicion.Columna);
+            int filaBombita = tablero.PosicionBombita.Fila;
+            int columnaBombita = tablero.PosicionBombita.Columna;
+            Proyectil proyectil = (Proyectil)this.bomba;
+            if (filaBombita == posicion.Fila)
+            {
+                if ((columnaBombita - posicion.Columna) < 0)
+                {
+                    for (int i = 0; i < bomba.Rango; i++)
+                    {
+                        proyectil.MoverIzquierda();
+                    }
+                }
+                else
+                {
+                    for (int i = 0; i < bomba.Rango; i++)
+                    {
+                        proyectil.MoverDerecha();
+                    }
+                }
+            }
+            if (columnaBombita == posicion.Columna)
+            {
+                if ((filaBombita - posicion.Fila) < 0)
+                {
+                    for (int i = 0; i < bomba.Rango; i++)
+                    {
+                        proyectil.MoverArriba();
+                    }
+                }
+                else
+                {
+                    for (int i = 0; i < bomba.Rango; i++)
+                    {
+                        proyectil.MoverAbajo();
+                    }
+                }
+            }
+
+
+
+            bomba = new Proyectil();
         }
     }
 }
