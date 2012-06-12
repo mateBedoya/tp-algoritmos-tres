@@ -26,14 +26,35 @@ namespace TP2_Bomberman.src
         private Dictionary<int, int> ceciliosPorNivel = new Dictionary<int,int>();
         private Dictionary<int, int> lopezRPorNivel = new Dictionary<int,int>();
         private Dictionary<int, int> lopezRAladoPorNivel = new Dictionary<int,int>();
-        private Casillero posicionBombita;
-
+        private Casillero posicionBombita;        private Random random = new Random();
         public Tablero(bool ConObstaculos=false) //inicializa los obstaculos si le paso true
         {
             tablero = new Casillero[MAXIMO_FILA, MAXIMO_COLUMNA];
             if (nivelActual == 1) CargarEnemigosPorNivel();
             InicializarCasilleros(ConObstaculos);
-            AgregarEnemigos();
+            if (ConObstaculos == true)
+            {
+                AgregarEnemigos();
+                AgregarSalida();
+            }
+        }
+
+        // Agrega un obstaculo con salida en una posicion aleatoria del tablero.
+        private void AgregarSalida()
+        {
+            while (true)
+            {
+                int fila = SortearFila();
+                int columna = SortearColumna();
+                if (ObtenerCasillero(fila, columna).EstaVacio() == true)
+                {
+                    int resultado = random.Next(1, 3);
+                    if (resultado == 1) AgregarEntidadEnCasillero(new BloqueDeCemento(), fila, columna);
+                    if (resultado == 2) AgregarEntidadEnCasillero(new BloqueDeLadrillos(), fila, columna);
+                    AgregarArticuloEnCasillero(new Salida(), fila, columna);
+                    break;
+                }
+            }
         }
 
         // En cada nivel aumenta en 1 la cantidad de LopezRAlado y 
@@ -78,9 +99,7 @@ namespace TP2_Bomberman.src
         // Sortea una fila dentro del rango del tablero
         private int SortearFila()
         {
-            Random filaRandom = new Random();
-            int fila;
-            fila = filaRandom.Next(4,MAXIMO_FILA-1);
+            int fila = random.Next(4,MAXIMO_FILA);
             return fila;
             
         }
@@ -88,14 +107,11 @@ namespace TP2_Bomberman.src
         // Sortea una columna par dentro del rango del tablero
         private int SortearColumna()
         {
-            Random columnaRandom = new Random();
-            int columna;
-            columna = columnaRandom.Next(2,MAXIMO_COLUMNA-1);
+            int columna = random.Next(4,MAXIMO_COLUMNA);
             columna = ConvertirEnPar(columna);
             return columna;
         }
         
-
         private int ConvertirEnPar(int numero)
         {
             return (numero/2) * 2;
@@ -119,29 +135,22 @@ namespace TP2_Bomberman.src
         private void CargarObstaculo(int i, int j)
         {
             // Los obstaculos fijos del bomberman original son de acero en esta version.
-            if (i % 2 == 1 && j % 2 == 1) 
-                AgregarEntidadEnCasillero(new BloqueDeAcero(), i, j);
-
+            if (i % 2 == 1 && j % 2 == 1) AgregarEntidadEnCasillero(new BloqueDeAcero(), i, j);
+            
             // Evita encerrar a bombita.
-            else if (i < 2 && j < 2) 
-                return;
+            else if (i < 3 && j < 3) return;
 
-            else
-            {
-                SortearObstaculoEnCasillero(i, j);
-            }
+            else SortearObstaculoEnCasillero(i, j);
         }
 
         // Sortea la posibilidad de colocar un obstaculo en el casillero y lo agrega si corresponde.
         private void SortearObstaculoEnCasillero(int i, int j)
         {
-            Random random = new Random();
 
             if (random.Next(1, PROBABILIDAD_BLOQUE_LADRILLO) == 1)
             {
                 AgregarEntidadEnCasillero(new BloqueDeLadrillos(), i, j);
                 SortearArticuloEnCasillero(i, j);
-
             }
 
             else if (random.Next(1, PROBABILIDAD_BLOQUE_CEMENTO) == 1)
@@ -154,7 +163,6 @@ namespace TP2_Bomberman.src
         // Sortea el tipo de articulo a colocar en el casillero y lo agrega si corresponde.
         private void SortearArticuloEnCasillero(int i, int j)
         {
-            Random random = new Random();
 
             if (random.Next(1, PROBABILIDAD_ARTICULO) == 1)
             {
@@ -171,7 +179,6 @@ namespace TP2_Bomberman.src
                     case 3:
                         AgregarArticuloEnCasillero(new BombaToleTole(), i, j);
                         return;
-
                 }
             }
         }
@@ -187,8 +194,6 @@ namespace TP2_Bomberman.src
             {
                 throw e;
             }
-            
-
         }
 
 

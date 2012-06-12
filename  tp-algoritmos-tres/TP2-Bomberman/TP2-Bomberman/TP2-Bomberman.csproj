@@ -48,6 +48,7 @@
     <Compile Include="src\Articulos\ArticuloNull.cs" />
     <Compile Include="src\Articulos\BombaToleTole.cs" />
     <Compile Include="src\Articulos\Habano.cs" />
+    <Compile Include="src\Articulos\Salida.cs" />
     <Compile Include="src\Articulos\Timer.cs" />
     <Compile Include="src\Bombas\Bomba.cs" />
     <Compile Include="src\Bombas\BombaNull.cs" />
@@ -90,6 +91,7 @@
     <Compile Include="test\LopezRAladoTest.cs" />
     <Compile Include="test\LopezRTest.cs" />
     <Compile Include="test\BloqueDeLadrillosTest.cs" />
+    <Compile Include="test\SalidaTest.cs" />
     <Compile Include="test\TableroTest.cs" />
     <Compile Include="test\TimerTest.cs" />
   </ItemGroup>
