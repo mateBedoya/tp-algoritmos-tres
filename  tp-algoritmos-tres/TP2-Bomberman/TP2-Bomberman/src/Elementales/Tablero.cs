@@ -26,11 +26,19 @@ namespace TP2_Bomberman.src
         private Dictionary<int, int> ceciliosPorNivel = new Dictionary<int,int>();
         private Dictionary<int, int> lopezRPorNivel = new Dictionary<int,int>();
         private Dictionary<int, int> lopezRAladoPorNivel = new Dictionary<int,int>();
-        private Casillero posicionBombita;        private Random random = new Random();
+        private Casillero posicionBombita;        
+        private Random random = new Random();
+
         public Tablero(bool ConObstaculos=false) //inicializa los obstaculos si le paso true
         {
             tablero = new Casillero[MAXIMO_FILA, MAXIMO_COLUMNA];
             if (nivelActual == 1) CargarEnemigosPorNivel();
+            InicializarTablero(ConObstaculos);
+        }
+
+        // Inicializa el tablero con casilleros, obstaculos y personajes.
+        public void InicializarTablero(bool ConObstaculos)
+        {
             InicializarCasilleros(ConObstaculos);
             if (ConObstaculos == true)
             {
@@ -38,7 +46,6 @@ namespace TP2_Bomberman.src
                 AgregarSalida();
             }
         }
-
         // Agrega un obstaculo con salida en una posicion aleatoria del tablero.
         private void AgregarSalida()
         {
@@ -92,16 +99,13 @@ namespace TP2_Bomberman.src
                 int columna = SortearColumna();
                 AgregarEntidadEnCasillero(new LopezRAlado(), fila, columna);
             }
-
-
-            }
+        }
 
         // Sortea una fila dentro del rango del tablero
         private int SortearFila()
         {
             int fila = random.Next(4,MAXIMO_FILA);
             return fila;
-            
         }
 
         // Sortea una columna par dentro del rango del tablero
@@ -273,6 +277,12 @@ namespace TP2_Bomberman.src
         {
             get { return this.posicionBombita; }
             set { this.posicionBombita = value; }
+        }
+
+        public int NivelActual
+        {
+            get { return this.nivelActual; }
+            set { this.nivelActual = value; }
         }
     }
 }
