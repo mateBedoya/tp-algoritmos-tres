@@ -85,5 +85,21 @@ namespace TP2_Bomberman.test
 
             Assert.AreEqual(porcentajeFinal, porcentajeInicial*0.85  );
         }
+
+        [Test]
+        public void PruebaQueElEfectoDelTimerLeDureHastaQueMuera()
+        {
+            Timer articulo = new Timer();
+            Bombita bombita = new Bombita();
+            Assert.AreEqual(1,bombita.PorcentajeDeRetardo);
+
+            bombita.AgarrarArticulo(articulo);
+            Assert.AreEqual(0.85, bombita.PorcentajeDeRetardo);
+
+            bombita.DaniarConToleTole(new ToleTole());
+
+            Assert.AreEqual(1, bombita.PorcentajeDeRetardo);
+
+        }
     }
 }

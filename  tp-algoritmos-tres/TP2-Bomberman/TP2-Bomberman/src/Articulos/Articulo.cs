@@ -26,22 +26,23 @@ namespace TP2_Bomberman.src.Articulos
 
 
         // Todas las bombas lo destruyen (le sacan la unica vida que tiene)
-        public void DaniarConMolotov(Molotov molotov)
+        // menos a la salida (se redefinen)
+        public virtual void DaniarConMolotov(Molotov molotov)
         {
             if (FueDestruido()) throw new EntidadYaDestruidaException();
             this.vida = 0;
         }
-        public void DaniarConToleTole(Bombas.ToleTole toleTole)
+        public virtual void DaniarConToleTole(Bombas.ToleTole toleTole)
         {
             if (FueDestruido()) throw new EntidadYaDestruidaException();
             this.vida = 0;
         }
-        public void DaniarConProyectil(Bombas.Proyectil proyectil)
+        public virtual void DaniarConProyectil(Bombas.Proyectil proyectil)
         {
             if (FueDestruido()) throw new EntidadYaDestruidaException();
             this.vida = 0;
         }
-        public bool FueDestruido()
+        public virtual bool FueDestruido()
         {
             return (this.vida == 0);
         }

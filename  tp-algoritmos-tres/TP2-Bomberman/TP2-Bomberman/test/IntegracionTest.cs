@@ -341,5 +341,146 @@ namespace TP2_Bomberman.test
             Assert.AreEqual(10, enemigo.Resistencia);
             Assert.AreEqual(2, bombita.Vidas);
         }
+
+        [Test]
+        public void CreaUnEnemigoUnBombitaYLopezRLanzaUnProyectilYLoLastimaAlEnemigoQueEstaEnElMedioYABombitaNoLoDanie()
+        {
+            Tablero tablero = new Tablero();
+            Bombita bombita = new Bombita();
+            tablero.AgregarEntidadEnCasillero(bombita, 0, 0);// Arranca en (0,0)
+            LopezR enemigo1 = new LopezR();
+            tablero.AgregarEntidadEnCasillero(enemigo1, 0, 3);
+            Cecilio enemigo2 = new Cecilio();
+            tablero.AgregarEntidadEnCasillero(enemigo2, 0, 1);
+
+
+            Bomba bomba = enemigo1.Bomba;
+
+            enemigo1.LanzarBomba();
+            enemigo1.MoverAbajo();
+
+
+            bomba.CuandoPaseElTiempo(5);
+
+            Assert.AreEqual(10, enemigo1.Resistencia);
+            Assert.AreEqual(3, bombita.Vidas);
+            Assert.IsTrue(enemigo2.FueDestruido());
+        }
+
+        [Test]
+        public void QueBombitaNoSeaDaniadoCuandoSeLeLanzaUnProyectilYEstaAtrasDeUnBloque()
+        {
+            Tablero tablero = new Tablero();
+            Bombita bombita = new Bombita();
+            tablero.AgregarEntidadEnCasillero(bombita, 1, 2);// Arranca en (0,0)
+            LopezR enemigo = new LopezR();
+            tablero.AgregarEntidadEnCasillero(enemigo, 1, 5);
+            BloqueDeAcero bloque = new BloqueDeAcero();
+            tablero.AgregarEntidadEnCasillero(bloque, 1, 3);
+
+            Bomba bomba = enemigo.Bomba;
+
+            enemigo.LanzarBomba();
+
+            bomba.CuandoPaseElTiempo(5);
+
+            Assert.AreEqual(3, bombita.Vidas);
+
+        }
+
+        [Test]
+        public void CreaUnEnemigoYUnBombitaYLanzaDosBombasYLoDestruye()
+        {
+            Tablero tablero = new Tablero();
+            Bombita bombita = new Bombita();
+            tablero.AgregarEntidadEnCasillero(bombita, 0, 0);// Arranca en (0,0)
+            LopezR enemigo = new LopezR();
+            tablero.AgregarEntidadEnCasillero(enemigo, 0, 2);
+            Bomba bomba1 = bombita.Bomba;
+
+            bombita.LanzarBomba();
+
+            bombita.MoverAbajo();
+            bombita.MoverDerecha();
+
+            bomba1.CuandoPaseElTiempo(5);
+
+            bombita.MoverArriba();
+            bombita.LanzarBomba();
+            Bomba bomba2 = bombita.Bomba;
+            bombita.MoverAbajo();
+            bombita.MoverIzquierda();
+
+            bomba2.CuandoPaseElTiempo(5);
+
+            Assert.IsTrue(enemigo.FueDestruido());
+        }
+
+        [Test]
+        public void BombitaIntentaLanzarDosBombasALaVez()
+        {
+            Tablero tablero = new Tablero();
+            Bombita bombita = new Bombita();
+            tablero.AgregarEntidadEnCasillero(bombita, 0, 0);// Arranca en (0,0)
+            Bomba bomba = bombita.Bomba;
+
+            bombita.LanzarBomba();
+            bombita.MoverAbajo();
+            bombita.MoverDerecha();
+
+            bombita.LanzarBomba();
+            bombita.MoverDerecha();
+
+            bomba.CuandoPaseElTiempo(3);
+
+            Assert.AreEqual(3, bombita.Vidas);
+        }
+
+        [Test]
+        public void LopezRIntentaLanzarDosProyectilesALaVezYNoPuede()
+        {
+            Tablero tablero = new Tablero();
+            Bombita bombita = new Bombita();
+            tablero.AgregarEntidadEnCasillero(bombita, 0, 0);// Arranca en (0,0)
+            LopezR enemigo = new LopezR();
+            tablero.AgregarEntidadEnCasillero(enemigo, 0, 3);
+            
+            Bomba bomba = enemigo.Bomba;
+
+            enemigo.LanzarBomba();
+            enemigo.MoverDerecha();
+            enemigo.LanzarBomba();
+
+            bomba.CuandoPaseElTiempo(5);
+
+            Assert.AreEqual(2, bombita.Vidas);
+        }
+        /*
+        [Test]
+        public void BombitaAgarreUnTimerYSusBombasTardenMasEnExplotar()
+        {
+            Tablero tablero = new Tablero();
+            Bombita bombita = new Bombita();
+            tablero.AgregarEntidadEnCasillero(bombita, 0, 0);// Arranca en (0,0)
+            Timer articulo = new Timer();
+            tablero.AgregarEntidadEnCasillero(articulo, 0, 1);
+
+            bombita.LanzarBomba();
+            bombita.Bomba.CuandoPaseElTiempo(1);
+            Assert.IsTrue(bombita.Bomba.FueDestruido());
+
+            bombita.MoverDerecha();
+            Assert.AreEqual(0.85,bombita.PorcentajeDeRetardo);
+            bombita.LanzarBomba();
+            bombita.Bomba.CuandoPaseElTiempo(0.85);
+            Assert.IsTrue(bombita.Bomba.FueDestruido());
+
+            bombita.LanzarBomba();
+            bombita.MoverDerecha();
+
+            bombita.Bomba.CuandoPaseElTiempo(3);
+
+            Assert.AreEqual(3, bombita.Vidas);
+        }*/
     }
 }

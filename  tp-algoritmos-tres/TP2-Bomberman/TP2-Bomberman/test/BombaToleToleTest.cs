@@ -86,6 +86,21 @@ namespace TP2_Bomberman.test
 
             Assert.Greater(destruccionFinal, destruccionInicial);
         }
-        
+
+        [Test]
+        public void PruebaQueElEfectoDelBombaToleToleLeDureHastaQueMuera()
+        {
+            BombaToleTole articulo = new BombaToleTole();
+            Bombita bombita = new Bombita();
+            Assert.IsInstanceOf<Molotov>(bombita.Bomba);
+
+            bombita.AgarrarArticulo(articulo);
+            Assert.IsInstanceOf<ToleTole>(bombita.Bomba);
+
+            bombita.DaniarConToleTole(new ToleTole());
+
+            Assert.IsInstanceOf<Molotov>(bombita.Bomba);
+
+        }
     }
 }

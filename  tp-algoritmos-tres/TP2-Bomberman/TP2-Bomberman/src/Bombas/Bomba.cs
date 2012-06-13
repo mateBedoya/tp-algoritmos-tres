@@ -8,19 +8,19 @@ using TP2_Bomberman.src.Excepciones;
 
 namespace TP2_Bomberman.src
 {
-    public abstract class Bomba: Entidad, IDependienteDelTiempo,IDestruible
+    public abstract class Bomba : Entidad, IDependienteDelTiempo, IDestruible, IDaniable
     {
         protected int destruccion;
         protected int retardo;
         protected int rango;
         protected int vida = 1;
-        protected int tiempoTranscurrido = 0;
+        protected double tiempoTranscurrido = 0;
         protected bool estaActivada = false;
 
         public Bomba()
             : base() { }
         public Bomba(Casillero posicion)
-            : base(posicion) 
+            : base(posicion)
         {
             posicion.Entidad = this;
         }
@@ -34,7 +34,7 @@ namespace TP2_Bomberman.src
             this.estaActivada = true;
         }
 
-        
+
         public abstract void Daniar(IDaniable daniable);
 
 
@@ -44,10 +44,10 @@ namespace TP2_Bomberman.src
             return false;
         }
 
-        public void CuandoPaseElTiempo(int tiempo)
+        public void CuandoPaseElTiempo(double tiempo)
         {
             tiempoTranscurrido = tiempoTranscurrido + tiempo;
-            if (estaActivada) this.Explotar(); 
+            if (estaActivada) this.Explotar();
         }
 
         // porcentajeRetardo es por si bombita agarra el articulo 
@@ -78,20 +78,24 @@ namespace TP2_Bomberman.src
             {
                 casilleroADaniar = posicion.ObtenerCasilleroDerechoEn(this.tablero);
             }
-            catch(CasilleroFueraDeRangoException)
+            catch (CasilleroFueraDeRangoException)
             {
                 return;
             }
-            for(int i = 0; i < rango-1; i++)
+            for (int i = 0; i < rango - 1; i++)
             {
                 IDaniable entidad = null;
-                if(casilleroADaniar != null) entidad = (IDaniable)casilleroADaniar.Entidad;
-                if(entidad != null) this.Daniar(entidad);
+                if (casilleroADaniar != null) entidad = (IDaniable)casilleroADaniar.Entidad;
+                if (entidad != null)
+                {
+                    this.Daniar(entidad);
+                    return;
+                }
                 try
                 {
                     if (casilleroADaniar != null) casilleroADaniar = casilleroADaniar.ObtenerCasilleroDerechoEn(this.tablero);
                 }
-                catch(CasilleroFueraDeRangoException)
+                catch (CasilleroFueraDeRangoException)
                 {
                     casilleroADaniar = null;
                 }
@@ -109,11 +113,15 @@ namespace TP2_Bomberman.src
             {
                 return;
             }
-            for(int i = 0; i < rango-1; i++)
+            for (int i = 0; i < rango - 1; i++)
             {
                 IDaniable entidad = null;
-                if(casilleroADaniar != null) entidad = (IDaniable)casilleroADaniar.Entidad;
-                if(entidad != null) this.Daniar(entidad);
+                if (casilleroADaniar != null) entidad = (IDaniable)casilleroADaniar.Entidad;
+                if (entidad != null)
+                {
+                    this.Daniar(entidad);
+                    return;
+                }
                 try
                 {
                     if (casilleroADaniar != null) casilleroADaniar = casilleroADaniar.ObtenerCasilleroIzquierdoEn(this.tablero);
@@ -136,17 +144,21 @@ namespace TP2_Bomberman.src
             {
                 return;
             }
-            
-            for(int i = 0; i < rango-1; i++)
+
+            for (int i = 0; i < rango - 1; i++)
             {
                 IDaniable entidad = null;
-                if(casilleroADaniar != null) entidad = (IDaniable)casilleroADaniar.Entidad;
-                if(entidad != null) this.Daniar(entidad);
+                if (casilleroADaniar != null) entidad = (IDaniable)casilleroADaniar.Entidad;
+                if (entidad != null)
+                {
+                    this.Daniar(entidad);
+                    return;
+                }
                 try
                 {
                     if (casilleroADaniar != null) casilleroADaniar = casilleroADaniar.ObtenerCasilleroSuperiorEn(this.tablero);
                 }
-                catch(CasilleroFueraDeRangoException)
+                catch (CasilleroFueraDeRangoException)
                 {
                     casilleroADaniar = null;
                 }
@@ -164,16 +176,20 @@ namespace TP2_Bomberman.src
             {
                 return;
             }
-            for(int i = 0; i < rango-1; i++)
+            for (int i = 0; i < rango - 1; i++)
             {
                 IDaniable entidad = null;
-                if(casilleroADaniar != null) entidad = (IDaniable)casilleroADaniar.Entidad;
-                if(entidad != null) this.Daniar(entidad);
+                if (casilleroADaniar != null) entidad = (IDaniable)casilleroADaniar.Entidad;
+                if (entidad != null)
+                {
+                    this.Daniar(entidad);
+                    return;
+                }
                 try
                 {
                     if (casilleroADaniar != null) casilleroADaniar = casilleroADaniar.ObtenerCasilleroInferiorEn(this.tablero);
                 }
-                catch(CasilleroFueraDeRangoException)
+                catch (CasilleroFueraDeRangoException)
                 {
                     casilleroADaniar = null;
                 }
@@ -188,6 +204,22 @@ namespace TP2_Bomberman.src
         }
 
 
+
+        public void DaniarConMolotov(Molotov molotov)
+        {
+            this.Explotar();
+        }
+        public void DaniarConToleTole(Bombas.ToleTole toleTole)
+        {
+            this.Explotar();
+        }
+        public void DaniarConProyectil(Bombas.Proyectil proyectil)
+        {
+            this.Explotar();
+        }
+
+
+
         // Properties
         public int Destruccion
         {
@@ -198,11 +230,16 @@ namespace TP2_Bomberman.src
         {
             get { return this.retardo; }
         }
-        
+
         public int Rango
         {
             get { return this.rango; }
         }
-                
+
+        public bool EstaActivada
+        {
+            get { return this.estaActivada; }
+        }
+
     }
 }

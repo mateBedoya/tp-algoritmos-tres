@@ -56,6 +56,8 @@ namespace TP2_Bomberman.src.Obstaculos
             lopez.CambiarPosicionA(this.posicion);
         }
 
+        
+
         // Propiedades
         public int Resistencia
         {

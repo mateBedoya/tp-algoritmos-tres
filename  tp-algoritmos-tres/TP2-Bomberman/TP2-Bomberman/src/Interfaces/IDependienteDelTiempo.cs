@@ -8,6 +8,6 @@ namespace TP2_Bomberman.src
     // La implementan los elementos que dependen del tiempo para realizar una accion
     public interface IDependienteDelTiempo
     {
-        void CuandoPaseElTiempo(int tiempo);
+        void CuandoPaseElTiempo(double tiempo);
     }
 }
