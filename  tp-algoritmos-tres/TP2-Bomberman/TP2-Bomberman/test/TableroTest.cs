@@ -141,5 +141,12 @@ namespace TP2_Bomberman.test
             Assert.AreEqual(0, casillero.Columna);
         }
 
+        [Test]
+        public void PruebaCrearTableroYEnemigosVivosEsNueve()
+        {
+            Tablero tablero = new Tablero(true);
+            Assert.AreEqual(tablero.EnemigosVivos, 9);
+        }
+
     }
 }
