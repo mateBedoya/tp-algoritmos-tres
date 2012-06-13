@@ -13,31 +13,41 @@ namespace TP2_Bomberman
     public class Bombita : Personaje
     {
         private int vidas = 3;
-                
+
         public Bombita()
-            :base()
+            : base()
         {
             this.resistencia = 1;
             this.bomba = new Molotov(); //Inicialmente tiene una molotov
         }
 
         // Bombita pierde una vida con cualquier bomba que se lo danie
-        public override void DaniarConMolotov(Molotov molotov) 
-        {
-            if(FueDestruido()) throw new EntidadYaDestruidaException();
-            this.vidas--;
-        }
-        public override void DaniarConToleTole(ToleTole toleTole) 
+        public override void DaniarConMolotov(Molotov molotov)
         {
             if (FueDestruido()) throw new EntidadYaDestruidaException();
             this.vidas--;
+            VolverAtributosAEstadoOriginal();
         }
-        public override void DaniarConProyectil(Proyectil proyectil) 
+        public override void DaniarConToleTole(ToleTole toleTole)
         {
             if (FueDestruido()) throw new EntidadYaDestruidaException();
             this.vidas--;
+            VolverAtributosAEstadoOriginal();
         }
-        
+        public override void DaniarConProyectil(Proyectil proyectil)
+        {
+            if (FueDestruido()) throw new EntidadYaDestruidaException();
+            this.vidas--;
+            VolverAtributosAEstadoOriginal();
+        }
+
+        // Lo hace cada vez que se muere asi le saca todos los articulos que pueda llegar a tener
+        private void VolverAtributosAEstadoOriginal()
+        {
+            this.porcentajeDeRetardo = 1;
+            this.bomba = new Molotov();
+            this.velocidad = 5;
+        }
 
         // Devuelve si no tiene mas vidas o no
         public override bool FueDestruido()
@@ -49,18 +59,16 @@ namespace TP2_Bomberman
 
         public void LanzarBomba()
         {
-            // FALTA IMPLEMENTAR
-            // LO QUE PENSE ES QUE CUANDO LANCE UNA BOMBA, TIRE LA QUE TIENE GUARDADA EN EL ATRIBUTO "bomba"
-            // E INMEDIATAMENTE CREE UNA NUEVA INSTANCIA Y LA GUARDE EN EL ATRIBUTO
-
-            //TENER EN CUENTA EL TIEMPO DEL RETARDO, ANTES DE LANZAR LA BOMBA MULTIPLICARLO POR EL RETARDO QUE
-            //ESTA EN EL ATRIBUTO "retardo". ESTO ES POR SI AGARRA EL ARTICULO TIMER Y LAS BOMBAS SE LANZAN CON
-            // UN RETARDO DEL 15% MENOS ENTONCES MODIFICA EL ATRIBUTO Y LO PONE EN 0.85 Y AL MULTIPLICARLO POR ESTO
-            // SE CAMBIA EL RETARDO DE LA BOMBA
-
+            if (bomba.FueDestruido())//Le permite agregar otra bomba si la anterior ya ha explotado
+            {
+                bomba = new Molotov();
+            }
+            else if (bomba.EstaActivada)
+            {
+                return;
+            }
             this.tablero.AgregarEntidadEnCasillero(bomba, posicion.Fila, posicion.Columna);
             bomba.ActivarBomba();
-            bomba = new Molotov();
         }
 
 
@@ -69,15 +77,15 @@ namespace TP2_Bomberman
         {
             articulo.UtilizarArticuloEn(this);
         }
-        
+
 
         //Propiedades
         public int Vidas
         {
-            get { return this.vidas;}
+            get { return this.vidas; }
             set { this.vidas = value; }
         }
 
-        
+
     }
 }

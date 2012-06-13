@@ -19,5 +19,10 @@ namespace TP2_Bomberman.src.Articulos
         {
             if (tablero.CantidadEnemigosVivos() == 0) tablero.avanzarNivel();
         }
+
+        public override bool FueDestruido() { return false; }
+
+
+
     }
 }

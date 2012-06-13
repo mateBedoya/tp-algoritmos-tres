@@ -215,31 +215,6 @@ namespace TP2_Bomberman.src
             return (INSTANCIA);
         }
 
-        // Devuelve un ArrayList con los casilleros adyacentes en el siguiente orden:
-        // {izquierdo, arriba, derecho, abajo}
-        // En caso de no poseer alguno de los adyacentes, pone un null en la lista
-        public ArrayList ObtenerAdyacentes(int fila, int columna) 
-        {
-            ArrayList listaDeAdyacentes = new ArrayList();
-            
-            if (CasilleroFueraDeRango(fila, columna)) throw new CasilleroFueraDeRangoException();
-
-            if (CasilleroFueraDeRango(fila, columna - 1)) listaDeAdyacentes.Add(null); //izq
-            else listaDeAdyacentes.Add(tablero[fila, columna - 1]);
-
-            if (CasilleroFueraDeRango(fila - 1, columna)) listaDeAdyacentes.Add(null); //arriba
-            else listaDeAdyacentes.Add(tablero[fila - 1, columna]);
-
-            if (CasilleroFueraDeRango(fila, columna + 1)) listaDeAdyacentes.Add(null);//der
-            else listaDeAdyacentes.Add(tablero[fila, columna + 1]);
-
-            if (CasilleroFueraDeRango(fila + 1, columna)) listaDeAdyacentes.Add(null);//abajo
-            else listaDeAdyacentes.Add(tablero[fila + 1, columna]);
-
-
-            return listaDeAdyacentes;
-        }
-
         // Se fija si un casillero esta dentro de los parametros del tablero
         public bool CasilleroFueraDeRango(int x, int y)
         {

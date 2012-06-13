@@ -140,5 +140,22 @@ namespace TP2_Bomberman.test
 
             Assert.Throws<EntidadYaDestruidaException>(() => cecilio.DaniarConToleTole(toleTole));
         }
+
+        [Test]
+        public void QueCecilioLanceUnaBombaYSeDanieASiMismo()
+        {
+            Tablero tablero = new Tablero();
+            Cecilio cecilio = new Cecilio();
+            tablero.AgregarEntidadEnCasillero(cecilio, 0, 0);
+
+            cecilio.LanzarBomba();
+            cecilio.MoverAbajo();
+
+            Bomba bomba = cecilio.Bomba;
+
+            bomba.CuandoPaseElTiempo(5);
+
+            Assert.IsTrue(cecilio.FueDestruido());
+        }
     }
 }

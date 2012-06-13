@@ -158,5 +158,22 @@ namespace TP2_Bomberman.test
 
             Assert.AreEqual(2, lopez.Posicion.Columna);
         }
+
+        [Test]
+        public void QueCecilioLanceUnaBombaYSeDanieASiMismo()
+        {
+            Tablero tablero = new Tablero();
+            LopezRAlado lopez = new LopezRAlado();
+            tablero.AgregarEntidadEnCasillero(lopez, 0, 0);
+
+            lopez.LanzarBomba();
+            lopez.MoverAbajo();
+
+            Bomba bomba = lopez.Bomba;
+
+            bomba.CuandoPaseElTiempo(5);
+
+            Assert.IsTrue(lopez.FueDestruido());
+        }
     }
 }

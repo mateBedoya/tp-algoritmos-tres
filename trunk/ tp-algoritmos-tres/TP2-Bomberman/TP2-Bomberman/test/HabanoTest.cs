@@ -85,5 +85,23 @@ namespace TP2_Bomberman.test
 
             Assert.Greater(velocidadFinal, velocidadInicial);
         }
+
+        [Test]
+        public void PruebaQueElEfectoDelHabanoLeDureHastaQueMuera()
+        {
+            Habano articulo = new Habano();
+            Bombita bombita = new Bombita();
+            int velocidadInicial = bombita.Velocidad;
+
+            bombita.AgarrarArticulo(articulo);
+            int velocidadIntermedia = bombita.Velocidad;
+
+            bombita.DaniarConToleTole(new ToleTole());
+            int velocidadFinal = bombita.Velocidad;
+
+            Assert.AreEqual(velocidadInicial, velocidadFinal);
+            Assert.Greater(velocidadIntermedia, velocidadInicial);
+            Assert.Greater(velocidadIntermedia, velocidadFinal);
+        }
     }
 }

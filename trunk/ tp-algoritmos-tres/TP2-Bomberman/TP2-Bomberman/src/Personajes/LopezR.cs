@@ -24,6 +24,14 @@ namespace TP2_Bomberman.src
 
         public override void LanzarBomba()//la lanza solo si bombita esta en su misma fila o columna
         {
+            if (bomba.FueDestruido())//Le permite agregar otra bomba si la anterior ya ha explotado
+            {
+                bomba = new Molotov();
+            }
+            else if (bomba.EstaActivada)
+            {
+                return;
+            }
             this.tablero.AgregarEntidadEnCasillero(bomba, posicion.Fila, posicion.Columna);
             int filaBombita = tablero.PosicionBombita.Fila;
             int columnaBombita = tablero.PosicionBombita.Columna;
@@ -62,10 +70,6 @@ namespace TP2_Bomberman.src
                     }
                 }
             }
-
-
-
-            bomba = new Proyectil();
         }
     }
 }
