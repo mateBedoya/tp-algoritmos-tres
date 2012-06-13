@@ -61,7 +61,14 @@ namespace TP2_Bomberman
         {
             if (bomba.FueDestruido())//Le permite agregar otra bomba si la anterior ya ha explotado
             {
-                bomba = new Molotov();
+                if (bomba is Molotov)// MEJORAR ESTO!!!!!!
+                {
+                    bomba = new Molotov();
+                }
+                else
+                {
+                    bomba = new ToleTole();
+                }
                 bomba.RetardoAdquirido = porcentajeDeRetardo;
             }
             else if (bomba.EstaActivada)
@@ -71,7 +78,6 @@ namespace TP2_Bomberman
             this.tablero.AgregarEntidadEnCasillero(bomba, posicion.Fila, posicion.Columna);
             bomba.ActivarBomba();
         }
-
 
 
         public void AgarrarArticulo(Articulo articulo)

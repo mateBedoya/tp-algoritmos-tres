@@ -29,5 +29,6 @@ namespace TP2_Bomberman.src.Bombas
         {
             daniable.DaniarConToleTole(this); // Uso de patron doble dipatch
         }
+
     }
 }

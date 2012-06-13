@@ -31,5 +31,6 @@ namespace TP2_Bomberman.src
             daniable.DaniarConMolotov(this); // Uso de patron doble dipatch
         }
 
+
     }
 }
