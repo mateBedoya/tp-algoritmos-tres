@@ -221,6 +221,7 @@ namespace TP2_Bomberman.src
 
 
 
+
         // Properties
         public int Destruccion
         {

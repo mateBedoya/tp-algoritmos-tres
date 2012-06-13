@@ -487,5 +487,39 @@ namespace TP2_Bomberman.test
 
             Assert.AreEqual(3, bombita.Vidas);
         }
+
+        [Test]
+        public void BombitaAgarreUnBombaToleToleYCambieElTipoDeBombaQueLanza()
+        {
+            Tablero tablero = new Tablero();
+            Bombita bombita = new Bombita();
+            tablero.AgregarEntidadEnCasillero(bombita, 0, 0);// Arranca en (0,0)
+            BombaToleTole articulo = new BombaToleTole();
+            tablero.AgregarEntidadEnCasillero(articulo, 0, 1);
+
+            bombita.MoverAbajo();
+            bombita.LanzarBomba();
+            bombita.MoverDerecha();
+            bombita.MoverAbajo();
+
+            bombita.Bomba.CuandoPaseElTiempo(1);
+            Assert.IsInstanceOf<Molotov>(bombita.Bomba);
+
+            bombita.MoverArriba();
+            bombita.MoverArriba();
+            bombita.MoverDerecha();
+            bombita.LanzarBomba();
+            bombita.MoverDerecha();
+            bombita.MoverAbajo();
+            bombita.Bomba.CuandoPaseElTiempo(10);
+            Assert.IsTrue(bombita.Bomba.FueDestruido());
+            Assert.IsInstanceOf<ToleTole>(bombita.Bomba);
+
+            bombita.LanzarBomba();
+            bombita.MoverDerecha();
+            bombita.MoverAbajo();
+            bombita.Bomba.CuandoPaseElTiempo(5);
+            Assert.IsInstanceOf<ToleTole>(bombita.Bomba);
+        }
     }
 }
