@@ -7,6 +7,7 @@ using TP2_Bomberman.src.Elementales;
 using TP2_Bomberman.src.Obstaculos;
 using TP2_Bomberman.src.Articulos;
 using TP2_Bomberman.src.Personajes;
+using TP2_Bomberman.src.Interfaces;
 
 namespace TP2_Bomberman.src
 {
@@ -23,6 +24,7 @@ namespace TP2_Bomberman.src
         private int PROBABILIDAD_ARTICULO = 10;
         private int CANTIDAD_DE_NIVELES = 6;
         private int nivelActual = 1;
+        private int enemigosVivos = 0;
         private Dictionary<int, int> ceciliosPorNivel = new Dictionary<int,int>();
         private Dictionary<int, int> lopezRPorNivel = new Dictionary<int,int>();
         private Dictionary<int, int> lopezRAladoPorNivel = new Dictionary<int,int>();
@@ -86,18 +88,21 @@ namespace TP2_Bomberman.src
                 int fila = SortearFila();
                 int columna = SortearColumna();
                 AgregarEntidadEnCasillero(new Cecilio(), fila, columna);
+                enemigosVivos += 1;
             }
             for (int cantidadDeLopezR = lopezRPorNivel[nivelActual]; cantidadDeLopezR > 0 ; cantidadDeLopezR--)
             {
                 int fila = SortearFila();
                 int columna = SortearColumna();
                 AgregarEntidadEnCasillero(new LopezR(), fila, columna);
+                enemigosVivos += 1;
             }
             for (int cantidadDeLopezRAlado = lopezRAladoPorNivel[nivelActual]; cantidadDeLopezRAlado > 0 ; cantidadDeLopezRAlado--)
             {
                 int fila = SortearFila();
                 int columna = SortearColumna();
                 AgregarEntidadEnCasillero(new LopezRAlado(), fila, columna);
+                enemigosVivos += 1;
             }
         }
 
@@ -283,6 +288,16 @@ namespace TP2_Bomberman.src
         {
             get { return this.nivelActual; }
             set { this.nivelActual = value; }
+        }
+
+        public int EnemigosVivos
+        {
+            get { return this.enemigosVivos; }
+        }
+
+        public void restarEnemigoVivo()
+        {
+            enemigosVivos -= 1;
         }
     }
 }

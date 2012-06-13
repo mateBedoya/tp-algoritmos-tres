@@ -5,11 +5,15 @@ using System.Text;
 using TP2_Bomberman.src.Bombas;
 using TP2_Bomberman.src.Excepciones;
 using TP2_Bomberman.src.Elementales;
+using TP2_Bomberman.src.Personajes;
+using TP2_Bomberman.src.Interfaces;
 
 namespace TP2_Bomberman.src
 {
     public abstract class Enemigo : Personaje
+
     {
+
         public Enemigo()
             : base() { }
 
@@ -27,6 +31,7 @@ namespace TP2_Bomberman.src
         {
             if (FueDestruido()) throw new EntidadYaDestruidaException();
             this.resistencia = 0;
+
         }
 
         public override void DaniarConProyectil(Proyectil proyectil)
