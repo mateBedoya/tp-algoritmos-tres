@@ -24,7 +24,7 @@ namespace TP2_Bomberman.src
         private int PROBABILIDAD_ARTICULO = 10;
         private int CANTIDAD_DE_NIVELES = 6;
         private int nivelActual = 1;
-        private int enemigosVivos = 0;
+        private List<Entidad> listaEnemigos = new List<Entidad>();
         private Dictionary<int, int> ceciliosPorNivel = new Dictionary<int,int>();
         private Dictionary<int, int> lopezRPorNivel = new Dictionary<int,int>();
         private Dictionary<int, int> lopezRAladoPorNivel = new Dictionary<int,int>();
@@ -41,6 +41,7 @@ namespace TP2_Bomberman.src
         // Inicializa el tablero con casilleros, obstaculos y personajes.
         public void InicializarTablero(bool ConObstaculos)
         {
+            List<Entidad> listaEnemigos = new List<Entidad>();
             InicializarCasilleros(ConObstaculos);
             if (ConObstaculos == true)
             {
@@ -88,21 +89,21 @@ namespace TP2_Bomberman.src
                 int fila = SortearFila();
                 int columna = SortearColumna();
                 AgregarEntidadEnCasillero(new Cecilio(), fila, columna);
-                enemigosVivos += 1;
+                listaEnemigos.Add(ObtenerCasillero(fila, columna).Entidad);
             }
             for (int cantidadDeLopezR = lopezRPorNivel[nivelActual]; cantidadDeLopezR > 0 ; cantidadDeLopezR--)
             {
                 int fila = SortearFila();
                 int columna = SortearColumna();
                 AgregarEntidadEnCasillero(new LopezR(), fila, columna);
-                enemigosVivos += 1;
+                listaEnemigos.Add(ObtenerCasillero(fila, columna).Entidad);
             }
             for (int cantidadDeLopezRAlado = lopezRAladoPorNivel[nivelActual]; cantidadDeLopezRAlado > 0 ; cantidadDeLopezRAlado--)
             {
                 int fila = SortearFila();
                 int columna = SortearColumna();
                 AgregarEntidadEnCasillero(new LopezRAlado(), fila, columna);
-                enemigosVivos += 1;
+                listaEnemigos.Add(ObtenerCasillero(fila, columna).Entidad);
             }
         }
 
@@ -290,14 +291,19 @@ namespace TP2_Bomberman.src
             set { this.nivelActual = value; }
         }
 
-        public int EnemigosVivos
+        public int CantidadEnemigosVivos()
         {
-            get { return this.enemigosVivos; }
+            int cantidad = 0;
+            foreach (Enemigo enemigo in listaEnemigos){
+                if (! enemigo.FueDestruido()) cantidad ++;
+            }
+            return cantidad;
         }
 
-        public void restarEnemigoVivo()
+        internal void avanzarNivel()
         {
-            enemigosVivos -= 1;
+            nivelActual += 1;
+            InicializarTablero(true);
         }
     }
 }

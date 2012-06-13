@@ -17,7 +17,7 @@ namespace TP2_Bomberman.src.Articulos
 
         public override void UtilizarArticuloEn(Personaje personaje)
         {
-
+            if (tablero.CantidadEnemigosVivos() == 0) tablero.avanzarNivel();
         }
     }
 }
