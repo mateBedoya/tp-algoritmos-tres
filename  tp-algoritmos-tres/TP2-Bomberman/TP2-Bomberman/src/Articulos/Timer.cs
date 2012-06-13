@@ -18,6 +18,7 @@ namespace TP2_Bomberman.src.Articulos
         public override void UtilizarArticuloEn(Personaje personaje)
         {
             personaje.PorcentajeDeRetardo = personaje.PorcentajeDeRetardo * 0.85;
+            personaje.Bomba.RetardoAdquirido = personaje.Bomba.RetardoAdquirido * 0.85;
         }
     }
 }

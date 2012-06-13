@@ -62,6 +62,7 @@ namespace TP2_Bomberman
             if (bomba.FueDestruido())//Le permite agregar otra bomba si la anterior ya ha explotado
             {
                 bomba = new Molotov();
+                bomba.RetardoAdquirido = porcentajeDeRetardo;
             }
             else if (bomba.EstaActivada)
             {

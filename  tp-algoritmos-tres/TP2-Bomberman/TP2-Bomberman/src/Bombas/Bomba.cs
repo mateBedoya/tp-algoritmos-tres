@@ -16,6 +16,7 @@ namespace TP2_Bomberman.src
         protected int vida = 1;
         protected double tiempoTranscurrido = 0;
         protected bool estaActivada = false;
+        protected double retardoAdquirido = 1;
 
         public Bomba()
             : base() { }
@@ -47,7 +48,7 @@ namespace TP2_Bomberman.src
         public void CuandoPaseElTiempo(double tiempo)
         {
             tiempoTranscurrido = tiempoTranscurrido + tiempo;
-            if (estaActivada) this.Explotar();
+            if (estaActivada) this.Explotar(retardoAdquirido);
         }
 
         // porcentajeRetardo es por si bombita agarra el articulo 
@@ -207,15 +208,15 @@ namespace TP2_Bomberman.src
 
         public void DaniarConMolotov(Molotov molotov)
         {
-            this.Explotar();
+            this.Explotar(retardoAdquirido);
         }
         public void DaniarConToleTole(Bombas.ToleTole toleTole)
         {
-            this.Explotar();
+            this.Explotar(retardoAdquirido);
         }
         public void DaniarConProyectil(Bombas.Proyectil proyectil)
         {
-            this.Explotar();
+            this.Explotar(retardoAdquirido);
         }
 
 
@@ -239,6 +240,12 @@ namespace TP2_Bomberman.src
         public bool EstaActivada
         {
             get { return this.estaActivada; }
+        }
+
+        public double RetardoAdquirido
+        {
+            get { return this.retardoAdquirido; }
+            set { this.retardoAdquirido = value; }
         }
 
     }

@@ -455,7 +455,7 @@ namespace TP2_Bomberman.test
 
             Assert.AreEqual(2, bombita.Vidas);
         }
-        /*
+        
         [Test]
         public void BombitaAgarreUnTimerYSusBombasTardenMasEnExplotar()
         {
@@ -465,22 +465,27 @@ namespace TP2_Bomberman.test
             Timer articulo = new Timer();
             tablero.AgregarEntidadEnCasillero(articulo, 0, 1);
 
+            bombita.MoverAbajo();
             bombita.LanzarBomba();
+            bombita.MoverDerecha();
+            bombita.MoverAbajo();
+
             bombita.Bomba.CuandoPaseElTiempo(1);
             Assert.IsTrue(bombita.Bomba.FueDestruido());
 
-            bombita.MoverDerecha();
+            bombita.MoverArriba();
+            bombita.MoverArriba();
             Assert.AreEqual(0.85,bombita.PorcentajeDeRetardo);
+            bombita.MoverDerecha();
             bombita.LanzarBomba();
-            bombita.Bomba.CuandoPaseElTiempo(0.85);
+            bombita.MoverDerecha();
+            bombita.MoverAbajo();
+            bombita.Bomba.CuandoPaseElTiempo(0.9);
+
             Assert.IsTrue(bombita.Bomba.FueDestruido());
 
-            bombita.LanzarBomba();
-            bombita.MoverDerecha();
-
-            bombita.Bomba.CuandoPaseElTiempo(3);
 
             Assert.AreEqual(3, bombita.Vidas);
-        }*/
+        }
     }
 }
