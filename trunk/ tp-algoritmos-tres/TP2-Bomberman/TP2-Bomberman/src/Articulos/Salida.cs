@@ -6,7 +6,7 @@ using System.Text;
 
 namespace TP2_Bomberman.src.Articulos
 {
-    class Salida : Articulo
+    public class Salida : Articulo
     {
         public Salida()
             : base() { }
