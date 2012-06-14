@@ -47,7 +47,14 @@ namespace TP2_Bomberman.src
             {
                 AgregarEnemigos();
                 AgregarSalida();
+                AgregarBombita();
             }
+        }
+
+        private void AgregarBombita()
+        {
+            Bombita bombita = new Bombita();
+            AgregarEntidadEnCasillero(bombita,0,0);
         }
         // Agrega un obstaculo con salida en una posicion aleatoria del tablero.
         private void AgregarSalida()
