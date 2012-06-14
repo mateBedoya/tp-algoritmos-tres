@@ -240,6 +240,18 @@ namespace TP2_Bomberman.src
 
         }
 
+        internal void avanzarNivel()
+        {
+            if (nivelActual == CANTIDAD_DE_NIVELES) terminarJuego();
+            nivelActual += 1;
+            InicializarTablero(true);
+        }
+
+        private void terminarJuego()
+        {
+            throw new NotImplementedException(); // Habria que cortar el game loop
+        }
+
 
         //Propiedades y getters y setters
 
@@ -275,16 +287,6 @@ namespace TP2_Bomberman.src
             return cantidad;
         }
 
-        internal void avanzarNivel()
-        {
-            if (nivelActual == CANTIDAD_DE_NIVELES) terminarJuego();
-            nivelActual += 1;
-            InicializarTablero(true);
-        }
 
-        private void terminarJuego()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

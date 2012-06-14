@@ -21,11 +21,9 @@ namespace TP2_Bomberman.src.Personajes
             this.bomba = new Molotov();
         }
 
+        // Lanzamiento de la bomba. La deja activada.
         public override void LanzarBomba()
         {
-            // FALTA IMPLEMENTAR
-            // LO QUE PENSE ES QUE CUANDO LANCE UNA BOMBA, TIRE LA QUE TIENE GUARDADA EN EL ATRIBUTO "bomba"
-            // E INMEDIATAMENTE CREE UNA NUEVA INSTANCIA Y LA GUARDE EN EL ATRIBUTO
             if (bomba.FueDestruido())//Le permite agregar otra bomba si la anterior ya ha explotado
             {
                 bomba = new Molotov();
@@ -38,6 +36,7 @@ namespace TP2_Bomberman.src.Personajes
             bomba.ActivarBomba();
         }
 
+        // Redefine que puede moverse por cualquier lado menos si hay un personaje
         public override bool PuedeMoverseA(Casillero casilleroNuevo)
         {
             if (casilleroNuevo.TienePersonaje()) return false;

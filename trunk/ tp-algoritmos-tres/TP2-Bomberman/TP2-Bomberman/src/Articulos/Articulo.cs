@@ -8,9 +8,9 @@ using TP2_Bomberman.src.Excepciones;
 
 namespace TP2_Bomberman.src.Articulos
 {
-    public abstract class Articulo: Entidad, IDaniable, IDestruible
+    public abstract class Articulo: Entidad, IDestruible
     {
-        protected int vida = 1;
+        protected int vida = 1; //Tienen una vida ya que con cualquier cosa que sea daniado, se destruye
 
         public Articulo()
             :base() { }
@@ -21,23 +21,24 @@ namespace TP2_Bomberman.src.Articulos
             posicion.Entidad = this;        
         }
 
+        // Metodo que se redefine en cada articulo y modifica las caracteristicas del personaje
         public abstract void UtilizarArticuloEn(Personaje personaje);
 
 
 
         // Todas las bombas lo destruyen (le sacan la unica vida que tiene)
         // menos a la salida (se redefinen)
-        public virtual void DaniarConMolotov(Molotov molotov)
+        public override void DaniarConMolotov(Molotov molotov)
         {
             if (FueDestruido()) throw new EntidadYaDestruidaException();
             this.vida = 0;
         }
-        public virtual void DaniarConToleTole(Bombas.ToleTole toleTole)
+        public override void DaniarConToleTole(Bombas.ToleTole toleTole)
         {
             if (FueDestruido()) throw new EntidadYaDestruidaException();
             this.vida = 0;
         }
-        public virtual void DaniarConProyectil(Bombas.Proyectil proyectil)
+        public override void DaniarConProyectil(Bombas.Proyectil proyectil)
         {
             if (FueDestruido()) throw new EntidadYaDestruidaException();
             this.vida = 0;
@@ -47,6 +48,10 @@ namespace TP2_Bomberman.src.Articulos
             return (this.vida == 0);
         }
 
+
+        // Metodo que maneja la "colision" entre un personaje y un articulo.
+        // Esto se produce cuando un personaje va a la casilla donde esta el articulo
+        // Al chocar, el articulo es utilizado en el personaje.
         public override void Chocar(Personaje personaje)
         {
             this.UtilizarArticuloEn(personaje);

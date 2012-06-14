@@ -7,6 +7,7 @@ using TP2_Bomberman.src;
 using TP2_Bomberman.src.Bombas;
 using TP2_Bomberman.src.Excepciones;
 using TP2_Bomberman.src.Obstaculos;
+using TP2_Bomberman.src.Elementales;
 
 namespace TP2_Bomberman.test
 {
@@ -163,8 +164,8 @@ namespace TP2_Bomberman.test
             Proyectil proyectil = new Proyectil();
             tablero.AgregarEntidadEnCasillero(proyectil, 0, 0);
 
-            Assert.Throws<CasilleroFueraDeRangoException>(() => proyectil.PuedeMoverseA(proyectil.Posicion.ObtenerCasilleroIzquierdoEn(tablero)));
-            Assert.IsTrue(proyectil.PuedeMoverseA(proyectil.Posicion.ObtenerCasilleroDerechoEn(tablero)));
+            Assert.Throws<CasilleroFueraDeRangoException>(() => proyectil.PuedeMoverseA(proyectil.Posicion.ObtenerCasilleroAdyacenteEnLaDireccionYElTablero(Entidad.OESTE, tablero)));
+            Assert.IsTrue(proyectil.PuedeMoverseA(proyectil.Posicion.ObtenerCasilleroAdyacenteEnLaDireccionYElTablero(Entidad.ESTE, tablero)));
 
         }
 
@@ -177,8 +178,8 @@ namespace TP2_Bomberman.test
             tablero.AgregarEntidadEnCasillero(proyectil, 0, 0);
             tablero.AgregarEntidadEnCasillero(bloque, 0, 1);
 
-            Assert.IsFalse(proyectil.PuedeMoverseA(proyectil.Posicion.ObtenerCasilleroDerechoEn(tablero)));
-            Assert.IsTrue(proyectil.PuedeMoverseA(proyectil.Posicion.ObtenerCasilleroInferiorEn(tablero)));
+            Assert.IsFalse(proyectil.PuedeMoverseA(proyectil.Posicion.ObtenerCasilleroAdyacenteEnLaDireccionYElTablero(Entidad.ESTE, tablero)));
+            Assert.IsTrue(proyectil.PuedeMoverseA(proyectil.Posicion.ObtenerCasilleroAdyacenteEnLaDireccionYElTablero(Entidad.SUR, tablero)));
         }
 
     }

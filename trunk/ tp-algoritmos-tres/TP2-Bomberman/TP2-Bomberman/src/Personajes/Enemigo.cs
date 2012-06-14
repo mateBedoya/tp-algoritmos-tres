@@ -23,21 +23,25 @@ namespace TP2_Bomberman.src
         //A todos los enemigos se les baja la resistencia dependiendo de la bomba
         public override void DaniarConMolotov(Molotov molotov)
         {
-            if (FueDestruido()) throw new EntidadYaDestruidaException();
-            this.resistencia = this.resistencia - molotov.Destruccion;        
+            DaniarConBomba(molotov);        
         }
 
         public override void DaniarConToleTole(ToleTole toleTole)//ToleTole le saca toda la resistencia
         {
-            if (FueDestruido()) throw new EntidadYaDestruidaException();
-            this.resistencia = 0;
+            DaniarConBomba(toleTole);
 
         }
 
         public override void DaniarConProyectil(Proyectil proyectil)
         {
+            DaniarConBomba(proyectil);
+        }
+
+        // Metodo general para cuando se dania con una bomba
+        public virtual void DaniarConBomba(Bomba bomba)
+        {
             if (FueDestruido()) throw new EntidadYaDestruidaException();
-            this.resistencia = this.resistencia - proyectil.Destruccion;
+            this.resistencia = this.resistencia - bomba.Destruccion;
         }
         
         public override bool FueDestruido()
@@ -46,6 +50,7 @@ namespace TP2_Bomberman.src
             return false;
         }
 
+        // Metodo que maneja las colisiones. Si bombita se choca con otro personaje pierde vida
         public override void Chocar(Personaje personaje)
         {
             personaje.DaniarConMolotov(new Molotov());//EL choque hace el mismo danio que una MOLOTOV

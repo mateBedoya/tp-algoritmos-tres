@@ -25,10 +25,11 @@ namespace TP2_Bomberman.src
             this.rango = 3;
         }
 
-
+        // Uso del patron double dispatch. Se redefinio el metodo danias y se 
+        // dania con la molotov segun le corresponda al daniable
         public override void Daniar(IDaniable daniable)
         {
-            daniable.DaniarConMolotov(this); // Uso de patron doble dipatch
+            daniable.DaniarConMolotov(this);
         }
 
 

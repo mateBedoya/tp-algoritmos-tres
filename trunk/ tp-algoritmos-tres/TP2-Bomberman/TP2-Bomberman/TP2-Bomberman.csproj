@@ -45,16 +45,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="src\Articulos\Articulo.cs" />
-    <Compile Include="src\Articulos\ArticuloNull.cs" />
     <Compile Include="src\Articulos\BombaToleTole.cs" />
     <Compile Include="src\Articulos\Habano.cs" />
     <Compile Include="src\Articulos\Salida.cs" />
     <Compile Include="src\Articulos\Timer.cs" />
     <Compile Include="src\Bombas\Bomba.cs" />
-    <Compile Include="src\Bombas\BombaNull.cs" />
     <Compile Include="src\Bombas\Proyectil.cs" />
     <Compile Include="src\Bombas\ToleTole.cs" />
-    <Compile Include="src\Elementales\CasilleroNull.cs" />
     <Compile Include="src\Elementales\Entidad.cs" />
     <Compile Include="src\Excepciones\EntidadYaDestruidaException.cs" />
     <Compile Include="src\Excepciones\MovimientoInvalidoException.cs" />
@@ -64,7 +61,6 @@
     <Compile Include="src\Obstaculos\BloqueDeCemento.cs" />
     <Compile Include="src\Obstaculos\BloqueDeLadrillos.cs" />
     <Compile Include="src\Obstaculos\Obstaculo.cs" />
-    <Compile Include="src\Obstaculos\ObstaculoNull.cs" />
     <Compile Include="src\Personajes\Bombita.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="src\Elementales\Casillero.cs" />
@@ -78,7 +74,6 @@
     <Compile Include="src\Personajes\LopezRAlado.cs" />
     <Compile Include="src\Personajes\Personaje.cs" />
     <Compile Include="src\Elementales\Tablero.cs" />
-    <Compile Include="src\Personajes\PersonajeNull.cs" />
     <Compile Include="test\BloqueDeAceroTest.cs" />
     <Compile Include="test\BloqueDeCementoTest.cs" />
     <Compile Include="test\BombaTest.cs" />

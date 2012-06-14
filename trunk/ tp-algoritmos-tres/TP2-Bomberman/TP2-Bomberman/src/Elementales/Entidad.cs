@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using TP2_Bomberman.src.Articulos;
+using TP2_Bomberman.src.Interfaces;
 
 namespace TP2_Bomberman.src.Elementales
 {
@@ -10,8 +11,13 @@ namespace TP2_Bomberman.src.Elementales
     /// esta clase generaliza a todas las entidades que ocupan o pueden ocupar un
     /// lugar en el tablero como ser personajes, obstaculos, bombas y articulos
     /// </summary>
-    public abstract class Entidad
+    public abstract class Entidad: IDaniable
     {
+        public static int[] ESTE = { 0, 1 };
+        public static int[] NORTE = { -1, 0 };
+        public static int[] OESTE = { 0, -1 };
+        public static int[] SUR = { 1, 0 };
+        protected int[] direccion;
         protected Casillero posicion;
         protected Tablero tablero;
 
@@ -30,6 +36,13 @@ namespace TP2_Bomberman.src.Elementales
 
         public virtual void Chocar(Personaje personaje) { }
 
+        // cambia de direccion
+        public void Direccionar(int[] direccion)
+        {
+            this.direccion = direccion;
+        }
+
+        // Devuelve si se trata de Bombita
         public bool EsBombita()
         {
             if (this is Bombita) return true;
@@ -54,5 +67,10 @@ namespace TP2_Bomberman.src.Elementales
         virtual internal void AgregarArticulo(Articulo articulo)
         {
         }
+
+        public virtual void DaniarConMolotov(Molotov molotov){}
+        public virtual void DaniarConToleTole(Bombas.ToleTole toleTole){}
+        public virtual void DaniarConProyectil(Bombas.Proyectil proyectil) { }
+
     }
 }

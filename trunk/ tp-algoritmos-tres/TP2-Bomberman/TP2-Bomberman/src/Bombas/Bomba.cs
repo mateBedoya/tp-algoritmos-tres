@@ -8,7 +8,7 @@ using TP2_Bomberman.src.Excepciones;
 
 namespace TP2_Bomberman.src
 {
-    public abstract class Bomba : Entidad, IDependienteDelTiempo, IDestruible, IDaniable
+    public abstract class Bomba : Entidad, IDependienteDelTiempo, IDestruible
     {
         protected int destruccion;
         protected int retardo;
@@ -28,29 +28,32 @@ namespace TP2_Bomberman.src
 
 
 
-
+        //Cuando un personaje lanza una bomba, esta queda activada. Luego cuando pase el tiempo
+        //necesario para que explote, explotara.
         public void ActivarBomba()
         {
             if (FueDestruido()) throw new EntidadYaDestruidaException();
             this.estaActivada = true;
         }
 
-
+        // Metodo que se redefine en cada bomba de como daniar a un daniable
         public abstract void Daniar(IDaniable daniable);
 
-
+        // Las bombas tienen una vida, quiere decir que con cualquier cosa que sean dañadas, son destruidas
         public bool FueDestruido()
         {
             if (vida == 0) return true;
             return false;
         }
 
+        //Metodo para simular el paso del tiempo
         public void CuandoPaseElTiempo(double tiempo)
         {
             tiempoTranscurrido = tiempoTranscurrido + tiempo;
             if (estaActivada) this.Explotar(retardoAdquirido);
         }
 
+        // Si paso el tiempo necesario, explota, y se expande.
         // porcentajeRetardo es por si bombita agarra el articulo 
         // Timer y se le pasa el porcentaje respecto del retardo original
         // que debe esperar la bomba para explotar. De no pasarse, vale
@@ -64,6 +67,7 @@ namespace TP2_Bomberman.src
             this.posicion = null;
         }
 
+        // Hace expandir su explosion en todas las direcciones
         private void ExpandirExplosion()
         {
             ExpandirDerecha();
@@ -72,132 +76,60 @@ namespace TP2_Bomberman.src
             ExpandirAbajo();
         }
 
+        // Expande la explosion hacia la direccion que se le pase
+        private void ExpandirExplosionHacia(int[] direccion)
+        {
+            Casillero casilleroADaniar;
+            int rangoACubrir = this.rango;
+            bool encontroDaniable = false;
+            try
+            {
+                casilleroADaniar = posicion.ObtenerCasilleroAdyacenteEnLaDireccionYElTablero(direccion, this.tablero);
+            }
+            catch (CasilleroFueraDeRangoException)
+            {
+                return;
+            }
+            while((!encontroDaniable)&(rangoACubrir != 0))
+            {
+                IDaniable entidad = null;
+                if((casilleroADaniar!=null) && (!casilleroADaniar.EstaVacio()))
+                {
+                    entidad = (IDaniable)casilleroADaniar.Entidad;
+                    this.Daniar(entidad);
+                    encontroDaniable = true;
+                }
+                try
+                {
+                    if (casilleroADaniar != null) casilleroADaniar = casilleroADaniar.ObtenerCasilleroAdyacenteEnLaDireccionYElTablero(direccion, this.tablero);
+                    rangoACubrir--;
+                }
+                catch (CasilleroFueraDeRangoException)
+                {
+                    casilleroADaniar = null;
+                }
+            }
+        }
+
+        // Metodos de expansion
         private void ExpandirDerecha()
         {
-            Casillero casilleroADaniar;
-            try
-            {
-                casilleroADaniar = posicion.ObtenerCasilleroDerechoEn(this.tablero);
-            }
-            catch (CasilleroFueraDeRangoException)
-            {
-                return;
-            }
-            for (int i = 0; i < rango - 1; i++)
-            {
-                IDaniable entidad = null;
-                if (casilleroADaniar != null) entidad = (IDaniable)casilleroADaniar.Entidad;
-                if (entidad != null)
-                {
-                    this.Daniar(entidad);
-                    return;
-                }
-                try
-                {
-                    if (casilleroADaniar != null) casilleroADaniar = casilleroADaniar.ObtenerCasilleroDerechoEn(this.tablero);
-                }
-                catch (CasilleroFueraDeRangoException)
-                {
-                    casilleroADaniar = null;
-                }
-            }
+            ExpandirExplosionHacia(ESTE);
         }
-
         private void ExpandirIzquierda()
         {
-            Casillero casilleroADaniar;
-            try
-            {
-                casilleroADaniar = posicion.ObtenerCasilleroIzquierdoEn(this.tablero);
-            }
-            catch (CasilleroFueraDeRangoException)
-            {
-                return;
-            }
-            for (int i = 0; i < rango - 1; i++)
-            {
-                IDaniable entidad = null;
-                if (casilleroADaniar != null) entidad = (IDaniable)casilleroADaniar.Entidad;
-                if (entidad != null)
-                {
-                    this.Daniar(entidad);
-                    return;
-                }
-                try
-                {
-                    if (casilleroADaniar != null) casilleroADaniar = casilleroADaniar.ObtenerCasilleroIzquierdoEn(this.tablero);
-                }
-                catch (CasilleroFueraDeRangoException)
-                {
-                    casilleroADaniar = null;
-                }
-            }
+            ExpandirExplosionHacia(OESTE);
         }
-
         private void ExpandirArriba()
         {
-            Casillero casilleroADaniar;
-            try
-            {
-                casilleroADaniar = posicion.ObtenerCasilleroSuperiorEn(this.tablero);
-            }
-            catch (CasilleroFueraDeRangoException)
-            {
-                return;
-            }
-
-            for (int i = 0; i < rango - 1; i++)
-            {
-                IDaniable entidad = null;
-                if (casilleroADaniar != null) entidad = (IDaniable)casilleroADaniar.Entidad;
-                if (entidad != null)
-                {
-                    this.Daniar(entidad);
-                    return;
-                }
-                try
-                {
-                    if (casilleroADaniar != null) casilleroADaniar = casilleroADaniar.ObtenerCasilleroSuperiorEn(this.tablero);
-                }
-                catch (CasilleroFueraDeRangoException)
-                {
-                    casilleroADaniar = null;
-                }
-            }
+            ExpandirExplosionHacia(NORTE);
         }
-
         private void ExpandirAbajo()
         {
-            Casillero casilleroADaniar;
-            try
-            {
-                casilleroADaniar = posicion.ObtenerCasilleroInferiorEn(this.tablero);
-            }
-            catch (CasilleroFueraDeRangoException)
-            {
-                return;
-            }
-            for (int i = 0; i < rango - 1; i++)
-            {
-                IDaniable entidad = null;
-                if (casilleroADaniar != null) entidad = (IDaniable)casilleroADaniar.Entidad;
-                if (entidad != null)
-                {
-                    this.Daniar(entidad);
-                    return;
-                }
-                try
-                {
-                    if (casilleroADaniar != null) casilleroADaniar = casilleroADaniar.ObtenerCasilleroInferiorEn(this.tablero);
-                }
-                catch (CasilleroFueraDeRangoException)
-                {
-                    casilleroADaniar = null;
-                }
-            }
+            ExpandirExplosionHacia(SUR);
         }
 
-
+        // Devuelve si se cumplio el tiempo del retardo para poder explotarse
         private bool PasoTiempoDeRetardo(double porcentajeRetardo = 1)
         {
             if (this.tiempoTranscurrido < this.retardo * porcentajeRetardo) return false;
@@ -205,16 +137,16 @@ namespace TP2_Bomberman.src
         }
 
 
-
-        public void DaniarConMolotov(Molotov molotov)
+        // Si son daniadas por cualquiera sea la otra bomba, explotan.
+        public override void DaniarConMolotov(Molotov molotov)
         {
             this.Explotar(retardoAdquirido);
         }
-        public void DaniarConToleTole(Bombas.ToleTole toleTole)
+        public override void DaniarConToleTole(Bombas.ToleTole toleTole)
         {
             this.Explotar(retardoAdquirido);
         }
-        public void DaniarConProyectil(Bombas.Proyectil proyectil)
+        public override void DaniarConProyectil(Bombas.Proyectil proyectil)
         {
             this.Explotar(retardoAdquirido);
         }

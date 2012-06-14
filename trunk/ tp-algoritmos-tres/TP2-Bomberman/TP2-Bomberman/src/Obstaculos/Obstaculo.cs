@@ -10,7 +10,7 @@ using TP2_Bomberman.src.Articulos;
 
 namespace TP2_Bomberman.src.Obstaculos
 {
-    public abstract class Obstaculo: Entidad, IDaniable, IDestruible
+    public abstract class Obstaculo: Entidad, IDestruible
     {
         protected int resistencia;
         protected Articulo articulo;
@@ -24,15 +24,30 @@ namespace TP2_Bomberman.src.Obstaculos
             posicion.Entidad = this;
         }
         
-        // MEtodos abstractos a definir en los hijos
-        public abstract void DaniarConMolotov(Molotov molotov);
-        public abstract void DaniarConProyectil(Bombas.Proyectil proyectil);
+
+        //Danios por bombas
 
         // Para todos los obstaculos es de la misma forma. La bomba tole tole los destruye cualquiera sea el obstaculo
-        public void DaniarConToleTole(Bombas.ToleTole toleTole)
+        public override void DaniarConToleTole(Bombas.ToleTole toleTole)
+        {
+            DaniarConBomba(toleTole);
+        }
+
+        public override void DaniarConMolotov(Molotov molotov)
+        {
+            DaniarConBomba(molotov);
+        }
+
+        public override void DaniarConProyectil(Bombas.Proyectil proyectil)
+        {
+            DaniarConBomba(proyectil);
+        }
+
+        // Metodo general para el daño producido por una bomba
+        public virtual void DaniarConBomba(Bomba bomba)
         {
             if (FueDestruido()) throw new EntidadYaDestruidaException();
-            this.resistencia = 0;
+            this.resistencia = this.resistencia - bomba.Destruccion;
             if (FueDestruido())
             {
                 if (this.articulo != null)
@@ -43,6 +58,7 @@ namespace TP2_Bomberman.src.Obstaculos
                 this.posicion = null;
             }
         }
+            
 
         //devuelve si un elemento fue destruido o no
         public bool FueDestruido() // Un obstaculo esta destruido cuando no tiene resistencia
@@ -51,6 +67,9 @@ namespace TP2_Bomberman.src.Obstaculos
             return false;
         }
 
+        //Metodo para el movimiento del LopezRAlado
+        //Este puede moverse por todos lados, por lo tanto puede
+        //pasar por encima de los obstaculos
         public virtual void Chocar(LopezRAlado lopez)
         {
             lopez.CambiarPosicionA(this.posicion);
