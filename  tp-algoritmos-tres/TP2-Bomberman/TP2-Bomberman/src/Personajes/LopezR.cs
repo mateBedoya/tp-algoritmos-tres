@@ -36,6 +36,8 @@ namespace TP2_Bomberman.src
             int filaBombita = tablero.PosicionBombita.Fila;
             int columnaBombita = tablero.PosicionBombita.Columna;
             Proyectil proyectil = (Proyectil)this.bomba;
+            
+
             if (filaBombita == posicion.Fila)
             {
                 if ((columnaBombita - posicion.Columna) < 0)
@@ -70,6 +72,9 @@ namespace TP2_Bomberman.src
                     }
                 }
             }
+        }
+        private void MoverEnDireccion()
+        {
         }
     }
 }
