@@ -10,7 +10,7 @@ using TP2_Bomberman.src.Personajes;
 
 namespace TP2_Bomberman.src
 {
-    public abstract class Personaje : Entidad,IMovible,IDaniable,IDestruible
+    public abstract class Personaje : Entidad,IMovible,IDestruible
     {
         protected int resistencia;
         protected int velocidad;
@@ -32,83 +32,45 @@ namespace TP2_Bomberman.src
 
         
         //Metodos de movimiento
+
+        // Metodo general
+        private void Mover()
+        {
+            try
+            {
+                CambiarPosicionA(posicion.ObtenerCasilleroAdyacenteEnLaDireccionYElTablero(this.direccion,this.tablero));
+            }
+            catch(CasilleroFueraDeRangoException){}
+            catch(MovimientoInvalidoException)
+            {
+                Entidad entidad = posicion.ObtenerCasilleroAdyacenteEnLaDireccionYElTablero(this.direccion, this.tablero).Entidad;
+                entidad.Chocar(this);
+            }
+        }
+
         public void MoverArriba()
         {
-            try
-            {
-                CambiarPosicionA(posicion.ObtenerCasilleroSuperiorEn(this.tablero));
-            }
-            catch(CasilleroFueraDeRangoException)
-            {
-                
-            }
-            catch (MovimientoInvalidoException)
-            {
-                Entidad entidad = posicion.ObtenerCasilleroSuperiorEn(this.tablero).Entidad;
-                entidad.Chocar(this);
-
-            }
+            this.Direccionar(NORTE);
+            this.Mover();
         }
-
         public void MoverAbajo()
         {
-            try
-            {
-                CambiarPosicionA(posicion.ObtenerCasilleroInferiorEn(this.tablero));
-            }
-            catch (CasilleroFueraDeRangoException)
-            {
-                
-            }
-            catch (MovimientoInvalidoException)
-            {
-                Entidad entidad = posicion.ObtenerCasilleroInferiorEn(this.tablero).Entidad;
-                entidad.Chocar(this);
-
-            }
-            
+            this.Direccionar(SUR);
+            this.Mover();            
         }
-
         public void MoverDerecha()
         {
-            try
-            {
-                CambiarPosicionA(posicion.ObtenerCasilleroDerechoEn(this.tablero));
-            }
-            catch (CasilleroFueraDeRangoException)
-            {
-                
-            }
-            catch (MovimientoInvalidoException)
-            {
-                Entidad entidad = posicion.ObtenerCasilleroDerechoEn(this.tablero).Entidad;
-                entidad.Chocar(this);
-
-            }
-            
+            this.Direccionar(ESTE);
+            this.Mover();
         }
-
         public void MoverIzquierda()
         {
-            try
-            {
-                Casillero casilleroNuevo = posicion.ObtenerCasilleroIzquierdoEn(this.tablero);
-                CambiarPosicionA(casilleroNuevo);
-            }
-            catch (CasilleroFueraDeRangoException)
-            {
-
-            }
-            catch (MovimientoInvalidoException)
-            {
-                Entidad entidad = posicion.ObtenerCasilleroIzquierdoEn(this.tablero).Entidad;
-                entidad.Chocar(this);
-
-            }
-            
+            this.Direccionar(OESTE);
+            this.Mover();
         }
 
 
+        // Para el movimiento, verifica si el movimiento es legal y cambia las referencias
         public void CambiarPosicionA(Casillero casilleroNuevo)
         {
 
@@ -122,6 +84,7 @@ namespace TP2_Bomberman.src
             if (this.EsBombita()) this.tablero.PosicionBombita = casilleroNuevo;
         }
 
+        // Define si el movimiento es legal o no.
         public virtual bool PuedeMoverseA(Casillero casilleroNuevo)
         {
             if (casilleroNuevo.EstaVacio()) return true;
@@ -129,9 +92,9 @@ namespace TP2_Bomberman.src
         }
 
         //Metodos abstractos a definir en los hijos
-        public abstract void DaniarConMolotov(Molotov molotov);
-        public abstract void DaniarConToleTole(Bombas.ToleTole toleTole);
-        public abstract void DaniarConProyectil(Bombas.Proyectil proyectil);
+        public override void DaniarConMolotov(Molotov molotov){}
+        public override void DaniarConToleTole(Bombas.ToleTole toleTole) { }
+        public override void DaniarConProyectil(Bombas.Proyectil proyectil) { }
         public abstract bool FueDestruido();
 
 

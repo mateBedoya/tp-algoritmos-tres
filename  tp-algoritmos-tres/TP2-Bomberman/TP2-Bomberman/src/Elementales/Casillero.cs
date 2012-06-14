@@ -15,7 +15,7 @@ namespace TP2_Bomberman.src
     {
         protected int fila;
         protected int columna;
-        private Entidad entidad;
+        private Entidad entidad; 
         
 
         public Casillero(int x, int y)
@@ -25,30 +25,10 @@ namespace TP2_Bomberman.src
             this.entidad = null;
         }
 
-
-
-        // retorna el casillero adyacente- derecha
-        public virtual Casillero ObtenerCasilleroDerechoEn(Tablero tablero)
+        // retorna la casilla adyacente en la direccion pasada
+        public virtual Casillero ObtenerCasilleroAdyacenteEnLaDireccionYElTablero(int[] direccion, Tablero tablero)
         {
-            return (tablero.ObtenerCasillero(this.fila, this.columna + 1));
-        }
-
-        // retorna el casillero adyacente- superior 
-        public virtual Casillero ObtenerCasilleroSuperiorEn(Tablero tablero)
-        {
-            return (tablero.ObtenerCasillero(this.fila - 1, this.columna));
-        }
-
-        // retorna el casillero adyacente- inferior
-        public virtual Casillero ObtenerCasilleroInferiorEn(Tablero tablero)
-        {
-            return (tablero.ObtenerCasillero(this.fila + 1, this.columna));
-        }
-
-        // retorna el casillero adyacente- izquierda
-        public virtual Casillero ObtenerCasilleroIzquierdoEn(Tablero tablero)
-        {
-            return (tablero.ObtenerCasillero(this.fila, this.columna - 1));
+            return (tablero.ObtenerCasillero(this.fila + direccion[0], this.columna + direccion[1]));
         }
 
         // retorna si esta vacio
@@ -57,6 +37,7 @@ namespace TP2_Bomberman.src
             return (this.entidad == null);
         }
 
+        //Devuelve si su entidad es un personaje
         public bool TienePersonaje()
         {
             if (entidad is Personaje) return true;

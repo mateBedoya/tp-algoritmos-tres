@@ -6,6 +6,7 @@ using NUnit.Framework;
 using TP2_Bomberman.src;
 using TP2_Bomberman.src.Obstaculos;
 using TP2_Bomberman.src.Articulos;
+using TP2_Bomberman.src.Elementales;
 
 namespace TP2_Bomberman.test
 {
@@ -108,7 +109,7 @@ namespace TP2_Bomberman.test
             Tablero tablero = new Tablero();
             Casillero casilleroActual = tablero.ObtenerCasillero(1, 1);
 
-            Casillero casilleroDerecho = casilleroActual.ObtenerCasilleroDerechoEn(tablero);
+            Casillero casilleroDerecho = casilleroActual.ObtenerCasilleroAdyacenteEnLaDireccionYElTablero(Entidad.ESTE, tablero);
 
             Assert.AreEqual(1, casilleroDerecho.Fila);
             Assert.AreEqual(2, casilleroDerecho.Columna);
@@ -121,7 +122,7 @@ namespace TP2_Bomberman.test
             Tablero tablero = new Tablero();
             Casillero casilleroActual = tablero.ObtenerCasillero(1, 1);
 
-            Casillero casilleroArriba = casilleroActual.ObtenerCasilleroSuperiorEn(tablero);
+            Casillero casilleroArriba = casilleroActual.ObtenerCasilleroAdyacenteEnLaDireccionYElTablero(Entidad.NORTE, tablero);
 
             Assert.AreEqual(0, casilleroArriba.Fila);
             Assert.AreEqual(1, casilleroArriba.Columna);
@@ -135,7 +136,7 @@ namespace TP2_Bomberman.test
             Tablero tablero = new Tablero();
             Casillero casilleroActual = tablero.ObtenerCasillero(1, 1);
 
-            Casillero casilleroIzquierdo = casilleroActual.ObtenerCasilleroIzquierdoEn(tablero);
+            Casillero casilleroIzquierdo = casilleroActual.ObtenerCasilleroAdyacenteEnLaDireccionYElTablero(Entidad.OESTE, tablero);
 
             Assert.AreEqual(1, casilleroIzquierdo.Fila);
             Assert.AreEqual(0, casilleroIzquierdo.Columna);
@@ -149,7 +150,7 @@ namespace TP2_Bomberman.test
             Tablero tablero = new Tablero();
             Casillero casilleroActual = tablero.ObtenerCasillero(1, 1);
 
-            Casillero casilleroAbajo = casilleroActual.ObtenerCasilleroInferiorEn(tablero);
+            Casillero casilleroAbajo = casilleroActual.ObtenerCasilleroAdyacenteEnLaDireccionYElTablero(Entidad.SUR, tablero);
 
             Assert.AreEqual(2, casilleroAbajo.Fila);
             Assert.AreEqual(1, casilleroAbajo.Columna);

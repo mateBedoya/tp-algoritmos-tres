@@ -13,28 +13,32 @@ namespace TP2_Bomberman
     public class Bombita : Personaje
     {
         private int vidas = 3;
+        private bool poseeBombaToleTole;
 
         public Bombita()
             : base()
         {
             this.resistencia = 1;
             this.bomba = new Molotov(); //Inicialmente tiene una molotov
+            this.poseeBombaToleTole = false;
         }
 
         // Bombita pierde una vida con cualquier bomba que se lo danie
         public override void DaniarConMolotov(Molotov molotov)
         {
-            if (FueDestruido()) throw new EntidadYaDestruidaException();
-            this.vidas--;
-            VolverAtributosAEstadoOriginal();
+            DaniarConBomba();
         }
         public override void DaniarConToleTole(ToleTole toleTole)
         {
-            if (FueDestruido()) throw new EntidadYaDestruidaException();
-            this.vidas--;
-            VolverAtributosAEstadoOriginal();
+            DaniarConBomba();
         }
         public override void DaniarConProyectil(Proyectil proyectil)
+        {
+            DaniarConBomba();
+        }
+
+        // Metodo general. Pierde una vida y vuelve a su estado original
+        private void DaniarConBomba()
         {
             if (FueDestruido()) throw new EntidadYaDestruidaException();
             this.vidas--;
@@ -47,6 +51,7 @@ namespace TP2_Bomberman
             this.porcentajeDeRetardo = 1;
             this.bomba = new Molotov();
             this.velocidad = 5;
+            this.poseeBombaToleTole = false;
         }
 
         // Devuelve si no tiene mas vidas o no
@@ -56,18 +61,18 @@ namespace TP2_Bomberman
             return false;
         }
 
-
+        // Deja una bomba activada en el lugar donde estaba
         public void LanzarBomba()
         {
             if (bomba.FueDestruido())//Le permite agregar otra bomba si la anterior ya ha explotado
             {
-                if (bomba is Molotov)// MEJORAR ESTO!!!!!!
+                if (poseeBombaToleTole)
                 {
-                    bomba = new Molotov();
+                    bomba = new ToleTole();
                 }
                 else
                 {
-                    bomba = new ToleTole();
+                    bomba = new Molotov();
                 }
                 bomba.RetardoAdquirido = porcentajeDeRetardo;
             }
@@ -92,7 +97,11 @@ namespace TP2_Bomberman
             get { return this.vidas; }
             set { this.vidas = value; }
         }
-
+        
+        public bool PoseeBombaToleTole
+        {
+            set { this.poseeBombaToleTole = value; }
+        }
 
     }
 }

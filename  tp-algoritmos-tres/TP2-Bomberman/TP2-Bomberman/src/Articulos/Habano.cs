@@ -14,7 +14,7 @@ namespace TP2_Bomberman.src.Articulos
         public Habano(Casillero posicion)
             : base(posicion) { }
 
-        //Aumenta en 5 la velocidad de bombita
+        //Aumenta en 5 la velocidad del personaje
         public override void UtilizarArticuloEn(Personaje personaje)
         {
             personaje.Velocidad = personaje.Velocidad + 5;
