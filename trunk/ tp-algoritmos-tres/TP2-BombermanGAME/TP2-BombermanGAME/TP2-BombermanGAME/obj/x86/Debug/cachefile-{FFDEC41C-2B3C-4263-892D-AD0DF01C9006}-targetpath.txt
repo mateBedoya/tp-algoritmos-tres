@@ -1,0 +1,15 @@
+Content\bombita.xnb
+Content\cecilio.xnb
+Content\lopezR.xnb
+Content\lopezRAlado.xnb
+Content\CasilleroVacio.xnb
+Content\ladrillos.xnb
+Content\acero.xnb
+Content\cemento.xnb
+Content\bombaToleTole.xnb
+Content\habano.xnb
+Content\timer.xnb
+Content\toleTole.xnb
+Content\molotov4.xnb
+Content\salida.xnb
+Content\SpriteFont1.xnb

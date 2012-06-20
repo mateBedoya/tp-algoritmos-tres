@@ -75,3 +75,10 @@ C:\Users\asd\Documents\Visual Studio 2010\Projects\TP2\ tp-algoritmos-tres\TP2-B
 C:\Users\asd\Documents\Visual Studio 2010\Projects\TP2\ tp-algoritmos-tres\TP2-Bomberman\TP2-Bomberman\obj\Release\ResolveAssemblyReference.cache
 C:\Users\asd\Documents\Visual Studio 2010\Projects\TP2\ tp-algoritmos-tres\TP2-Bomberman\TP2-Bomberman\obj\Release\TP2-Bomberman.dll
 C:\Users\asd\Documents\Visual Studio 2010\Projects\TP2\ tp-algoritmos-tres\TP2-Bomberman\TP2-Bomberman\obj\Release\TP2-Bomberman.pdb
+C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-Bomberman\TP2-Bomberman\bin\Release\TP2-Bomberman.dll
+C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-Bomberman\TP2-Bomberman\bin\Release\TP2-Bomberman.pdb
+C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-Bomberman\TP2-Bomberman\bin\Release\nunit.framework.dll
+C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-Bomberman\TP2-Bomberman\bin\Release\nunit.framework.xml
+C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-Bomberman\TP2-Bomberman\obj\Release\ResolveAssemblyReference.cache
+C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-Bomberman\TP2-Bomberman\obj\Release\TP2-Bomberman.dll
+C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-Bomberman\TP2-Bomberman\obj\Release\TP2-Bomberman.pdb

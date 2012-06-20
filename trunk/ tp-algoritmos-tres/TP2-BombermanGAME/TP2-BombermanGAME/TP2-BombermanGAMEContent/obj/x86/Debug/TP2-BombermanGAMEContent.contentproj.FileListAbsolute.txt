@@ -1,0 +1,3 @@
+C:\Users\nacho\Desktop\Bomberman\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAMEContent\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAMEContent\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAMEContent\obj\x86\Debug\ResolveAssemblyReference.cache

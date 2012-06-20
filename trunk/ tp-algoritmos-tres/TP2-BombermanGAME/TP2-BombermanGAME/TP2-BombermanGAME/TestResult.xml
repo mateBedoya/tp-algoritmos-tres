@@ -1,0 +1,1230 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME.csproj" total="171" errors="88" failures="6" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2012-06-20" time="13:40:01">
+  <environment nunit-version="2.6.0.12051" clr-version="2.0.50727.3623" os-version="Microsoft Windows NT 6.0.6001 Service Pack 1" platform="Win32NT" cwd="C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME" machine-name="NACHO1" user="nacho" user-domain="nacho1" />
+  <culture-info current-culture="es-AR" current-uiculture="es-ES" />
+  <test-suite type="Project" name="C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME.csproj" executed="True" result="Failure" success="False" time="1.513" asserts="0">
+    <results>
+      <test-suite type="Assembly" name="C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\TP2-BombermanGAME.exe" executed="True" result="Failure" success="False" time="1.513" asserts="0">
+        <results>
+          <test-suite type="Namespace" name="TP2_Bomberman" executed="True" result="Failure" success="False" time="1.513" asserts="0">
+            <results>
+              <test-suite type="Namespace" name="test" executed="True" result="Failure" success="False" time="1.513" asserts="0">
+                <results>
+                  <test-suite type="TestFixture" name="BloqueDeAceroTest" executed="True" result="Failure" success="False" time="0.031" asserts="0">
+                    <results>
+                      <test-case name="TP2_Bomberman.test.BloqueDeAceroTest.PruebaLaCreacionDeUnBloqueDeAcero" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="TP2_Bomberman.test.BloqueDeAceroTest.PruebaQuePosicionarAlBloqueEnUnaPosicionInvalidaLanceUnaExcepcion" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="TP2_Bomberman.test.BloqueDeAceroTest.PruebaQueSePosicioneCorrectamenteEnUnTablero" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                      <test-case name="TP2_Bomberman.test.BloqueDeAceroTest.QueElBloqueNoSeaDañandoPorUnaMolotov" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                      <test-case name="TP2_Bomberman.test.BloqueDeAceroTest.QueElBloqueNoSeaDañandoPorUnProyectil" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                      <test-case name="TP2_Bomberman.test.BloqueDeAceroTest.QueElBloqueSeaDañandoPorUnaToleToleYSeaDestruido" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                      <test-case name="TP2_Bomberman.test.BloqueDeAceroTest.TratarDeSeguirDaniandoAUnBloqueDestruidoLanceUnaExcepcion" executed="True" result="Failure" success="False" time="0.000" asserts="1">
+                        <failure>
+                          <message><![CDATA[  Expected: <TP2_Bomberman.src.Excepciones.EntidadYaDestruidaException>
+  But was:  null
+]]></message>
+                          <stack-trace><![CDATA[en TP2_Bomberman.test.BloqueDeAceroTest.TratarDeSeguirDaniandoAUnBloqueDestruidoLanceUnaExcepcion() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\BloqueDeAceroTest.cs:línea 88
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="BloqueDeCementoTest" executed="True" result="Failure" success="False" time="0.062" asserts="0">
+                    <results>
+                      <test-case name="TP2_Bomberman.test.BloqueDeCementoTest.PruebaLaCreacionDeUnBloqueDeCemento" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="TP2_Bomberman.test.BloqueDeCementoTest.PruebaQueLaResistenciaDeUnBloqueDeCementoSea10" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="TP2_Bomberman.test.BloqueDeCementoTest.PruebaQuePosicionarAlBloqueEnUnaPosicionInvalidaLanceUnaExcepcion" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="TP2_Bomberman.test.BloqueDeCementoTest.PruebaQueSePosicioneCorrectamenteEnUnTablero" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                      <test-case name="TP2_Bomberman.test.BloqueDeCementoTest.QueElBloqueNoSeaDañandoPorUnProyectilYQuedeResistencia5" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                      <test-case name="TP2_Bomberman.test.BloqueDeCementoTest.QueElBloqueSeaDañandoPorUnaMolotovYQuedeConResistencia5" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                      <test-case name="TP2_Bomberman.test.BloqueDeCementoTest.QueElBloqueSeaDañandoPorUnaToleToleYSeaDestruido" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="TP2_Bomberman.test.BloqueDeCementoTest.QueUnBloqueDeCementoSeaDestruidoYDejeUnArticulo" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.BloqueDeCementoTest.QueUnBloqueDeCementoSeaDestruidoYDejeUnArticulo() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\BloqueDeCementoTest.cs:línea 99
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.BloqueDeCementoTest.TratarDeSeguirDaniandoAUnBloqueDestruidoLanceUnaExcepcion" executed="True" result="Failure" success="False" time="0.000" asserts="1">
+                        <failure>
+                          <message><![CDATA[  Expected: <TP2_Bomberman.src.Excepciones.EntidadYaDestruidaException>
+  But was:  null
+]]></message>
+                          <stack-trace><![CDATA[en TP2_Bomberman.test.BloqueDeCementoTest.TratarDeSeguirDaniandoAUnBloqueDestruidoLanceUnaExcepcion() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\BloqueDeCementoTest.cs:línea 93
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="BloqueDeLadrillosTest" executed="True" result="Failure" success="False" time="0.047" asserts="0">
+                    <results>
+                      <test-case name="TP2_Bomberman.test.BloqueDeLadrillosTest.PruebaLaCreacionDeUnBloqueDeLadrillos" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="TP2_Bomberman.test.BloqueDeLadrillosTest.PruebaQueLaResistenciaDeUnBloqueDeLadrillosSea5" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="TP2_Bomberman.test.BloqueDeLadrillosTest.PruebaQuePosicionarAlBloqueEnUnaPosicionInvalidaLanceUnaExcepcion" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="TP2_Bomberman.test.BloqueDeLadrillosTest.PruebaQueSePosicioneCorrectamenteEnUnTablero" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                      <test-case name="TP2_Bomberman.test.BloqueDeLadrillosTest.QueElBloqueSeaDañandoPorUnaMolotovYSeaDestruido" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="TP2_Bomberman.test.BloqueDeLadrillosTest.QueElBloqueSeaDañandoPorUnaToleToleYSeaDestruido" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="TP2_Bomberman.test.BloqueDeLadrillosTest.QueElBloqueSeaDañandoPorUnProyectilYSeaDestruido" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="TP2_Bomberman.test.BloqueDeLadrillosTest.QueUnBloqueDeLadrillosSeaDestruidoYDejeUnArticulo" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.BloqueDeLadrillosTest.QueUnBloqueDeLadrillosSeaDestruidoYDejeUnArticulo() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\BloqueDeLadrillosTest.cs:línea 98
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.BloqueDeLadrillosTest.TratarDeSeguirDaniandoAUnBloqueDestruidoLanceUnaExcepcion" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.NullReferenceException : Referencia a objeto no establecida como instancia de un objeto.]]></message>
+                          <stack-trace><![CDATA[en TP2_Bomberman.src.Obstaculos.Obstaculo.DaniarConBomba(Bomba bomba) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Obstaculos\Obstaculo.cs:línea 72
+en TP2_Bomberman.src.Obstaculos.Obstaculo.DaniarConToleTole(ToleTole toleTole) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Obstaculos\Obstaculo.cs:línea 35
+en TP2_Bomberman.test.BloqueDeLadrillosTest.TratarDeSeguirDaniandoAUnBloqueDestruidoLanceUnaExcepcion() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\BloqueDeLadrillosTest.cs:línea 90
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="BombaTest" executed="True" result="Failure" success="False" time="0.109" asserts="0">
+                    <results>
+                      <test-case name="TP2_Bomberman.test.BombaTest.PruebaCrearOtraMolotov" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="TP2_Bomberman.test.BombaTest.PruebaLaCreacionDeUnaMolotov" executed="True" result="Success" success="True" time="0.000" asserts="3" />
+                      <test-case name="TP2_Bomberman.test.BombaTest.PruebaQueUnaMolotovCuandoSeActivaLuegoDeQuePaseUnTiempo1EsteDestruida" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.BombaTest.PruebaQueUnaMolotovCuandoSeActivaLuegoDeQuePaseUnTiempo1EsteDestruida() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\BombaTest.cs:línea 73
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.BombaTest.PruebaQueUnaMolotovCuandoSeActivaSiSeQuiereVolverAExplotarLanceUnaExcepcion" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.BombaTest.PruebaQueUnaMolotovCuandoSeActivaSiSeQuiereVolverAExplotarLanceUnaExcepcion() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\BombaTest.cs:línea 133
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.BombaTest.PruebaQueUnaMolotovCuandoSeActivaYNoPasaTiempoNoEsteDestruida" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.BombaTest.PruebaQueUnaMolotovCuandoSeActivaYNoPasaTiempoNoEsteDestruida() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\BombaTest.cs:línea 119
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.BombaTest.PruebaQueUnaToleToleCuandoSeActivaLuegoDeQuePaseUnTiempo5EsteDestruida" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.BombaTest.PruebaQueUnaToleToleCuandoSeActivaLuegoDeQuePaseUnTiempo5EsteDestruida() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\BombaTest.cs:línea 101
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.BombaTest.PruebaQueUnProyectilCuandoSeActivaLuegoDeQuePaseUnTiempo0EsteDestruida" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.BombaTest.PruebaQueUnProyectilCuandoSeActivaLuegoDeQuePaseUnTiempo0EsteDestruida() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\BombaTest.cs:línea 87
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.BombaTest.PruebaQueUnProyectilCuandoSeEncuentraConUnBloqueLoDania" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.BombaTest.PruebaQueUnProyectilCuandoSeEncuentraConUnBloqueLoDania() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\BombaTest.cs:línea 147
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.BombaTest.PruebaQueUnProyectilCuandoSeEncuentraUnPersonajeLoDania" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.BombaTest.PruebaQueUnProyectilCuandoSeEncuentraUnPersonajeLoDania() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\BombaTest.cs:línea 57
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.BombaTest.PruebaQueUnProyectilNoPuedaMoverseAUnCasilleroConUnaEntidad" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.BombaTest.PruebaQueUnProyectilNoPuedaMoverseAUnCasilleroConUnaEntidad() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\BombaTest.cs:línea 175
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.BombaTest.PruebaQueUnProyectilPuedaMoverseAUnCasilleroVacio" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.BombaTest.PruebaQueUnProyectilPuedaMoverseAUnCasilleroVacio() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\BombaTest.cs:línea 163
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.BombaTest.PruebaQueUnProyectilSoloPuedaMoverse4Casilleros" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.BombaTest.PruebaQueUnProyectilSoloPuedaMoverse4Casilleros() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\BombaTest.cs:línea 39
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="BombaToleToleTest" executed="True" result="Success" success="True" time="0.031" asserts="0">
+                    <results>
+                      <test-case name="TP2_Bomberman.test.BombaToleToleTest.CuandoSeTrateDeDaniarUnBombaToleToleYaDestruidoLanceUnaExcepcion" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="TP2_Bomberman.test.BombaToleToleTest.CuandoUnBombitaUtiliceUnBombaToleToleSusBombasSeanDelTipoToleTole" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="TP2_Bomberman.test.BombaToleToleTest.PruebaLaCreacionDeUnBombaToleTole" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                      <test-case name="TP2_Bomberman.test.BombaToleToleTest.PruebaLaCreacionDeUnBombaToleToleEnUnaPosicionDeterminada" executed="True" result="Success" success="True" time="0.000" asserts="4" />
+                      <test-case name="TP2_Bomberman.test.BombaToleToleTest.PruebaQueDaniarUnBombaToleToleConUnaMolotovLoDestruya" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="TP2_Bomberman.test.BombaToleToleTest.PruebaQueDaniarUnBombaToleToleConUnaToleToleLoDestruya" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="TP2_Bomberman.test.BombaToleToleTest.PruebaQueDaniarUnBombaToleToleConUnProyectilLoDestruya" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="TP2_Bomberman.test.BombaToleToleTest.PruebaQueElEfectoDelBombaToleToleLeDureHastaQueMuera" executed="True" result="Success" success="True" time="0.000" asserts="3" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="BombitaTest" executed="True" result="Failure" success="False" time="0.109" asserts="0">
+                    <results>
+                      <test-case name="TP2_Bomberman.test.BombitaTest.CuandoCreoABombitaQueTenga1DeResistencia" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="TP2_Bomberman.test.BombitaTest.CuandoCreoABombitaQueTenga3Vidas" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="TP2_Bomberman.test.BombitaTest.CuandoCreoABombitaQueTenga5DeVelocidad" executed="True" result="Failure" success="False" time="0.000" asserts="1">
+                        <failure>
+                          <message><![CDATA[  Expected: 5
+  But was:  3
+]]></message>
+                          <stack-trace><![CDATA[en TP2_Bomberman.test.BombitaTest.CuandoCreoABombitaQueTenga5DeVelocidad() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\BombitaTest.cs:línea 40
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.BombitaTest.CuandoSeMueveBombitaAbajoCambiaSuPosicionEnElTablero" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.BombitaTest.CuandoSeMueveBombitaAbajoCambiaSuPosicionEnElTablero() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\BombitaTest.cs:línea 73
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.BombitaTest.CuandoSeMueveBombitaALaDerechaCambiaSuPosicionEnElTablero" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.BombitaTest.CuandoSeMueveBombitaALaDerechaCambiaSuPosicionEnElTablero() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\BombitaTest.cs:línea 46
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.BombitaTest.CuandoSeMueveBombitaALaIzquierdaCambiaSuPosicionEnElTablero" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.BombitaTest.CuandoSeMueveBombitaALaIzquierdaCambiaSuPosicionEnElTablero() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\BombitaTest.cs:línea 59
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.BombitaTest.CuandoSeMueveBombitaArribaCambiaSuPosicionEnElTablero" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.BombitaTest.CuandoSeMueveBombitaArribaCambiaSuPosicionEnElTablero() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\BombitaTest.cs:línea 86
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.BombitaTest.IntentarMoverseAUnaPosicionInvalidaDejaABombitaEnElLugarQueEstaba" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.BombitaTest.IntentarMoverseAUnaPosicionInvalidaDejaABombitaEnElLugarQueEstaba() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\BombitaTest.cs:línea 101
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.BombitaTest.QueABombitaNoLeQuedenMasVidasYQueEsteDestruido" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.NullReferenceException : Referencia a objeto no establecida como instancia de un objeto.]]></message>
+                          <stack-trace><![CDATA[en TP2_Bomberman.Bombita.DaniarConBomba() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Personajes\Bombita.cs:línea 47
+en TP2_Bomberman.Bombita.DaniarConToleTole(ToleTole toleTole) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Personajes\Bombita.cs:línea 33
+en TP2_Bomberman.test.BombitaTest.QueABombitaNoLeQuedenMasVidasYQueEsteDestruido() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\BombitaTest.cs:línea 155
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.BombitaTest.QueBombitaAgarreUnBombaToleToleYQueModifiqueSuTipoDeBombaALanzar" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="TP2_Bomberman.test.BombitaTest.QueBombitaAgarreUnHabanoYQueModifiqueSuVelocidad" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="TP2_Bomberman.test.BombitaTest.QueBombitaAgarreUnTimerYQueModifiqueElRetardoConQueVaALanzarSusBombas" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="TP2_Bomberman.test.BombitaTest.QueBombitaSeaDañandoPorUnaMolotovLeQuiteUnaVida" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="TP2_Bomberman.test.BombitaTest.QueBombitaSeaDañandoPorUnaToleToleLeQuiteUnaVida" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="TP2_Bomberman.test.BombitaTest.QueBombitaSeaDañandoPorUnProyectilLeQuiteUnaVida" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="TP2_Bomberman.test.BombitaTest.TratarDeSeguirDaniandoAUnBombitaDestruidoLanceUnaExcepcion" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.NullReferenceException : Referencia a objeto no establecida como instancia de un objeto.]]></message>
+                          <stack-trace><![CDATA[en TP2_Bomberman.Bombita.DaniarConBomba() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Personajes\Bombita.cs:línea 47
+en TP2_Bomberman.Bombita.DaniarConToleTole(ToleTole toleTole) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Personajes\Bombita.cs:línea 33
+en TP2_Bomberman.test.BombitaTest.TratarDeSeguirDaniandoAUnBombitaDestruidoLanceUnaExcepcion() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\BombitaTest.cs:línea 170
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="CasilleroTest" executed="True" result="Failure" success="False" time="0.125" asserts="0">
+                    <results>
+                      <test-case name="TP2_Bomberman.test.CasilleroTest.PruebaLaCreacionDeUnCasillero" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                      <test-case name="TP2_Bomberman.test.CasilleroTest.PruebaObtenerLaCasillaPosicionadaAbajo" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.CasilleroTest.PruebaObtenerLaCasillaPosicionadaAbajo() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\CasilleroTest.cs:línea 150
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.CasilleroTest.PruebaObtenerLaCasillaPosicionadaALaDerecha" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.CasilleroTest.PruebaObtenerLaCasillaPosicionadaALaDerecha() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\CasilleroTest.cs:línea 109
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.CasilleroTest.PruebaObtenerLaCasillaPosicionadaALaIzquierda" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.CasilleroTest.PruebaObtenerLaCasillaPosicionadaALaIzquierda() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\CasilleroTest.cs:línea 136
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.CasilleroTest.PruebaObtenerLaCasillaPosicionadaArriba" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.CasilleroTest.PruebaObtenerLaCasillaPosicionadaArriba() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\CasilleroTest.cs:línea 122
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.CasilleroTest.PruebaPosicionarUnaBombaEnLaCasilla" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="TP2_Bomberman.test.CasilleroTest.PruebaPosicionarUnArticuloEnLaCasilla" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="TP2_Bomberman.test.CasilleroTest.PruebaPosicionarUnBloqueEnLaCasillaYQueTienePersonajeDevuelvaFalse" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="TP2_Bomberman.test.CasilleroTest.PruebaPosicionarUnObstaculoEnLaCasilla" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="TP2_Bomberman.test.CasilleroTest.PruebaPosicionarUnPersonajeEnLaCasilla" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="TP2_Bomberman.test.CasilleroTest.PruebaPosicionarUnPersonajeEnLaCasillaYQueTienePersonajeDevuelvaTrue" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="TP2_Bomberman.test.CasilleroTest.PruebaQueCasilleroEstaVacioDevuelvaFalseCuandoTieneUnaMolotovAdentroCuandoLePasoLaPosicionDesdeMOLOTOV" executed="True" result="Success" success="True" time="0.000" asserts="3" />
+                      <test-case name="TP2_Bomberman.test.CasilleroTest.PruebaQueCasilleroEstaVacioDevuelvaFalseCuandoTieneUnaMolotovAdentroCuandoSeLoPasoEnUnSetter" executed="True" result="Success" success="True" time="0.000" asserts="3" />
+                      <test-case name="TP2_Bomberman.test.CasilleroTest.PruebaQueCasilleroEstaVacioDevuelvaFalseCuandoTieneUnBloqueDeAceroAdentroCuandoLePasoLaPosicionDesdeElBloque" executed="True" result="Success" success="True" time="0.000" asserts="3" />
+                      <test-case name="TP2_Bomberman.test.CasilleroTest.PruebaQueCasilleroEstaVacioDevuelvaFalseCuandoTieneUnBloqueDeAceroAdentroCuandoSeLoPasoEnUnSetter" executed="True" result="Success" success="True" time="0.000" asserts="3" />
+                      <test-case name="TP2_Bomberman.test.CasilleroTest.PruebaQueCasilleroEstaVacioDevuelvaFalseCuandoTieneUnCecilioAdentroCuandoLePasoLaPosicionDesdeCecilio" executed="True" result="Success" success="True" time="0.000" asserts="3" />
+                      <test-case name="TP2_Bomberman.test.CasilleroTest.PruebaQueCasilleroEstaVacioDevuelvaFalseCuandoTieneUnCecilioAdentroCuandoSeLoPasoEnUnSetter" executed="True" result="Success" success="True" time="0.000" asserts="3" />
+                      <test-case name="TP2_Bomberman.test.CasilleroTest.PruebaQueCasilleroEstaVacioDevuelvaFalseCuandoTieneUnTimerAdentroCuandoLePasoLaPosicionDesdeTimer" executed="True" result="Success" success="True" time="0.000" asserts="3" />
+                      <test-case name="TP2_Bomberman.test.CasilleroTest.PruebaQueCasilleroEstaVacioDevuelvaFalseCuandoTieneUnTimerAdentroCuandoSeLoPasoEnUnSetter" executed="True" result="Success" success="True" time="0.000" asserts="3" />
+                      <test-case name="TP2_Bomberman.test.CasilleroTest.PruebaQueCuandoSeCreaUnCasilleroEsteVacio" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="TP2_Bomberman.test.CasilleroTest.PruebaQueElCasilleroEsteVacioDevuelvaTrueCuandoEsteVacio" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="CecilioTest" executed="True" result="Failure" success="False" time="0.109" asserts="0">
+                    <results>
+                      <test-case name="TP2_Bomberman.test.CecilioTest.CrearCecilioTiene5Vida" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="TP2_Bomberman.test.CecilioTest.CuandoCreoACecilioQueTenga5DeVelocidad" executed="True" result="Failure" success="False" time="0.000" asserts="1">
+                        <failure>
+                          <message><![CDATA[  Expected: 5
+  But was:  1
+]]></message>
+                          <stack-trace><![CDATA[en TP2_Bomberman.test.CecilioTest.CuandoCreoACecilioQueTenga5DeVelocidad() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\CecilioTest.cs:línea 27
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.CecilioTest.CuandoSeMueveCecilioAbajoCambiaSuPosicionEnElTablero" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.CecilioTest.CuandoSeMueveCecilioAbajoCambiaSuPosicionEnElTablero() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\CecilioTest.cs:línea 60
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.CecilioTest.CuandoSeMueveCecilioALaDerechaCambiaSuPosicionEnElTablero" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.CecilioTest.CuandoSeMueveCecilioALaDerechaCambiaSuPosicionEnElTablero() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\CecilioTest.cs:línea 33
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.CecilioTest.CuandoSeMueveCecilioALaIzquierdaCambiaSuPosicionEnElTablero" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.CecilioTest.CuandoSeMueveCecilioALaIzquierdaCambiaSuPosicionEnElTablero() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\CecilioTest.cs:línea 46
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.CecilioTest.CuandoSeMueveCecilioArribaCambiaSuPosicionEnElTablero" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.CecilioTest.CuandoSeMueveCecilioArribaCambiaSuPosicionEnElTablero() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\CecilioTest.cs:línea 73
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.CecilioTest.IntentarMoverseAUnaPosicionInvalidaDejaACecilioEnElLugarQueEstaba" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.CecilioTest.IntentarMoverseAUnaPosicionInvalidaDejaACecilioEnElLugarQueEstaba() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\CecilioTest.cs:línea 88
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.CecilioTest.QueCecilioLanceUnaBombaYSeDanieASiMismo" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.CecilioTest.QueCecilioLanceUnaBombaYSeDanieASiMismo() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\CecilioTest.cs:línea 147
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.CecilioTest.QueCecilioSeaDañandoPorUnaMolotovLeQuiteUnaVida" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.NullReferenceException : Referencia a objeto no establecida como instancia de un objeto.]]></message>
+                          <stack-trace><![CDATA[en TP2_Bomberman.src.Enemigo.DaniarConBomba(Bomba bomba) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Personajes\Enemigo.cs:línea 50
+en TP2_Bomberman.src.Enemigo.DaniarConMolotov(Molotov molotov) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Personajes\Enemigo.cs:línea 29
+en TP2_Bomberman.test.CecilioTest.QueCecilioSeaDañandoPorUnaMolotovLeQuiteUnaVida() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\CecilioTest.cs:línea 105
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.CecilioTest.QueCecilioSeaDañandoPorUnaToleToleLeQuiteUnaVida" executed="True" result="Error" success="False" time="0.016" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.NullReferenceException : Referencia a objeto no establecida como instancia de un objeto.]]></message>
+                          <stack-trace><![CDATA[en TP2_Bomberman.src.Enemigo.DaniarConBomba(Bomba bomba) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Personajes\Enemigo.cs:línea 50
+en TP2_Bomberman.src.Enemigo.DaniarConToleTole(ToleTole toleTole) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Personajes\Enemigo.cs:línea 34
+en TP2_Bomberman.test.CecilioTest.QueCecilioSeaDañandoPorUnaToleToleLeQuiteUnaVida() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\CecilioTest.cs:línea 117
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.CecilioTest.QueCecilioSeaDañandoPorUnProyectilLeQuiteUnaVida" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.NullReferenceException : Referencia a objeto no establecida como instancia de un objeto.]]></message>
+                          <stack-trace><![CDATA[en TP2_Bomberman.src.Enemigo.DaniarConBomba(Bomba bomba) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Personajes\Enemigo.cs:línea 50
+en TP2_Bomberman.src.Enemigo.DaniarConProyectil(Proyectil proyectil) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Personajes\Enemigo.cs:línea 40
+en TP2_Bomberman.test.CecilioTest.QueCecilioSeaDañandoPorUnProyectilLeQuiteUnaVida() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\CecilioTest.cs:línea 129
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.CecilioTest.TratarDeSeguirDaniandoACecilioDestruidoLanceUnaExcepcion" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.NullReferenceException : Referencia a objeto no establecida como instancia de un objeto.]]></message>
+                          <stack-trace><![CDATA[en TP2_Bomberman.src.Enemigo.DaniarConBomba(Bomba bomba) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Personajes\Enemigo.cs:línea 50
+en TP2_Bomberman.src.Enemigo.DaniarConToleTole(ToleTole toleTole) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Personajes\Enemigo.cs:línea 34
+en TP2_Bomberman.test.CecilioTest.TratarDeSeguirDaniandoACecilioDestruidoLanceUnaExcepcion() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\CecilioTest.cs:línea 139
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="HabanoTest" executed="True" result="Success" success="True" time="0.031" asserts="0">
+                    <results>
+                      <test-case name="TP2_Bomberman.test.HabanoTest.CuandoSeTrateDeDaniarUnHabanoYaDestruidoLanceUnaExcepcion" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="TP2_Bomberman.test.HabanoTest.CuandoUnBombitaUtiliceUnHabanoAumenteSuVelocidad" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="TP2_Bomberman.test.HabanoTest.PruebaLaCreacionDeUnHabano" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                      <test-case name="TP2_Bomberman.test.HabanoTest.PruebaLaCreacionDeUnHabanoEnUnaPosicionDeterminada" executed="True" result="Success" success="True" time="0.000" asserts="4" />
+                      <test-case name="TP2_Bomberman.test.HabanoTest.PruebaQueDaniarUnHabanoConUnaMolotovLoDestruya" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="TP2_Bomberman.test.HabanoTest.PruebaQueDaniarUnHabanoConUnaToleToleLoDestruya" executed="True" result="Success" success="True" time="0.016" asserts="1" />
+                      <test-case name="TP2_Bomberman.test.HabanoTest.PruebaQueDaniarUnHabanoConUnProyectilLoDestruya" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="TP2_Bomberman.test.HabanoTest.PruebaQueElEfectoDelHabanoLeDureHastaQueMuera" executed="True" result="Success" success="True" time="0.000" asserts="3" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="IntegracionTest" executed="True" result="Failure" success="False" time="0.250" asserts="0">
+                    <results>
+                      <test-case name="TP2_Bomberman.test.IntegracionTest.BombitaAgarreUnBombaToleToleYCambieElTipoDeBombaQueLanza" executed="True" result="Error" success="False" time="0.016" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.IntegracionTest.BombitaAgarreUnBombaToleToleYCambieElTipoDeBombaQueLanza() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\IntegracionTest.cs:línea 494
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.IntegracionTest.BombitaAgarreUnTimerYSusBombasTardenMasEnExplotar" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.IntegracionTest.BombitaAgarreUnTimerYSusBombasTardenMasEnExplotar() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\IntegracionTest.cs:línea 462
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.IntegracionTest.BombitaIntentaLanzarDosBombasALaVez" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.IntegracionTest.BombitaIntentaLanzarDosBombasALaVez() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\IntegracionTest.cs:línea 422
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.IntegracionTest.CreaUnEnemigoUnBombitaYLopezRLanzaUnProyectilYLoLastimaAlEnemigoQueEstaEnElMedioYABombitaNoLoDanie" executed="True" result="Error" success="False" time="0.016" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.IntegracionTest.CreaUnEnemigoUnBombitaYLopezRLanzaUnProyectilYLoLastimaAlEnemigoQueEstaEnElMedioYABombitaNoLoDanie() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\IntegracionTest.cs:línea 348
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.IntegracionTest.CreaUnEnemigoYUnBombitaYLanzaDosBombasYLoDestruye" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.IntegracionTest.CreaUnEnemigoYUnBombitaYLanzaDosBombasYLoDestruye() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\IntegracionTest.cs:línea 394
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.IntegracionTest.CreaUnEnemigoYUnBombitaYLoLastimaConUnaMolotov" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.IntegracionTest.CreaUnEnemigoYUnBombitaYLoLastimaConUnaMolotov() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\IntegracionTest.cs:línea 286
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.IntegracionTest.CreaUnEnemigoYUnBombitaYLoLastimaConUnaMolotovAlEnemigoYASiMismo" executed="True" result="Error" success="False" time="0.016" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.IntegracionTest.CreaUnEnemigoYUnBombitaYLoLastimaConUnaMolotovAlEnemigoYASiMismo() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\IntegracionTest.cs:línea 307
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.IntegracionTest.CreaUnEnemigoYUnBombitaYLopezRLanzaUnProyectilYLoLastimaABombita" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.IntegracionTest.CreaUnEnemigoYUnBombitaYLopezRLanzaUnProyectilYLoLastimaABombita() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\IntegracionTest.cs:línea 328
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.IntegracionTest.CreaUnTableroConBombitaYUnaBombaYMueveABombitaHastaChocar" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.IntegracionTest.CreaUnTableroConBombitaYUnaBombaYMueveABombitaHastaChocar() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\IntegracionTest.cs:línea 176
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.IntegracionTest.CreaUnTableroConBombitaYUnBloqueConUnArticuloYQueBombitaLoAgarre" executed="True" result="Error" success="False" time="0.016" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.IntegracionTest.CreaUnTableroConBombitaYUnBloqueConUnArticuloYQueBombitaLoAgarre() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\IntegracionTest.cs:línea 238
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.IntegracionTest.CreaUnTableroConBombitaYUnBombaToleToleYMueveABombitaHastaAgarrarlo" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.IntegracionTest.CreaUnTableroConBombitaYUnBombaToleToleYMueveABombitaHastaAgarrarlo() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\IntegracionTest.cs:línea 140
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.IntegracionTest.CreaUnTableroConBombitaYUnHabanoYMueveABombitaHastaAgarrarlo" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.IntegracionTest.CreaUnTableroConBombitaYUnHabanoYMueveABombitaHastaAgarrarlo() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\IntegracionTest.cs:línea 122
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.IntegracionTest.CreaUnTableroConBombitaYUnLopezRAladoYLosMueveHastaChocarseYQueBombitaPierdaUnaVida" executed="True" result="Error" success="False" time="0.016" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.IntegracionTest.CreaUnTableroConBombitaYUnLopezRAladoYLosMueveHastaChocarseYQueBombitaPierdaUnaVida() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\IntegracionTest.cs:línea 82
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.IntegracionTest.CreaUnTableroConBombitaYUnLopezRYLosMueveHastaChocarseYQueBombitaPierdaUnaVida" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.IntegracionTest.CreaUnTableroConBombitaYUnLopezRYLosMueveHastaChocarseYQueBombitaPierdaUnaVida() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\IntegracionTest.cs:línea 60
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.IntegracionTest.CreaUnTableroConBombitaYUnObstaculoYMueveABombitaHastaChocarse" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.IntegracionTest.CreaUnTableroConBombitaYUnObstaculoYMueveABombitaHastaChocarse() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\IntegracionTest.cs:línea 104
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.IntegracionTest.CreaUnTableroConBombitaYUnProyectilYSeColisionanEntoncesBombitaPierdeUnaVida" executed="True" result="Error" success="False" time="0.016" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.IntegracionTest.CreaUnTableroConBombitaYUnProyectilYSeColisionanEntoncesBombitaPierdeUnaVida() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\IntegracionTest.cs:línea 194
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.IntegracionTest.CreaUnTableroConBombitaYUnTimerYMueveABombitaHastaAgarrarlo" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.IntegracionTest.CreaUnTableroConBombitaYUnTimerYMueveABombitaHastaAgarrarlo() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\IntegracionTest.cs:línea 158
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.IntegracionTest.CreaUnTableroConUnBombitaYUnCecilioYLosMueve" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.IntegracionTest.CreaUnTableroConUnBombitaYUnCecilioYLosMueve() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\IntegracionTest.cs:línea 20
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.IntegracionTest.CreaUnTableroConUnBombitaYUnCecilioYLosMueveHastaChocarse" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.IntegracionTest.CreaUnTableroConUnBombitaYUnCecilioYLosMueveHastaChocarse() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\IntegracionTest.cs:línea 38
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.IntegracionTest.LopezRIntentaLanzarDosProyectilesALaVezYNoPuede" executed="True" result="Error" success="False" time="0.016" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.IntegracionTest.LopezRIntentaLanzarDosProyectilesALaVezYNoPuede() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\IntegracionTest.cs:línea 442
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.IntegracionTest.PruebaQueBombitaLanceUnaBombaAlLadoDeUnBloquesDeLadrillosYLosDestruya" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.IntegracionTest.PruebaQueBombitaLanceUnaBombaAlLadoDeUnBloquesDeLadrillosYLosDestruya() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\IntegracionTest.cs:línea 263
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.IntegracionTest.PruebaQueCuandoUnProyectilExploteDanieAUnBombitaQueEsteAlLado" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.IntegracionTest.PruebaQueCuandoUnProyectilExploteDanieAUnBombitaQueEsteAlLado() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\IntegracionTest.cs:línea 216
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.IntegracionTest.QueBombitaNoSeaDaniadoCuandoSeLeLanzaUnProyectilYEstaAtrasDeUnBloque" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.IntegracionTest.QueBombitaNoSeaDaniadoCuandoSeLeLanzaUnProyectilYEstaAtrasDeUnBloque() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\IntegracionTest.cs:línea 373
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="LopezRAladoAladoTest" executed="True" result="Failure" success="False" time="0.156" asserts="0">
+                    <results>
+                      <test-case name="TP2_Bomberman.test.LopezRAladoAladoTest.crearLopezRAladoTiene5DeResistencia" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="TP2_Bomberman.test.LopezRAladoAladoTest.CuandoCreoALopezRAladoQueTenga5DeVelocidad" executed="True" result="Failure" success="False" time="0.000" asserts="1">
+                        <failure>
+                          <message><![CDATA[  Expected: 5
+  But was:  1
+]]></message>
+                          <stack-trace><![CDATA[en TP2_Bomberman.test.LopezRAladoAladoTest.CuandoCreoALopezRAladoQueTenga5DeVelocidad() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\LopezRAladoTest.cs:línea 30
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.LopezRAladoAladoTest.CuandoSeMueveLopezRAladoAbajoCambiaSuPosicionEnElTablero" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.LopezRAladoAladoTest.CuandoSeMueveLopezRAladoAbajoCambiaSuPosicionEnElTablero() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\LopezRAladoTest.cs:línea 63
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.LopezRAladoAladoTest.CuandoSeMueveLopezRAladoALaDerechaCambiaSuPosicionEnElTablero" executed="True" result="Error" success="False" time="0.016" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.LopezRAladoAladoTest.CuandoSeMueveLopezRAladoALaDerechaCambiaSuPosicionEnElTablero() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\LopezRAladoTest.cs:línea 36
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.LopezRAladoAladoTest.CuandoSeMueveLopezRAladoALaIzquierdaCambiaSuPosicionEnElTablero" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.LopezRAladoAladoTest.CuandoSeMueveLopezRAladoALaIzquierdaCambiaSuPosicionEnElTablero() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\LopezRAladoTest.cs:línea 49
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.LopezRAladoAladoTest.CuandoSeMueveLopezRAladoArribaCambiaSuPosicionEnElTablero" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.LopezRAladoAladoTest.CuandoSeMueveLopezRAladoArribaCambiaSuPosicionEnElTablero() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\LopezRAladoTest.cs:línea 76
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.LopezRAladoAladoTest.IntentarMoverseAUnaPosicionInvalidaDejaALopezRAladoEnElLugarQueEstaba" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.LopezRAladoAladoTest.IntentarMoverseAUnaPosicionInvalidaDejaALopezRAladoEnElLugarQueEstaba() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\LopezRAladoTest.cs:línea 91
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.LopezRAladoAladoTest.QueCecilioLanceUnaBombaYSeDanieASiMismo" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.LopezRAladoAladoTest.QueCecilioLanceUnaBombaYSeDanieASiMismo() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\LopezRAladoTest.cs:línea 165
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.LopezRAladoAladoTest.QueLopezRAladoPuedaMoversePorArribaDeLosObstaculos" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.LopezRAladoAladoTest.QueLopezRAladoPuedaMoversePorArribaDeLosObstaculos() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\LopezRAladoTest.cs:línea 150
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.LopezRAladoAladoTest.QueLopezRAladoSeaDañandoPorUnaMolotovLeQuiteUnaVida" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.NullReferenceException : Referencia a objeto no establecida como instancia de un objeto.]]></message>
+                          <stack-trace><![CDATA[en TP2_Bomberman.src.Enemigo.DaniarConBomba(Bomba bomba) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Personajes\Enemigo.cs:línea 50
+en TP2_Bomberman.src.Enemigo.DaniarConMolotov(Molotov molotov) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Personajes\Enemigo.cs:línea 29
+en TP2_Bomberman.test.LopezRAladoAladoTest.QueLopezRAladoSeaDañandoPorUnaMolotovLeQuiteUnaVida() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\LopezRAladoTest.cs:línea 108
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.LopezRAladoAladoTest.QueLopezRAladoSeaDañandoPorUnaToleToleLeQuiteUnaVida" executed="True" result="Error" success="False" time="0.016" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.NullReferenceException : Referencia a objeto no establecida como instancia de un objeto.]]></message>
+                          <stack-trace><![CDATA[en TP2_Bomberman.src.Enemigo.DaniarConBomba(Bomba bomba) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Personajes\Enemigo.cs:línea 50
+en TP2_Bomberman.src.Enemigo.DaniarConToleTole(ToleTole toleTole) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Personajes\Enemigo.cs:línea 34
+en TP2_Bomberman.test.LopezRAladoAladoTest.QueLopezRAladoSeaDañandoPorUnaToleToleLeQuiteUnaVida() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\LopezRAladoTest.cs:línea 120
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.LopezRAladoAladoTest.QueLopezRAladoSeaDañandoPorUnProyectilLeQuiteUnaVida" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.NullReferenceException : Referencia a objeto no establecida como instancia de un objeto.]]></message>
+                          <stack-trace><![CDATA[en TP2_Bomberman.src.Enemigo.DaniarConBomba(Bomba bomba) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Personajes\Enemigo.cs:línea 50
+en TP2_Bomberman.src.Enemigo.DaniarConProyectil(Proyectil proyectil) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Personajes\Enemigo.cs:línea 40
+en TP2_Bomberman.test.LopezRAladoAladoTest.QueLopezRAladoSeaDañandoPorUnProyectilLeQuiteUnaVida() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\LopezRAladoTest.cs:línea 132
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.LopezRAladoAladoTest.TratarDeSeguirDaniandoALopezRAladoDestruidoLanceUnaExcepcion" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.NullReferenceException : Referencia a objeto no establecida como instancia de un objeto.]]></message>
+                          <stack-trace><![CDATA[en TP2_Bomberman.src.Enemigo.DaniarConBomba(Bomba bomba) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Personajes\Enemigo.cs:línea 50
+en TP2_Bomberman.src.Enemigo.DaniarConToleTole(ToleTole toleTole) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Personajes\Enemigo.cs:línea 34
+en TP2_Bomberman.test.LopezRAladoAladoTest.TratarDeSeguirDaniandoALopezRAladoDestruidoLanceUnaExcepcion() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\LopezRAladoTest.cs:línea 142
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="LopezRTest" executed="True" result="Failure" success="False" time="0.094" asserts="0">
+                    <results>
+                      <test-case name="TP2_Bomberman.test.LopezRTest.crearLopezRTiene10Resistencia" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="TP2_Bomberman.test.LopezRTest.CuandoCreoALopezRQueTenga5DeVelocidad" executed="True" result="Failure" success="False" time="0.000" asserts="1">
+                        <failure>
+                          <message><![CDATA[  Expected: 5
+  But was:  1
+]]></message>
+                          <stack-trace><![CDATA[en TP2_Bomberman.test.LopezRTest.CuandoCreoALopezRQueTenga5DeVelocidad() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\LopezRTest.cs:línea 28
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.LopezRTest.CuandoSeMueveLopezRAbajoCambiaSuPosicionEnElTablero" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.LopezRTest.CuandoSeMueveLopezRAbajoCambiaSuPosicionEnElTablero() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\LopezRTest.cs:línea 61
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.LopezRTest.CuandoSeMueveLopezRALaDerechaCambiaSuPosicionEnElTablero" executed="True" result="Error" success="False" time="0.016" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.LopezRTest.CuandoSeMueveLopezRALaDerechaCambiaSuPosicionEnElTablero() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\LopezRTest.cs:línea 34
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.LopezRTest.CuandoSeMueveLopezRALaIzquierdaCambiaSuPosicionEnElTablero" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.LopezRTest.CuandoSeMueveLopezRALaIzquierdaCambiaSuPosicionEnElTablero() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\LopezRTest.cs:línea 47
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.LopezRTest.CuandoSeMueveLopezRArribaCambiaSuPosicionEnElTablero" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.LopezRTest.CuandoSeMueveLopezRArribaCambiaSuPosicionEnElTablero() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\LopezRTest.cs:línea 74
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.LopezRTest.IntentarMoverseAUnaPosicionInvalidaDejaALopezREnElLugarQueEstaba" executed="True" result="Error" success="False" time="0.016" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.LopezRTest.IntentarMoverseAUnaPosicionInvalidaDejaALopezREnElLugarQueEstaba() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\LopezRTest.cs:línea 89
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.LopezRTest.QueLopezRSeaDañandoPorUnaMolotovLeQuiteUnaVida" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="TP2_Bomberman.test.LopezRTest.QueLopezRSeaDañandoPorUnaToleToleLeQuiteUnaVida" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.NullReferenceException : Referencia a objeto no establecida como instancia de un objeto.]]></message>
+                          <stack-trace><![CDATA[en TP2_Bomberman.src.Enemigo.DaniarConBomba(Bomba bomba) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Personajes\Enemigo.cs:línea 50
+en TP2_Bomberman.src.Enemigo.DaniarConToleTole(ToleTole toleTole) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Personajes\Enemigo.cs:línea 34
+en TP2_Bomberman.test.LopezRTest.QueLopezRSeaDañandoPorUnaToleToleLeQuiteUnaVida() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\LopezRTest.cs:línea 118
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.LopezRTest.QueLopezRSeaDañandoPorUnProyectilLeQuiteUnaVida" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="TP2_Bomberman.test.LopezRTest.TratarDeSeguirDaniandoALopezRDestruidoLanceUnaExcepcion" executed="True" result="Error" success="False" time="0.016" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.NullReferenceException : Referencia a objeto no establecida como instancia de un objeto.]]></message>
+                          <stack-trace><![CDATA[en TP2_Bomberman.src.Enemigo.DaniarConBomba(Bomba bomba) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Personajes\Enemigo.cs:línea 50
+en TP2_Bomberman.src.Enemigo.DaniarConToleTole(ToleTole toleTole) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Personajes\Enemigo.cs:línea 34
+en TP2_Bomberman.test.LopezRTest.TratarDeSeguirDaniandoALopezRDestruidoLanceUnaExcepcion() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\LopezRTest.cs:línea 140
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="SalidaTest" executed="True" result="Failure" success="False" time="0.047" asserts="0">
+                    <results>
+                      <test-case name="TP2_Bomberman.test.SalidaTest.PruebaLaCreacionDeUnaSalidaEnUnaPosicionDeterminada" executed="True" result="Success" success="True" time="0.000" asserts="4" />
+                      <test-case name="TP2_Bomberman.test.SalidaTest.PruebaLaCreacionDeUnaSalidaEnUnaPosicionDeterminadaEnUnTablero" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.SalidaTest.PruebaLaCreacionDeUnaSalidaEnUnaPosicionDeterminadaEnUnTablero() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\SalidaTest.cs:línea 30
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.SalidaTest.PruebaQueCuandoBombitaLoAgarrePaseDeNivel" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.SalidaTest.PruebaQueCuandoBombitaLoAgarrePaseDeNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\SalidaTest.cs:línea 76
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.SalidaTest.PruebaQueDaniarloNoLoDestruya" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.SalidaTest.PruebaQueDaniarloNoLoDestruya() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\SalidaTest.cs:línea 59
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.SalidaTest.PruebaQueUnaMolotovNoLoDestruya" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.SalidaTest.PruebaQueUnaMolotovNoLoDestruya() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\SalidaTest.cs:línea 43
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.SalidaTest.PruebaQueUnBloqueTengaUnaSalidaYCuandoSeaDestruidoLaDejeEnElTablero" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.SalidaTest.PruebaQueUnBloqueTengaUnaSalidaYCuandoSeaDestruidoLaDejeEnElTablero() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\SalidaTest.cs:línea 90
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="TableroTest" executed="True" result="Failure" success="False" time="0.078" asserts="0">
+                    <results>
+                      <test-case name="TP2_Bomberman.test.TableroTest.PruebaAgregarUnaEntidadAUnaCasillaDelTableroYVerificarQueEstaVacioDevuelvaFalse" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.TableroTest.PruebaAgregarUnaEntidadAUnaCasillaDelTableroYVerificarQueEstaVacioDevuelvaFalse() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\TableroTest.cs:línea 60
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.TableroTest.PruebaCrearTableroYEnemigosVivosEsNueve" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.TableroTest.PruebaCrearTableroYEnemigosVivosEsNueve() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\TableroTest.cs:línea 98
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.TableroTest.PruebaCrearUnTableroConDimension1" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.TableroTest.PruebaCrearUnTableroConDimension1() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\TableroTest.cs:línea 18
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.TableroTest.PruebaQueCuandoSeIntentaAccederAUnCasilleroFueraDeRangoLanceUnaExcepcion" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.TableroTest.PruebaQueCuandoSeIntentaAccederAUnCasilleroFueraDeRangoLanceUnaExcepcion() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\TableroTest.cs:línea 38
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.TableroTest.PruebaQueDevuelvaElCasilleroDeUnaPosicionDada" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.TableroTest.PruebaQueDevuelvaElCasilleroDeUnaPosicionDada() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\TableroTest.cs:línea 26
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.TableroTest.PruebaQueSeGuardeCorrectamenteLaPosicionDeBombita" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.TableroTest.PruebaQueSeGuardeCorrectamenteLaPosicionDeBombita() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\TableroTest.cs:línea 71
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.TableroTest.PruebaQueSeGuardeCorrectamenteLaPosicionDeBombitaCuandoSeMueve" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.TableroTest.PruebaQueSeGuardeCorrectamenteLaPosicionDeBombitaCuandoSeMueve() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\TableroTest.cs:línea 84
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TP2_Bomberman.test.TableroTest.PruebaTableroInicializadoConBloquesDeAcero" executed="True" result="Error" success="False" time="0.000" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ArgumentException : Ya se agregó un elemento con la misma clave.]]></message>
+                          <stack-trace><![CDATA[en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+en System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+en System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+en TP2_Bomberman.src.Tablero.CargarEnemigosPorNivel() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 235
+en TP2_Bomberman.src.Tablero..ctor(Boolean ConObstaculos) en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\src\Elementales\Tablero.cs:línea 47
+en TP2_Bomberman.test.TableroTest.PruebaTableroInicializadoConBloquesDeAcero() en C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\test\TableroTest.cs:línea 49
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="TimerTest" executed="True" result="Success" success="True" time="0.031" asserts="0">
+                    <results>
+                      <test-case name="TP2_Bomberman.test.TimerTest.CuandoSeTrateDeDaniarUnTimerYaDestruidoLanceUnaExcepcion" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="TP2_Bomberman.test.TimerTest.CuandoUnBombitaUtiliceUnTimerSusBombasTenganUnRetardoQuincePorcientoMenor" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="TP2_Bomberman.test.TimerTest.PruebaLaCreacionDeUnTimer" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                      <test-case name="TP2_Bomberman.test.TimerTest.PruebaLaCreacionDeUnTimerEnUnaPosicionDeterminada" executed="True" result="Success" success="True" time="0.000" asserts="4" />
+                      <test-case name="TP2_Bomberman.test.TimerTest.PruebaQueDaniarUnTimerConUnaMolotovLoDestruya" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="TP2_Bomberman.test.TimerTest.PruebaQueDaniarUnTimerConUnaToleToleLoDestruya" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="TP2_Bomberman.test.TimerTest.PruebaQueDaniarUnTimerConUnProyectilLoDestruya" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="TP2_Bomberman.test.TimerTest.PruebaQueElEfectoDelTimerLeDureHastaQueMuera" executed="True" result="Success" success="True" time="0.000" asserts="3" />
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>
