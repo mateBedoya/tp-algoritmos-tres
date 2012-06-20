@@ -59,7 +59,7 @@ namespace TP2_BombermanGAME
             controlador.CargarTexturas(Content);
             TexturasBombas.Add(Content.Load<Texture2D>("molotov4"));
             TexturasBombas.Add(Content.Load<Texture2D>("toleTole"));
-            //TexturasBombas.Add(Content.Load<Texture2D>("proyectil"));
+            TexturasBombas.Add(Content.Load<Texture2D>("bala"));
             formatoTexto = this.Content.Load<SpriteFont>("SpriteFont1");
         }
 

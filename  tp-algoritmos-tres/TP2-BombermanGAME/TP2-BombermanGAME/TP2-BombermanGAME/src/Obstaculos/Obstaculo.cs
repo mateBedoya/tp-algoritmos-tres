@@ -94,6 +94,8 @@ namespace TP2_Bomberman.src.Obstaculos
             lopez.CambiarPosicionA(this.posicion);
         }
 
+        public virtual void Chocar(Enemigo enemigo) { }
+
         
 
         // Propiedades

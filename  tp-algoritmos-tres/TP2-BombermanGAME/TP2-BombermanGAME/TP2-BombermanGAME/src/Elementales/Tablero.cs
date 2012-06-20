@@ -70,7 +70,7 @@ namespace TP2_Bomberman.src
             if (ConObstaculos == true)
             {
                 AgregarEnemigos();
-                /*int fila;
+                int fila;
                 int columna;
                 while (true)
                 {
@@ -78,9 +78,11 @@ namespace TP2_Bomberman.src
                     columna = SortearColumna();
                     if (EstaVacio(fila, columna)) break;
                 }
-                Cecilio cecilio = new Cecilio();
-                AgregarEntidadEnCasillero(cecilio, fila, columna);
-                listaCecilios.Add(cecilio);*/
+                Cecilio enemigo = new Cecilio();
+                AgregarEntidadEnCasillero(enemigo, fila, columna);
+                listaCecilios.Add(enemigo);
+                //listaCecilios.Add(enemigo);
+                //listaLopezR.Add(enemigo);*/
                 AgregarSalida();
                 AgregarBombita();
             }
