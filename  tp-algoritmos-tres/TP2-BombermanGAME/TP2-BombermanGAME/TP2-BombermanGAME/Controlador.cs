@@ -149,7 +149,7 @@ namespace TP2_BombermanGAME
             //    if (bomba.EstaActivada && !bomba.FueDestruido()) bomba.CuandoPaseElTiempo(0.01);
             //}
 
-            if (!tablero.Bombita.FueDestruido() && tablero.Salida.Posicion != null) return "Nivel: " + tablero.NivelActual + " \nVidas: " + tablero.Bombita.Vidas + " \nCantidad enemigos vivos: " + tablero.CantidadEnemigosVivos() + " \nEnemigo en: " + tablero.ListaCecilios[0].Posicion.Fila + "," + tablero.ListaCecilios[0].Posicion.Columna;
+            if (!tablero.Bombita.FueDestruido() && tablero.Salida.Posicion != null) return "Nivel: " + tablero.NivelActual + " \nVidas: " + tablero.Bombita.Vidas + " \nCantidad enemigos vivos: " + tablero.CantidadEnemigosVivos();
             if (tablero.Bombita.FueDestruido()) return "Perdio";
             if (this.nivelActual == tablero.CantidadDeNiveles) return "Gano";
             return "";
