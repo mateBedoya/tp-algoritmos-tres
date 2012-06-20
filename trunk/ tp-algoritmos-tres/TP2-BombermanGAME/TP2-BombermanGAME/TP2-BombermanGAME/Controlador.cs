@@ -456,16 +456,14 @@ namespace TP2_BombermanGAME
             if (tablero.Bombita.Posicion.Columna >= enemigo.Posicion.Columna) return true;
             return false;
         }
-        
+
 
         private void MoverBombita(KeyboardState teclado)
         {
-            
             if (teclado.IsKeyDown(Keys.Right))
             {
                 if (tablero.Bombita.posicionEnVentana.X + tablero.Bombita.textura.Width >= tablero.Dimension * tablero.Bombita.Posicion.textura.Width) return;
                 Casillero casilleroDerecho;
-
                 try
                 {
                     casilleroDerecho = tablero.ObtenerCasillero(tablero.Bombita.Posicion.Fila, tablero.Bombita.Posicion.Columna + 1);
@@ -473,11 +471,10 @@ namespace TP2_BombermanGAME
                 catch (Exception)
                 {
                     casilleroDerecho = null;
+                    return;
                 }
-                
-                if (casilleroDerecho != null && !casilleroDerecho.EstaVacio() && !casilleroDerecho.Entidad.EsArticulo()) return;
-                if (casilleroDerecho != null && casilleroDerecho.Entidad != null && casilleroDerecho.Entidad.EsSalida() && tablero.CantidadEnemigosVivos() != 0) return;
-                if ((casilleroDerecho != null) && (tablero.Bombita.posicionEnVentana.X + tablero.Bombita.textura.Width / 2 >= casilleroDerecho.posicionEnVentana.X))
+                if (movimientoEsInvalido(casilleroDerecho)) return;
+                if ((tablero.Bombita.posicionEnVentana.X + tablero.Bombita.textura.Width / 2 >= casilleroDerecho.posicionEnVentana.X))
                 {
                     tablero.Bombita.MoverDerecha();
                 }
@@ -494,10 +491,10 @@ namespace TP2_BombermanGAME
                 catch (Exception)
                 {
                     casilleroIzq = null;
+                    return;
                 }
-                
-                if (casilleroIzq != null && !casilleroIzq.EstaVacio() && !casilleroIzq.Entidad.EsArticulo()) return;
-                if (casilleroIzq != null && casilleroIzq.Entidad != null && casilleroIzq.Entidad.EsSalida() && tablero.CantidadEnemigosVivos()!=0) return;
+
+                if (movimientoEsInvalido(casilleroIzq)) return;
                 if ((casilleroIzq != null) && (tablero.Bombita.posicionEnVentana.X + tablero.Bombita.textura.Width / 2 <= casilleroIzq.posicionEnVentana.X + casilleroIzq.textura.Width))
                 {
                     tablero.Bombita.MoverIzquierda();
@@ -515,10 +512,9 @@ namespace TP2_BombermanGAME
                 catch (Exception)
                 {
                     casilleroSup = null;
+                    return;
                 }
-                
-                if (casilleroSup != null && !casilleroSup.EstaVacio() && !casilleroSup.Entidad.EsArticulo()) return;
-                if (casilleroSup != null && casilleroSup.Entidad != null && casilleroSup.Entidad.EsSalida() && tablero.CantidadEnemigosVivos() != 0) return;
+                if (movimientoEsInvalido(casilleroSup)) return;
                 if ((casilleroSup != null) && (tablero.Bombita.posicionEnVentana.Y + tablero.Bombita.textura.Height / 2 <= casilleroSup.posicionEnVentana.Y + casilleroSup.textura.Height))
                 {
                     tablero.Bombita.MoverArriba();
@@ -536,17 +532,22 @@ namespace TP2_BombermanGAME
                 catch (Exception)
                 {
                     casilleroInf = null;
+                    return;
                 }
-                
-                if (casilleroInf != null && !casilleroInf.EstaVacio() && !casilleroInf.Entidad.EsArticulo()) return;
-                if (casilleroInf != null && casilleroInf.Entidad != null && casilleroInf.Entidad.EsSalida() && tablero.CantidadEnemigosVivos() != 0) return;
+                if (movimientoEsInvalido(casilleroInf)) return;
                 if ((casilleroInf != null) && (tablero.Bombita.posicionEnVentana.Y + tablero.Bombita.textura.Height / 2 >= casilleroInf.posicionEnVentana.Y))
                 {
                     tablero.Bombita.MoverAbajo();
                 }
                 tablero.Bombita.posicionEnVentana.Y += tablero.Bombita.Velocidad;
             }
-            
+        }
+
+        private bool movimientoEsInvalido(Casillero casilleroADesplazarse)
+        {
+            if (!casilleroADesplazarse.EstaVacio() && !casilleroADesplazarse.Entidad.EsArticulo()) return true;
+            if (casilleroADesplazarse.Entidad != null && casilleroADesplazarse.Entidad.EsSalida() && tablero.CantidadEnemigosVivos() != 0) return true;
+            return false;
         }
 
         
