@@ -149,7 +149,7 @@ namespace TP2_BombermanGAME
             //    if (bomba.EstaActivada && !bomba.FueDestruido()) bomba.CuandoPaseElTiempo(0.01);
             //}
 
-            if (!tablero.Bombita.FueDestruido() && tablero.Salida.Posicion != null) return "Nivel: " + tablero.NivelActual + " \nVidas: " + tablero.Bombita.Vidas + " \nCantidad enemigos vivos: " + tablero.CantidadEnemigosVivos();
+            if (!tablero.Bombita.FueDestruido() && tablero.Salida.Posicion != null) return "Nivel: " + tablero.NivelActual + " \nVidas: " + tablero.Bombita.Vidas + " \nCantidad enemigos vivos: " + tablero.CantidadEnemigosVivos();// +" \nPosicion enemigo: " + tablero.ListaCecilios[0].Posicion.Fila + "," + tablero.ListaCecilios[0].Posicion.Columna;
             if (tablero.Bombita.FueDestruido()) return "Perdio";
             if (this.nivelActual == tablero.CantidadDeNiveles) return "Gano";
             return "";
@@ -188,129 +188,262 @@ namespace TP2_BombermanGAME
             {
                 enemigos.Add(lopez);
             }
-            
             foreach (Enemigo enemigo in enemigos)
             {
-                bool pudoMoverse = false;
-                if (bombitaEstaIgual(enemigo)) return;
-                
-                if (bombitaEstaArriba(enemigo))
-                {
-                    while (!pudoMoverse)
-                    {
-                        if (enemigo.posicionEnVentana.Y <= 0) break;
-                        Casillero casilleroSup;
-                        try
-                        {
-                            casilleroSup = tablero.ObtenerCasillero(enemigo.Posicion.Fila - 1, enemigo.Posicion.Columna);
-                        }
-                        catch (Exception)
-                        {
+          /*      
+                Casillero casilleroAMoverse;
 
-                            break;
-                        }
-                        if (casilleroSup != null && !casilleroSup.EstaVacio()) break;
-                        if (casilleroSup != null && casilleroSup.Entidad != null && casilleroSup.Entidad.EsSalida()) break;
-                        if ((casilleroSup != null) && (enemigo.posicionEnVentana.Y + enemigo.textura.Height / 2 <= casilleroSup.posicionEnVentana.Y + casilleroSup.textura.Height/2))
-                        {
-                            enemigo.MoverArriba();
-                        }
-                        
-                        enemigo.posicionEnVentana.Y -= enemigo.Velocidad ;
-                        
-                        
-                        pudoMoverse = true;
-                    }
-                    
-                }
-
-                if (bombitaEstaDerecha(enemigo))
-                {
-                    while (!pudoMoverse)
+                casilleroAMoverse = enemigo.Posicion;
+               // if (bombitaEstaDerecha(enemigo))
+                //{
+                    if (enemigo.posicionEnVentana.X + enemigo.textura.Width / 2 == casilleroAMoverse.posicionEnVentana.X + casilleroAMoverse.textura.Width / 2)
                     {
-                        if (enemigo.posicionEnVentana.X + enemigo.textura.Width >= tablero.Dimension * enemigo.Posicion.textura.Width) break;
-                        Casillero casilleroDerecho;
                         try
-                        {
-                            casilleroDerecho = tablero.ObtenerCasillero(enemigo.Posicion.Fila, enemigo.Posicion.Columna + 1);
-                        }
-                        catch (Exception)
-                        {
-                            
-                            break;
-                        }
-                        
-                        if (casilleroDerecho != null && !casilleroDerecho.EstaVacio()) break;
-                        if (casilleroDerecho != null && casilleroDerecho.Entidad != null && casilleroDerecho.Entidad.EsSalida()) break;
-                        if ((casilleroDerecho != null) && (enemigo.posicionEnVentana.X + enemigo.textura.Width / 2 >= casilleroDerecho.posicionEnVentana.X + casilleroDerecho.textura.Width /2))
                         {
                             enemigo.MoverDerecha();
                         }
+                        catch (Exception) { return; }
+
+                    }
+                    else
+                    {
                         enemigo.posicionEnVentana.X += enemigo.Velocidad;
-                        pudoMoverse = true;
                     }
-                }
-
-                if (!bombitaEstaArriba(enemigo))
-                {
-                    while (!pudoMoverse)
+                //}
+                //if (!bombitaEstaDerecha(enemigo))
+                //{
+                    if (enemigo.posicionEnVentana.X + enemigo.textura.Width / 2 == casilleroAMoverse.posicionEnVentana.X + casilleroAMoverse.textura.Width / 2)
                     {
-                        if (enemigo.posicionEnVentana.Y + enemigo.textura.Height >= tablero.Dimension * enemigo.Posicion.textura.Height) break;
-                        Casillero casilleroInf;
                         try
-                        {
-                            casilleroInf = tablero.ObtenerCasillero(enemigo.Posicion.Fila + 1, enemigo.Posicion.Columna);
-                        }
-                        catch (Exception)
-                        {
-                            
-                            break;
-                        }
-                        if (casilleroInf != null && !casilleroInf.EstaVacio()) break;
-                        if (casilleroInf != null && casilleroInf.Entidad != null && casilleroInf.Entidad.EsSalida()) break;
-                        if ((casilleroInf != null) && (enemigo.posicionEnVentana.Y + enemigo.textura.Height / 2 >= casilleroInf.posicionEnVentana.Y + casilleroInf.textura.Height/2))
-                        {
-                            enemigo.MoverAbajo();
-                        }                        
-                        enemigo.posicionEnVentana.Y += enemigo.Velocidad ;
-                        
-                        
-                        pudoMoverse = true;
-                    }
-                }
-
-
-                
-                if (!bombitaEstaDerecha(enemigo))
-                {
-                    while (!pudoMoverse)
-                    {
-                        if (enemigo.posicionEnVentana.X <= 0) break;
-                        Casillero casilleroIzq;
-                        try
-                        {
-                            casilleroIzq = tablero.ObtenerCasillero(enemigo.Posicion.Fila, enemigo.Posicion.Columna - 1);
-                        }
-                        catch (Exception)
-                        {
-                            
-                            break;
-                        }
-                        if (casilleroIzq != null && !casilleroIzq.EstaVacio()) break;
-                        if (casilleroIzq != null && casilleroIzq.Entidad != null && casilleroIzq.Entidad.EsSalida()) break;
-                        if ((casilleroIzq != null) && (enemigo.posicionEnVentana.X + enemigo.textura.Width / 2 <= casilleroIzq.posicionEnVentana.X + casilleroIzq.textura.Width/2))
                         {
                             enemigo.MoverIzquierda();
                         }
+                        catch (Exception) { return; }
 
-                        
-                            enemigo.posicionEnVentana.X -= enemigo.Velocidad ;
-                        
-                        pudoMoverse = true;
                     }
-                }                
+                    else
+                    {
+                        enemigo.posicionEnVentana.X -= enemigo.Velocidad;
+                    }
+                }
+                if (bombitaEstaArriba(enemigo))
+                {
+                    if (enemigo.posicionEnVentana.Y + enemigo.textura.Height / 2 == casilleroAMoverse.posicionEnVentana.Y + casilleroAMoverse.textura.Height / 2)
+                    {
+                        try
+                        {
+                            enemigo.MoverArriba();
+                        }
+                        catch (Exception) { return; }
+                        enemigo.posicionEnVentana.Y -= enemigo.Velocidad;
+                        return;
+                    }
+                    else
+                    {
+                        enemigo.posicionEnVentana.Y -= enemigo.Velocidad;
+                    }
+                }
+                if (!bombitaEstaArriba(enemigo))
+                {
+                    if (enemigo.posicionEnVentana.Y + enemigo.textura.Height / 2 == casilleroAMoverse.posicionEnVentana.Y + casilleroAMoverse.textura.Height / 2)
+                    {
+                        try
+                        {
+                            enemigo.MoverAbajo();
+                        }
+                        
+                        catch (Exception) { return; }
+                        enemigo.posicionEnVentana.Y += enemigo.Velocidad;
+                        return;
+                    }
+                    else
+                    {
+                        enemigo.posicionEnVentana.Y += enemigo.Velocidad;
+                    }
+                }
+            
+*/                    
+            
+        
+                if (!enemigo.FueDestruido())
+                {
+                    bool pudoMoverse = false;
+                    
+
+                    if (bombitaEstaArriba(enemigo))
+                    {
+                        while (!pudoMoverse)
+                        {
+                            if (enemigo.posicionEnVentana.Y <= 0) break;
+                            Casillero casilleroSup;
+                            try
+                            {
+                                casilleroSup = tablero.ObtenerCasillero(enemigo.Posicion.Fila - 1, enemigo.Posicion.Columna);
+                            }
+                            catch (Exception)
+                            {
+
+                                break;
+                            }
+                            if (casilleroSup != null && !casilleroSup.EstaVacio()) break;
+                            if (casilleroSup != null && casilleroSup.Entidad != null && casilleroSup.Entidad.EsSalida()) break;
+                            if ((casilleroSup != null) && (enemigo.posicionEnVentana.Y + enemigo.textura.Height / 2 <= casilleroSup.posicionEnVentana.Y + casilleroSup.textura.Height / 2))
+                            {
+                                enemigo.MoverArriba();
+                            }
+
+                            enemigo.posicionEnVentana.Y -= enemigo.Velocidad;
+
+
+                            pudoMoverse = true;
+                        }
+
+                    }
+
+                    if (bombitaEstaDerecha(enemigo))
+                    {
+                        while (!pudoMoverse)
+                        {
+                            if (enemigo.posicionEnVentana.X + enemigo.textura.Width >= tablero.Dimension * enemigo.Posicion.textura.Width) break;
+                            Casillero casilleroDerecho;
+                            try
+                            {
+                                casilleroDerecho = tablero.ObtenerCasillero(enemigo.Posicion.Fila, enemigo.Posicion.Columna + 1);
+                            }
+                            catch (Exception)
+                            {
+
+                                break;
+                            }
+
+                            if (casilleroDerecho != null && !casilleroDerecho.EstaVacio()) break;
+                            if (casilleroDerecho != null && casilleroDerecho.Entidad != null && casilleroDerecho.Entidad.EsSalida()) break;
+                            if ((casilleroDerecho != null) && (enemigo.posicionEnVentana.X + enemigo.textura.Width / 2 >= casilleroDerecho.posicionEnVentana.X + casilleroDerecho.textura.Width / 2))
+                            {
+                                enemigo.MoverDerecha();
+                            }
+                            enemigo.posicionEnVentana.X += enemigo.Velocidad;
+                            pudoMoverse = true;
+                        }
+                    }
+
+                    if (!bombitaEstaArriba(enemigo))
+                    {
+                        while (!pudoMoverse)
+                        {
+                            if (enemigo.posicionEnVentana.Y + enemigo.textura.Height >= tablero.Dimension * enemigo.Posicion.textura.Height) break;
+                            Casillero casilleroInf;
+                            try
+                            {
+                                casilleroInf = tablero.ObtenerCasillero(enemigo.Posicion.Fila + 1, enemigo.Posicion.Columna);
+                            }
+                            catch (Exception)
+                            {
+
+                                break;
+                            }
+                            if (casilleroInf != null && !casilleroInf.EstaVacio()) break;
+                            if (casilleroInf != null && casilleroInf.Entidad != null && casilleroInf.Entidad.EsSalida()) break;
+                            if ((casilleroInf != null) && (enemigo.posicionEnVentana.Y + enemigo.textura.Height / 2 >= casilleroInf.posicionEnVentana.Y + casilleroInf.textura.Height / 2))
+                            {
+                                enemigo.MoverAbajo();
+                            }
+                            enemigo.posicionEnVentana.Y += enemigo.Velocidad;
+
+
+                            pudoMoverse = true;
+                        }
+                    }
+
+
+
+                    if (!bombitaEstaDerecha(enemigo))
+                    {
+                        while (!pudoMoverse)
+                        {
+                            if (enemigo.posicionEnVentana.X <= 0) break;
+                            Casillero casilleroIzq;
+                            try
+                            {
+                                casilleroIzq = tablero.ObtenerCasillero(enemigo.Posicion.Fila, enemigo.Posicion.Columna - 1);
+                            }
+                            catch (Exception)
+                            {
+
+                                break;
+                            }
+                            if (casilleroIzq != null && !casilleroIzq.EstaVacio()) break;
+                            if (casilleroIzq != null && casilleroIzq.Entidad != null && casilleroIzq.Entidad.EsSalida()) break;
+                            if ((casilleroIzq != null) && (enemigo.posicionEnVentana.X + enemigo.textura.Width / 2 <= casilleroIzq.posicionEnVentana.X + casilleroIzq.textura.Width / 2))
+                            {
+                                enemigo.MoverIzquierda();
+                            }
+
+
+                            enemigo.posicionEnVentana.X -= enemigo.Velocidad;
+
+                            pudoMoverse = true;
+                        }
+                    }
+                }
             }
         }
+        /*
+        private void MoverHaciaBombita(Enemigo enemigo)
+        {
+            int restaFila = enemigo.Posicion.Fila - tablero.Bombita.Posicion.Fila;
+            int restaColumna = enemigo.Posicion.Columna - tablero.Bombita.Posicion.Columna;
+
+            
+            //if (Math.Abs(restaFila) > Math.Abs(restaColumna)) //derecha o izquierda
+            //{
+            try
+            {
+                if (Math.Abs(restaFila) > Math.Abs(restaColumna)) //derecha o izquierda
+                {
+                    if (restaFila < 0)
+                    {
+                        enemigo.MoverDerecha();
+                    }
+                    else
+                    {
+                        enemigo.MoverIzquierda();
+                    }
+                }
+                else
+                {
+                    if (restaColumna < 0)
+                    {
+                        enemigo.MoverAbajo();
+                    }
+                    else
+                    {
+                        enemigo.MoverArriba();
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+
+
+
+                    
+            
+    
+        }
+        
+        private void MoverEnPantalla(Enemigo enemigo)
+        {
+            Casillero casilleroAMoverse;
+            casilleroAMoverse = tablero.ObtenerCasillero(enemigo.Posicion.Fila, enemigo.Posicion.Columna);
+            while (enemigo.posicionEnVentana.X + enemigo.textura.Width / 2 > casilleroAMoverse.posicionEnVentana.X + casilleroAMoverse.textura.Width / 2)
+            {
+                enemigo.posicionEnVentana.X -= enemigo.Velocidad;
+            }
+        }
+        */
 
         private bool bombitaEstaArriba(Enemigo enemigo)
         {
@@ -323,15 +456,11 @@ namespace TP2_BombermanGAME
             if (tablero.Bombita.Posicion.Columna >= enemigo.Posicion.Columna) return true;
             return false;
         }
-        private bool bombitaEstaIgual(Enemigo enemigo)
-        {
-            if ((tablero.Bombita.Posicion.Columna == enemigo.Posicion.Columna) || (tablero.Bombita.Posicion.Fila == enemigo.Posicion.Fila)) return true;
-            return false;
-        }
         
 
         private void MoverBombita(KeyboardState teclado)
         {
+            
             if (teclado.IsKeyDown(Keys.Right))
             {
                 if (tablero.Bombita.posicionEnVentana.X + tablero.Bombita.textura.Width >= tablero.Dimension * tablero.Bombita.Posicion.textura.Width) return;
@@ -417,6 +546,7 @@ namespace TP2_BombermanGAME
                 }
                 tablero.Bombita.posicionEnVentana.Y += tablero.Bombita.Velocidad;
             }
+            
         }
 
         
@@ -485,6 +615,8 @@ namespace TP2_BombermanGAME
                         bomba.textura = texturasBombas[0];
                     else if (bomba is ToleTole)
                         bomba.textura = texturasBombas[1];
+                    else if (bomba is Proyectil)
+                        bomba.textura = texturasBombas[2];
                     spriteBatch.Draw(bomba.textura, bomba.posicionEnVentana, Color.White);
                 }
             }

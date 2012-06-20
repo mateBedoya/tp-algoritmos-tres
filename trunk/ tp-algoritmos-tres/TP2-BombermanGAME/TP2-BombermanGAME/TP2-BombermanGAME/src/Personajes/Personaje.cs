@@ -40,7 +40,7 @@ namespace TP2_Bomberman.src
             {
                 CambiarPosicionA(posicion.ObtenerCasilleroAdyacenteEnLaDireccionYElTablero(this.direccion,this.tablero));
             }
-            catch(CasilleroFueraDeRangoException){}
+            catch (CasilleroFueraDeRangoException e) { throw e; }
             catch(MovimientoInvalidoException)
             {
                 Entidad entidad = posicion.ObtenerCasilleroAdyacenteEnLaDireccionYElTablero(this.direccion, this.tablero).Entidad;
