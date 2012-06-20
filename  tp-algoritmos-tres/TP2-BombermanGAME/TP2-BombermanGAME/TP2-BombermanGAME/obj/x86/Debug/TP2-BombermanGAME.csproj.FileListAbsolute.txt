@@ -1,0 +1,66 @@
+C:\Users\nacho\Desktop\Bomberman\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\TP2-BombermanGAME.exe
+C:\Users\nacho\Desktop\Bomberman\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\TP2-BombermanGAME.pdb
+C:\Users\nacho\Desktop\Bomberman\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\nacho\Desktop\Bomberman\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\nacho\Desktop\Bomberman\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\obj\x86\Debug\TP2-BombermanGAME.exe
+C:\Users\nacho\Desktop\Bomberman\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\obj\x86\Debug\TP2-BombermanGAME.pdb
+C:\Users\nacho\Desktop\Bomberman\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\bombita.xnb
+C:\Users\nacho\Desktop\Bomberman\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\cecilio.xnb
+C:\Users\nacho\Desktop\Bomberman\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\lopezR.xnb
+C:\Users\nacho\Desktop\Bomberman\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\lopezRAlado.xnb
+C:\Users\nacho\Desktop\Bomberman\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\CasilleroVacio.xnb
+C:\Users\nacho\Desktop\Bomberman\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\SpriteFont1.xnb
+C:\Users\nacho\Desktop\Bomberman\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\ladrillos.xnb
+C:\Users\nacho\Desktop\Bomberman\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\acero.xnb
+C:\Users\nacho\Desktop\Bomberman\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\cemento.xnb
+C:\Users\nacho\Desktop\Bomberman\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\bombaToleTole.xnb
+C:\Users\nacho\Desktop\Bomberman\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\habano.xnb
+C:\Users\nacho\Desktop\Bomberman\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\timer.xnb
+C:\Users\nacho\Desktop\Bomberman\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\toleTole.xnb
+C:\Users\nacho\Desktop\Bomberman\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\molotov4.xnb
+C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\bombita.xnb
+C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\cecilio.xnb
+C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\lopezR.xnb
+C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\lopezRAlado.xnb
+C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\CasilleroVacio.xnb
+C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\ladrillos.xnb
+C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\acero.xnb
+C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\cemento.xnb
+C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\bombaToleTole.xnb
+C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\habano.xnb
+C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\timer.xnb
+C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\toleTole.xnb
+C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\molotov4.xnb
+C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\SpriteFont1.xnb
+C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\TP2-BombermanGAME.exe
+C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\TP2-BombermanGAME.pdb
+C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\obj\x86\Debug\TP2-BombermanGAME.exe
+C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\obj\x86\Debug\TP2-BombermanGAME.pdb
+C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\salida.xnb
+C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\nunit.framework.dll
+C:\Users\nacho\Desktop\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\nunit.framework.xml
+C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\bombita.xnb
+C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\cecilio.xnb
+C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\lopezR.xnb
+C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\lopezRAlado.xnb
+C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\CasilleroVacio.xnb
+C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\ladrillos.xnb
+C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\acero.xnb
+C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\cemento.xnb
+C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\bombaToleTole.xnb
+C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\habano.xnb
+C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\timer.xnb
+C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\toleTole.xnb
+C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\molotov4.xnb
+C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\salida.xnb
+C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\SpriteFont1.xnb
+C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\TP2-BombermanGAME.exe
+C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\TP2-BombermanGAME.pdb
+C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\nunit.framework.dll
+C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\nunit.framework.xml
+C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\obj\x86\Debug\TP2-BombermanGAME.exe
+C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\obj\x86\Debug\TP2-BombermanGAME.pdb
