@@ -141,9 +141,23 @@ namespace TP2_BombermanGAME
                 nivelActual++;
                 return "Pasa de nivel";
             }
+            int vidasAntes = tablero.Bombita.Vidas;
             MoverBombita(teclado);
             LanzamientoBombita(teclado);
-            LanzamientoEnemigos();
+            List<Enemigo> enemigos = new List<Enemigo>();
+            foreach (Cecilio cecilio in tablero.ListaCecilios)
+            {
+                enemigos.Add(cecilio);
+            }
+            foreach (LopezR lopez in tablero.ListaLopezR)
+            {
+                enemigos.Add(lopez);
+            }
+            foreach (LopezRAlado lopez in tablero.ListaLopezRAlado)
+            {
+                enemigos.Add(lopez);
+            }
+            LanzamientoEnemigos(enemigos);
             MoverEnemigos();
             if (tablero.Bombita.Bomba.EstaActivada && !tablero.Bombita.Bomba.FueDestruido())
             {
@@ -162,6 +176,10 @@ namespace TP2_BombermanGAME
                         explosion.CuandoPaseElTiempo(0.01);
                     }
                 }
+            }
+            if (vidasAntes > tablero.Bombita.Vidas)
+            {
+                return "vidaPerdida";
             }
             if (!tablero.Bombita.FueDestruido()) return "Nivel: " + tablero.NivelActual + " \nVidas: " + tablero.Bombita.Vidas + " \nCantidad enemigos vivos: " + tablero.CantidadEnemigosVivos();// +" \nPosicion enemigo: " + tablero.ListaCecilios[0].Posicion.Fila + "," + tablero.ListaCecilios[0].Posicion.Columna;
             if (tablero.Bombita.FueDestruido()) return "Perdio";
@@ -186,8 +204,9 @@ namespace TP2_BombermanGAME
             }
         }
 
-        private void LanzamientoEnemigos()
+        private void LanzamientoEnemigos(List<Enemigo> enemigos)
         {
+            /*
             List<Enemigo> enemigos = new List<Enemigo>();
             foreach (Cecilio cecilio in tablero.ListaCecilios)
             {
@@ -200,12 +219,12 @@ namespace TP2_BombermanGAME
             foreach (LopezRAlado lopez in tablero.ListaLopezRAlado)
             {
                 enemigos.Add(lopez);
-            }
+            }*/
             foreach (Enemigo enemigo in enemigos)
             {
                 if (BombitaEstaCerca(enemigo) && !enemigo.FueDestruido())
                     enemigo.LanzarBomba();
-                else return;
+                
             }
             foreach (Bomba bomba in tablero.ListaBombas)
             {
@@ -719,7 +738,6 @@ namespace TP2_BombermanGAME
 
             if (!tablero.Bombita.FueDestruido())
             {
-
                 if(tablero.Bombita.Direccion == "")
                     spriteBatch.Draw(tablero.Bombita.textura, tablero.Bombita.posicionEnVentana, Color.White);
                 if(tablero.Bombita.Direccion == "oeste")
@@ -732,6 +750,11 @@ namespace TP2_BombermanGAME
                     spriteBatch.Draw(Game1.TexturasBombita["derecha"], tablero.Bombita.posicionEnVentana, Color.White);
             }
 
+        }
+
+        public void DibujarVidaPerdida(SpriteBatch spriteBatch)
+        {
+            spriteBatch.Draw(Game1.TexturasBombita["muerto"], tablero.Bombita.posicionEnVentana, Color.White);
         }
         
     }

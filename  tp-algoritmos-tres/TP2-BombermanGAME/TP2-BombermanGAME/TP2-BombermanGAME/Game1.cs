@@ -18,7 +18,7 @@ namespace TP2_BombermanGAME
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        enum gameState {pause, playing, gameOver, won };
+        enum gameState {pause, playing, gameOver, won, vidaPerdida };
         gameState estado;
         Controlador controlador;
         public static Dictionary<string,Texture2D> TexturasBombas = new Dictionary<string,Texture2D>();
@@ -67,6 +67,7 @@ namespace TP2_BombermanGAME
             TexturasBombita["abajo"] = (Content.Load<Texture2D>("bombita"));
             TexturasBombita["derecha"] = (Content.Load<Texture2D>("derecha"));
             TexturasBombita["izquierda"] = (Content.Load<Texture2D>("izquierda"));
+            TexturasBombita["muerto"] = (Content.Load<Texture2D>("muerto"));
 
             formatoTexto = this.Content.Load<SpriteFont>("SpriteFont1");
         }
@@ -114,6 +115,12 @@ namespace TP2_BombermanGAME
                     controlador.Reset(Content);
                 }
             }
+            if (estado == gameState.vidaPerdida)
+            {
+                if (Keyboard.GetState().IsKeyDown(Keys.Enter))
+                    estado = gameState.playing;
+            }
+
             if (estado == gameState.playing)
             {
                 salida = controlador.Actualizar(teclado);
@@ -128,6 +135,10 @@ namespace TP2_BombermanGAME
                 if (salida == "Gano")
                 {
                     estado = gameState.won;
+                }
+                if (salida == "vidaPerdida")
+                {
+                    estado = gameState.vidaPerdida;
                 }
             }
             
@@ -156,6 +167,11 @@ namespace TP2_BombermanGAME
             else if (estado == gameState.won)
             {
                 spriteBatch.DrawString(formatoTexto, "HA GANADO, JUEGO TERMINADO", new Vector2(0, 375), Color.Red);
+            }
+            else if (estado == gameState.vidaPerdida)
+            {
+                controlador.DibujarVidaPerdida(spriteBatch);
+                spriteBatch.DrawString(formatoTexto, "HA PERDIDO UNA VIDA, PRESIONE ENTER PARA CONTINUAR", new Vector2(0, 375), Color.Red);
             }
             else if (estado == gameState.playing)
             {
