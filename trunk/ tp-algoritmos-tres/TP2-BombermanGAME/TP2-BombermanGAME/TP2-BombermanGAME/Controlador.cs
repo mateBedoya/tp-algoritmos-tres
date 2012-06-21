@@ -32,7 +32,7 @@ namespace TP2_BombermanGAME
 
         public void Reset(ContentManager content)
         {
-            tablero.Reiniciar();
+            tablero.Reiniciar(tablero.Bombita);
             CargarTexturas(content);
         }
 
@@ -570,7 +570,7 @@ namespace TP2_BombermanGAME
                 }
 
                 if (movimientoEsInvalido(casilleroIzq)) return;
-                if ((casilleroIzq != null) && (tablero.Bombita.posicionEnVentana.X + tablero.Bombita.textura.Width / 2 <= casilleroIzq.posicionEnVentana.X + casilleroIzq.textura.Width))
+                if ((tablero.Bombita.posicionEnVentana.X + tablero.Bombita.textura.Width / 2 <= casilleroIzq.posicionEnVentana.X + casilleroIzq.textura.Width))
                 {
                     tablero.Bombita.MoverIzquierda();
                 }

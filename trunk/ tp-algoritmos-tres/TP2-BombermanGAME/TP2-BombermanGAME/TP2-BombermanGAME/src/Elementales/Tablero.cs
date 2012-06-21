@@ -22,7 +22,7 @@ namespace TP2_Bomberman.src
         private static Tablero INSTANCIA = null;
         private int PROBABILIDAD_BLOQUE_CEMENTO = 20;
         private int PROBABILIDAD_BLOQUE_LADRILLO = 10;
-        private int PROBABILIDAD_ARTICULO = 10;
+        private int PROBABILIDAD_ARTICULO = 5;
         private int CANTIDAD_DE_NIVELES = 6;
         private static int nivelActual = 1;
         private List<Cecilio> listaCecilios = new List<Cecilio>();
@@ -50,7 +50,7 @@ namespace TP2_Bomberman.src
             InicializarTablero(ConObstaculos);
         }
 
-        public void Reiniciar()
+        public void Reiniciar(Bombita bombita)
         {
             tablero = new Casillero[MAXIMO_FILA, MAXIMO_COLUMNA];
             listaCecilios = new List<Cecilio>();
@@ -63,6 +63,7 @@ namespace TP2_Bomberman.src
             listaHabano = new List<Habano>();
             listaBombaToleTole = new List<BombaToleTole>();
             InicializarTablero(true);
+            AgregarEntidadEnCasillero(bombita, 0, 0);
         }
         
         // Inicializa el tablero con casilleros, obstaculos y personajes.
