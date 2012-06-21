@@ -20,6 +20,7 @@ namespace TP2_Bomberman
         {
             this.resistencia = 1;
             this.bomba = new Molotov(); //Inicialmente tiene una molotov
+            bomba.Duenio = this;
             this.poseeBombaToleTole = false;
         }
 
@@ -54,6 +55,7 @@ namespace TP2_Bomberman
         {
             this.porcentajeDeRetardo = 1;
             this.bomba = new Molotov();
+            bomba.Duenio = this;
             this.velocidad = 3;
             this.poseeBombaToleTole = false;
         }
@@ -79,6 +81,7 @@ namespace TP2_Bomberman
                     bomba = new Molotov();
                 }
                 bomba.RetardoAdquirido = porcentajeDeRetardo;
+                bomba.Duenio = this;
             }
             else if (bomba.EstaActivada)
             {

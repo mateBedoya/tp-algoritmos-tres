@@ -19,6 +19,7 @@ namespace TP2_Bomberman.src
         protected bool estaActivada = false;
         protected double retardoAdquirido = 1;
         protected List<Explosion> listaExplosiones = new List<Explosion>();
+        protected Personaje duenio;
 
         public Bomba()
             : base() { }
@@ -201,5 +202,10 @@ namespace TP2_Bomberman.src
             get { return this.listaExplosiones; }
         }
 
+        public Personaje Duenio
+        {
+            get { return this.duenio; }
+            set { this.duenio = value; }
+        }
     }
 }

@@ -26,13 +26,14 @@ namespace TP2_Bomberman.src
         {
             if (bomba.FueDestruido())//Le permite agregar otra bomba si la anterior ya ha explotado
             {
-                bomba = new Molotov();
+                bomba = new Proyectil();
             }
             else if (bomba.EstaActivada)
             {
                 return;
             }
             this.tablero.AgregarEntidadEnCasillero(bomba, posicion.Fila, posicion.Columna);
+            tablero.AgregarBomba(bomba);
             int filaBombita = tablero.PosicionBombita.Fila;
             int columnaBombita = tablero.PosicionBombita.Columna;
             Proyectil proyectil = (Proyectil)this.bomba;
