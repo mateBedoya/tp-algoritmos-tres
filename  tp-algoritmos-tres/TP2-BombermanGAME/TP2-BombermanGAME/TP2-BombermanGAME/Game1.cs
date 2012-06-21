@@ -22,6 +22,7 @@ namespace TP2_BombermanGAME
         gameState estado;
         Controlador controlador;
         public static Dictionary<string,Texture2D> TexturasBombas = new Dictionary<string,Texture2D>();
+        public static Dictionary<string, Texture2D> TexturasBombita = new Dictionary<string, Texture2D>();
         //Texture2D explosionTexture;
         SpriteFont formatoTexto;
         string salida;
@@ -61,6 +62,12 @@ namespace TP2_BombermanGAME
             TexturasBombas["toleTole"]=(Content.Load<Texture2D>("toleTole"));
             TexturasBombas["proyectil"]=(Content.Load<Texture2D>("bala"));
             TexturasBombas["explosion"] = (Content.Load<Texture2D>("explosion"));
+
+            TexturasBombita["arriba"] = (Content.Load<Texture2D>("arriba"));
+            TexturasBombita["abajo"] = (Content.Load<Texture2D>("bombita"));
+            TexturasBombita["derecha"] = (Content.Load<Texture2D>("derecha"));
+            TexturasBombita["izquierda"] = (Content.Load<Texture2D>("izquierda"));
+
             formatoTexto = this.Content.Load<SpriteFont>("SpriteFont1");
         }
 

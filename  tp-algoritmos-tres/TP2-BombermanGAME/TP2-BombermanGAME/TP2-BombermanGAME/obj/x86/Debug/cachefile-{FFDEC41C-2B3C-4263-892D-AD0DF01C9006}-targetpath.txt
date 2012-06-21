@@ -15,3 +15,6 @@ Content\salida.xnb
 Content\SpriteFont1.xnb
 Content\bala.xnb
 Content\explosion.xnb
+Content\arriba.xnb
+Content\derecha.xnb
+Content\izquierda.xnb

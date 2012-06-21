@@ -659,7 +659,17 @@ namespace TP2_BombermanGAME
 
             if (!tablero.Bombita.FueDestruido())
             {
-                spriteBatch.Draw(tablero.Bombita.textura, tablero.Bombita.posicionEnVentana, Color.White);
+
+                if(tablero.Bombita.Direccion == "")
+                    spriteBatch.Draw(tablero.Bombita.textura, tablero.Bombita.posicionEnVentana, Color.White);
+                if(tablero.Bombita.Direccion == "oeste")
+                    spriteBatch.Draw(Game1.TexturasBombita["izquierda"], tablero.Bombita.posicionEnVentana, Color.White);
+                if(tablero.Bombita.Direccion == "norte")
+                    spriteBatch.Draw(Game1.TexturasBombita["arriba"], tablero.Bombita.posicionEnVentana, Color.White);
+                if(tablero.Bombita.Direccion == "sur")
+                    spriteBatch.Draw(Game1.TexturasBombita["abajo"], tablero.Bombita.posicionEnVentana, Color.White);
+                if(tablero.Bombita.Direccion == "este")
+                    spriteBatch.Draw(Game1.TexturasBombita["derecha"], tablero.Bombita.posicionEnVentana, Color.White);
             }
 
         }
