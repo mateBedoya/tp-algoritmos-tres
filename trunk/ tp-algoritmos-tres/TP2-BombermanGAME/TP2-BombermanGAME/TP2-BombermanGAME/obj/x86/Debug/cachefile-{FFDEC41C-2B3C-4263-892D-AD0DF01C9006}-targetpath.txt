@@ -12,9 +12,10 @@ Content\timer.xnb
 Content\toleTole.xnb
 Content\molotov4.xnb
 Content\salida.xnb
+Content\SpriteFont1.xnb
 Content\bala.xnb
 Content\explosion.xnb
 Content\arriba.xnb
 Content\derecha.xnb
 Content\izquierda.xnb
-Content\SpriteFont1.xnb
+Content\muerto.xnb

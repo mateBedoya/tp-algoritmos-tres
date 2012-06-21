@@ -18,6 +18,7 @@ namespace TP2_Bomberman.src.Articulos
         public override void UtilizarArticuloEn(Personaje personaje)
         {
             personaje.Bomba = new ToleTole();
+            personaje.Bomba.Duenio = personaje;
             if (personaje.EsBombita())
             {
                 Bombita bombita = (Bombita)personaje;
