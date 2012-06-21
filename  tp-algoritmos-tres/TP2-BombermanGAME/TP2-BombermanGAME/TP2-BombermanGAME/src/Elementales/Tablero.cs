@@ -8,6 +8,7 @@ using TP2_Bomberman.src.Obstaculos;
 using TP2_Bomberman.src.Articulos;
 using TP2_Bomberman.src.Personajes;
 using TP2_Bomberman.src.Interfaces;
+using TP2_BombermanGAME.src.Bombas;
 
 namespace TP2_Bomberman.src
 {
@@ -33,6 +34,7 @@ namespace TP2_Bomberman.src
         private List<Timer> listaTimer = new List<Timer>();
         private List<Habano> listaHabano = new List<Habano>();
         private List<BombaToleTole> listaBombaToleTole = new List<BombaToleTole>();
+        private List<Bomba> listaBombas = new List<Bomba>();
         private static Dictionary<int, int> ceciliosPorNivel = new Dictionary<int,int>();
         private static Dictionary<int, int> lopezRPorNivel = new Dictionary<int,int>();
         private static Dictionary<int, int> lopezRAladoPorNivel = new Dictionary<int,int>();
@@ -70,7 +72,7 @@ namespace TP2_Bomberman.src
             if (ConObstaculos == true)
             {
                 AgregarEnemigos();
-                int fila;
+                /*int fila;
                 int columna;
                 while (true)
                 {
@@ -360,6 +362,11 @@ namespace TP2_Bomberman.src
 
         }
 
+        public void AgregarBomba(Bomba bomba)
+        {
+            listaBombas.Add(bomba);
+        }
+
         internal void avanzarNivel()
         {
             //if (Tablero.nivelActual == CANTIDAD_DE_NIVELES) terminarJuego();
@@ -473,6 +480,10 @@ namespace TP2_Bomberman.src
         public List<BombaToleTole> ListaBombaToleTole
         {
             get { return listaBombaToleTole; }
+        }
+        public List<Bomba> ListaBombas
+        {
+            get { return listaBombas; }
         }
         public int CantidadDeNiveles
         {
