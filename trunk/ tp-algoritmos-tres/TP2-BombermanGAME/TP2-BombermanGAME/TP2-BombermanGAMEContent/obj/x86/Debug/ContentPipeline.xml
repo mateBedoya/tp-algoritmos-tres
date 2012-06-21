@@ -154,6 +154,33 @@
       <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\explosion.xnb</Output>
       <Time>2012-06-20T19:24:59.9184-03:00</Time>
     </Item>
+    <Item>
+      <Source>arriba.bmp</Source>
+      <Name>arriba</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\arriba.xnb</Output>
+      <Time>2012-06-20T23:17:39.1103854-03:00</Time>
+    </Item>
+    <Item>
+      <Source>derecha.bmp</Source>
+      <Name>derecha</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\derecha.xnb</Output>
+      <Time>2012-06-20T23:17:39.1103854-03:00</Time>
+    </Item>
+    <Item>
+      <Source>izquierda.bmp</Source>
+      <Name>izquierda</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\izquierda.xnb</Output>
+      <Time>2012-06-20T23:17:39.1259821-03:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

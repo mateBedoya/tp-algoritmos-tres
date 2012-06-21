@@ -66,3 +66,6 @@ C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\T
 C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\obj\x86\Debug\TP2-BombermanGAME.pdb
 C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\bala.xnb
 C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\explosion.xnb
+C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\arriba.xnb
+C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\derecha.xnb
+C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\izquierda.xnb

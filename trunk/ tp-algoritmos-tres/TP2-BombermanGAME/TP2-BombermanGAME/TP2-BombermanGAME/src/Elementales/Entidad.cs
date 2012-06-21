@@ -26,7 +26,7 @@ namespace TP2_Bomberman.src.Elementales
         public static int[] NORTE = { -1, 0 };
         public static int[] OESTE = { 0, -1 };
         public static int[] SUR = { 1, 0 };
-        protected int[] direccion;
+        protected int[] direccion = null;
         protected Casillero posicion;
         protected Tablero tablero;
 

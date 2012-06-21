@@ -16,6 +16,7 @@ namespace TP2_Bomberman.src
         protected int velocidad;
         protected Bomba bomba;
         protected double porcentajeDeRetardo = 1; //Empieza con un retardo normal de la bomba incorporada (100%)
+        protected string ultimaDireccion = "";
         
         public Personaje()
             :base()
@@ -52,21 +53,25 @@ namespace TP2_Bomberman.src
         {
             this.Direccionar(NORTE);
             this.Mover();
+            ultimaDireccion = "norte";
         }
         public void MoverAbajo()
         {
             this.Direccionar(SUR);
-            this.Mover();            
+            this.Mover();
+            ultimaDireccion = "sur";
         }
         public void MoverDerecha()
         {
             this.Direccionar(ESTE);
             this.Mover();
+            ultimaDireccion = "este";
         }
         public void MoverIzquierda()
         {
             this.Direccionar(OESTE);
             this.Mover();
+            ultimaDireccion = "oeste";
         }
 
 
@@ -122,6 +127,10 @@ namespace TP2_Bomberman.src
             set { this.porcentajeDeRetardo = value; }
         }
 
+        public string Direccion
+        {
+            get { return this.ultimaDireccion; }
+        }
         
     }
 }
