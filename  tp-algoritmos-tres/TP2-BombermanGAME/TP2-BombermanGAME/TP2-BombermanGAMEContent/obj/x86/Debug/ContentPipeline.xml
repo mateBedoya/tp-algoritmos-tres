@@ -8,7 +8,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\bombita.xnb</Output>
-      <Time>2012-06-20T19:09:39.6388-03:00</Time>
+      <Time>2012-06-21T10:13:09.1858222-03:00</Time>
     </Item>
     <Item>
       <Source>cecilio.bmp</Source>
@@ -17,7 +17,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\cecilio.xnb</Output>
-      <Time>2012-06-20T23:42:26.9467059-03:00</Time>
+      <Time>2012-06-21T10:13:09.1702222-03:00</Time>
     </Item>
     <Item>
       <Source>lopezR.bmp</Source>
@@ -26,7 +26,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\lopezR.xnb</Output>
-      <Time>2012-06-20T23:39:08.2828959-03:00</Time>
+      <Time>2012-06-21T10:13:09.1702222-03:00</Time>
     </Item>
     <Item>
       <Source>lopezRAlado.bmp</Source>
@@ -35,7 +35,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\lopezRAlado.xnb</Output>
-      <Time>2012-06-20T23:38:30.9273624-03:00</Time>
+      <Time>2012-06-21T10:13:09.1702222-03:00</Time>
     </Item>
     <Item>
       <Source>CasilleroVacio.jpg</Source>
@@ -44,7 +44,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\CasilleroVacio.xnb</Output>
-      <Time>2012-06-20T19:09:40.1692-03:00</Time>
+      <Time>2012-06-21T10:13:09.4354222-03:00</Time>
     </Item>
     <Item>
       <Source>ladrillos.bmp</Source>
@@ -53,7 +53,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\ladrillos.xnb</Output>
-      <Time>2012-06-20T19:09:39.7792-03:00</Time>
+      <Time>2012-06-21T10:13:09.2014222-03:00</Time>
     </Item>
     <Item>
       <Source>acero.bmp</Source>
@@ -62,7 +62,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\acero.xnb</Output>
-      <Time>2012-06-20T19:09:39.7948-03:00</Time>
+      <Time>2012-06-21T10:13:09.2170222-03:00</Time>
     </Item>
     <Item>
       <Source>cemento.bmp</Source>
@@ -71,7 +71,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\cemento.xnb</Output>
-      <Time>2012-06-20T19:09:39.8104-03:00</Time>
+      <Time>2012-06-21T10:13:09.2326222-03:00</Time>
     </Item>
     <Item>
       <Source>bombaToleTole.bmp</Source>
@@ -80,7 +80,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\bombaToleTole.xnb</Output>
-      <Time>2012-06-20T19:09:39.7948-03:00</Time>
+      <Time>2012-06-21T10:13:09.2170222-03:00</Time>
     </Item>
     <Item>
       <Source>habano.bmp</Source>
@@ -89,7 +89,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\habano.xnb</Output>
-      <Time>2012-06-20T19:09:39.7948-03:00</Time>
+      <Time>2012-06-21T10:13:09.2170222-03:00</Time>
     </Item>
     <Item>
       <Source>timer.bmp</Source>
@@ -98,7 +98,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\timer.xnb</Output>
-      <Time>2012-06-20T19:09:39.7636-03:00</Time>
+      <Time>2012-06-21T10:13:09.1858222-03:00</Time>
     </Item>
     <Item>
       <Source>toleTole.bmp</Source>
@@ -107,7 +107,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\toleTole.xnb</Output>
-      <Time>2012-06-20T23:39:58.1162694-03:00</Time>
+      <Time>2012-06-21T10:13:09.2014222-03:00</Time>
     </Item>
     <Item>
       <Source>molotov4.bmp</Source>
@@ -116,7 +116,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\molotov4.xnb</Output>
-      <Time>2012-06-20T23:37:51.5597772-03:00</Time>
+      <Time>2012-06-21T10:13:09.2014222-03:00</Time>
     </Item>
     <Item>
       <Source>salida.bmp</Source>
@@ -125,7 +125,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\salida.xnb</Output>
-      <Time>2012-06-20T19:09:39.8572-03:00</Time>
+      <Time>2012-06-21T10:13:09.3262222-03:00</Time>
     </Item>
     <Item>
       <Source>SpriteFont1.spritefont</Source>
@@ -134,7 +134,7 @@
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\SpriteFont1.xnb</Output>
-      <Time>2012-06-20T19:09:40.1536-03:00</Time>
+      <Time>2012-06-21T10:13:09.4354222-03:00</Time>
     </Item>
     <Item>
       <Source>bala.bmp</Source>
@@ -143,7 +143,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\bala.xnb</Output>
-      <Time>2012-06-20T23:43:02.6801202-03:00</Time>
+      <Time>2012-06-21T10:13:09.4354222-03:00</Time>
     </Item>
     <Item>
       <Source>explosion.bmp</Source>
@@ -152,7 +152,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\explosion.xnb</Output>
-      <Time>2012-06-20T23:41:13.124685-03:00</Time>
+      <Time>2012-06-21T10:13:09.1858222-03:00</Time>
     </Item>
     <Item>
       <Source>arriba.bmp</Source>
@@ -161,7 +161,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\arriba.xnb</Output>
-      <Time>2012-06-20T23:37:03.5044959-03:00</Time>
+      <Time>2012-06-21T10:13:09.4354222-03:00</Time>
     </Item>
     <Item>
       <Source>derecha.bmp</Source>
@@ -170,7 +170,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\derecha.xnb</Output>
-      <Time>2012-06-20T23:41:46.0973772-03:00</Time>
+      <Time>2012-06-21T10:13:09.3262222-03:00</Time>
     </Item>
     <Item>
       <Source>izquierda.bmp</Source>
@@ -179,7 +179,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\izquierda.xnb</Output>
-      <Time>2012-06-20T23:40:36.6571977-03:00</Time>
+      <Time>2012-06-21T10:13:09.4198222-03:00</Time>
     </Item>
     <Item>
       <Source>muerto.bmp</Source>
@@ -188,7 +188,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\muerto.xnb</Output>
-      <Time>2012-06-21T02:07:17.6993517-03:00</Time>
+      <Time>2012-06-21T10:13:09.1702222-03:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

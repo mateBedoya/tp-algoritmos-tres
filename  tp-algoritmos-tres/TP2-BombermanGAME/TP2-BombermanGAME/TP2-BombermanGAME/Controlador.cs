@@ -239,6 +239,12 @@ namespace TP2_BombermanGAME
                 }
                 else if (bomba is Proyectil)
                 {
+                    Casillero casillero = bomba.Posicion;
+                    float anchoTextura = Game1.TexturasBombas["proyectil"].Width;
+                    float altoTextura = Game1.TexturasBombas["proyectil"].Height;
+                    float anchoCasillero = casillero.textura.Width;
+                    float altoCasillero = casillero.textura.Height;
+                    bomba.posicionEnVentana = new Vector2(casillero.posicionEnVentana.X + anchoCasillero / 2 - anchoTextura / 2, casillero.posicionEnVentana.Y + altoCasillero / 2 - altoTextura / 2);
                     MoverProyectil((Proyectil)bomba);
                 }
             }
@@ -260,7 +266,88 @@ namespace TP2_BombermanGAME
 
         private void MoverProyectil(Proyectil proyectil)
         {
+            if (proyectil.Duenio.Direccion == "este")
+            {
+                if (proyectil.posicionEnVentana.X + Game1.TexturasBombas["proyectil"].Width >= tablero.Dimension * proyectil.Posicion.textura.Width) return;
+                Casillero casilleroSup;
+                try
+                {
+                    casilleroSup = tablero.ObtenerCasillero(proyectil.Posicion.Fila, proyectil.Posicion.Columna + 1);
+                }
+                catch (Exception)
+                {
+                    return;
+                }
 
+                if ((casilleroSup != null) && (proyectil.posicionEnVentana.X + Game1.TexturasBombas["proyectil"].Width / 2 >= casilleroSup.posicionEnVentana.X + casilleroSup.textura.Width / 2))
+                {
+                    proyectil.MoverDerecha();
+                }
+
+                proyectil.posicionEnVentana.X += proyectil.Velocidad;
+                
+            }
+            if (proyectil.Duenio.Direccion == "oeste")
+            {
+                if (proyectil.posicionEnVentana.X <= 0) return;
+                Casillero casilleroSup;
+                try
+                {
+                    casilleroSup = tablero.ObtenerCasillero(proyectil.Posicion.Fila , proyectil.Posicion.Columna -1);
+                }
+                catch (Exception)
+                {
+                    return;
+                }
+                if ((casilleroSup != null) && (proyectil.posicionEnVentana.X + Game1.TexturasBombas["proyectil"].Width / 2 <= casilleroSup.posicionEnVentana.X + casilleroSup.textura.Width / 2))
+                {
+                    proyectil.MoverIzquierda();
+                }
+
+                proyectil.posicionEnVentana.X -= proyectil.Velocidad;
+                
+            }
+            if (proyectil.Duenio.Direccion == "norte")
+            {
+                if (proyectil.posicionEnVentana.Y <= 0) return;
+                Casillero casilleroSup;
+                try
+                {
+                    casilleroSup = tablero.ObtenerCasillero(proyectil.Posicion.Fila - 1, proyectil.Posicion.Columna);
+                }
+                catch (Exception)
+                {
+                    return;
+                }
+                if ((casilleroSup != null) && (proyectil.posicionEnVentana.Y + Game1.TexturasBombas["proyectil"].Height / 2 <= casilleroSup.posicionEnVentana.Y + casilleroSup.textura.Height / 2))
+                {
+                    proyectil.MoverArriba();
+                }
+
+                proyectil.posicionEnVentana.Y -= proyectil.Velocidad;
+
+                
+            }
+            if (proyectil.Duenio.Direccion == "sur")
+            {
+                if (proyectil.posicionEnVentana.Y + Game1.TexturasBombas["proyectil"].Height >= tablero.Dimension * proyectil.Posicion.textura.Height) return;
+                Casillero casilleroSup;
+                try
+                {
+                    casilleroSup = tablero.ObtenerCasillero(proyectil.Posicion.Fila + 1, proyectil.Posicion.Columna);
+                }
+                catch (Exception)
+                {
+                    return;
+                }
+
+                if ((casilleroSup != null) && (proyectil.posicionEnVentana.Y + Game1.TexturasBombas["proyectil"].Height / 2 >= casilleroSup.posicionEnVentana.Y + casilleroSup.textura.Height / 2))
+                {
+                    proyectil.MoverAbajo();
+                }
+
+                proyectil.posicionEnVentana.Y += proyectil.Velocidad;
+            }
         }
 
         private void MoverEnemigos()

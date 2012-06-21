@@ -50,7 +50,7 @@ namespace TP2_Bomberman.src
         }
 
         //Metodo para simular el paso del tiempo
-        public void CuandoPaseElTiempo(double tiempo)
+        public virtual void CuandoPaseElTiempo(double tiempo)
         {
             tiempoTranscurrido = tiempoTranscurrido + tiempo;
             if (estaActivada && !FueDestruido()) this.Explotar(retardoAdquirido);
