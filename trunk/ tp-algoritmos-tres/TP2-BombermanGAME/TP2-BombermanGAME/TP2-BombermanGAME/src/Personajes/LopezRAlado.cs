@@ -12,6 +12,7 @@ namespace TP2_Bomberman.src.Personajes
         {
             this.resistencia = 5;
             this.bomba = new Molotov();
+            bomba.Duenio = this;
         }
 
         public LopezRAlado(Casillero posicion)
@@ -27,12 +28,14 @@ namespace TP2_Bomberman.src.Personajes
             if (bomba.FueDestruido())//Le permite agregar otra bomba si la anterior ya ha explotado
             {
                 bomba = new Molotov();
+                bomba.Duenio = this;
             }
             else if (bomba.EstaActivada)
             {
                 return;
             }
             this.tablero.AgregarEntidadEnCasillero(bomba, posicion.Fila, posicion.Columna);
+            tablero.AgregarBomba(bomba);
             bomba.ActivarBomba();
         }
 

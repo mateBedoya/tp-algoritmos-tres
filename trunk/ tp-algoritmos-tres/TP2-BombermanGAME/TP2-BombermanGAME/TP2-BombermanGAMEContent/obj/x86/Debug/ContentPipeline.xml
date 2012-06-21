@@ -17,7 +17,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\cecilio.xnb</Output>
-      <Time>2012-06-20T19:09:39.6232-03:00</Time>
+      <Time>2012-06-20T23:42:26.9467059-03:00</Time>
     </Item>
     <Item>
       <Source>lopezR.bmp</Source>
@@ -26,7 +26,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\lopezR.xnb</Output>
-      <Time>2012-06-20T19:09:39.6388-03:00</Time>
+      <Time>2012-06-20T23:39:08.2828959-03:00</Time>
     </Item>
     <Item>
       <Source>lopezRAlado.bmp</Source>
@@ -35,7 +35,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\lopezRAlado.xnb</Output>
-      <Time>2012-06-20T19:09:39.6388-03:00</Time>
+      <Time>2012-06-20T23:38:30.9273624-03:00</Time>
     </Item>
     <Item>
       <Source>CasilleroVacio.jpg</Source>
@@ -107,7 +107,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\toleTole.xnb</Output>
-      <Time>2012-06-20T19:09:39.7792-03:00</Time>
+      <Time>2012-06-20T23:39:58.1162694-03:00</Time>
     </Item>
     <Item>
       <Source>molotov4.bmp</Source>
@@ -116,7 +116,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\molotov4.xnb</Output>
-      <Time>2012-06-20T19:09:39.7792-03:00</Time>
+      <Time>2012-06-20T23:37:51.5597772-03:00</Time>
     </Item>
     <Item>
       <Source>salida.bmp</Source>
@@ -143,7 +143,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\bala.xnb</Output>
-      <Time>2012-06-20T19:09:40.1536-03:00</Time>
+      <Time>2012-06-20T23:43:02.6801202-03:00</Time>
     </Item>
     <Item>
       <Source>explosion.bmp</Source>
@@ -152,7 +152,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\explosion.xnb</Output>
-      <Time>2012-06-20T19:24:59.9184-03:00</Time>
+      <Time>2012-06-20T23:41:13.124685-03:00</Time>
     </Item>
     <Item>
       <Source>arriba.bmp</Source>
@@ -161,7 +161,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\arriba.xnb</Output>
-      <Time>2012-06-20T23:17:39.1103854-03:00</Time>
+      <Time>2012-06-20T23:37:03.5044959-03:00</Time>
     </Item>
     <Item>
       <Source>derecha.bmp</Source>
@@ -170,7 +170,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\derecha.xnb</Output>
-      <Time>2012-06-20T23:17:39.1103854-03:00</Time>
+      <Time>2012-06-20T23:41:46.0973772-03:00</Time>
     </Item>
     <Item>
       <Source>izquierda.bmp</Source>
@@ -179,7 +179,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\TP2-BombermanGAME\TP2-BombermanGAME\TP2-BombermanGAME\bin\x86\Debug\Content\izquierda.xnb</Output>
-      <Time>2012-06-20T23:17:39.1259821-03:00</Time>
+      <Time>2012-06-20T23:40:36.6571977-03:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

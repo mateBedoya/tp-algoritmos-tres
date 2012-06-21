@@ -143,15 +143,16 @@ namespace TP2_BombermanGAME
             }
             MoverBombita(teclado);
             LanzamientoBombita(teclado);
+            LanzamientoEnemigos();
             MoverEnemigos();
             if (tablero.Bombita.Bomba.EstaActivada && !tablero.Bombita.Bomba.FueDestruido())
             {
                 tablero.Bombita.Bomba.CuandoPaseElTiempo(0.01);
             }
-            //foreach (Bomba bomba in tablero.ListaBombas)
-            //{
-            //    if (bomba.EstaActivada && !bomba.FueDestruido()) bomba.CuandoPaseElTiempo(0.01);
-            //}
+            foreach (Bomba bomba in tablero.ListaBombas)
+            {
+                if (bomba.EstaActivada && !bomba.FueDestruido()) bomba.CuandoPaseElTiempo(0.01);
+            }
             foreach (Bomba bomba in tablero.ListaBombas)
             {
                 foreach (Explosion explosion in bomba.ListaExplosiones)
@@ -174,8 +175,6 @@ namespace TP2_BombermanGAME
             {
                 tablero.Bombita.LanzarBomba();
                 Bomba bomba = tablero.Bombita.Bomba;
-                //foreach (Bomba bomba in tablero.ListaBombas)
-                //{
                 Casillero casillero = bomba.Posicion;
                 float anchoTextura = Game1.TexturasBombas["molotov"].Width;
                 float altoTextura = Game1.TexturasBombas["molotov"].Height;
@@ -186,8 +185,64 @@ namespace TP2_BombermanGAME
                 
             }
         }
-                
-                
+
+        private void LanzamientoEnemigos()
+        {
+            List<Enemigo> enemigos = new List<Enemigo>();
+            foreach (Cecilio cecilio in tablero.ListaCecilios)
+            {
+                enemigos.Add(cecilio);
+            }
+            foreach (LopezR lopez in tablero.ListaLopezR)
+            {
+                enemigos.Add(lopez);
+            }
+            foreach (LopezRAlado lopez in tablero.ListaLopezRAlado)
+            {
+                enemigos.Add(lopez);
+            }
+            foreach (Enemigo enemigo in enemigos)
+            {
+                if (BombitaEstaCerca(enemigo) && !enemigo.FueDestruido())
+                    enemigo.LanzarBomba();
+                else return;
+            }
+            foreach (Bomba bomba in tablero.ListaBombas)
+            {
+                if (!(bomba is Proyectil) && !bomba.Duenio.FueDestruido())
+                {
+                    Casillero casillero = bomba.Posicion;
+                    float anchoTextura = Game1.TexturasBombas["molotov"].Width;
+                    float altoTextura = Game1.TexturasBombas["molotov"].Height;
+                    float anchoCasillero = casillero.textura.Width;
+                    float altoCasillero = casillero.textura.Height;
+                    bomba.posicionEnVentana = new Vector2(casillero.posicionEnVentana.X + anchoCasillero / 2 - anchoTextura / 2, casillero.posicionEnVentana.Y + altoCasillero / 2 - altoTextura / 2);
+                }
+                else if (bomba is Proyectil)
+                {
+                    MoverProyectil((Proyectil)bomba);
+                }
+            }
+        }
+
+        private bool BombitaEstaCerca(Enemigo enemigo)
+        {
+            int filaBombita = tablero.Bombita.Posicion.Fila;
+            int columnaBombita = tablero.Bombita.Posicion.Columna;
+            int filaEnemigo = enemigo.Posicion.Fila;
+            int columnaEnemigo = enemigo.Posicion.Columna;
+            int rango = enemigo.Bomba.Rango;
+            if (((filaBombita == filaEnemigo) && (Math.Abs(columnaBombita - columnaEnemigo) <= rango)) || ((columnaBombita == columnaEnemigo) && (Math.Abs(filaBombita - filaEnemigo) <= rango)))
+            {
+                return true;
+            }
+            return false;
+        }
+
+        private void MoverProyectil(Proyectil proyectil)
+        {
+
+        }
 
         private void MoverEnemigos()
         {
@@ -404,6 +459,10 @@ namespace TP2_BombermanGAME
                 }
             }
         }
+
+
+
+
         /*
         private void MoverHaciaBombita(Enemigo enemigo)
         {
@@ -621,20 +680,21 @@ namespace TP2_BombermanGAME
                 if (!enemigo.FueDestruido())
                     spriteBatch.Draw(enemigo.textura, enemigo.posicionEnVentana, Color.White);
             }
-            if (tablero.Bombita.Bomba.EstaActivada && !tablero.Bombita.Bomba.FueDestruido())
+
+            foreach (Bomba bomba in tablero.ListaBombas)
             {
-                //foreach(Bomba bomba in tablero.ListaBombas)
-                //{
-                Bomba bomba = tablero.Bombita.Bomba;
-                if (!bomba.FueDestruido())
+                if (bomba.EstaActivada && !bomba.FueDestruido())
                 {
-                    if (bomba is Molotov)
-                        bomba.textura = Game1.TexturasBombas["molotov"];
-                    else if (bomba is ToleTole)
-                        bomba.textura = Game1.TexturasBombas["toleTole"];
-                    else if (bomba is Proyectil)
-                        bomba.textura = Game1.TexturasBombas["proyectil"];
-                    spriteBatch.Draw(bomba.textura, bomba.posicionEnVentana, Color.White);
+                    if (!bomba.FueDestruido() && !bomba.Duenio.FueDestruido())
+                    {
+                        if (bomba is Molotov)
+                            bomba.textura = Game1.TexturasBombas["molotov"];
+                        else if (bomba is ToleTole)
+                            bomba.textura = Game1.TexturasBombas["toleTole"];
+                        else if (bomba is Proyectil)
+                            bomba.textura = Game1.TexturasBombas["proyectil"];
+                        spriteBatch.Draw(bomba.textura, bomba.posicionEnVentana, Color.White);
+                    }
                 }
             }
 

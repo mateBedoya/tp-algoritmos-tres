@@ -31,7 +31,11 @@ namespace TP2_Bomberman.src.Bombas
         // dania con el proyectil segun le corresponda al daniable
         public override void Daniar(IDaniable daniable)
         {
-            daniable.DaniarConProyectil(this);
+            try
+            {
+                daniable.DaniarConProyectil(this);
+            }
+            catch (Exception) { }
         }
 
 

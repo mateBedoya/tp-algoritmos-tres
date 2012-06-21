@@ -80,9 +80,12 @@ namespace TP2_Bomberman.src
                     columna = SortearColumna();
                     if (EstaVacio(fila, columna)) break;
                 }
-                Cecilio enemigo = new Cecilio();
-                AgregarEntidadEnCasillero(enemigo, fila, columna);
-                listaCecilios.Add(enemigo);
+                LopezR enemigo = new LopezR();
+                Cecilio enemigo2 = new Cecilio();
+                AgregarEntidadEnCasillero(enemigo2, fila, columna);
+                //AgregarEntidadEnCasillero(enemigo, fila, columna);
+                //listaLopezR.Add(enemigo);
+                listaCecilios.Add(enemigo2);
                 //listaCecilios.Add(enemigo);
                 //listaLopezR.Add(enemigo);*/
                 AgregarSalida();
