@@ -21,7 +21,7 @@ namespace TP2_Bomberman.src
         public Personaje()
             :base()
         {
-            this.velocidad = 3; // Único atributo compartido por todos los personajes.
+            this.velocidad = 1; // Único atributo compartido por todos los personajes.
         }
 
         public Personaje(Casillero posicion)

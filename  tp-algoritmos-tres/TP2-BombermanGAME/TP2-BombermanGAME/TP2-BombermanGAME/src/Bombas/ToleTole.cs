@@ -13,7 +13,7 @@ namespace TP2_Bomberman.src.Bombas
             :base()
         { 
             this.destruccion = 100000;//Esto quiere decir que destruye todo
-            this.retardo = 5;
+            this.retardo = 3;
             this.rango = 6;
         }
 
@@ -21,7 +21,7 @@ namespace TP2_Bomberman.src.Bombas
             : base(posicion)
         {
             this.destruccion = 100000;//Esto quiere decir que destruye todo
-            this.retardo = 5;
+            this.retardo = 3;
             this.rango = 6;
         }
 
