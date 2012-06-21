@@ -56,7 +56,7 @@ namespace TP2_Bomberman
             this.porcentajeDeRetardo = 1;
             this.bomba = new Molotov();
             bomba.Duenio = this;
-            this.velocidad = 3;
+            this.velocidad = 1;
             this.poseeBombaToleTole = false;
         }
 
