@@ -13,6 +13,7 @@ namespace TP2_Bomberman.src
         {
             this.resistencia = 10;
             this.bomba = new Proyectil();
+            bomba.Duenio = this;
         }
 
         public LopezR(Casillero posicion)
@@ -20,6 +21,7 @@ namespace TP2_Bomberman.src
         {
             this.resistencia = 10;
             this.bomba = new Proyectil();
+            bomba.Duenio = this;
         }
 
         public override void LanzarBomba()//la lanza solo si bombita esta en su misma fila o columna
@@ -27,6 +29,7 @@ namespace TP2_Bomberman.src
             if (bomba.FueDestruido())//Le permite agregar otra bomba si la anterior ya ha explotado
             {
                 bomba = new Proyectil();
+                bomba.Duenio = this;
             }
             else if (bomba.EstaActivada)
             {
@@ -37,8 +40,10 @@ namespace TP2_Bomberman.src
             int filaBombita = tablero.PosicionBombita.Fila;
             int columnaBombita = tablero.PosicionBombita.Columna;
             Proyectil proyectil = (Proyectil)this.bomba;
-            
+            bomba.ActivarBomba();
 
+            
+            /*
             if (filaBombita == posicion.Fila)
             {
                 if ((columnaBombita - posicion.Columna) < 0)
@@ -72,10 +77,7 @@ namespace TP2_Bomberman.src
                         proyectil.MoverAbajo();
                     }
                 }
-            }
-        }
-        private void MoverEnDireccion()
-        {
+            }*/
         }
     }
 }
