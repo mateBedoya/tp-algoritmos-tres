@@ -15,6 +15,7 @@ using TP2_Bomberman.src.Personajes;
 using TP2_Bomberman.src.Elementales;
 using TP2_Bomberman.src.Articulos;
 using TP2_Bomberman.src.Bombas;
+using TP2_BombermanGAME.src.Bombas;
 
 namespace TP2_BombermanGAME
 {
@@ -22,7 +23,7 @@ namespace TP2_BombermanGAME
     {
         private Tablero tablero;
         public int nivelActual;
-                
+
         public void Inicializar()
         {
             tablero = new Tablero(true);
@@ -34,7 +35,7 @@ namespace TP2_BombermanGAME
             tablero.Reiniciar();
             CargarTexturas(content);
         }
-        
+
         public void CargarTexturas(ContentManager Content)
         {
             foreach (Casillero casillero in tablero.Mapa)
@@ -50,7 +51,7 @@ namespace TP2_BombermanGAME
                 bloque.textura = Content.Load<Texture2D>("acero");
                 float ancho = bloque.textura.Width;
                 float alto = bloque.textura.Height;
-                bloque.posicionEnVentana = new Vector2(bloque.Posicion.Columna * ancho, bloque.Posicion.Fila *alto);
+                bloque.posicionEnVentana = new Vector2(bloque.Posicion.Columna * ancho, bloque.Posicion.Fila * alto);
             }
 
             foreach (BloqueDeCemento bloque in tablero.ListaDeBloqueDeCemento)
@@ -74,7 +75,7 @@ namespace TP2_BombermanGAME
                 float altoTextura = enemigo.textura.Height;
                 float anchoCasillero = enemigo.Posicion.textura.Width;
                 float altoCasillero = enemigo.Posicion.textura.Height;
-                enemigo.posicionEnVentana = new Vector2(enemigo.Posicion.posicionEnVentana.X + anchoCasillero/2 - anchoTextura/2, enemigo.Posicion.posicionEnVentana.Y + altoCasillero/2 - altoTextura/2);
+                enemigo.posicionEnVentana = new Vector2(enemigo.Posicion.posicionEnVentana.X + anchoCasillero / 2 - anchoTextura / 2, enemigo.Posicion.posicionEnVentana.Y + altoCasillero / 2 - altoTextura / 2);
             }
             foreach (LopezR enemigo in tablero.ListaLopezR)
             {
@@ -83,7 +84,7 @@ namespace TP2_BombermanGAME
                 float altoTextura = enemigo.textura.Height;
                 float anchoCasillero = enemigo.Posicion.textura.Width;
                 float altoCasillero = enemigo.Posicion.textura.Height;
-                enemigo.posicionEnVentana = new Vector2(enemigo.Posicion.posicionEnVentana.X + anchoCasillero/2 - anchoTextura/2, enemigo.Posicion.posicionEnVentana.Y + altoCasillero/2 - altoTextura/2 );
+                enemigo.posicionEnVentana = new Vector2(enemigo.Posicion.posicionEnVentana.X + anchoCasillero / 2 - anchoTextura / 2, enemigo.Posicion.posicionEnVentana.Y + altoCasillero / 2 - altoTextura / 2);
             }
             foreach (LopezRAlado enemigo in tablero.ListaLopezRAlado)
             {
@@ -92,7 +93,7 @@ namespace TP2_BombermanGAME
                 float altoTextura = enemigo.textura.Height;
                 float anchoCasillero = enemigo.Posicion.textura.Width;
                 float altoCasillero = enemigo.Posicion.textura.Height;
-                enemigo.posicionEnVentana = new Vector2(enemigo.Posicion.posicionEnVentana.X + anchoCasillero/2 - anchoTextura/2, enemigo.Posicion.posicionEnVentana.Y + altoCasillero/2 - altoTextura/2);
+                enemigo.posicionEnVentana = new Vector2(enemigo.Posicion.posicionEnVentana.X + anchoCasillero / 2 - anchoTextura / 2, enemigo.Posicion.posicionEnVentana.Y + altoCasillero / 2 - altoTextura / 2);
             }
             foreach (Articulo articulo in tablero.ListaTimer)
             {
@@ -130,7 +131,7 @@ namespace TP2_BombermanGAME
             float anchoSalida = tablero.Salida.textura.Width;
             float altoSalida = tablero.Salida.textura.Height;
             tablero.Salida.posicionEnVentana = new Vector2(tablero.Salida.Posicion.Columna * anchoSalida, tablero.Salida.Posicion.Fila * altoSalida);
-            
+
         }
 
         public string Actualizar(KeyboardState teclado)
@@ -143,18 +144,30 @@ namespace TP2_BombermanGAME
             MoverBombita(teclado);
             LanzamientoBombita(teclado);
             MoverEnemigos();
-            if(tablero.Bombita.Bomba.EstaActivada && !tablero.Bombita.Bomba.FueDestruido()) tablero.Bombita.Bomba.CuandoPaseElTiempo(0.01);
+            if (tablero.Bombita.Bomba.EstaActivada && !tablero.Bombita.Bomba.FueDestruido())
+            {
+                tablero.Bombita.Bomba.CuandoPaseElTiempo(0.01);
+            }
             //foreach (Bomba bomba in tablero.ListaBombas)
             //{
             //    if (bomba.EstaActivada && !bomba.FueDestruido()) bomba.CuandoPaseElTiempo(0.01);
             //}
-
-            if (!tablero.Bombita.FueDestruido() && tablero.Salida.Posicion != null) return "Nivel: " + tablero.NivelActual + " \nVidas: " + tablero.Bombita.Vidas + " \nCantidad enemigos vivos: " + tablero.CantidadEnemigosVivos();// +" \nPosicion enemigo: " + tablero.ListaCecilios[0].Posicion.Fila + "," + tablero.ListaCecilios[0].Posicion.Columna;
+            foreach (Bomba bomba in tablero.ListaBombas)
+            {
+                foreach (Explosion explosion in bomba.ListaExplosiones)
+                {
+                    if (explosion.Posicion != null)
+                    {
+                        explosion.CuandoPaseElTiempo(0.01);
+                    }
+                }
+            }
+            if (!tablero.Bombita.FueDestruido()) return "Nivel: " + tablero.NivelActual + " \nVidas: " + tablero.Bombita.Vidas + " \nCantidad enemigos vivos: " + tablero.CantidadEnemigosVivos();// +" \nPosicion enemigo: " + tablero.ListaCecilios[0].Posicion.Fila + "," + tablero.ListaCecilios[0].Posicion.Columna;
             if (tablero.Bombita.FueDestruido()) return "Perdio";
             if (this.nivelActual == tablero.CantidadDeNiveles) return "Gano";
             return "";
         }
-        
+
         private void LanzamientoBombita(KeyboardState teclado)
         {
             if (teclado.IsKeyDown(Keys.Space))
@@ -163,15 +176,18 @@ namespace TP2_BombermanGAME
                 Bomba bomba = tablero.Bombita.Bomba;
                 //foreach (Bomba bomba in tablero.ListaBombas)
                 //{
-                    Casillero casillero = bomba.Posicion;
-                    float anchoTextura = Game1.TexturasBombas[0].Width;
-                    float altoTextura = Game1.TexturasBombas[0].Height;
-                    float anchoCasillero = casillero.textura.Width;
-                    float altoCasillero = casillero.textura.Height;
-                    bomba.posicionEnVentana = new Vector2(casillero.posicionEnVentana.X + anchoCasillero / 2 - anchoTextura / 2, casillero.posicionEnVentana.Y + altoCasillero / 2 - altoTextura / 2);
-                //}
+                Casillero casillero = bomba.Posicion;
+                float anchoTextura = Game1.TexturasBombas["molotov"].Width;
+                float altoTextura = Game1.TexturasBombas["molotov"].Height;
+                float anchoCasillero = casillero.textura.Width;
+                float altoCasillero = casillero.textura.Height;
+                bomba.posicionEnVentana = new Vector2(casillero.posicionEnVentana.X + anchoCasillero / 2 - anchoTextura / 2, casillero.posicionEnVentana.Y + altoCasillero / 2 - altoTextura / 2);
+
+                
             }
         }
+                
+                
 
         private void MoverEnemigos()
         {
@@ -190,85 +206,85 @@ namespace TP2_BombermanGAME
             }
             foreach (Enemigo enemigo in enemigos)
             {
-          /*      
-                Casillero casilleroAMoverse;
+                /*      
+                      Casillero casilleroAMoverse;
 
-                casilleroAMoverse = enemigo.Posicion;
-               // if (bombitaEstaDerecha(enemigo))
-                //{
-                    if (enemigo.posicionEnVentana.X + enemigo.textura.Width / 2 == casilleroAMoverse.posicionEnVentana.X + casilleroAMoverse.textura.Width / 2)
-                    {
-                        try
-                        {
-                            enemigo.MoverDerecha();
-                        }
-                        catch (Exception) { return; }
+                      casilleroAMoverse = enemigo.Posicion;
+                     // if (bombitaEstaDerecha(enemigo))
+                      //{
+                          if (enemigo.posicionEnVentana.X + enemigo.textura.Width / 2 == casilleroAMoverse.posicionEnVentana.X + casilleroAMoverse.textura.Width / 2)
+                          {
+                              try
+                              {
+                                  enemigo.MoverDerecha();
+                              }
+                              catch (Exception) { return; }
 
-                    }
-                    else
-                    {
-                        enemigo.posicionEnVentana.X += enemigo.Velocidad;
-                    }
-                //}
-                //if (!bombitaEstaDerecha(enemigo))
-                //{
-                    if (enemigo.posicionEnVentana.X + enemigo.textura.Width / 2 == casilleroAMoverse.posicionEnVentana.X + casilleroAMoverse.textura.Width / 2)
-                    {
-                        try
-                        {
-                            enemigo.MoverIzquierda();
-                        }
-                        catch (Exception) { return; }
+                          }
+                          else
+                          {
+                              enemigo.posicionEnVentana.X += enemigo.Velocidad;
+                          }
+                      //}
+                      //if (!bombitaEstaDerecha(enemigo))
+                      //{
+                          if (enemigo.posicionEnVentana.X + enemigo.textura.Width / 2 == casilleroAMoverse.posicionEnVentana.X + casilleroAMoverse.textura.Width / 2)
+                          {
+                              try
+                              {
+                                  enemigo.MoverIzquierda();
+                              }
+                              catch (Exception) { return; }
 
-                    }
-                    else
-                    {
-                        enemigo.posicionEnVentana.X -= enemigo.Velocidad;
-                    }
-                }
-                if (bombitaEstaArriba(enemigo))
-                {
-                    if (enemigo.posicionEnVentana.Y + enemigo.textura.Height / 2 == casilleroAMoverse.posicionEnVentana.Y + casilleroAMoverse.textura.Height / 2)
-                    {
-                        try
-                        {
-                            enemigo.MoverArriba();
-                        }
-                        catch (Exception) { return; }
-                        enemigo.posicionEnVentana.Y -= enemigo.Velocidad;
-                        return;
-                    }
-                    else
-                    {
-                        enemigo.posicionEnVentana.Y -= enemigo.Velocidad;
-                    }
-                }
-                if (!bombitaEstaArriba(enemigo))
-                {
-                    if (enemigo.posicionEnVentana.Y + enemigo.textura.Height / 2 == casilleroAMoverse.posicionEnVentana.Y + casilleroAMoverse.textura.Height / 2)
-                    {
-                        try
-                        {
-                            enemigo.MoverAbajo();
-                        }
+                          }
+                          else
+                          {
+                              enemigo.posicionEnVentana.X -= enemigo.Velocidad;
+                          }
+                      }
+                      if (bombitaEstaArriba(enemigo))
+                      {
+                          if (enemigo.posicionEnVentana.Y + enemigo.textura.Height / 2 == casilleroAMoverse.posicionEnVentana.Y + casilleroAMoverse.textura.Height / 2)
+                          {
+                              try
+                              {
+                                  enemigo.MoverArriba();
+                              }
+                              catch (Exception) { return; }
+                              enemigo.posicionEnVentana.Y -= enemigo.Velocidad;
+                              return;
+                          }
+                          else
+                          {
+                              enemigo.posicionEnVentana.Y -= enemigo.Velocidad;
+                          }
+                      }
+                      if (!bombitaEstaArriba(enemigo))
+                      {
+                          if (enemigo.posicionEnVentana.Y + enemigo.textura.Height / 2 == casilleroAMoverse.posicionEnVentana.Y + casilleroAMoverse.textura.Height / 2)
+                          {
+                              try
+                              {
+                                  enemigo.MoverAbajo();
+                              }
                         
-                        catch (Exception) { return; }
-                        enemigo.posicionEnVentana.Y += enemigo.Velocidad;
-                        return;
-                    }
-                    else
-                    {
-                        enemigo.posicionEnVentana.Y += enemigo.Velocidad;
-                    }
-                }
+                              catch (Exception) { return; }
+                              enemigo.posicionEnVentana.Y += enemigo.Velocidad;
+                              return;
+                          }
+                          else
+                          {
+                              enemigo.posicionEnVentana.Y += enemigo.Velocidad;
+                          }
+                      }
             
-*/                    
-            
-        
+      */
+
+
                 if (!enemigo.FueDestruido())
                 {
                     bool pudoMoverse = false;
-                    
+
 
                     if (bombitaEstaArriba(enemigo))
                     {
@@ -450,7 +466,7 @@ namespace TP2_BombermanGAME
             if (tablero.Bombita.Posicion.Fila <= enemigo.Posicion.Fila) return true;
             return false;
         }
-        
+
         private bool bombitaEstaDerecha(Enemigo enemigo)
         {
             if (tablero.Bombita.Posicion.Columna >= enemigo.Posicion.Columna) return true;
@@ -550,8 +566,8 @@ namespace TP2_BombermanGAME
             return false;
         }
 
-        
-        public void Dibujar(SpriteBatch spriteBatch, List<Texture2D> texturasBombas)
+
+        public void Dibujar(SpriteBatch spriteBatch)
         {
             foreach (Casillero casillero in tablero.Mapa)
             {
@@ -577,7 +593,7 @@ namespace TP2_BombermanGAME
             }
             foreach (BloqueDeAcero bloque in tablero.ListaDeBloqueDeAcero)
             {
-                if(!bloque.FueDestruido())
+                if (!bloque.FueDestruido())
                     spriteBatch.Draw(bloque.textura, bloque.posicionEnVentana, Color.White);
             }
             foreach (BloqueDeCemento bloque in tablero.ListaDeBloqueDeCemento)
@@ -607,21 +623,38 @@ namespace TP2_BombermanGAME
             }
             if (tablero.Bombita.Bomba.EstaActivada && !tablero.Bombita.Bomba.FueDestruido())
             {
-            //foreach(Bomba bomba in tablero.ListaBombas)
-            //{
+                //foreach(Bomba bomba in tablero.ListaBombas)
+                //{
                 Bomba bomba = tablero.Bombita.Bomba;
                 if (!bomba.FueDestruido())
                 {
                     if (bomba is Molotov)
-                        bomba.textura = texturasBombas[0];
+                        bomba.textura = Game1.TexturasBombas["molotov"];
                     else if (bomba is ToleTole)
-                        bomba.textura = texturasBombas[1];
+                        bomba.textura = Game1.TexturasBombas["toleTole"];
                     else if (bomba is Proyectil)
-                        bomba.textura = texturasBombas[2];
+                        bomba.textura = Game1.TexturasBombas["proyectil"];
                     spriteBatch.Draw(bomba.textura, bomba.posicionEnVentana, Color.White);
                 }
             }
-            //if (tablero.Bombita.Bomba.FueDestruido()) { }
+
+            foreach (Bomba bomba in tablero.ListaBombas)
+            {
+                foreach (Explosion explosion in bomba.ListaExplosiones)
+                {
+                    
+                    if (explosion.Posicion != null)
+                    {
+                        float ancho = Game1.TexturasBombas["explosion"].Width;
+                        float alto = Game1.TexturasBombas["explosion"].Height;
+                        float anchoC = explosion.Posicion.textura.Width;
+                        float altoC = explosion.Posicion.textura.Height;
+                        explosion.posicionEnVentana = new Vector2(explosion.Posicion.posicionEnVentana.X + anchoC / 2 - ancho / 2, explosion.Posicion.posicionEnVentana.Y + altoC / 2 - alto / 2);
+                        explosion.textura = Game1.TexturasBombas["explosion"];
+                        spriteBatch.Draw(explosion.textura, explosion.posicionEnVentana, Color.White);
+                    }
+                }
+            }
             
 
             if (!tablero.Bombita.FueDestruido())
@@ -630,5 +663,6 @@ namespace TP2_BombermanGAME
             }
 
         }
+        
     }
 }

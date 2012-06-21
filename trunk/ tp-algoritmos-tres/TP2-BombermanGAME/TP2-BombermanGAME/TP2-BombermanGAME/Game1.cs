@@ -21,7 +21,7 @@ namespace TP2_BombermanGAME
         enum gameState {pause, playing, gameOver, won };
         gameState estado;
         Controlador controlador;
-        public static List<Texture2D> TexturasBombas = new List<Texture2D>();
+        public static Dictionary<string,Texture2D> TexturasBombas = new Dictionary<string,Texture2D>();
         //Texture2D explosionTexture;
         SpriteFont formatoTexto;
         string salida;
@@ -57,9 +57,10 @@ namespace TP2_BombermanGAME
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             controlador.CargarTexturas(Content);
-            TexturasBombas.Add(Content.Load<Texture2D>("molotov4"));
-            TexturasBombas.Add(Content.Load<Texture2D>("toleTole"));
-            TexturasBombas.Add(Content.Load<Texture2D>("bala"));
+            TexturasBombas["molotov"]=(Content.Load<Texture2D>("molotov4"));
+            TexturasBombas["toleTole"]=(Content.Load<Texture2D>("toleTole"));
+            TexturasBombas["proyectil"]=(Content.Load<Texture2D>("bala"));
+            TexturasBombas["explosion"] = (Content.Load<Texture2D>("explosion"));
             formatoTexto = this.Content.Load<SpriteFont>("SpriteFont1");
         }
 
@@ -136,7 +137,7 @@ namespace TP2_BombermanGAME
             GraphicsDevice.Clear(Color.Snow);
 
             spriteBatch.Begin();
-            controlador.Dibujar(spriteBatch, TexturasBombas);
+            controlador.Dibujar(spriteBatch);
             if (estado == gameState.gameOver)
             {
                 spriteBatch.DrawString(formatoTexto,"HA PERDIDO, PRESIONE LA TECLA ESCAPE PARA SALIR",new Vector2(0,375),Color.Black);

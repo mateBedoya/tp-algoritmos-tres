@@ -5,6 +5,7 @@ using System.Text;
 using TP2_Bomberman.src.Interfaces;
 using TP2_Bomberman.src.Elementales;
 using TP2_Bomberman.src.Excepciones;
+using TP2_BombermanGAME.src.Bombas;
 
 namespace TP2_Bomberman.src
 {
@@ -17,6 +18,7 @@ namespace TP2_Bomberman.src
         protected double tiempoTranscurrido = 0;
         protected bool estaActivada = false;
         protected double retardoAdquirido = 1;
+        protected List<Explosion> listaExplosiones = new List<Explosion>();
 
         public Bomba()
             : base() { }
@@ -85,6 +87,7 @@ namespace TP2_Bomberman.src
             try
             {
                 casilleroADaniar = posicion.ObtenerCasilleroAdyacenteEnLaDireccionYElTablero(direccion, this.tablero);
+                AgregarExplosion(casilleroADaniar);
             }
             catch (Exception)
             {
@@ -101,14 +104,26 @@ namespace TP2_Bomberman.src
                 }
                 try
                 {
-                    if (casilleroADaniar != null) casilleroADaniar = casilleroADaniar.ObtenerCasilleroAdyacenteEnLaDireccionYElTablero(direccion, this.tablero);
+                    if (casilleroADaniar != null)
+                    {
+                        casilleroADaniar = casilleroADaniar.ObtenerCasilleroAdyacenteEnLaDireccionYElTablero(direccion, this.tablero);
+                        if (!encontroDaniable && rangoACubrir != 1) AgregarExplosion(casilleroADaniar);
+                    }
                     rangoACubrir--;
+
                 }
                 catch (Exception)
                 {
                     casilleroADaniar = null;
                 }
             }
+        }
+
+        private void AgregarExplosion(Casillero posicion)
+        {
+            Explosion explosion = new Explosion(this);
+            explosion.Posicion = posicion;
+            this.listaExplosiones.Add(explosion);
         }
 
         // Metodos de expansion
@@ -179,6 +194,11 @@ namespace TP2_Bomberman.src
         {
             get { return this.retardoAdquirido; }
             set { this.retardoAdquirido = value; }
+        }
+
+        public List<Explosion> ListaExplosiones
+        {
+            get { return this.listaExplosiones; }
         }
 
     }

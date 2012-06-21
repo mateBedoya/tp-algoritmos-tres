@@ -111,6 +111,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\Bombas\Explosion.cs" />
     <Compile Include="test\BloqueDeAceroTest.cs" />
     <Compile Include="test\BloqueDeCementoTest.cs" />
     <Compile Include="test\BloqueDeLadrillosTest.cs" />

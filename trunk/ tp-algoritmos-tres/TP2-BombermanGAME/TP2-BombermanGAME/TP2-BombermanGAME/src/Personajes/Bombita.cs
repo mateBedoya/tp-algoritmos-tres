@@ -85,6 +85,7 @@ namespace TP2_Bomberman
                 return;
             }
             this.tablero.AgregarEntidadEnCasillero(bomba, posicion.Fila, posicion.Columna);
+            tablero.AgregarBomba(bomba);
             bomba.ActivarBomba();
         }
 
