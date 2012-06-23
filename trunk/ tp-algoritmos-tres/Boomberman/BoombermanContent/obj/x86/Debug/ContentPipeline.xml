@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>BombitaAbajo.bmp</Source>
+      <Name>BombitaAbajo</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\nacho\Desktop\ImagenesPong\Boomberman (Actualizado)\Boomberman\Boomberman\bin\x86\Debug\Content\BombitaAbajo.xnb</Output>
+      <Time>2012-06-23T03:08:55.5858-03:00</Time>
+    </Item>
+    <Item>
+      <Source>BombitaArriba.bmp</Source>
+      <Name>BombitaArriba</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\nacho\Desktop\ImagenesPong\Boomberman (Actualizado)\Boomberman\Boomberman\bin\x86\Debug\Content\BombitaArriba.xnb</Output>
+      <Time>2012-06-23T03:08:55.6014-03:00</Time>
+    </Item>
+    <Item>
+      <Source>BombitaDerecha.bmp</Source>
+      <Name>BombitaDerecha</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\nacho\Desktop\ImagenesPong\Boomberman (Actualizado)\Boomberman\Boomberman\bin\x86\Debug\Content\BombitaDerecha.xnb</Output>
+      <Time>2012-06-23T03:08:55.6326-03:00</Time>
+    </Item>
+    <Item>
+      <Source>BombitaIzquierda.bmp</Source>
+      <Name>BombitaIzquierda</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\nacho\Desktop\ImagenesPong\Boomberman (Actualizado)\Boomberman\Boomberman\bin\x86\Debug\Content\BombitaIzquierda.xnb</Output>
+      <Time>2012-06-23T03:08:55.6482-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Vacio.bmp</Source>
+      <Name>Vacio</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\nacho\Desktop\ImagenesPong\Boomberman (Actualizado)\Boomberman\Boomberman\bin\x86\Debug\Content\Vacio.xnb</Output>
+      <Time>2012-06-23T03:08:56.241-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Molotov.bmp</Source>
+      <Name>Molotov</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\nacho\Desktop\ImagenesPong\Boomberman (Actualizado)\Boomberman\Boomberman\bin\x86\Debug\Content\Molotov.xnb</Output>
+      <Time>2012-06-23T03:08:55.8354-03:00</Time>
+    </Item>
+    <Item>
+      <Source>ToleTole.bmp</Source>
+      <Name>ToleTole</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\nacho\Desktop\ImagenesPong\Boomberman (Actualizado)\Boomberman\Boomberman\bin\x86\Debug\Content\ToleTole.xnb</Output>
+      <Time>2012-06-23T03:08:56.2098-03:00</Time>
+    </Item>
+    <Item>
+      <Source>BonusTimer.bmp</Source>
+      <Name>BonusTimer</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\nacho\Desktop\ImagenesPong\Boomberman (Actualizado)\Boomberman\Boomberman\bin\x86\Debug\Content\BonusTimer.xnb</Output>
+      <Time>2012-06-23T03:08:55.6794-03:00</Time>
+    </Item>
+    <Item>
+      <Source>BonusToleTole.bmp</Source>
+      <Name>BonusToleTole</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\nacho\Desktop\ImagenesPong\Boomberman (Actualizado)\Boomberman\Boomberman\bin\x86\Debug\Content\BonusToleTole.xnb</Output>
+      <Time>2012-06-23T03:08:55.7106-03:00</Time>
+    </Item>
+    <Item>
+      <Source>ObstaculoDeAcero.bmp</Source>
+      <Name>ObstaculoDeAcero</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\nacho\Desktop\ImagenesPong\Boomberman (Actualizado)\Boomberman\Boomberman\bin\x86\Debug\Content\ObstaculoDeAcero.xnb</Output>
+      <Time>2012-06-23T03:08:55.8666-03:00</Time>
+    </Item>
+    <Item>
+      <Source>ObstaculoDeCemento.bmp</Source>
+      <Name>ObstaculoDeCemento</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\nacho\Desktop\ImagenesPong\Boomberman (Actualizado)\Boomberman\Boomberman\bin\x86\Debug\Content\ObstaculoDeCemento.xnb</Output>
+      <Time>2012-06-23T03:08:55.8822-03:00</Time>
+    </Item>
+    <Item>
+      <Source>ObstaculoDeLadrillo.bmp</Source>
+      <Name>ObstaculoDeLadrillo</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\nacho\Desktop\ImagenesPong\Boomberman (Actualizado)\Boomberman\Boomberman\bin\x86\Debug\Content\ObstaculoDeLadrillo.xnb</Output>
+      <Time>2012-06-23T03:08:55.9134-03:00</Time>
+    </Item>
+    <Item>
+      <Source>CecilioAbajo.bmp</Source>
+      <Name>CecilioAbajo</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\nacho\Desktop\ImagenesPong\Boomberman (Actualizado)\Boomberman\Boomberman\bin\x86\Debug\Content\CecilioAbajo.xnb</Output>
+      <Time>2012-06-23T03:08:55.7418-03:00</Time>
+    </Item>
+    <Item>
+      <Source>CecilioArriba.bmp</Source>
+      <Name>CecilioArriba</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\nacho\Desktop\ImagenesPong\Boomberman (Actualizado)\Boomberman\Boomberman\bin\x86\Debug\Content\CecilioArriba.xnb</Output>
+      <Time>2012-06-23T03:08:55.773-03:00</Time>
+    </Item>
+    <Item>
+      <Source>CecilioDerecha.bmp</Source>
+      <Name>CecilioDerecha</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\nacho\Desktop\ImagenesPong\Boomberman (Actualizado)\Boomberman\Boomberman\bin\x86\Debug\Content\CecilioDerecha.xnb</Output>
+      <Time>2012-06-23T03:08:55.7886-03:00</Time>
+    </Item>
+    <Item>
+      <Source>CecilioIzquierda.bmp</Source>
+      <Name>CecilioIzquierda</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\nacho\Desktop\ImagenesPong\Boomberman (Actualizado)\Boomberman\Boomberman\bin\x86\Debug\Content\CecilioIzquierda.xnb</Output>
+      <Time>2012-06-23T03:08:55.8198-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Salida.bmp</Source>
+      <Name>Salida</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\nacho\Desktop\ImagenesPong\Boomberman (Actualizado)\Boomberman\Boomberman\bin\x86\Debug\Content\Salida.xnb</Output>
+      <Time>2012-06-23T03:08:56.1474-03:00</Time>
+    </Item>
+    <Item>
+      <Source>ProyectilAbajo.bmp</Source>
+      <Name>ProyectilAbajo</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\nacho\Desktop\ImagenesPong\Boomberman (Actualizado)\Boomberman\Boomberman\bin\x86\Debug\Content\ProyectilAbajo.xnb</Output>
+      <Time>2012-06-23T03:08:55.9446-03:00</Time>
+    </Item>
+    <Item>
+      <Source>ProyectilArriba.bmp</Source>
+      <Name>ProyectilArriba</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\nacho\Desktop\ImagenesPong\Boomberman (Actualizado)\Boomberman\Boomberman\bin\x86\Debug\Content\ProyectilArriba.xnb</Output>
+      <Time>2012-06-23T03:08:55.9914-03:00</Time>
+    </Item>
+    <Item>
+      <Source>ProyectilDerecha.bmp</Source>
+      <Name>ProyectilDerecha</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\nacho\Desktop\ImagenesPong\Boomberman (Actualizado)\Boomberman\Boomberman\bin\x86\Debug\Content\ProyectilDerecha.xnb</Output>
+      <Time>2012-06-23T03:08:56.085-03:00</Time>
+    </Item>
+    <Item>
+      <Source>ProyectilIzquierda.bmp</Source>
+      <Name>ProyectilIzquierda</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\nacho\Desktop\ImagenesPong\Boomberman (Actualizado)\Boomberman\Boomberman\bin\x86\Debug\Content\ProyectilIzquierda.xnb</Output>
+      <Time>2012-06-23T03:08:56.1162-03:00</Time>
+    </Item>
+    <Item>
+      <Source>SpriteFont1.spritefont</Source>
+      <Name>SpriteFont1</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\nacho\Desktop\ImagenesPong\Boomberman (Actualizado)\Boomberman\Boomberman\bin\x86\Debug\Content\SpriteFont1.xnb</Output>
+      <Time>2012-06-23T03:08:56.1942-03:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>Reach</TargetProfile>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>C:\Users\nacho\Desktop\ImagenesPong\Boomberman (Actualizado)\Boomberman\BoombermanContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\nacho\Desktop\ImagenesPong\Boomberman (Actualizado)\Boomberman\Boomberman\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\nacho\Desktop\ImagenesPong\Boomberman (Actualizado)\Boomberman\BoombermanContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\nacho\Desktop\ImagenesPong\Boomberman (Actualizado)\Boomberman\Boomberman\bin\x86\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2010-08-23T12:41:18-03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2010-08-23T12:41:18-03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2012-06-14T03:50:56.1501528-03:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>
