@@ -1,0 +1,72 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using TP2.Juego.obstaculos;
+using TP2.Elementales;
+using TP2.src.Juego.bombas;
+
+namespace TP2.src.Juego.obstaculos
+{
+    public class ObstaculoDeCemento : Obstaculo
+    {
+        private static int DURABILIDAD = 10;
+        private int durabilidad;
+
+         // crea un obstaculo de cemento
+        public ObstaculoDeCemento()
+            : base()
+        {
+            this.durabilidad = DURABILIDAD;
+        }
+
+
+        // crea un obstaculo de cemento
+        public ObstaculoDeCemento(Casilla posicion)
+            : base(posicion)
+        {
+            this.durabilidad = DURABILIDAD;
+        }
+
+
+        // crea un obstaculo de cemento
+        public ObstaculoDeCemento(bool guardaSalida)
+            : base(guardaSalida)
+        {
+            this.durabilidad = DURABILIDAD;
+        }
+
+
+        // implementacion de la interfaz IDestruible
+        public override bool FueDestruido()
+        {
+            return (this.durabilidad <= 0);
+        }
+
+
+        // implementacion de la interfaz IDaniable
+        public override void DaniarPorMolotov(Molotov bomba)
+        {
+            this.durabilidad = this.durabilidad - bomba.GetDanio();
+        }
+
+
+        public override void DaniarPorProyectil(Proyectil bomba)
+        {
+            this.durabilidad = this.durabilidad - bomba.GetDanio();
+        }
+
+
+        public override void DaniarPorToletole(ToleTole bomba)
+        {
+            this.durabilidad = 0;
+        }
+
+
+        // este metodo es utilizado por el controlador para solicitar su actual imagen que la representa
+        public override string GetDescripcion()
+        {
+            return "ObstaculoDeCemento";
+        }
+    }
+}
