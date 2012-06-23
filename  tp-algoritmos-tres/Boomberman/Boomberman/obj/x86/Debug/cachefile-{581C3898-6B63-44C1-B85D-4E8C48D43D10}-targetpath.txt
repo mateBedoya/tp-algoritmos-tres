@@ -20,3 +20,12 @@ Content\ProyectilArriba.xnb
 Content\ProyectilDerecha.xnb
 Content\ProyectilIzquierda.xnb
 Content\SpriteFont1.xnb
+Content\LopezRAbajo.xnb
+Content\LopezRArriba.xnb
+Content\LopezRDerecha.xnb
+Content\LopezRIzquierda.xnb
+Content\LopezRAladoAbajo.xnb
+Content\LopezRAladoArriba.xnb
+Content\LopezRAladoDerecha.xnb
+Content\LopezRAladoIzquierda.xnb
+Content\Habano.xnb

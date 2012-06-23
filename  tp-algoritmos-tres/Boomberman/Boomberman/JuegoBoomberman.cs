@@ -33,7 +33,7 @@ namespace Boomberman
         private List<Nivel> niveles;
         private Nivel nivelActual;
         private int contadorDeCiclos;
-
+        //private double segundosHastaElMomento;
 
         public JuegoBoomberman()
         {
@@ -47,7 +47,7 @@ namespace Boomberman
         // permite cargar los niveles que tendra el juego
         private void CargarNiveles()
         {
-            this.niveles.Add(new Nivel01(2,0,0,0,0,0));
+            this.niveles.Add(new Nivel01(2,2,2,10,5,0));
         }
 
         /// <summary>
@@ -178,6 +178,8 @@ namespace Boomberman
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
+            if (Keyboard.GetState().IsKeyDown(Keys.Escape))
+                this.Exit();
 
             // se actualiza la accion del usuario ingresada por teclado
             KeyboardState teclado = Keyboard.GetState();
@@ -188,8 +190,9 @@ namespace Boomberman
             this.nivelActual.Actualizar();
             List<IActuable> copiaDeActuables = this.actuables;
             foreach (IActuable actuable in copiaDeActuables)
+            {
                 actuable.Actuar();
-            
+            }
             // TODO: Add your update logic here
             base.Update(gameTime);
         }
@@ -206,6 +209,7 @@ namespace Boomberman
 
             // se dibujan las vistas de las entidades por pantalla
             spriteBatch.Begin();
+            //spriteBatch.DrawString(this.Content.Load<SpriteFont>("SpriteFont1"), segundosHastaElMomento.ToString()/*gameTime.TotalGameTime.ToString()*/, new Vector2(0, 0), Color.Black);
             List<IDibujable> copiaDeDibujables = this.dibujables;
             int indice = copiaDeDibujables.Count() -1 ;
             while (indice >= 0)

@@ -38,7 +38,7 @@ namespace TP2.src.juego.articulos
         // este metodo es utilizado por el controlador para solicitar su actual imagen que la representa
         public override string GetDescripcion()
         {
-            return "Vacio";
+            return "Habano";
         }
     }
 }

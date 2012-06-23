@@ -167,6 +167,21 @@ namespace TP2.Elementales
             this.entidades.Add(entidad);
         }
 
+        // Agrega los obstáculos de acero al tablero
+        public void AgregarObstaculosDeAceroIniciales()
+        {
+            for (int i = 0; i < MAXIMO_FILA; i++)
+            {
+                for (int j = 0; j < MAXIMO_COLUMNA; j++)
+                {
+                    if (i % 2 == 1 && j % 2 == 1)
+                        AgregarEntidad(new ObstaculoDeAcero(), i, j);
+                }
+            }
+                
+            
+        }
+
 
         // permite agregar una entidad al tablero
         // Se agrega a la entidad en la casilla correspondiente a las coordenadas pasadas

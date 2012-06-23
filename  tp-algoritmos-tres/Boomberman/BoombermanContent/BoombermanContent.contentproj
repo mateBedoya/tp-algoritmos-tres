@@ -167,6 +167,67 @@
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LopezRAbajo.jpg">
+      <Name>LopezRAbajo</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LopezRArriba.bmp">
+      <Name>LopezRArriba</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LopezRDerecha.bmp">
+      <Name>LopezRDerecha</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LopezRIzquierda.bmp">
+      <Name>LopezRIzquierda</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LopezRAladoAbajo.bmp">
+      <Name>LopezRAladoAbajo</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <ProcessorParameters_ColorKeyColor>153, 204, 51, 255</ProcessorParameters_ColorKeyColor>
+    </Compile>
+    <Compile Include="LopezRAladoArriba.bmp">
+      <Name>LopezRAladoArriba</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <ProcessorParameters_ColorKeyColor>153, 204, 51, 255</ProcessorParameters_ColorKeyColor>
+    </Compile>
+    <Compile Include="LopezRAladoDerecha.bmp">
+      <Name>LopezRAladoDerecha</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <ProcessorParameters_ColorKeyColor>153, 204, 51, 255</ProcessorParameters_ColorKeyColor>
+    </Compile>
+    <Compile Include="LopezRAladoIzquierda.bmp">
+      <Name>LopezRAladoIzquierda</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <ProcessorParameters_ColorKeyColor>153, 204, 51, 255</ProcessorParameters_ColorKeyColor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Habano.bmp">
+      <Name>Habano</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />
   <!--  To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
