@@ -11,6 +11,8 @@ namespace TP2.src.juego.personajes
 {
     public abstract class Enemigo : Personaje
     {
+        private int contadorDeCiclos = 0;
+
         // crea un enemigo
         public Enemigo(int resistencia, int velocidad)
             : base(resistencia, velocidad)
@@ -54,11 +56,64 @@ namespace TP2.src.juego.personajes
             while (indice < proximaPosicion.CantidadDeEntidades())
             {
                 Entidad entidad = proximaPosicion.GetEntidades()[indice];
-                if (!entidad.PuedeSuperponerse() & !entidad.EsBombita())
+                if (!entidad.PuedeSuperponerse() /*& !entidad.EsBombita()*/)
                     return false;
                 indice++;
             }
             return true;
+        }
+
+        public override void Actuar()
+        {
+            Casilla posicionActual = this.Posicion();
+            if ((contadorDeCiclos >= (30 - this.Velocidad())) &&
+                (contadorDeCiclos % (30 - this.Velocidad()) == 0))
+            {
+                Random rand = new Random();
+                int direccion = rand.Next(4);
+                switch (direccion)
+                {
+                    case 0:
+                        MoverAlEste();
+                        contadorDeCiclos++;
+                        return;
+                    case 1:
+                        MoverAlOeste();
+                        contadorDeCiclos++;
+                        return;
+                    case 2:
+                        MoverAlNorte();
+                        contadorDeCiclos++;
+                        return;
+                    case 3:
+                        MoverAlSur();
+                        contadorDeCiclos++;
+                        return;
+                }
+
+                //if (this.Direccion() == ESTE)
+                //{
+                //    MoverAlEste();
+                //}
+                //if (posicionActual == this.Posicion())
+                //{
+                //    MoverAlOeste();
+                //}
+                //else if (posicionActual == this.Posicion())
+                //{
+                //    MoverAlNorte();
+                //}
+            }
+            contadorDeCiclos++;
+        }
+
+
+        private void direccionOpuesta()
+        {
+            if (this.direccion == ESTE) this.direccion = OESTE;
+            if (this.direccion == OESTE) this.direccion = ESTE;
+            if (this.direccion == SUR) this.direccion = NORTE;
+            if (this.direccion == NORTE) this.direccion = SUR;
         }
     }
 }

@@ -26,7 +26,7 @@ namespace TP2.src.Juego.personajes
         // inicializa los atributos
         private void Inicializar()
         {
-            this.estrategiaDeLanzamiento = new LanzarProyectil(this);
+            this.estrategiaDeLanzamiento = new LanzarMolotov(this);
         }
 
 
@@ -124,7 +124,7 @@ namespace TP2.src.Juego.personajes
             this.resistencia = 0;
         }
 
-
+        
         // este metodo es utilizado por el controlador para solicitar su actual imagen que lo represente
         public override string GetDescripcion()
         {

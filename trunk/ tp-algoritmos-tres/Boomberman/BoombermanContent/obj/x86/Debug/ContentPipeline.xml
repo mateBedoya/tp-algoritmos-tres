@@ -7,7 +7,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\nacho\Desktop\ImagenesPong\Boomberman (Actualizado)\Boomberman\Boomberman\bin\x86\Debug\Content\BombitaAbajo.xnb</Output>
+      <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\Boomberman\Boomberman\bin\x86\Debug\Content\BombitaAbajo.xnb</Output>
       <Time>2012-06-23T03:08:55.5858-03:00</Time>
     </Item>
     <Item>
@@ -16,7 +16,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\nacho\Desktop\ImagenesPong\Boomberman (Actualizado)\Boomberman\Boomberman\bin\x86\Debug\Content\BombitaArriba.xnb</Output>
+      <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\Boomberman\Boomberman\bin\x86\Debug\Content\BombitaArriba.xnb</Output>
       <Time>2012-06-23T03:08:55.6014-03:00</Time>
     </Item>
     <Item>
@@ -25,7 +25,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\nacho\Desktop\ImagenesPong\Boomberman (Actualizado)\Boomberman\Boomberman\bin\x86\Debug\Content\BombitaDerecha.xnb</Output>
+      <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\Boomberman\Boomberman\bin\x86\Debug\Content\BombitaDerecha.xnb</Output>
       <Time>2012-06-23T03:08:55.6326-03:00</Time>
     </Item>
     <Item>
@@ -34,7 +34,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\nacho\Desktop\ImagenesPong\Boomberman (Actualizado)\Boomberman\Boomberman\bin\x86\Debug\Content\BombitaIzquierda.xnb</Output>
+      <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\Boomberman\Boomberman\bin\x86\Debug\Content\BombitaIzquierda.xnb</Output>
       <Time>2012-06-23T03:08:55.6482-03:00</Time>
     </Item>
     <Item>
@@ -43,7 +43,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\nacho\Desktop\ImagenesPong\Boomberman (Actualizado)\Boomberman\Boomberman\bin\x86\Debug\Content\Vacio.xnb</Output>
+      <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\Boomberman\Boomberman\bin\x86\Debug\Content\Vacio.xnb</Output>
       <Time>2012-06-23T03:08:56.241-03:00</Time>
     </Item>
     <Item>
@@ -52,7 +52,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\nacho\Desktop\ImagenesPong\Boomberman (Actualizado)\Boomberman\Boomberman\bin\x86\Debug\Content\Molotov.xnb</Output>
+      <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\Boomberman\Boomberman\bin\x86\Debug\Content\Molotov.xnb</Output>
       <Time>2012-06-23T03:08:55.8354-03:00</Time>
     </Item>
     <Item>
@@ -61,7 +61,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\nacho\Desktop\ImagenesPong\Boomberman (Actualizado)\Boomberman\Boomberman\bin\x86\Debug\Content\ToleTole.xnb</Output>
+      <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\Boomberman\Boomberman\bin\x86\Debug\Content\ToleTole.xnb</Output>
       <Time>2012-06-23T03:08:56.2098-03:00</Time>
     </Item>
     <Item>
@@ -70,7 +70,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\nacho\Desktop\ImagenesPong\Boomberman (Actualizado)\Boomberman\Boomberman\bin\x86\Debug\Content\BonusTimer.xnb</Output>
+      <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\Boomberman\Boomberman\bin\x86\Debug\Content\BonusTimer.xnb</Output>
       <Time>2012-06-23T03:08:55.6794-03:00</Time>
     </Item>
     <Item>
@@ -79,7 +79,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\nacho\Desktop\ImagenesPong\Boomberman (Actualizado)\Boomberman\Boomberman\bin\x86\Debug\Content\BonusToleTole.xnb</Output>
+      <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\Boomberman\Boomberman\bin\x86\Debug\Content\BonusToleTole.xnb</Output>
       <Time>2012-06-23T03:08:55.7106-03:00</Time>
     </Item>
     <Item>
@@ -88,7 +88,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\nacho\Desktop\ImagenesPong\Boomberman (Actualizado)\Boomberman\Boomberman\bin\x86\Debug\Content\ObstaculoDeAcero.xnb</Output>
+      <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\Boomberman\Boomberman\bin\x86\Debug\Content\ObstaculoDeAcero.xnb</Output>
       <Time>2012-06-23T03:08:55.8666-03:00</Time>
     </Item>
     <Item>
@@ -97,7 +97,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\nacho\Desktop\ImagenesPong\Boomberman (Actualizado)\Boomberman\Boomberman\bin\x86\Debug\Content\ObstaculoDeCemento.xnb</Output>
+      <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\Boomberman\Boomberman\bin\x86\Debug\Content\ObstaculoDeCemento.xnb</Output>
       <Time>2012-06-23T03:08:55.8822-03:00</Time>
     </Item>
     <Item>
@@ -106,7 +106,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\nacho\Desktop\ImagenesPong\Boomberman (Actualizado)\Boomberman\Boomberman\bin\x86\Debug\Content\ObstaculoDeLadrillo.xnb</Output>
+      <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\Boomberman\Boomberman\bin\x86\Debug\Content\ObstaculoDeLadrillo.xnb</Output>
       <Time>2012-06-23T03:08:55.9134-03:00</Time>
     </Item>
     <Item>
@@ -115,7 +115,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\nacho\Desktop\ImagenesPong\Boomberman (Actualizado)\Boomberman\Boomberman\bin\x86\Debug\Content\CecilioAbajo.xnb</Output>
+      <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\Boomberman\Boomberman\bin\x86\Debug\Content\CecilioAbajo.xnb</Output>
       <Time>2012-06-23T03:08:55.7418-03:00</Time>
     </Item>
     <Item>
@@ -124,7 +124,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\nacho\Desktop\ImagenesPong\Boomberman (Actualizado)\Boomberman\Boomberman\bin\x86\Debug\Content\CecilioArriba.xnb</Output>
+      <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\Boomberman\Boomberman\bin\x86\Debug\Content\CecilioArriba.xnb</Output>
       <Time>2012-06-23T03:08:55.773-03:00</Time>
     </Item>
     <Item>
@@ -133,7 +133,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\nacho\Desktop\ImagenesPong\Boomberman (Actualizado)\Boomberman\Boomberman\bin\x86\Debug\Content\CecilioDerecha.xnb</Output>
+      <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\Boomberman\Boomberman\bin\x86\Debug\Content\CecilioDerecha.xnb</Output>
       <Time>2012-06-23T03:08:55.7886-03:00</Time>
     </Item>
     <Item>
@@ -142,7 +142,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\nacho\Desktop\ImagenesPong\Boomberman (Actualizado)\Boomberman\Boomberman\bin\x86\Debug\Content\CecilioIzquierda.xnb</Output>
+      <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\Boomberman\Boomberman\bin\x86\Debug\Content\CecilioIzquierda.xnb</Output>
       <Time>2012-06-23T03:08:55.8198-03:00</Time>
     </Item>
     <Item>
@@ -151,7 +151,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\nacho\Desktop\ImagenesPong\Boomberman (Actualizado)\Boomberman\Boomberman\bin\x86\Debug\Content\Salida.xnb</Output>
+      <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\Boomberman\Boomberman\bin\x86\Debug\Content\Salida.xnb</Output>
       <Time>2012-06-23T03:08:56.1474-03:00</Time>
     </Item>
     <Item>
@@ -160,7 +160,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\nacho\Desktop\ImagenesPong\Boomberman (Actualizado)\Boomberman\Boomberman\bin\x86\Debug\Content\ProyectilAbajo.xnb</Output>
+      <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\Boomberman\Boomberman\bin\x86\Debug\Content\ProyectilAbajo.xnb</Output>
       <Time>2012-06-23T03:08:55.9446-03:00</Time>
     </Item>
     <Item>
@@ -169,7 +169,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\nacho\Desktop\ImagenesPong\Boomberman (Actualizado)\Boomberman\Boomberman\bin\x86\Debug\Content\ProyectilArriba.xnb</Output>
+      <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\Boomberman\Boomberman\bin\x86\Debug\Content\ProyectilArriba.xnb</Output>
       <Time>2012-06-23T03:08:55.9914-03:00</Time>
     </Item>
     <Item>
@@ -178,7 +178,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\nacho\Desktop\ImagenesPong\Boomberman (Actualizado)\Boomberman\Boomberman\bin\x86\Debug\Content\ProyectilDerecha.xnb</Output>
+      <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\Boomberman\Boomberman\bin\x86\Debug\Content\ProyectilDerecha.xnb</Output>
       <Time>2012-06-23T03:08:56.085-03:00</Time>
     </Item>
     <Item>
@@ -187,7 +187,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\nacho\Desktop\ImagenesPong\Boomberman (Actualizado)\Boomberman\Boomberman\bin\x86\Debug\Content\ProyectilIzquierda.xnb</Output>
+      <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\Boomberman\Boomberman\bin\x86\Debug\Content\ProyectilIzquierda.xnb</Output>
       <Time>2012-06-23T03:08:56.1162-03:00</Time>
     </Item>
     <Item>
@@ -196,8 +196,101 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\nacho\Desktop\ImagenesPong\Boomberman (Actualizado)\Boomberman\Boomberman\bin\x86\Debug\Content\SpriteFont1.xnb</Output>
+      <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\Boomberman\Boomberman\bin\x86\Debug\Content\SpriteFont1.xnb</Output>
       <Time>2012-06-23T03:08:56.1942-03:00</Time>
+    </Item>
+    <Item>
+      <Source>LopezRAbajo.jpg</Source>
+      <Name>LopezRAbajo</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\Boomberman\Boomberman\bin\x86\Debug\Content\LopezRAbajo.xnb</Output>
+      <Time>2012-06-23T12:35:02.9845042-03:00</Time>
+    </Item>
+    <Item>
+      <Source>LopezRArriba.bmp</Source>
+      <Name>LopezRArriba</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\Boomberman\Boomberman\bin\x86\Debug\Content\LopezRArriba.xnb</Output>
+      <Time>2012-06-23T12:35:15.3329042-03:00</Time>
+    </Item>
+    <Item>
+      <Source>LopezRDerecha.bmp</Source>
+      <Name>LopezRDerecha</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\Boomberman\Boomberman\bin\x86\Debug\Content\LopezRDerecha.xnb</Output>
+      <Time>2012-06-23T12:35:25.8531042-03:00</Time>
+    </Item>
+    <Item>
+      <Source>LopezRIzquierda.bmp</Source>
+      <Name>LopezRIzquierda</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\Boomberman\Boomberman\bin\x86\Debug\Content\LopezRIzquierda.xnb</Output>
+      <Time>2012-06-23T12:35:36.2057042-03:00</Time>
+    </Item>
+    <Item>
+      <Source>LopezRAladoAbajo.bmp</Source>
+      <Name>LopezRAladoAbajo</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor">153, 204, 51, 255</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\Boomberman\Boomberman\bin\x86\Debug\Content\LopezRAladoAbajo.xnb</Output>
+      <Time>2012-06-23T14:11:23.6839042-03:00</Time>
+    </Item>
+    <Item>
+      <Source>LopezRAladoArriba.bmp</Source>
+      <Name>LopezRAladoArriba</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor">153, 204, 51, 255</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\Boomberman\Boomberman\bin\x86\Debug\Content\LopezRAladoArriba.xnb</Output>
+      <Time>2012-06-23T14:11:23.6995042-03:00</Time>
+    </Item>
+    <Item>
+      <Source>LopezRAladoDerecha.bmp</Source>
+      <Name>LopezRAladoDerecha</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor">153, 204, 51, 255</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\Boomberman\Boomberman\bin\x86\Debug\Content\LopezRAladoDerecha.xnb</Output>
+      <Time>2012-06-23T14:11:23.6995042-03:00</Time>
+    </Item>
+    <Item>
+      <Source>LopezRAladoIzquierda.bmp</Source>
+      <Name>LopezRAladoIzquierda</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor">153, 204, 51, 255</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\Boomberman\Boomberman\bin\x86\Debug\Content\LopezRAladoIzquierda.xnb</Output>
+      <Time>2012-06-23T14:11:23.6995042-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Habano.bmp</Source>
+      <Name>Habano</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\Boomberman\Boomberman\bin\x86\Debug\Content\Habano.xnb</Output>
+      <Time>2012-06-23T14:31:08.5045042-03:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -205,10 +298,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\nacho\Desktop\ImagenesPong\Boomberman (Actualizado)\Boomberman\BoombermanContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\nacho\Desktop\ImagenesPong\Boomberman (Actualizado)\Boomberman\Boomberman\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\nacho\Desktop\ImagenesPong\Boomberman (Actualizado)\Boomberman\BoombermanContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\nacho\Desktop\ImagenesPong\Boomberman (Actualizado)\Boomberman\Boomberman\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\nacho\Desktop\ tp-algoritmos-tres\Boomberman\BoombermanContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\nacho\Desktop\ tp-algoritmos-tres\Boomberman\Boomberman\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\nacho\Desktop\ tp-algoritmos-tres\Boomberman\BoombermanContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\nacho\Desktop\ tp-algoritmos-tres\Boomberman\Boomberman\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>

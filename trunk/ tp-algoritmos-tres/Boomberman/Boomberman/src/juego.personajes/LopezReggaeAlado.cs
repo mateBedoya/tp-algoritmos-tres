@@ -48,7 +48,13 @@ namespace TP2.src.Juego.personajes
         // este metodo es utilizado por el controlador para solicitar su actual imagen que la representa
         public override string GetDescripcion()
         {
-            return "Vacio";
+            if (this.direccion == ESTE)
+                return ("LopezRAladoDerecha");
+            if (this.direccion == NORTE)
+                return ("LopezRAladoArriba");
+            if (this.direccion == OESTE)
+                return ("LopezRAladoIzquierda");
+            return ("LopezRAladoAbajo");
         }
     }
 }
