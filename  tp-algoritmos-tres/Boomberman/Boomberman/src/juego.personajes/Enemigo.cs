@@ -71,6 +71,7 @@ namespace TP2.src.juego.personajes
             {
                 Random rand = new Random();
                 int direccion = rand.Next(4);
+                if(BombitaEstaCerca()) LanzarExplosivo();
                 switch (direccion)
                 {
                     case 0:
@@ -90,30 +91,16 @@ namespace TP2.src.juego.personajes
                         contadorDeCiclos++;
                         return;
                 }
-
-                //if (this.Direccion() == ESTE)
-                //{
-                //    MoverAlEste();
-                //}
-                //if (posicionActual == this.Posicion())
-                //{
-                //    MoverAlOeste();
-                //}
-                //else if (posicionActual == this.Posicion())
-                //{
-                //    MoverAlNorte();
-                //}
+                
             }
             contadorDeCiclos++;
         }
 
-
-        private void direccionOpuesta()
+        private bool BombitaEstaCerca()
         {
-            if (this.direccion == ESTE) this.direccion = OESTE;
-            if (this.direccion == OESTE) this.direccion = ESTE;
-            if (this.direccion == SUR) this.direccion = NORTE;
-            if (this.direccion == NORTE) this.direccion = SUR;
+            Casilla posicionBombita = Bombita.GetInstancia().Posicion();
+            if ((Math.Abs(posicionBombita.GetX() - this.posicion.GetX()) <= 6) & (Math.Abs(posicionBombita.GetY() - this.posicion.GetY()) <= 6)) return true;
+            return false;
         }
     }
 }

@@ -153,6 +153,8 @@
     <Compile Include="src\juego.personajes\LopezReggaeAlado.cs" />
     <Compile Include="src\juego.personajes\Personaje.cs" />
     <Compile Include="src\niveles\Nivel01.cs" />
+    <Compile Include="src\niveles\Nivel02.cs" />
+    <Compile Include="src\niveles\Nivel03.cs" />
     <Compile Include="src\vistas\Vista.cs" />
   </ItemGroup>
   <ItemGroup>
