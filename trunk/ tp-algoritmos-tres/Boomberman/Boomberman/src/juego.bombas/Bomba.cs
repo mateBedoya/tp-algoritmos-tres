@@ -107,18 +107,21 @@ namespace TP2.Juego.bombas
         public override void DaniarPorMolotov(Molotov molotov) 
         {
             this.exploto = true;
+            this.lanzador.NotificarExplosion(true);
         }
 
 
         public override void DaniarPorProyectil(Proyectil proyectil) 
         {
             this.exploto = true;
+            this.lanzador.NotificarExplosion(true);
         }
 
 
         public override void DaniarPorToletole(ToleTole toletole)
         {
             this.exploto = true;
+            this.lanzador.NotificarExplosion(true);
         }
 
 

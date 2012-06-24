@@ -52,7 +52,9 @@ namespace Boomberman
         // permite cargar los niveles que tendra el juego
         private void CargarNiveles()
         {
-            this.niveles.Add(new Nivel01(2,2,2,10,5,0));
+            this.niveles.Add(new Nivel01(1,1,1,5,5,0));
+            this.niveles.Add(new Nivel02(3, 1, 3, 5, 5, 5));
+            this.niveles.Add(new Nivel03(0, 6, 0, 5, 5, 10));
         }
 
         /// <summary>
@@ -131,6 +133,7 @@ namespace Boomberman
                     bombita.LanzarExplosivo();
             }
             contadorDeCiclos++;
+            if (bombita.EncontroSalida()) ActualizarEstado();
         }
 
 
@@ -178,7 +181,9 @@ namespace Boomberman
         // controla el estado del juego
         private void ActualizarEstado()
         {
-            this.nivelActual = niveles[0];
+            this.nivelActual = niveles[nivelActual.Numero()];
+            this.dibujables = new List<IDibujable>();
+            this.actuables = new List<IActuable>();
             this.nivelActual.Cargar();
         }
 
@@ -191,14 +196,19 @@ namespace Boomberman
                 estado = gameState.playing;
                 menu_principal.AddElement(0, "Continuar");
             }
-            else if (Keyboard.GetState().IsKeyDown(Keys.Enter) && menu_principal.Element_active() == 2) // Guardar
+            else if (Keyboard.GetState().IsKeyDown(Keys.Enter) && menu_principal.Element_active() == 2) // Guardar y salir
             {
                 GuardarJuego();
                 this.Exit();
             }
             else if (Keyboard.GetState().IsKeyDown(Keys.Enter) && menu_principal.Element_active() == 3) // Cargar
             {
-                CargarJuego();
+                try
+                {
+                    CargarJuego();
+                }
+                catch (FileNotFoundException)
+                { }
                 estado = gameState.playing;
             }
             else if (Keyboard.GetState().IsKeyDown(Keys.Enter) && menu_principal.Element_active() == 4) // Salir
