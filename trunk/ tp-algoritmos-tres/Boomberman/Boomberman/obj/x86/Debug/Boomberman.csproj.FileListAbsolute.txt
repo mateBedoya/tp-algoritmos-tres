@@ -130,3 +130,4 @@ C:\Users\asd\Documents\Visual Studio 2010\Projects\TP2\Boomberman\Boomberman\obj
 C:\Users\asd\Documents\Visual Studio 2010\Projects\TP2\Boomberman\Boomberman\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\asd\Documents\Visual Studio 2010\Projects\TP2\Boomberman\Boomberman\obj\x86\Debug\Boomberman.exe
 C:\Users\asd\Documents\Visual Studio 2010\Projects\TP2\Boomberman\Boomberman\obj\x86\Debug\Boomberman.pdb
+C:\Users\nacho\Desktop\ tp-algoritmos-tres\Boomberman\Boomberman\bin\x86\Debug\Content\font.xnb

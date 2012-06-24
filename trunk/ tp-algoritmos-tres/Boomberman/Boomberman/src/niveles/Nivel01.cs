@@ -20,7 +20,9 @@ namespace Boomberman.src.niveles
         public Nivel01(int cecilios, int lopezReggaes, int lopezReggaesAlados,
             int obstaculosDeLadrillo, int obstaculosDeCemento, int obstaculosDeAcero)
             : base(cecilios, lopezReggaes, lopezReggaesAlados, obstaculosDeLadrillo, obstaculosDeCemento, obstaculosDeAcero)
-        { }
+        {
+            this.SetNumero(1);
+        }
 
 
         // se crea el tablero y se carga con datos predeterminados

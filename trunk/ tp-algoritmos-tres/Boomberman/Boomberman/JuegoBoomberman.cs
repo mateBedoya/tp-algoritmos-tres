@@ -17,6 +17,8 @@ using Boomberman.src.elementales;
 using TP2.src.Elementales;
 using Boomberman.src.vistas;
 using Boomberman.src.niveles;
+using System.Xml.Serialization;
+using System.IO;
 
 namespace Boomberman
 {
@@ -27,13 +29,16 @@ namespace Boomberman
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        menuComponent menu_principal;
+        enum gameState { pause, playing };
+        gameState estado;
         private static int CICLOS_PARA_ACTUALIZAR_CONTROL_DEL_USUARIO = 5;
         private List<IDibujable> dibujables;
         private List<IActuable> actuables;
         private List<Nivel> niveles;
         private Nivel nivelActual;
         private int contadorDeCiclos;
-        //private double segundosHastaElMomento;
+        
 
         public JuegoBoomberman()
         {
@@ -64,6 +69,16 @@ namespace Boomberman
             this.contadorDeCiclos = 0;
 
             Window.Title = "Boomberman- 2012";
+
+            estado = gameState.pause;
+
+            menu_principal = new menuComponent(this, 4, Color.Yellow, Color.Red, Content.Load<SpriteFont>("font"), 40, 1050, 650);
+            menu_principal.AddElement(0, "Nuevo Juego");
+            menu_principal.AddElement(1, "Guardar y salir");
+            menu_principal.AddElement(2, "Cargar");
+            menu_principal.AddElement(3, "Salir");
+            menu_principal.posicionar();
+
             base.Initialize();
         }
 
@@ -167,6 +182,30 @@ namespace Boomberman
             this.nivelActual.Cargar();
         }
 
+        private void ActualizarMenuPrincipal(KeyboardState teclado)
+        {
+            menu_principal.Press_keys(teclado);
+
+            if (Keyboard.GetState().IsKeyDown(Keys.Enter) && menu_principal.Element_active() == 1) // Juego Nuevo y despues Continuar
+            {
+                estado = gameState.playing;
+                menu_principal.AddElement(0, "Continuar");
+            }
+            else if (Keyboard.GetState().IsKeyDown(Keys.Enter) && menu_principal.Element_active() == 2) // Guardar
+            {
+                GuardarJuego();
+                this.Exit();
+            }
+            else if (Keyboard.GetState().IsKeyDown(Keys.Enter) && menu_principal.Element_active() == 3) // Cargar
+            {
+                CargarJuego();
+                estado = gameState.playing;
+            }
+            else if (Keyboard.GetState().IsKeyDown(Keys.Enter) && menu_principal.Element_active() == 4) // Salir
+            {
+                this.Exit();
+            }
+        }
 
         /// <summary>
         /// Allows the game to run logic such as updating the world,
@@ -181,8 +220,23 @@ namespace Boomberman
             if (Keyboard.GetState().IsKeyDown(Keys.Escape))
                 this.Exit();
 
-            // se actualiza la accion del usuario ingresada por teclado
+
             KeyboardState teclado = Keyboard.GetState();
+
+
+            if (estado == gameState.playing)
+            {
+                if (Keyboard.GetState().IsKeyDown(Keys.P))
+                    estado = gameState.pause;
+            }
+            if (estado == gameState.pause)
+            {
+                ActualizarMenuPrincipal(teclado);
+                return;
+            }
+
+            // se actualiza la accion del usuario ingresada por teclado
+            
             this.ActualizarControlDelUsuario(teclado);
             this.ActualizarActuablesYDibujables();
 
@@ -198,6 +252,20 @@ namespace Boomberman
         }
 
 
+        public void GuardarJuego()
+        {
+            string archivo = "bomberman.xml";
+            XmlSerializer formatter = new XmlSerializer(typeof(int));
+            formatter.Serialize(File.OpenWrite(archivo), nivelActual.Numero());
+        }
+
+        public void CargarJuego()
+        {
+            XmlSerializer formatter = new XmlSerializer(typeof(int));
+            int nivel = (int)formatter.Deserialize(File.OpenRead("bomberman.xml"));
+            this.nivelActual = niveles[nivel - 1];
+            this.nivelActual.Cargar();
+        }
 
         /// <summary>
         /// This is called when the game should draw itself.
@@ -219,7 +287,15 @@ namespace Boomberman
                 indice--;
             }
 
-            spriteBatch.DrawString(Content.Load<SpriteFont>("SpriteFont1"), "Vidas: " + nivelActual.GetBombita().Vidas, new Vector2(0, 0), Color.Black);
+            if (estado == gameState.playing)
+            {
+                spriteBatch.DrawString(Content.Load<SpriteFont>("SpriteFont1"), "Nivel: " + nivelActual.Numero() + "\nVidas: " + nivelActual.GetBombita().Vidas + "\nPresione 'P' para acceder al menu principal", new Vector2(0, 0), Color.Black);
+            }
+
+            if (estado == gameState.pause)
+            {
+                menu_principal.Draw(spriteBatch);
+            }
 
             spriteBatch.End();
 
