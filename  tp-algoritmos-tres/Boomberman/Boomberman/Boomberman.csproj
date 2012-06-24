@@ -112,6 +112,7 @@
     <Compile Include="JuegoBoomberman.cs" />
     <Compile Include="src\elementales\Casilla.cs" />
     <Compile Include="src\elementales\Entidad.cs" />
+    <Compile Include="src\elementales\Estallido.cs" />
     <Compile Include="src\elementales\Nivel.cs" />
     <Compile Include="src\elementales\Tablero.cs" />
     <Compile Include="src\estrategias\Explosion.cs" />
