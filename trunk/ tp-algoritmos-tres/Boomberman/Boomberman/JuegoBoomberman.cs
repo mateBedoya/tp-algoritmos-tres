@@ -209,7 +209,7 @@ namespace Boomberman
 
             // se dibujan las vistas de las entidades por pantalla
             spriteBatch.Begin();
-            //spriteBatch.DrawString(this.Content.Load<SpriteFont>("SpriteFont1"), segundosHastaElMomento.ToString()/*gameTime.TotalGameTime.ToString()*/, new Vector2(0, 0), Color.Black);
+            
             List<IDibujable> copiaDeDibujables = this.dibujables;
             int indice = copiaDeDibujables.Count() -1 ;
             while (indice >= 0)
@@ -218,6 +218,9 @@ namespace Boomberman
                 dibujable.Dibujar(this.Content, this.spriteBatch);
                 indice--;
             }
+
+            spriteBatch.DrawString(Content.Load<SpriteFont>("SpriteFont1"), "Vidas: " + nivelActual.GetBombita().Vidas, new Vector2(0, 0), Color.Black);
+
             spriteBatch.End();
 
             // TODO: Add your drawing code here

@@ -91,3 +91,4 @@ C:\Users\nacho\Desktop\ tp-algoritmos-tres\Boomberman\Boomberman\bin\x86\Debug\C
 C:\Users\nacho\Desktop\ tp-algoritmos-tres\Boomberman\Boomberman\bin\x86\Debug\Content\LopezRAladoDerecha.xnb
 C:\Users\nacho\Desktop\ tp-algoritmos-tres\Boomberman\Boomberman\bin\x86\Debug\Content\LopezRAladoIzquierda.xnb
 C:\Users\nacho\Desktop\ tp-algoritmos-tres\Boomberman\Boomberman\bin\x86\Debug\Content\Habano.xnb
+C:\Users\nacho\Desktop\ tp-algoritmos-tres\Boomberman\Boomberman\bin\x86\Debug\Content\Estallido.xnb

@@ -21,6 +21,7 @@ namespace TP2.src.Juego.personajes
         private static int VELOCIDAD_MAXIMA = 2;
         private static double PORCENTAJE_DE_RETARDO_MINIMO = 0.5;
         private static Bombita BOMBITA = null;
+        private int vidas;
         private bool encontroSalida;
 
         // inicializa los atributos
@@ -36,6 +37,7 @@ namespace TP2.src.Juego.personajes
         { 
             this.Inicializar();
             this.encontroSalida = false;
+            this.vidas = 3;
         }
 
 
@@ -121,9 +123,38 @@ namespace TP2.src.Juego.personajes
         // bombita es daniado por un enemigo
         public void SerDaniadoPorEnemigo()
         {
-            this.resistencia = 0;
+            //this.resistencia = 0;
+            this.vidas--;
         }
 
+        // implementacion de la interfaz IDaniable
+        public override void DaniarPorMolotov(Molotov bomba)
+        {
+            this.vidas--;
+        }
+
+
+        public override void DaniarPorProyectil(Proyectil bomba)
+        {
+            this.vidas--;
+        }
+
+
+        public override void DaniarPorToletole(ToleTole bomba)
+        {
+            this.vidas--;
+        }
+
+        public int Vidas
+        {
+            get { return this.vidas;}
+        }
+
+        // implementacion de la interfaz IDestruible
+        public override bool FueDestruido()
+        {
+            return (this.vidas <= 0);
+        }
         
         // este metodo es utilizado por el controlador para solicitar su actual imagen que lo represente
         public override string GetDescripcion()

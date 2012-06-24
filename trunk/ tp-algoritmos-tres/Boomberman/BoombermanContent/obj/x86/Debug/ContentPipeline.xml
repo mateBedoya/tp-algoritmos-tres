@@ -292,6 +292,15 @@
       <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\Boomberman\Boomberman\bin\x86\Debug\Content\Habano.xnb</Output>
       <Time>2012-06-23T14:31:08.5045042-03:00</Time>
     </Item>
+    <Item>
+      <Source>Estallido.bmp</Source>
+      <Name>Estallido</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\nacho\Desktop\ tp-algoritmos-tres\Boomberman\Boomberman\bin\x86\Debug\Content\Estallido.xnb</Output>
+      <Time>2012-06-24T00:36:42.0056914-03:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>
