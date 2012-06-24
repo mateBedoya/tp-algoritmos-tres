@@ -19,7 +19,6 @@ Content\ProyectilAbajo.xnb
 Content\ProyectilArriba.xnb
 Content\ProyectilDerecha.xnb
 Content\ProyectilIzquierda.xnb
-Content\SpriteFont1.xnb
 Content\LopezRAbajo.xnb
 Content\LopezRArriba.xnb
 Content\LopezRDerecha.xnb
@@ -30,3 +29,4 @@ Content\LopezRAladoDerecha.xnb
 Content\LopezRAladoIzquierda.xnb
 Content\Habano.xnb
 Content\Estallido.xnb
+Content\SpriteFont1.xnb

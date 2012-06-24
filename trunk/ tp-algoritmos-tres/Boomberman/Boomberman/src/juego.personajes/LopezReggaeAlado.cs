@@ -41,6 +41,7 @@ namespace TP2.src.Juego.personajes
         // puede moverse siempre
         public override bool PuedeMoverseA(Casilla casilla)
         {
+            if (casilla.TienePersonaje()) return false;
             return true;
         }
 
