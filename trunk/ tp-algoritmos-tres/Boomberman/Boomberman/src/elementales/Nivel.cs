@@ -85,6 +85,16 @@ namespace Boomberman.src.elementales
             return (this.bombita);
         }
 
+        public void SetBombita(Bombita _bombita)
+        {
+            this.bombita = _bombita;
+        }
+
+        public void SetTablero(Tablero _tablero)
+        {
+            this.tablero = _tablero;
+        }
+
 
         // retorna el tablero
         public Tablero GetTablero()

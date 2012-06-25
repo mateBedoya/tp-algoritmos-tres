@@ -52,8 +52,8 @@ namespace Boomberman
         // permite cargar los niveles que tendra el juego
         private void CargarNiveles()
         {
-            this.niveles.Add(new Nivel01(1,1,1,5,5,0));
-            this.niveles.Add(new Nivel02(3, 1, 3, 5, 5, 5));
+            this.niveles.Add(new Nivel01(1,0,0,5,0,0));
+            this.niveles.Add(new Nivel02(0, 0, 1, 5, 5, 5));
             this.niveles.Add(new Nivel03(0, 6, 0, 5, 5, 10));
         }
 
@@ -96,6 +96,7 @@ namespace Boomberman
             this.niveles = new List<Nivel>();
             this.CargarNiveles();
             this.nivelActual = niveles[0];
+            Tablero.GetInstancia().AgregarEntidad(Bombita.GetInstancia(), 0, 0);
             this.nivelActual.Cargar();
             // TODO: use this.Content to load your game content here
         }
@@ -184,6 +185,11 @@ namespace Boomberman
             this.nivelActual = niveles[nivelActual.Numero()];
             this.dibujables = new List<IDibujable>();
             this.actuables = new List<IActuable>();
+            Tablero.GetInstancia().Reiniciar();
+            Bombita.GetInstancia().Reiniciar();
+            Tablero.GetInstancia().AgregarEntidad(Bombita.GetInstancia(), 0, 0);
+            nivelActual.SetBombita(Bombita.GetInstancia());
+            nivelActual.SetTablero(Tablero.GetInstancia());
             this.nivelActual.Cargar();
         }
 
@@ -264,16 +270,35 @@ namespace Boomberman
 
         public void GuardarJuego()
         {
-            string archivo = "bomberman.xml";
-            XmlSerializer formatter = new XmlSerializer(typeof(int));
-            formatter.Serialize(File.OpenWrite(archivo), nivelActual.Numero());
+
+            Casilla posicionBombita = new Casilla();
+            int x = nivelActual.GetBombita().Posicion().X;
+            int y = nivelActual.GetBombita().Posicion().Y;
+            posicionBombita.X = x;
+            posicionBombita.Y = y;
+            XmlSerializer formatter = new XmlSerializer(typeof(Casilla));
+            formatter.Serialize(File.OpenWrite("bomberman.xml"), posicionBombita);
+
+            XmlSerializer formatter2 = new XmlSerializer(typeof(int));
+            formatter2.Serialize(File.OpenWrite("nivel.xml"), nivelActual.Numero());
+
+
         }
 
         public void CargarJuego()
         {
-            XmlSerializer formatter = new XmlSerializer(typeof(int));
-            int nivel = (int)formatter.Deserialize(File.OpenRead("bomberman.xml"));
+            XmlSerializer formatter = new XmlSerializer(typeof(Casilla));
+            Casilla posicionBombita = (Casilla)formatter.Deserialize(File.OpenRead("bomberman.xml"));
+
+            XmlSerializer formatter2 = new XmlSerializer(typeof(int));
+            int nivel = (int)formatter2.Deserialize(File.OpenRead("nivel.xml"));
             this.nivelActual = niveles[nivel - 1];
+            
+            Tablero.GetInstancia().Reiniciar();
+            Bombita.GetInstancia().Reiniciar();
+            Tablero.GetInstancia().AgregarEntidad(Bombita.GetInstancia(), posicionBombita.X, posicionBombita.Y);
+            nivelActual.SetBombita(Bombita.GetInstancia());
+            nivelActual.SetTablero(Tablero.GetInstancia());
             this.nivelActual.Cargar();
         }
 

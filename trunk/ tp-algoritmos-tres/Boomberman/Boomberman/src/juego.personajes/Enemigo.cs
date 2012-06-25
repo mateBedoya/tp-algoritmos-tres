@@ -99,7 +99,7 @@ namespace TP2.src.juego.personajes
         private bool BombitaEstaCerca()
         {
             Casilla posicionBombita = Bombita.GetInstancia().Posicion();
-            if ((Math.Abs(posicionBombita.GetX() - this.posicion.GetX()) <= 6) & (Math.Abs(posicionBombita.GetY() - this.posicion.GetY()) <= 6)) return true;
+            if ((Math.Abs(posicionBombita.X - this.posicion.X) <= 6) & (Math.Abs(posicionBombita.Y - this.posicion.Y) <= 6)) return true;
             return false;
         }
     }

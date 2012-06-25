@@ -26,7 +26,7 @@ namespace Boomberman.src.niveles
         // se crea el tablero y se carga con datos predeterminados
         public override void Cargar()
         {
-            base.Cargar();
+            //base.Cargar();
 
             this.AgregarCecilios();
             this.AgregarLopezReggaes();

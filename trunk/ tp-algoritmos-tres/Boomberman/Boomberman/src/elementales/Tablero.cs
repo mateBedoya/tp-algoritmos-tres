@@ -231,8 +231,8 @@ namespace TP2.Elementales
                 if (this.obstaculoQueOcultaSalida.FueDestruido())
                 {
                     this.seAgregoLaSalida = true;
-                    int X = this.obstaculoQueOcultaSalida.Posicion().GetX();
-                    int Y = this.obstaculoQueOcultaSalida.Posicion().GetY();
+                    int X = this.obstaculoQueOcultaSalida.Posicion().X;
+                    int Y = this.obstaculoQueOcultaSalida.Posicion().Y;
                     this.AgregarEntidad(new Salida(), X, Y);
                     this.obstaculoQueOcultaSalida = null;
                 }
@@ -266,8 +266,8 @@ namespace TP2.Elementales
         public void RemoverEntidad(Entidad entidad)
         {
             entidad.Destruir();
-            int X = entidad.Posicion().GetX();
-            int Y = entidad.Posicion().GetY();
+            int X = entidad.Posicion().X;
+            int Y = entidad.Posicion().Y;
             Casilla posicionAModificar = this.Casilla(X, Y);
             posicionAModificar.RemoverEntidad(entidad);
             this.entidades.Remove(entidad);

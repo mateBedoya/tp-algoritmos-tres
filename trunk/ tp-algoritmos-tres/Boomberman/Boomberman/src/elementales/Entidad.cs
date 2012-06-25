@@ -105,13 +105,13 @@ namespace TP2.src.Elementales
         // implementacion de la interfaz IPosicionable
         public virtual int X()
         {
-            return (this.posicion.GetX());
+            return (this.posicion.X);
         }
 
 
         public virtual int Y()
         {
-            return (this.posicion.GetY());
+            return (this.posicion.Y);
         }
 
 

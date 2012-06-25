@@ -107,7 +107,7 @@ namespace TP2.Juego.obstaculos
             try
             {
                 Articulo articulo = FabricaDeArticulos.GetInstancia().SolicitarArticulo();
-                Tablero.GetInstancia().AgregarEntidad(articulo, this.Posicion().GetX(), this.Posicion().GetY());
+                Tablero.GetInstancia().AgregarEntidad(articulo, this.Posicion().X, this.Posicion().Y);
             }
             catch (ArticuloVacioError e)
             {
