@@ -12,37 +12,42 @@ namespace TP2.Elementales
 {
     public class Casilla
     {
-        private int X;
-        private int Y;
+        private int x;
+        private int y;
         private List<Entidad> entidades;
+
+        // constructor vacio para poder hacer la serializacion
+        public Casilla() { }
 
         // crea una casilla vacia con una posicion en el tablero
         public Casilla(int X, int Y)
         {
-            this.X = X;
-            this.Y = Y;
+            this.x = X;
+            this.y = Y;
             this.entidades = new List<Entidad>();
         }
 
 
         // retorna la fila que ocupa en el tablero
-        public int GetX()
+        public int X
         {
-            return (this.X);
+            get { return (this.x); }
+            set { this.x = value; }
         }
 
 
         // retorna la columna que ocupa en el tablero
-        public int GetY()
+        public int Y
         {
-            return (this.Y);
+            get { return (this.y); }
+            set { this.y = value; }
         }
 
 
         // retorna la casilla adyacente en la direccion pasada
         public Casilla CasillaAdyacenteEnLaDireccion(int[] direccion)
         {
-            return (Tablero.GetInstancia().Casilla(this.X + direccion[0], this.Y + direccion[1]));
+            return (Tablero.GetInstancia().Casilla(this.x + direccion[0], this.y + direccion[1]));
         }
 
 

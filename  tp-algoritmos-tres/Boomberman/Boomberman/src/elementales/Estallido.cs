@@ -30,7 +30,7 @@ namespace Boomberman.src.elementales
 
         public void Aplicar()
         {
-            Tablero.GetInstancia().AgregarEntidad(this, posicion.GetX(), posicion.GetY());
+            Tablero.GetInstancia().AgregarEntidad(this, posicion.X, posicion.Y);
             this.CuandoPaseElTiempo(0.05);
         }
 

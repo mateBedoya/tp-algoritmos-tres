@@ -42,7 +42,7 @@ namespace TP2.src.estrategias
                if (puedeAplicarse)
                {
                     Proyectil proyectil = new Proyectil();
-                    Tablero.GetInstancia().AgregarEntidad(proyectil, posicionDelProyectil.GetX(), posicionDelProyectil.GetY());
+                    Tablero.GetInstancia().AgregarEntidad(proyectil, posicionDelProyectil.X, posicionDelProyectil.Y);
                     proyectil.Direccionar(this.aplicador.Direccion());
                     proyectil.CuandoPaseElTiempo(this.aplicador.PorcentajeDeRetardo());
                     proyectil.AnotarLanzador(this.aplicador);

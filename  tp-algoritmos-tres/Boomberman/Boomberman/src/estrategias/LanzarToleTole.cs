@@ -25,7 +25,7 @@ namespace TP2.src.estrategias
         {
             Casilla posicionDeLaToleTole = this.aplicador.Posicion();
             ToleTole toleTole = new ToleTole();
-            Tablero.GetInstancia().AgregarEntidad(toleTole, posicionDeLaToleTole.GetX(), posicionDeLaToleTole.GetY());
+            Tablero.GetInstancia().AgregarEntidad(toleTole, posicionDeLaToleTole.X, posicionDeLaToleTole.Y);
             toleTole.Direccionar(this.aplicador.Direccion());
             toleTole.CuandoPaseElTiempo(this.aplicador.PorcentajeDeRetardo());
             toleTole.AnotarLanzador(this.aplicador);

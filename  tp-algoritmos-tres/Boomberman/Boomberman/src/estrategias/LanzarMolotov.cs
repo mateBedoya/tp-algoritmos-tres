@@ -25,7 +25,7 @@ namespace TP2.src.estrategias
         {
             Casilla posicionDeLaMolotov = this.aplicador.Posicion();
             Molotov molotov = new Molotov();
-            Tablero.GetInstancia().AgregarEntidad(molotov, posicionDeLaMolotov.GetX(), posicionDeLaMolotov.GetY());
+            Tablero.GetInstancia().AgregarEntidad(molotov, posicionDeLaMolotov.X, posicionDeLaMolotov.Y);
             molotov.Direccionar(this.aplicador.Direccion());
             molotov.CuandoPaseElTiempo(this.aplicador.PorcentajeDeRetardo());
             molotov.AnotarLanzador(this.aplicador);
