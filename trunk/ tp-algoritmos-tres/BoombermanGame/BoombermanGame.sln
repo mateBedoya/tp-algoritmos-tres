@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoombermanGame", "BoombermanGame\BoombermanGame\BoombermanGame.csproj", "{18F43ECC-1256-4CB2-B6A7-0E3DD23A4C3F}"
+EndProject
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "BoombermanGameContent", "BoombermanGame\BoombermanGameContent\BoombermanGameContent.contentproj", "{5B34420B-928A-4069-8BA7-F23DFD67922E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{18F43ECC-1256-4CB2-B6A7-0E3DD23A4C3F}.Debug|x86.ActiveCfg = Debug|x86
+		{18F43ECC-1256-4CB2-B6A7-0E3DD23A4C3F}.Debug|x86.Build.0 = Debug|x86
+		{18F43ECC-1256-4CB2-B6A7-0E3DD23A4C3F}.Release|x86.ActiveCfg = Release|x86
+		{18F43ECC-1256-4CB2-B6A7-0E3DD23A4C3F}.Release|x86.Build.0 = Release|x86
+		{5B34420B-928A-4069-8BA7-F23DFD67922E}.Debug|x86.ActiveCfg = Debug|x86
+		{5B34420B-928A-4069-8BA7-F23DFD67922E}.Release|x86.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
