@@ -1,0 +1,94 @@
+c:\users\alan\documents\visual studio 2010\Projects\BoombermanGame\BoombermanGame\BoombermanGame\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\alan\documents\visual studio 2010\Projects\BoombermanGame\BoombermanGame\BoombermanGame\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+c:\users\alan\documents\visual studio 2010\Projects\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\SpriteFont1.xnb
+c:\users\alan\documents\visual studio 2010\Projects\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\SpriteFont2.xnb
+c:\users\alan\documents\visual studio 2010\Projects\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\BoombermanGame.exe
+c:\users\alan\documents\visual studio 2010\Projects\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\BoombermanGame.pdb
+c:\users\alan\documents\visual studio 2010\Projects\BoombermanGame\BoombermanGame\BoombermanGame\obj\x86\Debug\BoombermanGame.exe
+c:\users\alan\documents\visual studio 2010\Projects\BoombermanGame\BoombermanGame\BoombermanGame\obj\x86\Debug\BoombermanGame.pdb
+c:\users\alan\documents\visual studio 2010\Projects\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\BombitaAbajo.xnb
+c:\users\alan\documents\visual studio 2010\Projects\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\BombitaArriba.xnb
+c:\users\alan\documents\visual studio 2010\Projects\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\BombitaDerecha.xnb
+c:\users\alan\documents\visual studio 2010\Projects\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\BombitaIzquierda.xnb
+c:\users\alan\documents\visual studio 2010\Projects\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\BonusTimer.xnb
+c:\users\alan\documents\visual studio 2010\Projects\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\BonusToleTole.xnb
+c:\users\alan\documents\visual studio 2010\Projects\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\CecilioAbajo.xnb
+c:\users\alan\documents\visual studio 2010\Projects\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\CecilioArriba.xnb
+c:\users\alan\documents\visual studio 2010\Projects\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\CecilioDerecha.xnb
+c:\users\alan\documents\visual studio 2010\Projects\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\CecilioIzquierda.xnb
+c:\users\alan\documents\visual studio 2010\Projects\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\Estallido.xnb
+c:\users\alan\documents\visual studio 2010\Projects\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\GameOver.xnb
+c:\users\alan\documents\visual studio 2010\Projects\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\Molotov.xnb
+c:\users\alan\documents\visual studio 2010\Projects\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\NextLevel.xnb
+c:\users\alan\documents\visual studio 2010\Projects\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\ObstaculoDeAcero.xnb
+c:\users\alan\documents\visual studio 2010\Projects\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\ObstaculoDeCemento.xnb
+c:\users\alan\documents\visual studio 2010\Projects\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\ObstaculoDeLadrillo.xnb
+c:\users\alan\documents\visual studio 2010\Projects\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\Pause.xnb
+c:\users\alan\documents\visual studio 2010\Projects\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\ProyectilAbajo.xnb
+c:\users\alan\documents\visual studio 2010\Projects\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\ProyectilArriba.xnb
+c:\users\alan\documents\visual studio 2010\Projects\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\ProyectilDerecha.xnb
+c:\users\alan\documents\visual studio 2010\Projects\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\ProyectilIzquierda.xnb
+c:\users\alan\documents\visual studio 2010\Projects\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\Salida.xnb
+c:\users\alan\documents\visual studio 2010\Projects\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\ToleTole.xnb
+c:\users\alan\documents\visual studio 2010\Projects\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\Vacio.xnb
+c:\users\alan\documents\visual studio 2010\Projects\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\YouWin.xnb
+c:\users\alan\documents\visual studio 2010\Projects\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\BordeHorizontal.xnb
+c:\users\alan\documents\visual studio 2010\Projects\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\BordeVertical.xnb
+c:\users\alan\documents\visual studio 2010\Projects\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\BonusHabano.xnb
+C:\Users\Alan\documents\visual studio 2010\Projects\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\nunit.framework.dll
+C:\Users\Alan\documents\visual studio 2010\Projects\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\nunit.framework.xml
+C:\Users\Alan\documents\visual studio 2010\Projects\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\LopezRAbajo.xnb
+C:\Users\Alan\documents\visual studio 2010\Projects\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\LopezRAladoAbajo.xnb
+C:\Users\Alan\documents\visual studio 2010\Projects\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\LopezRAladoArriba.xnb
+C:\Users\Alan\documents\visual studio 2010\Projects\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\LopezRAladoDerecha.xnb
+C:\Users\Alan\documents\visual studio 2010\Projects\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\LopezRAladoIzquierda.xnb
+C:\Users\Alan\documents\visual studio 2010\Projects\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\LopezRArriba.xnb
+C:\Users\Alan\documents\visual studio 2010\Projects\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\LopezRDerecha.xnb
+C:\Users\Alan\documents\visual studio 2010\Projects\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\LopezRIzquierda.xnb
+C:\Users\nacho\Desktop\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\SpriteFont1.xnb
+C:\Users\nacho\Desktop\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\SpriteFont2.xnb
+C:\Users\nacho\Desktop\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\BombitaAbajo.xnb
+C:\Users\nacho\Desktop\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\BombitaArriba.xnb
+C:\Users\nacho\Desktop\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\BombitaDerecha.xnb
+C:\Users\nacho\Desktop\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\BombitaIzquierda.xnb
+C:\Users\nacho\Desktop\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\BonusTimer.xnb
+C:\Users\nacho\Desktop\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\BonusToleTole.xnb
+C:\Users\nacho\Desktop\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\CecilioAbajo.xnb
+C:\Users\nacho\Desktop\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\CecilioArriba.xnb
+C:\Users\nacho\Desktop\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\CecilioDerecha.xnb
+C:\Users\nacho\Desktop\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\CecilioIzquierda.xnb
+C:\Users\nacho\Desktop\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\Estallido.xnb
+C:\Users\nacho\Desktop\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\GameOver.xnb
+C:\Users\nacho\Desktop\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\Molotov.xnb
+C:\Users\nacho\Desktop\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\NextLevel.xnb
+C:\Users\nacho\Desktop\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\ObstaculoDeAcero.xnb
+C:\Users\nacho\Desktop\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\ObstaculoDeCemento.xnb
+C:\Users\nacho\Desktop\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\ObstaculoDeLadrillo.xnb
+C:\Users\nacho\Desktop\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\Pause.xnb
+C:\Users\nacho\Desktop\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\ProyectilAbajo.xnb
+C:\Users\nacho\Desktop\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\ProyectilArriba.xnb
+C:\Users\nacho\Desktop\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\ProyectilDerecha.xnb
+C:\Users\nacho\Desktop\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\ProyectilIzquierda.xnb
+C:\Users\nacho\Desktop\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\Salida.xnb
+C:\Users\nacho\Desktop\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\ToleTole.xnb
+C:\Users\nacho\Desktop\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\Vacio.xnb
+C:\Users\nacho\Desktop\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\YouWin.xnb
+C:\Users\nacho\Desktop\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\BordeHorizontal.xnb
+C:\Users\nacho\Desktop\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\BordeVertical.xnb
+C:\Users\nacho\Desktop\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\BonusHabano.xnb
+C:\Users\nacho\Desktop\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\LopezRAbajo.xnb
+C:\Users\nacho\Desktop\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\LopezRAladoAbajo.xnb
+C:\Users\nacho\Desktop\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\LopezRAladoArriba.xnb
+C:\Users\nacho\Desktop\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\LopezRAladoDerecha.xnb
+C:\Users\nacho\Desktop\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\LopezRAladoIzquierda.xnb
+C:\Users\nacho\Desktop\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\LopezRArriba.xnb
+C:\Users\nacho\Desktop\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\LopezRDerecha.xnb
+C:\Users\nacho\Desktop\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\Content\LopezRIzquierda.xnb
+C:\Users\nacho\Desktop\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\BoombermanGame.exe
+C:\Users\nacho\Desktop\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\BoombermanGame.pdb
+C:\Users\nacho\Desktop\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\nunit.framework.dll
+C:\Users\nacho\Desktop\BoombermanGame\BoombermanGame\BoombermanGame\bin\x86\Debug\nunit.framework.xml
+C:\Users\nacho\Desktop\BoombermanGame\BoombermanGame\BoombermanGame\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\nacho\Desktop\BoombermanGame\BoombermanGame\BoombermanGame\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\nacho\Desktop\BoombermanGame\BoombermanGame\BoombermanGame\obj\x86\Debug\BoombermanGame.exe
+C:\Users\nacho\Desktop\BoombermanGame\BoombermanGame\BoombermanGame\obj\x86\Debug\BoombermanGame.pdb

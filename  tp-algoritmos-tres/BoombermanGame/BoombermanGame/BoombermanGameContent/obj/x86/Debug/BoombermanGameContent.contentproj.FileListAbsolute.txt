@@ -1,0 +1,2 @@
+C:\Users\Alan\documents\visual studio 2010\Projects\BoombermanGame\BoombermanGame\BoombermanGameContent\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\nacho\Desktop\BoombermanGame\BoombermanGame\BoombermanGameContent\obj\x86\Debug\ResolveAssemblyReference.cache
